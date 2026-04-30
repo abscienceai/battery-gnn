@@ -1,4 +1,4 @@
-# Accuracy Is Not Enough: Robustness-First Evaluation of Temporal Graph Learning for Lithium-Ion Battery Degradation
+# Noise Regime Determines Model Choice: A Frequency-Selective Robustness Benchmark for Lithium-Ion Battery Prognostics
 
 > **Alper Bingöl & Mücahit Soylu** — İnönü University
 
@@ -277,8 +277,8 @@ Trained model checkpoints:
 If you use this code or data in your work, please cite:
 
 ```bibtex
-@article{bingol2025accuracy,
-  title   = {Accuracy Is Not Enough: Robustness-First Evaluation of Temporal Graph Learning for Lithium-Ion Battery Degradation},
+@article{bingolsoylu2025accuracy,
+  title   = {Noise Regime Determines Model Choice: A Frequency-Selective Robustness Benchmark for Lithium-Ion Battery Prognostics},
   author  = {Bing{\"o}l, Alper and Soylu, M{\"u}cahit},
   journal = {Preprint},
   year    = {2025}
