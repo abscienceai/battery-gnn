@@ -1,0 +1,101 @@
+{
+  "analysis_role": "descriptive mechanism analysis",
+  "analysis_script_commit": "b4b64eb3faa82c47c549aa4fd405e1774c81bc21",
+  "analysis_script_sha256": "5b6f74f83d408dbba5d448921fc62321e34ac8ab2186ab2bf59358d1d9a511e3",
+  "ar1_settings": [
+    -0.9,
+    -0.5,
+    0.0,
+    0.5,
+    0.9
+  ],
+  "bandwidth_settings": [
+    "white",
+    "lowpass_ma3",
+    "lowpass_ma9",
+    "bandpass_ma3_minus_ma9",
+    "highpass_first_difference"
+  ],
+  "claim_guard": {
+    "feature_space_mechanism_stress_only": true,
+    "physical_sensor_interpretation": false,
+    "spectral_gcn": false,
+    "universal_gcn_robustness": false
+  },
+  "clean_final_v3_reference_barrier": "PASS",
+  "clean_max_abs_mae_difference": 4.990105550994883e-14,
+  "clean_max_abs_rmse_difference": 4.820102650349156e-14,
+  "clean_pairing": "same split_seed + same train_seed + same model + same domain + same metric",
+  "clean_reference_rows": 120,
+  "clean_reference_tolerance": 1e-07,
+  "contract": "correlation_bandwidth_drift_analysis_v1",
+  "drift_settings": [
+    0.1,
+    0.25,
+    0.5
+  ],
+  "execution_manifest_sha256": "f43e69afae5e6d6a9a59edab0ab530990b8dab1dc790c3de3d775ba522835317",
+  "model_contrast_definition": "MLP relative degradation minus GCN relative degradation",
+  "models_retrained": false,
+  "nested_aggregation": "3 train initializations x 5 perturbation seeds averaged within each split and perturbation setting",
+  "nested_count_per_split_setting": 15,
+  "new_hypothesis_tests_performed": false,
+  "outputs": {
+    "ar1_response_by_split": {
+      "path": "${WORKSPACE}/results/revision_2026/spectral_frequency/final_spectral_v1/correlation_bandwidth_drift_v1/analysis_v1/ar1_response_by_split.csv",
+      "rows": 400,
+      "sha256": "3d68796b6378a831b24d2ef0e1135a4c4a87dd6a7900793b9f4fc75b688f2c51"
+    },
+    "ar1_response_summary": {
+      "path": "${WORKSPACE}/results/revision_2026/spectral_frequency/final_spectral_v1/correlation_bandwidth_drift_v1/analysis_v1/ar1_response_summary.csv",
+      "rows": 80,
+      "sha256": "5d3dc74a148cb5c5474627a0fbaf5de0d458e933b1a9a7c0d87b630dcec3c96b"
+    },
+    "bandwidth_response_by_split": {
+      "path": "${WORKSPACE}/results/revision_2026/spectral_frequency/final_spectral_v1/correlation_bandwidth_drift_v1/analysis_v1/bandwidth_response_by_split.csv",
+      "rows": 400,
+      "sha256": "06aada601d15cd84103f256f66e78dcd36ca37e6c215196a47e5457efdd20f18"
+    },
+    "bandwidth_response_summary": {
+      "path": "${WORKSPACE}/results/revision_2026/spectral_frequency/final_spectral_v1/correlation_bandwidth_drift_v1/analysis_v1/bandwidth_response_summary.csv",
+      "rows": 80,
+      "sha256": "b2b0eea1571e9e4c4d28619b67d4f29aa4d480fa305018dad83a97e3a89aef27"
+    },
+    "clean_reference_check": {
+      "path": "${WORKSPACE}/results/revision_2026/spectral_frequency/final_spectral_v1/correlation_bandwidth_drift_v1/analysis_v1/clean_final_v3_reference_check.csv",
+      "rows": 120,
+      "sha256": "2f196bd80222cd8e9212b82c38ffdb1ee52ed6eb71702e751a6773bc7742fe7d"
+    },
+    "controlled_drift_response_by_split": {
+      "path": "${WORKSPACE}/results/revision_2026/spectral_frequency/final_spectral_v1/correlation_bandwidth_drift_v1/analysis_v1/controlled_drift_response_by_split.csv",
+      "rows": 240,
+      "sha256": "a53980be730ce7bd9bf8a85bbbd6501d1dab5b8ca3648a1b50102050514e8c31"
+    },
+    "controlled_drift_response_summary": {
+      "path": "${WORKSPACE}/results/revision_2026/spectral_frequency/final_spectral_v1/correlation_bandwidth_drift_v1/analysis_v1/controlled_drift_response_summary.csv",
+      "rows": 48,
+      "sha256": "c2725b7b39f37f4555ba793aab41280efe9ae0b83d886f491637d41546a40172"
+    },
+    "model_contrast_summary": {
+      "path": "${WORKSPACE}/results/revision_2026/spectral_frequency/final_spectral_v1/correlation_bandwidth_drift_v1/analysis_v1/model_contrast_summary.csv",
+      "rows": 104,
+      "sha256": "c4f86dfaf8ad03bf37949884fe458fdae48e1e856c9003dd8c1006bacb278da9"
+    },
+    "perturbation_spectral_summary": {
+      "path": "${WORKSPACE}/results/revision_2026/spectral_frequency/final_spectral_v1/correlation_bandwidth_drift_v1/analysis_v1/perturbation_spectral_summary.csv",
+      "rows": 13,
+      "sha256": "03c8530bfad3399667a8aa67bc640967ba52a658c9fb5bb58c6cf52671fdee01"
+    }
+  },
+  "p_values_computed": false,
+  "perturbation_spectral_rows_read": 325,
+  "positive_contrast_interpretation": "GCN lower relative degradation",
+  "raw_metric_files_read": 30,
+  "raw_metric_rows_read": 7920,
+  "relative_degradation_definition": "(perturbed_metric-clean_metric)/clean_metric",
+  "scaler_refit": false,
+  "spectral_protocol_sha256": "a8d3b65b87980470f326717f0cb50e3d4fb4d2e0429c93171eb0d21d6c713e45",
+  "split_units": 5,
+  "status": "COMPLETE",
+  "value_level_read_started_only_after_analysis_script_commit": true
+}

@@ -1,0 +1,89 @@
+{
+  "analysis_script_commit": "f77045fc41f8f08347bc093ec7f235fbb7298874",
+  "analysis_script_sha256": "87b543bb81ea23c5d8de142d3e1934a5f8f7bade9d278adf5dda889de2bb9a0f",
+  "auc_direction": "lower_error_auc_is_better",
+  "clean_final_v3_runlevel_barrier": "PASS",
+  "clean_max_abs_mae_difference": 3.620350297328656e-09,
+  "clean_max_abs_rmse_difference": 3.5379799992463212e-09,
+  "clean_run_count": 120,
+  "clean_run_tolerance": 1e-07,
+  "compound_medium_inferential": false,
+  "contract": "final_physical_sensor_noise_analysis_v2",
+  "corruption_seeds_nested_per_split": 5,
+  "domains": [
+    "BALANCED_ALL",
+    "HUST",
+    "CALCE",
+    "MATR"
+  ],
+  "execution_manifest_sha256": "cdc02692291041e3fc3e2ef192af857fa7e95c146b7d91dcb7a43bb5e268a127",
+  "inferential_n": 5,
+  "inferential_unit": "split_seed",
+  "minimum_attainable_two_sided_signflip_p_at_n5": 0.0625,
+  "multiplicity": "Holm_across_16_family_by_domain_comparisons_separately_for_RMSE_and_MAE",
+  "outputs": {
+    "auc_by_split": {
+      "path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/analysis_v2_domain_contract/physical_noise_auc_by_split.csv",
+      "rows": 320,
+      "sha256": "463579b3ac674e78d9b6ddf8433bdc5538d5374c7f424b6fcd11f585c438d7f4"
+    },
+    "clean_check": {
+      "path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/analysis_v2_domain_contract/clean_final_v3_runlevel_check.csv",
+      "rows": 120,
+      "sha256": "620c319438f0866164b5656e9ff0ca63388c26c74a8da5a03163bced8b6de06a"
+    },
+    "compound_by_split": {
+      "path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/analysis_v2_domain_contract/physical_noise_compound_medium_by_split.csv",
+      "rows": 80,
+      "sha256": "846a5f206c94b78f54f3d8adaa6136b5539cc3c06673e49d0b9eceb54cce47a4"
+    },
+    "compound_summary": {
+      "path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/analysis_v2_domain_contract/physical_noise_compound_medium_summary.csv",
+      "rows": 16,
+      "sha256": "e4cd7e4e43a88fd0fe38ccf82e76280a137d02b8191ffcf37b1c1fd91929621c"
+    },
+    "level_by_split": {
+      "path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/analysis_v2_domain_contract/physical_noise_level_by_split.csv",
+      "rows": 1280,
+      "sha256": "94b1089375709f6f0b5e696cb76f223abc49d796364ad8e6521d2192ade88757"
+    },
+    "level_summary": {
+      "path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/analysis_v2_domain_contract/physical_noise_level_summary.csv",
+      "rows": 256,
+      "sha256": "80bf41f45d362a7ec09aac32dadec862d716f93a64961622e4dbfe04f2b7c229"
+    },
+    "primary_inference": {
+      "path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/analysis_v2_domain_contract/physical_noise_primary_inference.csv",
+      "rows": 32,
+      "sha256": "e3818fd322e517a4a8e5120a904c6e7ca2527602143fb5008ff3b8baa15364b0"
+    }
+  },
+  "positive_primary_delta_interpretation": "GCN_lower_error_AUC",
+  "primary_delta_definition": "MLP_AUC_minus_GCN_AUC",
+  "primary_families": [
+    "gaussian",
+    "calibration_offset",
+    "sensor_drift",
+    "sample_dropout"
+  ],
+  "primary_metrics": [
+    "rmse",
+    "mae"
+  ],
+  "raw_metric_files_read": 30,
+  "raw_metric_rows_read": 7920,
+  "severity_axis": {
+    "clean": 0.0,
+    "high": 1.0,
+    "low": 0.3333333333333333,
+    "medium": 0.6666666666666666
+  },
+  "significant_holm_0p05_count": 0,
+  "source_execution_version": "v2_domain_metric_contract",
+  "split_count": 5,
+  "status": "COMPLETE",
+  "test": "exact_two_sided_paired_signflip_of_split_level_auc_differences",
+  "train_initializations_nested_per_split": 3,
+  "v1_metric_analysis_used": false,
+  "value_level_read_started_only_after_analysis_script_commit": true
+}

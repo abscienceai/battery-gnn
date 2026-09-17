@@ -1,0 +1,296 @@
+{
+  "aggregation_contract": {
+    "higher_level_unit": "split_seed",
+    "higher_level_units": 5,
+    "repeated_split_caveat": "The five split seeds are repeated holdout sensitivity units, not five independent datasets.",
+    "within_split": "Average three model initialization seeds and five corruption seeds before higher-level inference."
+  },
+  "claims_guard": {
+    "preferred_language": "Model preference is corruption-family-, severity-, and dataset-dependent unless the frozen results support a narrower statement.",
+    "universal_gcn_robustness_claim_allowed": false,
+    "universal_mlp_robustness_claim_allowed": false
+  },
+  "clean_roundtrip_barrier": {
+    "feature_tolerance": {
+      "absolute": 1e-08,
+      "relative": 1e-08
+    },
+    "mapping_requirements": {
+      "cross_cell_mapping": false,
+      "future_cycle_use": false,
+      "target_used_for_feature_generation": false
+    },
+    "on_failure": "Stop before noisy evaluation and audit dataset adapter/alignment; do not relax tolerance based on noisy test performance.",
+    "required_before_noisy_test_metrics": true,
+    "rule": "Reconstruct each eligible test cycle from raw source data with zero corruption, run the frozen cycle kernel, align to the canonical row, and verify the 20 features against the existing clean canonical features before any noisy model metric is evaluated."
+  },
+  "compound_operation_order": [
+    "calibration_offset",
+    "sensor_drift",
+    "gaussian",
+    "sample_dropout_and_causal_forward_fill"
+  ],
+  "contract": "physical_sensor_noise_soh_v1",
+  "corruption_application_scope": {
+    "cell_level_calibration_bias": true,
+    "corruption_occurs_before_feature_recomputation": true,
+    "cycle_progressive_sensor_drift": true,
+    "phase": "test only",
+    "sample_dropout": true,
+    "sample_level_gaussian": true
+  },
+  "corruption_seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "datasets": [
+    "HUST",
+    "CALCE",
+    "MATR"
+  ],
+  "evaluation_contract": {
+    "balanced_all": "same dataset-balanced and cell-balanced weighting as the frozen clean benchmark",
+    "metrics": [
+      "RMSE",
+      "MAE",
+      "R2_by_dataset"
+    ],
+    "model_weights_unchanged": true,
+    "test_cell_membership_unchanged": true,
+    "test_targets_unchanged": true,
+    "train_only_scaler_reused": true
+  },
+  "feature_recomputation_rule": "For every corrupted raw cycle, call the same frozen extract_primary_cycle_features(voltage_V,current_A,time_s) kernel used by the clean revision pipeline. No direct perturbation of canonical/model feature tensors is allowed.",
+  "model_initialization_seeds": [
+    0,
+    1,
+    2
+  ],
+  "model_parameter_count_each": 5569,
+  "model_source": "frozen final_v3 clean-trained states; no noisy retraining",
+  "models": [
+    "FeatureMatchedMLP",
+    "FeatureMatchedCausalGCN"
+  ],
+  "old_feature_space_noise_role": "Legacy g.x-space perturbation is not used as the primary physical-sensor robustness evidence.",
+  "pre_freeze_physical_evaluation_files": 0,
+  "pre_freeze_physical_test_metric_files": 0,
+  "primary_feature_count": 20,
+  "primary_features": [
+    "v_min",
+    "v_q10",
+    "v_q25",
+    "v_median",
+    "v_q75",
+    "v_q90",
+    "v_max",
+    "v_mean",
+    "v_std",
+    "v_phase_slope",
+    "i_min",
+    "i_q10",
+    "i_q25",
+    "i_median",
+    "i_q75",
+    "i_q90",
+    "i_max",
+    "i_mean",
+    "i_std",
+    "i_phase_slope"
+  ],
+  "primary_inferential_sensitivity": {
+    "comparisons_per_error_metric": 16,
+    "difference_definition": "MLP AUC minus GCN AUC; positive values favor GCN",
+    "domains": [
+      "BALANCED_ALL",
+      "HUST",
+      "CALCE",
+      "MATR"
+    ],
+    "endpoint": "AUC over clean+low+medium+high for each primary corruption family",
+    "families": [
+      "gaussian",
+      "calibration_offset",
+      "sensor_drift",
+      "sample_dropout"
+    ],
+    "interpretation": "Inferential sensitivity only; descriptive model preference is reported even when Holm-adjusted p-values are not significant.",
+    "multiple_testing": "Holm adjustment separately across the 16 RMSE AUC comparisons and 16 MAE AUC comparisons",
+    "test": "exact two-sided paired sign-flip sensitivity test over five split-level differences"
+  },
+  "primary_task": "cycle-level SOH regression",
+  "protocol_code_commit": "7fc4465ef3944486e4f5253f7a69a22364a3f56b",
+  "purpose": "Replace normalized feature-space perturbation with raw-input sensor corruption in physical units, followed by complete feature recomputation through the frozen cycle feature kernel.",
+  "randomness_contract": {
+    "global_rng_state_dependency": false,
+    "same_corruption_realization_for_mlp_and_gcn": true,
+    "seed_key_fields": [
+      "corruption_seed",
+      "scenario",
+      "level",
+      "dataset",
+      "cell_id",
+      "cycle_id"
+    ],
+    "stable_hash_seeded": true
+  },
+  "raw_model_input_channels": {
+    "capacity": {
+      "corrupted_in_primary_benchmark": false,
+      "reason": "Capacity/SOH belongs to the supervised target definition and must not be introduced as a corrupted model input; doing so would change target semantics rather than test input-sensor robustness.",
+      "used": false
+    },
+    "current": {
+      "physical_unit": "A",
+      "used": true
+    },
+    "temperature": {
+      "corrupted_in_primary_benchmark": false,
+      "reason": "Temperature is not part of the frozen 20-feature primary model input. A temperature corruption would therefore not propagate into this model.",
+      "used": false
+    },
+    "voltage": {
+      "physical_unit": "V",
+      "used": true
+    },
+    "within_cycle_time": {
+      "corrupted": false,
+      "physical_unit": "s",
+      "role": "chronology and normalized within-cycle phase only",
+      "used": true
+    }
+  },
+  "robustness_summary": {
+    "auc": "Trapezoidal AUC of RMSE and MAE over normalized severity axis 0..1, including reconstructed clean baseline at severity 0. Lower AUC is better.",
+    "clean_severity_axis": 0.0,
+    "compound_medium_role": "descriptive only",
+    "corrupted_severity_axis": [
+      0.3333333333333333,
+      0.6666666666666666,
+      1.0
+    ],
+    "high_severity_output": "relative error inflation from clean",
+    "per_level_outputs": [
+      "absolute metric",
+      "absolute change from clean",
+      "percent change from clean",
+      "MLP-minus-GCN preference margin"
+    ],
+    "primary_family_curves": [
+      "gaussian",
+      "calibration_offset",
+      "sensor_drift",
+      "sample_dropout"
+    ]
+  },
+  "scenario_families": {
+    "calibration_offset": {
+      "definition": "For each dataset/cell/corruption seed draw one zero-mean Gaussian voltage bias and one current bias using the level-specific sigma; hold each bias constant across all samples and cycles of that cell.",
+      "levels": [
+        "low",
+        "medium",
+        "high"
+      ]
+    },
+    "compound_medium": {
+      "definition": "Apply medium calibration bias plus medium sensor drift plus medium Gaussian sample noise, followed by medium sample dropout and causal forward-fill.",
+      "inferential_role": "descriptive stress test only",
+      "levels": [
+        "medium"
+      ]
+    },
+    "gaussian": {
+      "definition": "At every raw sample independently add zero-mean Gaussian noise in V and A using the level-specific physical-unit sigma.",
+      "levels": [
+        "low",
+        "medium",
+        "high"
+      ]
+    },
+    "sample_dropout": {
+      "definition": "Apply Bernoulli sample dropout independently within each raw cycle. Protect the first valid sample, then causally forward-fill missing V/I observations from the most recent retained sample. Time coordinates remain unchanged.",
+      "levels": [
+        "low",
+        "medium",
+        "high"
+      ]
+    },
+    "sensor_drift": {
+      "definition": "For each cell and corruption seed draw the drift sign independently for V and I. Bias magnitude grows with observed cycle index at the specified physical-unit rate per 100 cycles and is clipped at the level-specific absolute cap. No total future lifetime is used.",
+      "levels": [
+        "low",
+        "medium",
+        "high"
+      ]
+    }
+  },
+  "severity_levels": {
+    "high": {
+      "calibration_current_sigma_A": 0.025,
+      "calibration_voltage_sigma_V": 0.01,
+      "drift_current_cap_A": 0.05,
+      "drift_current_per_100_cycles_A": 0.01,
+      "drift_voltage_cap_V": 0.02,
+      "drift_voltage_per_100_cycles_V": 0.005,
+      "dropout_probability": 0.03,
+      "gaussian_current_sigma_A": 0.025,
+      "gaussian_voltage_sigma_V": 0.01,
+      "severity_axis": 1.0
+    },
+    "low": {
+      "calibration_current_sigma_A": 0.005,
+      "calibration_voltage_sigma_V": 0.002,
+      "drift_current_cap_A": 0.01,
+      "drift_current_per_100_cycles_A": 0.002,
+      "drift_voltage_cap_V": 0.005,
+      "drift_voltage_per_100_cycles_V": 0.001,
+      "dropout_probability": 0.005,
+      "gaussian_current_sigma_A": 0.005,
+      "gaussian_voltage_sigma_V": 0.002,
+      "severity_axis": 0.3333333333333333
+    },
+    "medium": {
+      "calibration_current_sigma_A": 0.01,
+      "calibration_voltage_sigma_V": 0.005,
+      "drift_current_cap_A": 0.025,
+      "drift_current_per_100_cycles_A": 0.005,
+      "drift_voltage_cap_V": 0.01,
+      "drift_voltage_per_100_cycles_V": 0.002,
+      "dropout_probability": 0.01,
+      "gaussian_current_sigma_A": 0.01,
+      "gaussian_voltage_sigma_V": 0.005,
+      "severity_axis": 0.6666666666666666
+    }
+  },
+  "source_sha256": {
+    "benchmark_model": "5d621f8d5764e417e41bc518ec72b9608566a087c552b8365d438c2344c06c5e",
+    "canonical_builder": "fdf5c44a8949fdbc5c84caee1b503099396a71b0c012bf612025955db45ef0dc",
+    "canonical_table": "49a7b7629cf9ee3f8ce0a7e3c52f2807878b752b4c9a30a876285fb891b00c14",
+    "clean_execution_manifest": "5a8bfbe0f11a6158f2749a9da4f18f1e62adf8c839976c1bf0af9c9f6c07440d",
+    "clean_protocol": "2dec14c210ae3f02e5f65e4acc24f9c4adc747bc071509cb144e69dba707f4dd",
+    "cycle_feature_kernel": "089a4b800dec8000738ad019c138c461d063a0476e7977dcd4f9c39453c321c5",
+    "raw_cycle_generator": "456711ce3cdfe1f5cdccf0705feb04d04f8159f9324b449fbfb03b1dd204c025",
+    "split_assignments": "914c8b90131f496ca396f63e0502147ca99848fdfd4b2c6b2a5887225b47d055",
+    "train_only_scalers": "b9708b9321b521b87bdd05f969558134d7e0148285ef7c50f648c2028cd86de1"
+  },
+  "split_seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "status": "FINAL_FROZEN_BEFORE_ANY_PHYSICAL_SENSOR_CORRUPTION_EVALUATION",
+  "training_policy": {
+    "frozen_clean_trained_models": true,
+    "no_noise_augmentation_training": true,
+    "no_retraining": true,
+    "test_only_corruption": true,
+    "train_only_scaler_reused_without_refit": true,
+    "validation_or_test_statistics_may_refit_scaler": false
+  },
+  "unit_conversion_rule": "Use the frozen dataset adapters to convert source-native sensor channels to voltage in V, current in A, and time in s first. Apply corruption only after this conversion and before feature extraction."
+}

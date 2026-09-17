@@ -1,0 +1,19 @@
+{
+  "all_fits_patience_valid_below_ceiling": true,
+  "all_source_validation_best_states_reproduced": true,
+  "all_target_test_metrics_independently_reproduced": true,
+  "audit_pass": true,
+  "causal_test_edge_checks": 671340,
+  "contract": "lodo_zero_shot_execution_audit_receipt_v1",
+  "cross_cell_edges_detected": false,
+  "execution_manifest_sha256": "b3e82cf395ce543c6452c62df02e34662b768f2cf24124d7eb530c88e11afbc1",
+  "future_edges_detected": false,
+  "held_out_target_absent_from_source_training": true,
+  "held_out_target_absent_from_source_validation": true,
+  "numeric_test_metrics_surfaced_by_audit": false,
+  "paired_initializations_exact": true,
+  "runner_sha256": "896c209211f7e952eab462d46ccf77d00cf20b948f76bdaa9cf4ce68daa8e0e9",
+  "target_test_contains_only_held_out_dataset": true,
+  "validated_model_states": 90,
+  "validated_paired_records": 45
+}

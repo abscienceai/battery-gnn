@@ -1,0 +1,320 @@
+{
+  "analysis_script_commit": "245f43ed76db364162e5825e1847c369602f2b54",
+  "analysis_script_path": "${WORKSPACE}/repo/battery-gnn/scripts/revision_2026/99_dqdv_descriptive_analysis.py",
+  "analysis_script_sha256": "63b6bf007391d120ee6a871da4f9386370723f747a852078fd6f4a6c3d9e6ab0",
+  "balanced_metric_semantics": "dataset-balanced + cell-balanced hierarchical weighted test RMSE/MAE inherited from audited execution records",
+  "common_cohort": true,
+  "condition_roles": {
+    "PRIMARY20_COMMON": "primary20_common_cohort_baseline",
+    "PRIMARY20_PLUS_FULL_DQDV10": "full_curve_leakage_positive_control",
+    "PRIMARY20_PLUS_PREFIX25_DQDV10": "target_independent_training_derived_prefix25",
+    "PRIMARY20_PLUS_PREFIX50_DQDV10": "target_independent_training_derived_prefix50"
+  },
+  "conditions": [
+    "PRIMARY20_COMMON",
+    "PRIMARY20_PLUS_FULL_DQDV10",
+    "PRIMARY20_PLUS_PREFIX25_DQDV10",
+    "PRIMARY20_PLUS_PREFIX50_DQDV10"
+  ],
+  "contract": "dqdv_descriptive_analysis_v1",
+  "delta_csv_path": "${WORKSPACE}/results/revision_2026/dqdv_leakage_control/final_dqdv_v1/analysis_v1/dqdv_vs_primary20_deltas.csv",
+  "delta_csv_sha256": "8f2ea978db62d5d3e863edd75769b73357b194f9cb729e475cc20f3245553e3b",
+  "delta_row_count": 48,
+  "descriptive_only": true,
+  "domain_metric_semantics": "plain row-level unweighted dataset-specific test RMSE/MAE for HUST, CALCE, and MATR inherited from audited execution records",
+  "domains": [
+    "BALANCED_ALL",
+    "HUST",
+    "CALCE",
+    "MATR"
+  ],
+  "execution_audit_sha256": "086b9374441055b386de2007af0ae2041ff5707508d9fdad246e5aee7a27a658",
+  "execution_manifest_sha256": "744ae4a695f9a94a2c597469dc867c58141ea94fc5d131074d88574a25b72725",
+  "feature_dimension_disclosure": {
+    "PRIMARY20_COMMON": 20,
+    "all_dqdv_augmented_conditions": 30
+  },
+  "full_dqdv_interpretation": "retrospective leakage-positive control; not deployment-valid",
+  "input_records": [
+    {
+      "path": "${WORKSPACE}/results/revision_2026/dqdv_leakage_control/final_dqdv_v1/training_v2/final_execution_v2/run_records/PRIMARY20_COMMON__split0__train0.json",
+      "sha256": "9677a640d9c00c7b95d9ed861657a4193f28e782760df8146c6f33e4f0802218"
+    },
+    {
+      "path": "${WORKSPACE}/results/revision_2026/dqdv_leakage_control/final_dqdv_v1/training_v2/final_execution_v2/run_records/PRIMARY20_COMMON__split0__train1.json",
+      "sha256": "8337fc572ed88693d30b91328ab764504bffb5670d360167c0291a3b0859969e"
+    },
+    {
+      "path": "${WORKSPACE}/results/revision_2026/dqdv_leakage_control/final_dqdv_v1/training_v2/final_execution_v2/run_records/PRIMARY20_COMMON__split0__train2.json",
+      "sha256": "c459aa781237fff147834b7d571b03a605d6d38ef72478a69a74e92f64f81546"
+    },
+    {
+      "path": "${WORKSPACE}/results/revision_2026/dqdv_leakage_control/final_dqdv_v1/training_v2/final_execution_v2/run_records/PRIMARY20_COMMON__split1__train0.json",
+      "sha256": "fa8007fd696a19009212a5496e32e98b8ea82c40f345bd08b29052f9e5ebc650"
+    },
+    {
+      "path": "${WORKSPACE}/results/revision_2026/dqdv_leakage_control/final_dqdv_v1/training_v2/final_execution_v2/run_records/PRIMARY20_COMMON__split1__train1.json",
+      "sha256": "bff7cc1cebaaddf84fa248d2ecb4489ac05baa30953a40d0b3f8a1ac1dbd2c08"
+    },
+    {
+      "path": "${WORKSPACE}/results/revision_2026/dqdv_leakage_control/final_dqdv_v1/training_v2/final_execution_v2/run_records/PRIMARY20_COMMON__split1__train2.json",
+      "sha256": "0f5f06fa864bb22993aa08c2f7a1dfbe91397b19acccc5cba3a18a07757ace4d"
+    },
+    {
+      "path": "${WORKSPACE}/results/revision_2026/dqdv_leakage_control/final_dqdv_v1/training_v2/final_execution_v2/run_records/PRIMARY20_COMMON__split2__train0.json",
+      "sha256": "71e9eab1bb6e109c06191caaa2ddef252d472582ec96b0ecfdb9a3dc50d0f37d"
+    },
+    {
+      "path": "${WORKSPACE}/results/revision_2026/dqdv_leakage_control/final_dqdv_v1/training_v2/final_execution_v2/run_records/PRIMARY20_COMMON__split2__train1.json",
+      "sha256": "644804a8db436cd3a02ca76ead9f589cb0908986217cb9b6164c849e27a3906f"
+    },
+    {
+      "path": "${WORKSPACE}/results/revision_2026/dqdv_leakage_control/final_dqdv_v1/training_v2/final_execution_v2/run_records/PRIMARY20_COMMON__split2__train2.json",
+      "sha256": "31a53632fdcfa0a4f578b5cae3944f086af15349d132d967d4bfd2a155e4237f"
+    },
+    {
+      "path": "${WORKSPACE}/results/revision_2026/dqdv_leakage_control/final_dqdv_v1/training_v2/final_execution_v2/run_records/PRIMARY20_COMMON__split3__train0.json",
+      "sha256": "854fde7bdeb1af1070174c5c5f8cc438ae4408d10c51eaa22f68aa79d7eff8b1"
+    },
+    {
+      "path": "${WORKSPACE}/results/revision_2026/dqdv_leakage_control/final_dqdv_v1/training_v2/final_execution_v2/run_records/PRIMARY20_COMMON__split3__train1.json",
+      "sha256": "8a5752a78e3fab15cb20ef54b30cf0765c2bdc3cc50a744f59c9a322051b1c15"
+    },
+    {
+      "path": "${WORKSPACE}/results/revision_2026/dqdv_leakage_control/final_dqdv_v1/training_v2/final_execution_v2/run_records/PRIMARY20_COMMON__split3__train2.json",
+      "sha256": "4dd2b5907de52c700e506a25756f537bc39a978ac963dd2cd272dda62471bf53"
+    },
+    {
+      "path": "${WORKSPACE}/results/revision_2026/dqdv_leakage_control/final_dqdv_v1/training_v2/final_execution_v2/run_records/PRIMARY20_COMMON__split4__train0.json",
+      "sha256": "1be6c26c25419a5854a5d8f16c4901c1b5a920938da63922993b49c987f5cd66"
+    },
+    {
+      "path": "${WORKSPACE}/results/revision_2026/dqdv_leakage_control/final_dqdv_v1/training_v2/final_execution_v2/run_records/PRIMARY20_COMMON__split4__train1.json",
+      "sha256": "7ec46fb54c66b4c5630558e4ca98d1be488126e545664b6c8b7c1fce13acf1d6"
+    },
+    {
+      "path": "${WORKSPACE}/results/revision_2026/dqdv_leakage_control/final_dqdv_v1/training_v2/final_execution_v2/run_records/PRIMARY20_COMMON__split4__train2.json",
+      "sha256": "c587b8566cefb5efe14ba43d4f7262b868a74d919c6e0372612e7d12bd7d8ea9"
+    },
+    {
+      "path": "${WORKSPACE}/results/revision_2026/dqdv_leakage_control/final_dqdv_v1/training_v2/final_execution_v2/run_records/PRIMARY20_PLUS_FULL_DQDV10__split0__train0.json",
+      "sha256": "79ea7646b82824136a3624a8163d64ee020238f1c8c4da5873718ce7cc2b6fce"
+    },
+    {
+      "path": "${WORKSPACE}/results/revision_2026/dqdv_leakage_control/final_dqdv_v1/training_v2/final_execution_v2/run_records/PRIMARY20_PLUS_FULL_DQDV10__split0__train1.json",
+      "sha256": "0e62c7b55debe72b17200330737873d2f277cb93c5a8f9309de70d7d55b78711"
+    },
+    {
+      "path": "${WORKSPACE}/results/revision_2026/dqdv_leakage_control/final_dqdv_v1/training_v2/final_execution_v2/run_records/PRIMARY20_PLUS_FULL_DQDV10__split0__train2.json",
+      "sha256": "7c066e8c38b7820efb5ab096458d6fb544b4a90b27d4ccb42294093301ded3dd"
+    },
+    {
+      "path": "${WORKSPACE}/results/revision_2026/dqdv_leakage_control/final_dqdv_v1/training_v2/final_execution_v2/run_records/PRIMARY20_PLUS_FULL_DQDV10__split1__train0.json",
+      "sha256": "b3548d57f7d067100f8b32e37e12942f4d1ea822a5eee2a5e62616ccd268b0d9"
+    },
+    {
+      "path": "${WORKSPACE}/results/revision_2026/dqdv_leakage_control/final_dqdv_v1/training_v2/final_execution_v2/run_records/PRIMARY20_PLUS_FULL_DQDV10__split1__train1.json",
+      "sha256": "8f33feb6a10a66fff34042d74c5f83930ce363e1e2d441bc4d9d0585653e54ce"
+    },
+    {
+      "path": "${WORKSPACE}/results/revision_2026/dqdv_leakage_control/final_dqdv_v1/training_v2/final_execution_v2/run_records/PRIMARY20_PLUS_FULL_DQDV10__split1__train2.json",
+      "sha256": "e26ee85f99af372bd8f8d03db6cae4a12b8204ecdfaaa21b422eb69e4598ad9b"
+    },
+    {
+      "path": "${WORKSPACE}/results/revision_2026/dqdv_leakage_control/final_dqdv_v1/training_v2/final_execution_v2/run_records/PRIMARY20_PLUS_FULL_DQDV10__split2__train0.json",
+      "sha256": "ade44fc23f872675e4dddd254d5ed974fad286d69035ba128519b65e815b01b5"
+    },
+    {
+      "path": "${WORKSPACE}/results/revision_2026/dqdv_leakage_control/final_dqdv_v1/training_v2/final_execution_v2/run_records/PRIMARY20_PLUS_FULL_DQDV10__split2__train1.json",
+      "sha256": "3222b991b5f8216cc83a0ed2591ae88e8d1389127f5da085505faecfdff6bf6f"
+    },
+    {
+      "path": "${WORKSPACE}/results/revision_2026/dqdv_leakage_control/final_dqdv_v1/training_v2/final_execution_v2/run_records/PRIMARY20_PLUS_FULL_DQDV10__split2__train2.json",
+      "sha256": "1c0e8cf7ed29843c018ea955d181724623eb8a03be7f4619ddb918cd68f1a4db"
+    },
+    {
+      "path": "${WORKSPACE}/results/revision_2026/dqdv_leakage_control/final_dqdv_v1/training_v2/final_execution_v2/run_records/PRIMARY20_PLUS_FULL_DQDV10__split3__train0.json",
+      "sha256": "0671ffe61b43016577114aa129291ed156bdccfc30bffb1bf06a23a3fd89e8a0"
+    },
+    {
+      "path": "${WORKSPACE}/results/revision_2026/dqdv_leakage_control/final_dqdv_v1/training_v2/final_execution_v2/run_records/PRIMARY20_PLUS_FULL_DQDV10__split3__train1.json",
+      "sha256": "e1fa72446f2c1d9275bf80191756e9094b71b980041e0f82db820dff5c1ebc07"
+    },
+    {
+      "path": "${WORKSPACE}/results/revision_2026/dqdv_leakage_control/final_dqdv_v1/training_v2/final_execution_v2/run_records/PRIMARY20_PLUS_FULL_DQDV10__split3__train2.json",
+      "sha256": "f1a183467e620fccc43d0a6fc0852cad1e8c7886649d13465e050ca506081eb1"
+    },
+    {
+      "path": "${WORKSPACE}/results/revision_2026/dqdv_leakage_control/final_dqdv_v1/training_v2/final_execution_v2/run_records/PRIMARY20_PLUS_FULL_DQDV10__split4__train0.json",
+      "sha256": "a7593cad03dca956dc23c847ec3e67d13b2663e1ae1d13d2f1c13b910f23e109"
+    },
+    {
+      "path": "${WORKSPACE}/results/revision_2026/dqdv_leakage_control/final_dqdv_v1/training_v2/final_execution_v2/run_records/PRIMARY20_PLUS_FULL_DQDV10__split4__train1.json",
+      "sha256": "8e057f034cb802019744484d5b67826c7ddfd53562bfb0202ddfb9c8f512f838"
+    },
+    {
+      "path": "${WORKSPACE}/results/revision_2026/dqdv_leakage_control/final_dqdv_v1/training_v2/final_execution_v2/run_records/PRIMARY20_PLUS_FULL_DQDV10__split4__train2.json",
+      "sha256": "c1dae909098662e040aeb0e299a2122b5bec1edfe503973a32cbfa0254e3db28"
+    },
+    {
+      "path": "${WORKSPACE}/results/revision_2026/dqdv_leakage_control/final_dqdv_v1/training_v2/final_execution_v2/run_records/PRIMARY20_PLUS_PREFIX25_DQDV10__split0__train0.json",
+      "sha256": "55b84403402f959846e56b2280c5956827f9ecdce2af8a8018b64110c5ca398b"
+    },
+    {
+      "path": "${WORKSPACE}/results/revision_2026/dqdv_leakage_control/final_dqdv_v1/training_v2/final_execution_v2/run_records/PRIMARY20_PLUS_PREFIX25_DQDV10__split0__train1.json",
+      "sha256": "90eada7125d75d7e20008c83d3c9f5b338e1e6e2d691f7e59700899c89bd9572"
+    },
+    {
+      "path": "${WORKSPACE}/results/revision_2026/dqdv_leakage_control/final_dqdv_v1/training_v2/final_execution_v2/run_records/PRIMARY20_PLUS_PREFIX25_DQDV10__split0__train2.json",
+      "sha256": "5193d9a65ba94d367da1f9fb55b8a602dab786bbb71676e4d1ac1595bf0babbe"
+    },
+    {
+      "path": "${WORKSPACE}/results/revision_2026/dqdv_leakage_control/final_dqdv_v1/training_v2/final_execution_v2/run_records/PRIMARY20_PLUS_PREFIX25_DQDV10__split1__train0.json",
+      "sha256": "c7cb5d6c0af69f780c21115daa9610b309f2b240cb4a83616fb8aae3b124db22"
+    },
+    {
+      "path": "${WORKSPACE}/results/revision_2026/dqdv_leakage_control/final_dqdv_v1/training_v2/final_execution_v2/run_records/PRIMARY20_PLUS_PREFIX25_DQDV10__split1__train1.json",
+      "sha256": "6fb8798f2e8bc7dcf5a3a5cfe2863465689bda1a37ac4e559a6000861ad01218"
+    },
+    {
+      "path": "${WORKSPACE}/results/revision_2026/dqdv_leakage_control/final_dqdv_v1/training_v2/final_execution_v2/run_records/PRIMARY20_PLUS_PREFIX25_DQDV10__split1__train2.json",
+      "sha256": "d3de5e755009f0d615af84feb5f8e1ba3fd71242ed88f6bf13776ce27fb8b296"
+    },
+    {
+      "path": "${WORKSPACE}/results/revision_2026/dqdv_leakage_control/final_dqdv_v1/training_v2/final_execution_v2/run_records/PRIMARY20_PLUS_PREFIX25_DQDV10__split2__train0.json",
+      "sha256": "8203d2e3e6259f76af5ebf6495c8f856022f00eb87626d840e91b48845034741"
+    },
+    {
+      "path": "${WORKSPACE}/results/revision_2026/dqdv_leakage_control/final_dqdv_v1/training_v2/final_execution_v2/run_records/PRIMARY20_PLUS_PREFIX25_DQDV10__split2__train1.json",
+      "sha256": "124ae992b226cc0d7a8d9a42b9056fa5e7c1c635b9a241b787a4f28d3429bd25"
+    },
+    {
+      "path": "${WORKSPACE}/results/revision_2026/dqdv_leakage_control/final_dqdv_v1/training_v2/final_execution_v2/run_records/PRIMARY20_PLUS_PREFIX25_DQDV10__split2__train2.json",
+      "sha256": "25dc8344f4d0aa1621610ec3bd326d2993669aad921d424d612610257bd92e4c"
+    },
+    {
+      "path": "${WORKSPACE}/results/revision_2026/dqdv_leakage_control/final_dqdv_v1/training_v2/final_execution_v2/run_records/PRIMARY20_PLUS_PREFIX25_DQDV10__split3__train0.json",
+      "sha256": "43d68f353d5152543c53d8dee8809cd4fc8f40b50ed963334d825d6fd7558c1c"
+    },
+    {
+      "path": "${WORKSPACE}/results/revision_2026/dqdv_leakage_control/final_dqdv_v1/training_v2/final_execution_v2/run_records/PRIMARY20_PLUS_PREFIX25_DQDV10__split3__train1.json",
+      "sha256": "53388f036d295ad7e72d528ad8d36d90ec375bcbb1fda22c4ef585e519767512"
+    },
+    {
+      "path": "${WORKSPACE}/results/revision_2026/dqdv_leakage_control/final_dqdv_v1/training_v2/final_execution_v2/run_records/PRIMARY20_PLUS_PREFIX25_DQDV10__split3__train2.json",
+      "sha256": "9874b9ba30df19be39f2986cf5469601798d8aa54037e583753b3b7de8925ac1"
+    },
+    {
+      "path": "${WORKSPACE}/results/revision_2026/dqdv_leakage_control/final_dqdv_v1/training_v2/final_execution_v2/run_records/PRIMARY20_PLUS_PREFIX25_DQDV10__split4__train0.json",
+      "sha256": "9a65fe99f3497c72303e53c35b0ed6bbbff9d0259aa47066a8ac742f4f43015d"
+    },
+    {
+      "path": "${WORKSPACE}/results/revision_2026/dqdv_leakage_control/final_dqdv_v1/training_v2/final_execution_v2/run_records/PRIMARY20_PLUS_PREFIX25_DQDV10__split4__train1.json",
+      "sha256": "385f715b8c4ad565e8f1624496a56d51f009447a0679df9d51467dc0046a1e60"
+    },
+    {
+      "path": "${WORKSPACE}/results/revision_2026/dqdv_leakage_control/final_dqdv_v1/training_v2/final_execution_v2/run_records/PRIMARY20_PLUS_PREFIX25_DQDV10__split4__train2.json",
+      "sha256": "738896132a47b7347a95b0c3fd935e191523f1ba7d3168e4ef63c1d37bdb900b"
+    },
+    {
+      "path": "${WORKSPACE}/results/revision_2026/dqdv_leakage_control/final_dqdv_v1/training_v2/final_execution_v2/run_records/PRIMARY20_PLUS_PREFIX50_DQDV10__split0__train0.json",
+      "sha256": "309140426716c92cb38115aa90333544d49a0106882ef9c8e33f3ba473e2c36f"
+    },
+    {
+      "path": "${WORKSPACE}/results/revision_2026/dqdv_leakage_control/final_dqdv_v1/training_v2/final_execution_v2/run_records/PRIMARY20_PLUS_PREFIX50_DQDV10__split0__train1.json",
+      "sha256": "7201d82376a9d248166772b8510cd2af3d9373077f8522d093b16a80e1b84ba8"
+    },
+    {
+      "path": "${WORKSPACE}/results/revision_2026/dqdv_leakage_control/final_dqdv_v1/training_v2/final_execution_v2/run_records/PRIMARY20_PLUS_PREFIX50_DQDV10__split0__train2.json",
+      "sha256": "ff09db1935341a3c6880f8b71328baf1c4425fb4dfd1bcd5604ac7103aa36f95"
+    },
+    {
+      "path": "${WORKSPACE}/results/revision_2026/dqdv_leakage_control/final_dqdv_v1/training_v2/final_execution_v2/run_records/PRIMARY20_PLUS_PREFIX50_DQDV10__split1__train0.json",
+      "sha256": "67a5e2b772eb003a278e3dd0bc7203e05885bd118c7141c1c60c80112103866b"
+    },
+    {
+      "path": "${WORKSPACE}/results/revision_2026/dqdv_leakage_control/final_dqdv_v1/training_v2/final_execution_v2/run_records/PRIMARY20_PLUS_PREFIX50_DQDV10__split1__train1.json",
+      "sha256": "e565ca2f65fbc0cfbc5c341d6831e5e0dadf3e9ee1b2722c226855c13407bf1d"
+    },
+    {
+      "path": "${WORKSPACE}/results/revision_2026/dqdv_leakage_control/final_dqdv_v1/training_v2/final_execution_v2/run_records/PRIMARY20_PLUS_PREFIX50_DQDV10__split1__train2.json",
+      "sha256": "04db4720edd0bc33162188fd062ea87eee67909a142e9a4b9d9406dd7d829528"
+    },
+    {
+      "path": "${WORKSPACE}/results/revision_2026/dqdv_leakage_control/final_dqdv_v1/training_v2/final_execution_v2/run_records/PRIMARY20_PLUS_PREFIX50_DQDV10__split2__train0.json",
+      "sha256": "9135b81defa59b8dc85da798b7ed4d4dd31a8ea437cf1f49027fce9edc19e1f1"
+    },
+    {
+      "path": "${WORKSPACE}/results/revision_2026/dqdv_leakage_control/final_dqdv_v1/training_v2/final_execution_v2/run_records/PRIMARY20_PLUS_PREFIX50_DQDV10__split2__train1.json",
+      "sha256": "08d4ca6e943075127eec9c1646dac57d7ac78936536fac9b044c41a425497fa7"
+    },
+    {
+      "path": "${WORKSPACE}/results/revision_2026/dqdv_leakage_control/final_dqdv_v1/training_v2/final_execution_v2/run_records/PRIMARY20_PLUS_PREFIX50_DQDV10__split2__train2.json",
+      "sha256": "6982366c641336f6aa9fd2fbd593fd1c5f3357fe61a9699bcacb68c95e15146c"
+    },
+    {
+      "path": "${WORKSPACE}/results/revision_2026/dqdv_leakage_control/final_dqdv_v1/training_v2/final_execution_v2/run_records/PRIMARY20_PLUS_PREFIX50_DQDV10__split3__train0.json",
+      "sha256": "b52c3546c8e1a6b6401ce7d169fcd8df77bfb1627f0678f695f1cdbc503c47b1"
+    },
+    {
+      "path": "${WORKSPACE}/results/revision_2026/dqdv_leakage_control/final_dqdv_v1/training_v2/final_execution_v2/run_records/PRIMARY20_PLUS_PREFIX50_DQDV10__split3__train1.json",
+      "sha256": "a5eb4609d88390f5e655553a63811b8a74bec03fdb96a11996211bcb47ecf6d5"
+    },
+    {
+      "path": "${WORKSPACE}/results/revision_2026/dqdv_leakage_control/final_dqdv_v1/training_v2/final_execution_v2/run_records/PRIMARY20_PLUS_PREFIX50_DQDV10__split3__train2.json",
+      "sha256": "a1f5e6cd77fc9b5ff5b1402e05fa8cd5b22eabbb41cdbf0d04759cc35ddcd82a"
+    },
+    {
+      "path": "${WORKSPACE}/results/revision_2026/dqdv_leakage_control/final_dqdv_v1/training_v2/final_execution_v2/run_records/PRIMARY20_PLUS_PREFIX50_DQDV10__split4__train0.json",
+      "sha256": "7474213f08972af6a015831a8c2128be6be5ba470cbc21412a89c9decb3005c7"
+    },
+    {
+      "path": "${WORKSPACE}/results/revision_2026/dqdv_leakage_control/final_dqdv_v1/training_v2/final_execution_v2/run_records/PRIMARY20_PLUS_PREFIX50_DQDV10__split4__train1.json",
+      "sha256": "03efe005da8fde86525083bbb72363674bc29e0faf1776d1d27cdea2141a2fec"
+    },
+    {
+      "path": "${WORKSPACE}/results/revision_2026/dqdv_leakage_control/final_dqdv_v1/training_v2/final_execution_v2/run_records/PRIMARY20_PLUS_PREFIX50_DQDV10__split4__train2.json",
+      "sha256": "18c7c743f29a84e0b3ee0f1c7371a2b6329d4faa17c4860b8c56272b3a179530"
+    }
+  ],
+  "metadata_correction_receipt_sha256": "ebc46e8d1eb265e8850f42c9af30f91246f3ccb56f84cb86a4f5a5a9cd1ad343",
+  "metrics": [
+    "RMSE",
+    "MAE"
+  ],
+  "model_contrast_csv_path": "${WORKSPACE}/results/revision_2026/dqdv_leakage_control/final_dqdv_v1/analysis_v1/dqdv_model_contrasts.csv",
+  "model_contrast_csv_sha256": "abf17724f983ce8d3105892e88bc33feea262038e8889f97f2d492a6865c3dc0",
+  "model_contrast_row_count": 32,
+  "model_fit_count": 120,
+  "model_state_reconstruction_performed": false,
+  "model_training_performed": false,
+  "models": [
+    "MLP",
+    "CAUSAL_GCN"
+  ],
+  "multiple_testing_correction_computed": false,
+  "new_inferential_tests": false,
+  "numeric_test_metric_values_printed_by_analysis": false,
+  "numeric_test_metric_values_written_to_outputs": true,
+  "p_values_computed": false,
+  "prefix_interpretation": "target-independent partial-curve controls using fixed training-derived time cutoffs",
+  "protocol_sha256": "4612a450eeaf909a04c31be16957bdc0567aac67635241e14d7bbceea507fe9d",
+  "record_count": 60,
+  "runs_per_condition": 15,
+  "split_seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "status": "COMPLETE_PENDING_INDEPENDENT_ANALYSIS_AUDIT",
+  "summary_csv_path": "${WORKSPACE}/results/revision_2026/dqdv_leakage_control/final_dqdv_v1/analysis_v1/dqdv_descriptive_summary.csv",
+  "summary_csv_sha256": "66501c319d8ba87deb0672ab6e2d1ba8a7dc279cb2f7975e60e3941c1c90e91a",
+  "summary_row_count": 64,
+  "training_initialization_seeds": [
+    0,
+    1,
+    2
+  ]
+}

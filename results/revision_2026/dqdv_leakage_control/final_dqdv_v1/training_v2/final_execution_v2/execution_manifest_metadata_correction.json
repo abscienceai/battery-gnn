@@ -1,0 +1,27 @@
+{
+  "basis": {
+    "all_120_stop_epochs_below_10000": true,
+    "at_least_one_stop_epoch_not_below_5000": true,
+    "executed_runner_sha256": "fc4118473310a9d89536a33565dc06d2247965bba5515e171830ecb9b523c350",
+    "manifest_validation_safety_ceiling": 10000,
+    "protocol_max_epochs": 10000,
+    "runner_final_closure_ceiling": 10000
+  },
+  "contract": "dqdv_training_v2_execution_manifest_metadata_correction_v1",
+  "corrected_execution_manifest_sha256": "744ae4a695f9a94a2c597469dc867c58141ea94fc5d131074d88574a25b72725",
+  "corrected_field": "epoch_ceiling",
+  "correction_scope": "manifest metadata only",
+  "model_states_changed": false,
+  "new_value": 10000,
+  "old_execution_manifest_sha256": "a9b74e84eb145cb5b2340ab40c036821d15d82d2ba2ce2caf1a93f490fa4f4a9",
+  "old_value": 5000,
+  "original_manifest_backup_path": "${WORKSPACE}/results/revision_2026/dqdv_leakage_control/final_dqdv_v1/training_v2/final_execution_v2/execution_manifest.pre_metadata_correction.json",
+  "original_manifest_backup_sha256": "a9b74e84eb145cb5b2340ab40c036821d15d82d2ba2ce2caf1a93f490fa4f4a9",
+  "pair_records_changed": false,
+  "protocol_changed": false,
+  "runner_changed": false,
+  "scientific_execution_changed": false,
+  "status": "METADATA_CORRECTION_COMPLETE_PENDING_INDEPENDENT_AUDIT",
+  "test_metric_values_read_for_correction": false,
+  "test_metric_values_surfaced": false
+}

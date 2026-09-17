@@ -1,0 +1,587 @@
+{
+  "ceiling_amendment": {
+    "amendment_basis": "validation-only termination evidence; MLP patience_valid assertion failed after train_one returned, while train_one has exactly one explicit early break at wait >= patience; therefore the old 5000-epoch safety ceiling was exhausted",
+    "compatibility_reason": "all four completed v1 pairs terminated by the unchanged 30-epoch patience rule before epoch 5000; increasing only the safety ceiling cannot alter those deterministic already-terminated trajectories",
+    "compatible_completed_model_fit_count": 8,
+    "compatible_completed_pair_count": 4,
+    "compatible_v1_records": [
+      {
+        "condition": "PRIMARY20_COMMON",
+        "models": {
+          "CAUSAL_GCN": {
+            "best_epoch": 1479,
+            "state_path": "${WORKSPACE}/results/revision_2026/dqdv_leakage_control/final_dqdv_v1/training_v1/final_execution_v1/model_states/PRIMARY20_COMMON__split0__train0__CAUSAL_GCN.pt",
+            "state_sha256": "4b5b841025b59f1d4f8cd4206ed1f2f958a996114d77e9131490fc3ef2206c3f",
+            "stop_epoch": 1509
+          },
+          "MLP": {
+            "best_epoch": 1196,
+            "state_path": "${WORKSPACE}/results/revision_2026/dqdv_leakage_control/final_dqdv_v1/training_v1/final_execution_v1/model_states/PRIMARY20_COMMON__split0__train0__MLP.pt",
+            "state_sha256": "8afa5067b23fc8e22ae90af70912755cd6d8df7c08513f7f94d0d94ed77127bc",
+            "stop_epoch": 1226
+          }
+        },
+        "record_path": "${WORKSPACE}/results/revision_2026/dqdv_leakage_control/final_dqdv_v1/training_v1/final_execution_v1/run_records/PRIMARY20_COMMON__split0__train0.json",
+        "record_sha256": "9677a640d9c00c7b95d9ed861657a4193f28e782760df8146c6f33e4f0802218",
+        "split_seed": 0,
+        "train_seed": 0
+      },
+      {
+        "condition": "PRIMARY20_COMMON",
+        "models": {
+          "CAUSAL_GCN": {
+            "best_epoch": 1454,
+            "state_path": "${WORKSPACE}/results/revision_2026/dqdv_leakage_control/final_dqdv_v1/training_v1/final_execution_v1/model_states/PRIMARY20_COMMON__split0__train1__CAUSAL_GCN.pt",
+            "state_sha256": "a24b47c767bb7487a54b7a0a4f04aee634635496346cd9836f527be3f378ed79",
+            "stop_epoch": 1484
+          },
+          "MLP": {
+            "best_epoch": 1348,
+            "state_path": "${WORKSPACE}/results/revision_2026/dqdv_leakage_control/final_dqdv_v1/training_v1/final_execution_v1/model_states/PRIMARY20_COMMON__split0__train1__MLP.pt",
+            "state_sha256": "5cf3a3e32e2bf4fbe78e974d5a549c21563fa41e524717fde7cbd1a18fa6001a",
+            "stop_epoch": 1378
+          }
+        },
+        "record_path": "${WORKSPACE}/results/revision_2026/dqdv_leakage_control/final_dqdv_v1/training_v1/final_execution_v1/run_records/PRIMARY20_COMMON__split0__train1.json",
+        "record_sha256": "8337fc572ed88693d30b91328ab764504bffb5670d360167c0291a3b0859969e",
+        "split_seed": 0,
+        "train_seed": 1
+      },
+      {
+        "condition": "PRIMARY20_COMMON",
+        "models": {
+          "CAUSAL_GCN": {
+            "best_epoch": 2843,
+            "state_path": "${WORKSPACE}/results/revision_2026/dqdv_leakage_control/final_dqdv_v1/training_v1/final_execution_v1/model_states/PRIMARY20_COMMON__split0__train2__CAUSAL_GCN.pt",
+            "state_sha256": "c2754536211419a376c8673e73abd452f90020c0592d866e61fcb7084192410d",
+            "stop_epoch": 2873
+          },
+          "MLP": {
+            "best_epoch": 1490,
+            "state_path": "${WORKSPACE}/results/revision_2026/dqdv_leakage_control/final_dqdv_v1/training_v1/final_execution_v1/model_states/PRIMARY20_COMMON__split0__train2__MLP.pt",
+            "state_sha256": "0b797d79bd972e544bca140bbe151dacb15545dd316c34896a97ea92f10694ab",
+            "stop_epoch": 1520
+          }
+        },
+        "record_path": "${WORKSPACE}/results/revision_2026/dqdv_leakage_control/final_dqdv_v1/training_v1/final_execution_v1/run_records/PRIMARY20_COMMON__split0__train2.json",
+        "record_sha256": "c459aa781237fff147834b7d571b03a605d6d38ef72478a69a74e92f64f81546",
+        "split_seed": 0,
+        "train_seed": 2
+      },
+      {
+        "condition": "PRIMARY20_PLUS_FULL_DQDV10",
+        "models": {
+          "CAUSAL_GCN": {
+            "best_epoch": 1548,
+            "state_path": "${WORKSPACE}/results/revision_2026/dqdv_leakage_control/final_dqdv_v1/training_v1/final_execution_v1/model_states/PRIMARY20_PLUS_FULL_DQDV10__split0__train0__CAUSAL_GCN.pt",
+            "state_sha256": "91bff0eb7d939aea1f65e1f41782444ccbed46fe7710143dad11b0e743abf8b8",
+            "stop_epoch": 1578
+          },
+          "MLP": {
+            "best_epoch": 3016,
+            "state_path": "${WORKSPACE}/results/revision_2026/dqdv_leakage_control/final_dqdv_v1/training_v1/final_execution_v1/model_states/PRIMARY20_PLUS_FULL_DQDV10__split0__train0__MLP.pt",
+            "state_sha256": "d99aaa25a3b958665766597ba63b7b85f3200d1fd915948b25b0909b7525b886",
+            "stop_epoch": 3046
+          }
+        },
+        "record_path": "${WORKSPACE}/results/revision_2026/dqdv_leakage_control/final_dqdv_v1/training_v1/final_execution_v1/run_records/PRIMARY20_PLUS_FULL_DQDV10__split0__train0.json",
+        "record_sha256": "79ea7646b82824136a3624a8163d64ee020238f1c8c4da5873718ce7cc2b6fce",
+        "split_seed": 0,
+        "train_seed": 0
+      }
+    ],
+    "completed_v1_pairs_compatible_with_v2": true,
+    "early_stopping_metric_unchanged": "validation dataset-balanced cell-balanced RMSE",
+    "failed_pair": {
+      "condition": "PRIMARY20_PLUS_FULL_DQDV10",
+      "must_rerun_from_scratch_under_v2": true,
+      "split_seed": 0,
+      "train_seed": 1
+    },
+    "invalid_partial_v1_states": [
+      {
+        "path": "${WORKSPACE}/results/revision_2026/dqdv_leakage_control/final_dqdv_v1/training_v1/final_execution_v1/model_states/PRIMARY20_PLUS_FULL_DQDV10__split0__train1__CAUSAL_GCN.pt",
+        "reusable_in_v2": false,
+        "sha256": "2d2563d9dffc365397880b81cd835981764fb0763f4dd3544587d3c5ba03ff47"
+      },
+      {
+        "path": "${WORKSPACE}/results/revision_2026/dqdv_leakage_control/final_dqdv_v1/training_v1/final_execution_v1/model_states/PRIMARY20_PLUS_FULL_DQDV10__split0__train1__MLP.pt",
+        "reusable_in_v2": false,
+        "sha256": "f70bd69a94484df10dddc5d93baa651bb30c452b75a9943298cb9d02dd03e4d8"
+      }
+    ],
+    "invalid_partial_v1_states_preserved_for_provenance": true,
+    "invalid_partial_v1_states_reused": false,
+    "learning_rate_unchanged": 0.001,
+    "new_max_epochs": 10000,
+    "objective_unchanged": "dataset-balanced + cell-balanced MSE",
+    "old_max_epochs": 5000,
+    "optimizer_unchanged": "AdamW",
+    "patience_unchanged": 30,
+    "remaining_model_fits_to_execute_under_v2": 112,
+    "remaining_pairs_to_execute_under_v2": 56,
+    "source_execution_status_sha256": "f8d24a2d0a7d127bd4b309b379ddcf2ee2ffb368f683ac829f84cbfd900e55df",
+    "source_failure_log_sha256": "8e5774ab8208d4c74949d6d56668077848ef1d6aa31bc577ac0defa5963c2454",
+    "source_runner_sha256": "117f5dea393cb27c487e07e7a0ffc7c46195bb71d69c7809fcc574517caa573f",
+    "source_train_one_sha256": "5d621f8d5764e417e41bc518ec72b9608566a087c552b8365d438c2344c06c5e",
+    "test_metric_values_inspected_for_amendment": false,
+    "test_metric_values_may_have_been_computed_in_memory_for_incomplete_pair": true,
+    "test_metric_values_surfaced_for_amendment": false,
+    "test_metric_values_used_for_amendment": false,
+    "weight_decay_unchanged": 1e-05
+  },
+  "conditions": {
+    "PRIMARY20_COMMON": {
+      "feature_blocks": [
+        "PRIMARY20"
+      ],
+      "input_dimension": 20,
+      "interpretation": "feature-matched primary reference on the common cohort",
+      "parameter_count_each_model": 5569
+    },
+    "PRIMARY20_PLUS_FULL_DQDV10": {
+      "feature_blocks": [
+        "PRIMARY20",
+        "FULL_DQDV10"
+      ],
+      "input_dimension": 30,
+      "interpretation": "retrospective leakage-positive control; not deployment-valid",
+      "parameter_count_each_model": 6209
+    },
+    "PRIMARY20_PLUS_PREFIX25_DQDV10": {
+      "feature_blocks": [
+        "PRIMARY20",
+        "PREFIX25_DQDV10"
+      ],
+      "input_dimension": 30,
+      "interpretation": "partial-curve control using split-specific training-only fixed time cutoff",
+      "parameter_count_each_model": 6209
+    },
+    "PRIMARY20_PLUS_PREFIX50_DQDV10": {
+      "feature_blocks": [
+        "PRIMARY20",
+        "PREFIX50_DQDV10"
+      ],
+      "input_dimension": 30,
+      "interpretation": "partial-curve control using split-specific training-only fixed time cutoff",
+      "parameter_count_each_model": 6209
+    }
+  },
+  "contract": "dqdv_training_protocol_v2",
+  "data_contract": {
+    "canonical_soh_eligible_rows_before_common_cohort": 300553,
+    "common_cohort": "split-specific intersection of PRIMARY20, FULL, PREFIX25, and PREFIX50 valid rows",
+    "datasets": [
+      "HUST",
+      "CALCE",
+      "MATR"
+    ],
+    "dqdv_scaler": "separate training-only dQ/dV10 scaler for FULL, PREFIX25, and PREFIX50 within each split seed",
+    "primary_scaler": "one training-only PRIMARY20 scaler per split seed reused across all four conditions",
+    "same_row_ids_all_four_conditions": true,
+    "task": "cycle-level SOH",
+    "test_rows_used_for_scaler_fit": false,
+    "validation_rows_used_for_scaler_fit": false
+  },
+  "evaluation_contract": {
+    "balanced_all_metric_semantics": "equal-dataset, equal-cell, equal-observation hierarchical weighted_metrics",
+    "dataset_specific_metric_semantics": "plain row-level unweighted dataset_metrics",
+    "metrics": [
+      "RMSE",
+      "MAE"
+    ],
+    "model_selection_uses_test_data": false,
+    "test_evaluation_allowed_only_after_model_selection": true,
+    "test_metric_values_may_be_surfaced_before_execution_audit": false,
+    "test_metric_values_may_be_used_to_change_protocol": false,
+    "test_metric_values_may_be_written_to_artifacts": true
+  },
+  "freezer": {
+    "commit": "1efd86d5cbec973ca2d6bb313acc9b05c312f5d0",
+    "path": "${WORKSPACE}/repo/battery-gnn/scripts/revision_2026/87_freeze_dqdv_training_protocol.py",
+    "sha256": "cb354156b54bb4cf0a73a5a4c65ebdb803381d11a8d08f73b2fa9447ccc6ea8e"
+  },
+  "interpretation_contract": {
+    "analysis_role": "descriptive leakage-control comparison",
+    "dqdv_augmented_dimension": 30,
+    "feature_dimension_difference_disclosed": true,
+    "full_dqdv": "positive leakage control because full-discharge ica_area_Ah can encode discharge capacity",
+    "inferential_tests_added": false,
+    "prefix25_and_prefix50": "target-independent partial-curve controls generated from fixed training-derived elapsed-time windows",
+    "primary20_dimension": 20,
+    "universal_gcn_superiority_claim_allowed": false
+  },
+  "model_contract": {
+    "activation": "ReLU",
+    "architecture": "input_dim -> 64 -> 64 -> 1",
+    "batch_normalization": false,
+    "causal_gcn_operator": "parameter-free causal mean aggregation over {self, previous valid observation} before fc1 and fc2",
+    "causal_receptive_field": "at most {t,t-1,t-2}",
+    "cross_cell_edges": false,
+    "dropout": false,
+    "future_edges": false,
+    "models": [
+      "FeatureMatchedMLP",
+      "FeatureMatchedCausalGCN"
+    ],
+    "parameter_matching": "MLP and causal GCN have identical learnable parameter counts within each condition",
+    "same_train_seed_initialization_within_pair": true
+  },
+  "parent_protocol_sha256": "43122c4d6ef5a2e70b2d13ae22432a2cfa13027874e0bea6f3b62675e3fb23e9",
+  "planned_runs": [
+    {
+      "condition": "PRIMARY20_COMMON",
+      "split_seed": 0,
+      "train_seed": 0
+    },
+    {
+      "condition": "PRIMARY20_COMMON",
+      "split_seed": 0,
+      "train_seed": 1
+    },
+    {
+      "condition": "PRIMARY20_COMMON",
+      "split_seed": 0,
+      "train_seed": 2
+    },
+    {
+      "condition": "PRIMARY20_COMMON",
+      "split_seed": 1,
+      "train_seed": 0
+    },
+    {
+      "condition": "PRIMARY20_COMMON",
+      "split_seed": 1,
+      "train_seed": 1
+    },
+    {
+      "condition": "PRIMARY20_COMMON",
+      "split_seed": 1,
+      "train_seed": 2
+    },
+    {
+      "condition": "PRIMARY20_COMMON",
+      "split_seed": 2,
+      "train_seed": 0
+    },
+    {
+      "condition": "PRIMARY20_COMMON",
+      "split_seed": 2,
+      "train_seed": 1
+    },
+    {
+      "condition": "PRIMARY20_COMMON",
+      "split_seed": 2,
+      "train_seed": 2
+    },
+    {
+      "condition": "PRIMARY20_COMMON",
+      "split_seed": 3,
+      "train_seed": 0
+    },
+    {
+      "condition": "PRIMARY20_COMMON",
+      "split_seed": 3,
+      "train_seed": 1
+    },
+    {
+      "condition": "PRIMARY20_COMMON",
+      "split_seed": 3,
+      "train_seed": 2
+    },
+    {
+      "condition": "PRIMARY20_COMMON",
+      "split_seed": 4,
+      "train_seed": 0
+    },
+    {
+      "condition": "PRIMARY20_COMMON",
+      "split_seed": 4,
+      "train_seed": 1
+    },
+    {
+      "condition": "PRIMARY20_COMMON",
+      "split_seed": 4,
+      "train_seed": 2
+    },
+    {
+      "condition": "PRIMARY20_PLUS_FULL_DQDV10",
+      "split_seed": 0,
+      "train_seed": 0
+    },
+    {
+      "condition": "PRIMARY20_PLUS_FULL_DQDV10",
+      "split_seed": 0,
+      "train_seed": 1
+    },
+    {
+      "condition": "PRIMARY20_PLUS_FULL_DQDV10",
+      "split_seed": 0,
+      "train_seed": 2
+    },
+    {
+      "condition": "PRIMARY20_PLUS_FULL_DQDV10",
+      "split_seed": 1,
+      "train_seed": 0
+    },
+    {
+      "condition": "PRIMARY20_PLUS_FULL_DQDV10",
+      "split_seed": 1,
+      "train_seed": 1
+    },
+    {
+      "condition": "PRIMARY20_PLUS_FULL_DQDV10",
+      "split_seed": 1,
+      "train_seed": 2
+    },
+    {
+      "condition": "PRIMARY20_PLUS_FULL_DQDV10",
+      "split_seed": 2,
+      "train_seed": 0
+    },
+    {
+      "condition": "PRIMARY20_PLUS_FULL_DQDV10",
+      "split_seed": 2,
+      "train_seed": 1
+    },
+    {
+      "condition": "PRIMARY20_PLUS_FULL_DQDV10",
+      "split_seed": 2,
+      "train_seed": 2
+    },
+    {
+      "condition": "PRIMARY20_PLUS_FULL_DQDV10",
+      "split_seed": 3,
+      "train_seed": 0
+    },
+    {
+      "condition": "PRIMARY20_PLUS_FULL_DQDV10",
+      "split_seed": 3,
+      "train_seed": 1
+    },
+    {
+      "condition": "PRIMARY20_PLUS_FULL_DQDV10",
+      "split_seed": 3,
+      "train_seed": 2
+    },
+    {
+      "condition": "PRIMARY20_PLUS_FULL_DQDV10",
+      "split_seed": 4,
+      "train_seed": 0
+    },
+    {
+      "condition": "PRIMARY20_PLUS_FULL_DQDV10",
+      "split_seed": 4,
+      "train_seed": 1
+    },
+    {
+      "condition": "PRIMARY20_PLUS_FULL_DQDV10",
+      "split_seed": 4,
+      "train_seed": 2
+    },
+    {
+      "condition": "PRIMARY20_PLUS_PREFIX25_DQDV10",
+      "split_seed": 0,
+      "train_seed": 0
+    },
+    {
+      "condition": "PRIMARY20_PLUS_PREFIX25_DQDV10",
+      "split_seed": 0,
+      "train_seed": 1
+    },
+    {
+      "condition": "PRIMARY20_PLUS_PREFIX25_DQDV10",
+      "split_seed": 0,
+      "train_seed": 2
+    },
+    {
+      "condition": "PRIMARY20_PLUS_PREFIX25_DQDV10",
+      "split_seed": 1,
+      "train_seed": 0
+    },
+    {
+      "condition": "PRIMARY20_PLUS_PREFIX25_DQDV10",
+      "split_seed": 1,
+      "train_seed": 1
+    },
+    {
+      "condition": "PRIMARY20_PLUS_PREFIX25_DQDV10",
+      "split_seed": 1,
+      "train_seed": 2
+    },
+    {
+      "condition": "PRIMARY20_PLUS_PREFIX25_DQDV10",
+      "split_seed": 2,
+      "train_seed": 0
+    },
+    {
+      "condition": "PRIMARY20_PLUS_PREFIX25_DQDV10",
+      "split_seed": 2,
+      "train_seed": 1
+    },
+    {
+      "condition": "PRIMARY20_PLUS_PREFIX25_DQDV10",
+      "split_seed": 2,
+      "train_seed": 2
+    },
+    {
+      "condition": "PRIMARY20_PLUS_PREFIX25_DQDV10",
+      "split_seed": 3,
+      "train_seed": 0
+    },
+    {
+      "condition": "PRIMARY20_PLUS_PREFIX25_DQDV10",
+      "split_seed": 3,
+      "train_seed": 1
+    },
+    {
+      "condition": "PRIMARY20_PLUS_PREFIX25_DQDV10",
+      "split_seed": 3,
+      "train_seed": 2
+    },
+    {
+      "condition": "PRIMARY20_PLUS_PREFIX25_DQDV10",
+      "split_seed": 4,
+      "train_seed": 0
+    },
+    {
+      "condition": "PRIMARY20_PLUS_PREFIX25_DQDV10",
+      "split_seed": 4,
+      "train_seed": 1
+    },
+    {
+      "condition": "PRIMARY20_PLUS_PREFIX25_DQDV10",
+      "split_seed": 4,
+      "train_seed": 2
+    },
+    {
+      "condition": "PRIMARY20_PLUS_PREFIX50_DQDV10",
+      "split_seed": 0,
+      "train_seed": 0
+    },
+    {
+      "condition": "PRIMARY20_PLUS_PREFIX50_DQDV10",
+      "split_seed": 0,
+      "train_seed": 1
+    },
+    {
+      "condition": "PRIMARY20_PLUS_PREFIX50_DQDV10",
+      "split_seed": 0,
+      "train_seed": 2
+    },
+    {
+      "condition": "PRIMARY20_PLUS_PREFIX50_DQDV10",
+      "split_seed": 1,
+      "train_seed": 0
+    },
+    {
+      "condition": "PRIMARY20_PLUS_PREFIX50_DQDV10",
+      "split_seed": 1,
+      "train_seed": 1
+    },
+    {
+      "condition": "PRIMARY20_PLUS_PREFIX50_DQDV10",
+      "split_seed": 1,
+      "train_seed": 2
+    },
+    {
+      "condition": "PRIMARY20_PLUS_PREFIX50_DQDV10",
+      "split_seed": 2,
+      "train_seed": 0
+    },
+    {
+      "condition": "PRIMARY20_PLUS_PREFIX50_DQDV10",
+      "split_seed": 2,
+      "train_seed": 1
+    },
+    {
+      "condition": "PRIMARY20_PLUS_PREFIX50_DQDV10",
+      "split_seed": 2,
+      "train_seed": 2
+    },
+    {
+      "condition": "PRIMARY20_PLUS_PREFIX50_DQDV10",
+      "split_seed": 3,
+      "train_seed": 0
+    },
+    {
+      "condition": "PRIMARY20_PLUS_PREFIX50_DQDV10",
+      "split_seed": 3,
+      "train_seed": 1
+    },
+    {
+      "condition": "PRIMARY20_PLUS_PREFIX50_DQDV10",
+      "split_seed": 3,
+      "train_seed": 2
+    },
+    {
+      "condition": "PRIMARY20_PLUS_PREFIX50_DQDV10",
+      "split_seed": 4,
+      "train_seed": 0
+    },
+    {
+      "condition": "PRIMARY20_PLUS_PREFIX50_DQDV10",
+      "split_seed": 4,
+      "train_seed": 1
+    },
+    {
+      "condition": "PRIMARY20_PLUS_PREFIX50_DQDV10",
+      "split_seed": 4,
+      "train_seed": 2
+    }
+  ],
+  "pretraining_barriers": {
+    "model_training_performed_during_protocol_freeze": false,
+    "target_values_read_during_protocol_freeze": false,
+    "test_metric_values_read_during_protocol_freeze": false
+  },
+  "pretraining_barriers_v2": {
+    "amendment_uses_validation_termination_only": true,
+    "model_training_performed_during_v2_freeze": false,
+    "test_metric_values_read_during_v2_freeze": false,
+    "test_metric_values_surfaced_during_v2_freeze": false
+  },
+  "scientific_question": "Does full-discharge dQ/dV create target leakage, and how much of any apparent gain remains when dQ/dV is restricted to fixed early discharge windows whose durations are fitted using training rows only?",
+  "status": "FROZEN_AFTER_VALIDATION_ONLY_CEILING_AMENDMENT_BEFORE_RESUME",
+  "training_contract": {
+    "device": "cpu",
+    "early_stopping_metric": "validation dataset-balanced cell-balanced RMSE",
+    "expected_model_fits": 120,
+    "learning_rate": 0.001,
+    "max_epochs": 10000,
+    "max_epochs_role": "nonbinding safety ceiling; extended from 5000 to 10000 after validation-only termination evidence showed that the old 5000-epoch ceiling was binding for one 30D MLP fit; 30-epoch validation patience remains the intended stopping rule",
+    "models_per_combination": 2,
+    "new_hyperparameter_tuning": false,
+    "objective": "dataset-balanced + cell-balanced MSE",
+    "optimizer": "AdamW",
+    "patience": 30,
+    "planned_condition_split_init_combinations": 60,
+    "split_seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "training_initialization_seeds": [
+      0,
+      1,
+      2
+    ],
+    "weight_decay": 1e-05
+  },
+  "upstream_anchors": {
+    "common_cohort_scaler_manifest_sha256": "3ee48af31ad580c14de0460fa1f163ad572e369368d6da71c0ba6823d28905a1",
+    "dqdv_leakage_control_protocol_sha256": "c455bf7a46f89649f25769a43abd443f171545b06e4740c799df1842c8bbb8e9",
+    "feature_bank_manifest_sha256": "901d692f720a9e5166283f66b462580496192e9bab8cc1706453546c167021dc",
+    "feature_matched_model_implementation_sha256": "5d621f8d5764e417e41bc518ec72b9608566a087c552b8365d438c2344c06c5e",
+    "final_v3_execution_manifest_sha256": "5a8bfbe0f11a6158f2749a9da4f18f1e62adf8c839976c1bf0af9c9f6c07440d",
+    "final_v3_runner_sha256": "b945728c02255f1f2977e47024e33ca75f4e76570c8d381b4881836f17d3dcba",
+    "final_v3_training_protocol_sha256": "2dec14c210ae3f02e5f65e4acc24f9c4adc747bc071509cb144e69dba707f4dd"
+  },
+  "v2_freezer": {
+    "commit": "a2a08b971ae25e3220d4bbc639595339c0810bc4",
+    "path": "${WORKSPACE}/repo/battery-gnn/scripts/revision_2026/91_freeze_dqdv_training_protocol_v2.py",
+    "sha256": "46ad9007da39bcd5db3de3b4de5ddeb6241b77326a4e384413eb36535d372952"
+  }
+}

@@ -1,0 +1,11 @@
+split_seed,scaler_scope,n_train_rows,n_train_cells,zero_variance_features,fit_split
+0,pooled_prospective_rul_features,44252,71,0,train_only
+0,prospective_rul_target,44252,71,0,train_only
+1,pooled_prospective_rul_features,46168,71,0,train_only
+1,prospective_rul_target,46168,71,0,train_only
+2,pooled_prospective_rul_features,44325,71,0,train_only
+2,prospective_rul_target,44325,71,0,train_only
+3,pooled_prospective_rul_features,45346,71,0,train_only
+3,prospective_rul_target,45346,71,0,train_only
+4,pooled_prospective_rul_features,44823,71,0,train_only
+4,prospective_rul_target,44823,71,0,train_only

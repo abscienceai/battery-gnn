@@ -1,0 +1,54 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# OS/editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Raw or locally reconstructed datasets
+data/raw/
+data/audit/
+*.mat
+*.h5
+*.hdf5
+*.zip
+
+# Model states / heavy binary intermediates
+*.pth
+*.pt
+*.ckpt
+*.pkl
+*.pickle
+*.joblib
+
+# Local execution state
+checkpoints/
+runs/
+tmp/
+temp/
+.cache/
+
+# Local publication/audit logs
+PUBLICATION_AUDIT_*.log
+PUBLICATION_STAGING_REPORT_*.log
+
+# Secrets / local environment
+.env
+.env.*
+!.env.example

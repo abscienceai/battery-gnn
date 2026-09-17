@@ -1,0 +1,155 @@
+{
+  "activation": "ReLU",
+  "all_ceiling_decisions_validation_only": true,
+  "architecture": "20 -> 64 -> 64 -> 1",
+  "batch_normalization": false,
+  "benchmark_model_commit": "3b030ade470754c753ca966e15dd81a362d4b811",
+  "benchmark_script_sha256": "5d621f8d5764e417e41bc518ec72b9608566a087c552b8365d438c2344c06c5e",
+  "calibration1_commit": "cf378006d46b6a484c386ff2b92950bc260ac3f7",
+  "calibration1_script_sha256": "b33acedc8dfe48efbc2105280110f9a7b23efcc4d6a097ee949d445eaca52907",
+  "calibration1_summary_sha256": "9fc21ff70f4125def3223eb40da7fda16c63a021273d4e0e13c2d9a2a6160246",
+  "calibration2_commit": "eb84f1a44844302f96dd93b2a967646f354f1171",
+  "calibration2_script_sha256": "c98258a72da7b3847f1e0903982a04646d73f50b0999d5025484bee58723cd39",
+  "calibration2_summary_sha256": "a59b26a755214858675b8b2f583cf41e7dce69adcb8e5d6b0ab5d0436161cfbf",
+  "ceiling_evidence": {
+    "calibration_split0_train0": {
+      "CAUSAL_GCN_best_stop": [
+        1351,
+        1381
+      ],
+      "MLP_best_stop": [
+        874,
+        904
+      ]
+    },
+    "calibration_split1_train0": {
+      "CAUSAL_GCN_best_stop": [
+        2022,
+        2052
+      ],
+      "MLP_best_stop": [
+        1249,
+        1279
+      ]
+    },
+    "selected_final_safety_ceiling": 5000
+  },
+  "cross_cell_edges": false,
+  "datasets": [
+    "HUST",
+    "CALCE",
+    "MATR"
+  ],
+  "device": "CPU",
+  "dropout": false,
+  "early_stopping_metric": "validation dataset-balanced cell-balanced RMSE",
+  "early_stopping_patience": 30,
+  "feature_count": 20,
+  "feature_matched_observations": 300553,
+  "final_fit_validity_rule": "Every fit must terminate through the 30-epoch validation patience rule before epoch 5000. Any ceiling hit invalidates aggregate analysis until optimization-budget calibration is revisited using train/validation data only.",
+  "future_edges": false,
+  "hidden_dim": 64,
+  "learning_rate": 0.001,
+  "max_epochs": 5000,
+  "max_epochs_role": "nonbinding safety ceiling; training terminates by 30-epoch validation patience whenever convergence occurs earlier",
+  "maximum_causal_receptive_field": "t, t-1, t-2",
+  "models": [
+    "MLP",
+    "CAUSAL_GCN"
+  ],
+  "objective": "dataset-balanced + cell-balanced MSE",
+  "optimizer": "AdamW",
+  "pairing_policy": "Within every split_seed/train_seed pair, MLP and CAUSAL_GCN use identical observations, features, split assignments, train-only scaler, initialization seed, optimizer settings, and learnable-layer shapes.",
+  "parameter_count_each": 5569,
+  "planned_model_fit_count": 30,
+  "planned_paired_run_count": 15,
+  "planned_paired_runs": [
+    {
+      "split_seed": 0,
+      "train_seed": 0
+    },
+    {
+      "split_seed": 0,
+      "train_seed": 1
+    },
+    {
+      "split_seed": 0,
+      "train_seed": 2
+    },
+    {
+      "split_seed": 1,
+      "train_seed": 0
+    },
+    {
+      "split_seed": 1,
+      "train_seed": 1
+    },
+    {
+      "split_seed": 1,
+      "train_seed": 2
+    },
+    {
+      "split_seed": 2,
+      "train_seed": 0
+    },
+    {
+      "split_seed": 2,
+      "train_seed": 1
+    },
+    {
+      "split_seed": 2,
+      "train_seed": 2
+    },
+    {
+      "split_seed": 3,
+      "train_seed": 0
+    },
+    {
+      "split_seed": 3,
+      "train_seed": 1
+    },
+    {
+      "split_seed": 3,
+      "train_seed": 2
+    },
+    {
+      "split_seed": 4,
+      "train_seed": 0
+    },
+    {
+      "split_seed": 4,
+      "train_seed": 1
+    },
+    {
+      "split_seed": 4,
+      "train_seed": 2
+    }
+  ],
+  "protocol": "full_clean_feature_matched_soh_v3",
+  "replication_policy": "Three initialization seeds nested within each of five cell-level split seeds. Split seed remains the higher-level replication unit for primary inference.",
+  "reverse_edges": false,
+  "scaler": "split-seed-specific pooled train-only scaler",
+  "split_seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "status": "FINAL_FROZEN_BEFORE_V3_RUNS",
+  "superseded_v2_protocol_sha256": "5b172695668b470039fdea6ce7c43df31f8440ca6750415d73e4467631063719",
+  "task": "cycle-level SOH regression",
+  "test_policy": "Test outputs are evaluation-only and are not inspected between v3 runs. Test information cannot alter features, architecture, scaler, split policy, optimizer, learning rate, weight decay, hidden size, patience, or epoch ceiling.",
+  "test_used_for_ceiling_selection": false,
+  "threads": 4,
+  "training_initialization_seeds": [
+    0,
+    1,
+    2
+  ],
+  "v2_exclusion_from_final_aggregation": true,
+  "v2_exclusion_reason": "CAUSAL_GCN for split_seed=1/train_seed=0 reached the 2000-epoch ceiling before satisfying the frozen patience criterion.",
+  "v2_status": "ABORTED_NONCONVERGED_CEILING",
+  "v3_execution_policy": "All 15 paired runs are executed from scratch in a separate final_v3 result root. No v1/v2 test result is carried into the final v3 aggregate.",
+  "weight_decay": 1e-05
+}

@@ -1,0 +1,144 @@
+{
+  "builder": {
+    "commit": "9d82f5e7d621bf8777a58aadd7a03a96ee439d0e",
+    "path": "${WORKSPACE}/repo/battery-gnn/scripts/revision_2026/103_prospective_rul_target_split_scaler_builder.py",
+    "sha256": "daecfa4b442ca95e7d6792de3851621430294770dacbc1db20171a9ac694cf54"
+  },
+  "contract": "prospective_rul_data_v1",
+  "early_checkpoint_support": {
+    "checkpoints": [
+      25,
+      50,
+      100
+    ],
+    "feature_valid_rank_one_based_materialized": true,
+    "future_lifetime_fraction_required": false
+  },
+  "endpoint": {
+    "SOH_threshold": 0.8,
+    "event_cells": {
+      "CALCE": 13,
+      "MATR": 88
+    },
+    "required_consecutive_observations": 2
+  },
+  "execution_state": {
+    "model_training_performed": false,
+    "test_metrics_read": false,
+    "test_metrics_surfaced": false
+  },
+  "outputs": {
+    "inherited_cell_split_assignments": {
+      "path": "${WORKSPACE}/results/revision_2026/prospective_rul/data_v1/inherited_cell_split_assignments.csv",
+      "sha256": "2b2c5cf7d7e62ecf68879a7df8cfae20e49482b1d36a661de318677272a3a99e"
+    },
+    "prospective_rul_target_table": {
+      "path": "${WORKSPACE}/results/revision_2026/prospective_rul/data_v1/prospective_rul_target_table.csv",
+      "sha256": "e5ec1f09b09f54be06fb9af46bb628b9f81b82053a290ae9c069d1f0d4907725"
+    },
+    "train_only_feature_scaler_parameters": {
+      "path": "${WORKSPACE}/results/revision_2026/prospective_rul/data_v1/train_only_feature_scaler_parameters.csv",
+      "sha256": "25f159c51becd400a315aa862d8cdd5f58497172511addff9d7be967314b15aa"
+    },
+    "train_only_scaler_fit_summary": {
+      "path": "${WORKSPACE}/results/revision_2026/prospective_rul/data_v1/train_only_scaler_fit_summary.csv",
+      "sha256": "fa748eb37a1a5676c46226ed136ede1025ca719a6905a6c2e3f784e3817d31ae"
+    },
+    "train_only_target_scaler_parameters": {
+      "path": "${WORKSPACE}/results/revision_2026/prospective_rul/data_v1/train_only_target_scaler_parameters.csv",
+      "sha256": "78e6e62d3e2d4aa737e43264eabe41823a2d3c5d702151a87569c15e3f2dda8e"
+    }
+  },
+  "primary_datasets": [
+    "CALCE",
+    "MATR"
+  ],
+  "protocol_sha256": "2f61fd329008286bca986411a88945c3ac0e5df09aeffab48939bdb92a9f4592",
+  "scaler_contract": {
+    "SOH_task_scaler_reused": false,
+    "feature_count": 20,
+    "feature_scaler_scope": "pooled_prospective_rul",
+    "feature_scalers_fit_on": "prospective-RUL train rows only",
+    "target_scaler_scope": "prospective_rul_target",
+    "target_scalers_fit_on": "prospective-RUL train targets only",
+    "test_statistics_used": false,
+    "validation_statistics_used": false
+  },
+  "source_split_assignment_sha256": "914c8b90131f496ca396f63e0502147ca99848fdfd4b2c6b2a5887225b47d055",
+  "source_split_manifest_sha256": "91aee27fa332e053454c4f2300c367dc363b938e5ab3d12513372370ec4f2238",
+  "split_contract": {
+    "assignment_rows": 505,
+    "cells_by_split_per_seed": {
+      "test": 15,
+      "train": 71,
+      "validation": 15
+    },
+    "cells_per_seed": 101,
+    "reassignment_performed": false,
+    "row_counts_by_seed": {
+      "0": {
+        "test_cells": 15,
+        "test_rows": 9667,
+        "train_cells": 71,
+        "train_rows": 44252,
+        "validation_cells": 15,
+        "validation_rows": 10250
+      },
+      "1": {
+        "test_cells": 15,
+        "test_rows": 9185,
+        "train_cells": 71,
+        "train_rows": 46168,
+        "validation_cells": 15,
+        "validation_rows": 8816
+      },
+      "2": {
+        "test_cells": 15,
+        "test_rows": 9024,
+        "train_cells": 71,
+        "train_rows": 44325,
+        "validation_cells": 15,
+        "validation_rows": 10820
+      },
+      "3": {
+        "test_cells": 15,
+        "test_rows": 9829,
+        "train_cells": 71,
+        "train_rows": 45346,
+        "validation_cells": 15,
+        "validation_rows": 8994
+      },
+      "4": {
+        "test_cells": 15,
+        "test_rows": 10510,
+        "train_cells": 71,
+        "train_rows": 44823,
+        "validation_cells": 15,
+        "validation_rows": 8836
+      }
+    },
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "source_assignments_reused_exactly": true
+  },
+  "status": "COMPLETE_PENDING_INDEPENDENT_AUDIT",
+  "target_contract": {
+    "HUST_rows_present": false,
+    "censored_cells_present": false,
+    "event_cell_count": 101,
+    "name": "RUL_observations_80pct_k2",
+    "post_eol_rows_present": false,
+    "rows_by_dataset": {
+      "CALCE": 7355,
+      "MATR": 56814
+    },
+    "total_rows": 64169,
+    "units": "observation cycles",
+    "zero_at_eol": true
+  }
+}

@@ -1,0 +1,197 @@
+{
+  "analysis_contract": {
+    "model_ranking": "descriptive",
+    "new_inferential_tests": false,
+    "old_end_of_record_RUL_results_reused": false,
+    "old_fractional_early_prediction_results_reused": false,
+    "primary_reporting_unit": "five split-level means; initialization seeds remain within-split repetitions",
+    "split_seeds_claimed_independent_trials": false,
+    "universal_GCN_superiority_claim_allowed": false
+  },
+  "contract": "prospective_rul_training_protocol_v1",
+  "early_stopping": {
+    "best_state_retained": true,
+    "ceiling_policy": "if any fit reaches the 10000-epoch safety ceiling, halt before test evaluation; do not inspect test metrics; a ceiling-only protocol amendment may then be made using training/validation evidence only",
+    "maximum_epochs_safety_ceiling": 10000,
+    "minimum_delta": 0.0,
+    "patience": 30,
+    "selection_data": "validation only",
+    "selection_metric": "BALANCED_ALL validation RMSE in raw RUL observation cycles",
+    "target_predictions_inverse_transformed_before_scoring": true,
+    "test_metrics_visible_during_selection": false
+  },
+  "execution_state": {
+    "model_states_created": false,
+    "test_metrics_read": false,
+    "test_metrics_surfaced": false,
+    "training_started": false
+  },
+  "feature_contract": {
+    "EOL_input": false,
+    "RUL_input": false,
+    "SOH_input": false,
+    "capacity_input": false,
+    "cycle_index_input": false,
+    "feature_count": 20,
+    "feature_scaler": "split-specific prospective-RUL TRAIN rows only",
+    "future_input": false,
+    "observation_index_input": false,
+    "target_scaler": "split-specific prospective-RUL TRAIN targets only"
+  },
+  "frozen_inputs": {
+    "cell_assignments": {
+      "path": "${WORKSPACE}/results/revision_2026/prospective_rul/data_v1/inherited_cell_split_assignments.csv",
+      "sha256": "2b2c5cf7d7e62ecf68879a7df8cfae20e49482b1d36a661de318677272a3a99e"
+    },
+    "data_manifest": {
+      "path": "${WORKSPACE}/results/revision_2026/prospective_rul/data_v1/prospective_rul_data_manifest.json",
+      "sha256": "1bbf306249b658e1233eeba3283e1a1c1044bbfe0aabd43826ace98570845c0b"
+    },
+    "feature_scalers": {
+      "path": "${WORKSPACE}/results/revision_2026/prospective_rul/data_v1/train_only_feature_scaler_parameters.csv",
+      "sha256": "25f159c51becd400a315aa862d8cdd5f58497172511addff9d7be967314b15aa"
+    },
+    "main_protocol": {
+      "path": "${WORKSPACE}/results/revision_2026/prospective_rul/prospective_rul_protocol_v1.json",
+      "sha256": "2f61fd329008286bca986411a88945c3ac0e5df09aeffab48939bdb92a9f4592"
+    },
+    "target_scalers": {
+      "path": "${WORKSPACE}/results/revision_2026/prospective_rul/data_v1/train_only_target_scaler_parameters.csv",
+      "sha256": "78e6e62d3e2d4aa737e43264eabe41823a2d3c5d702151a87569c15e3f2dda8e"
+    },
+    "target_table": {
+      "path": "${WORKSPACE}/results/revision_2026/prospective_rul/data_v1/prospective_rul_target_table.csv",
+      "sha256": "e5ec1f09b09f54be06fb9af46bb628b9f81b82053a290ae9c069d1f0d4907725"
+    }
+  },
+  "initialization": {
+    "data_shuffle": false,
+    "same_parameter_shapes_and_initial_values_within_pair": true,
+    "same_seed_recreated_immediately_before_each_paired_model": true,
+    "torch_initialization_seed": "training_initialization_seed"
+  },
+  "metric_embargo": {
+    "embargo_lift_condition": "independent prospective-RUL execution audit passes",
+    "test_metrics_may_be_written_to_run_records": true,
+    "test_numeric_values_printed_by_runner": false,
+    "test_numeric_values_surfaced_before_independent_execution_audit": false,
+    "test_predictions_may_be_written_to_artifacts": true
+  },
+  "models": {
+    "FeatureMatchedCausalGCN_RUL": {
+      "aggregation_rule": "for each noninitial valid observation t, mean(self_t, previous_valid_observation); the first valid observation uses self only",
+      "cross_cell_edges": false,
+      "future_edges": false,
+      "layers": [
+        "CausalMeanAggregate",
+        "Linear(20,64)",
+        "ReLU",
+        "CausalMeanAggregate",
+        "Linear(64,64)",
+        "ReLU",
+        "Linear(64,1)"
+      ],
+      "learnable_parameters": 5569,
+      "maximum_receptive_field": "t,t-1,t-2",
+      "reverse_edges": false
+    },
+    "FeatureMatchedMLP_RUL": {
+      "layers": [
+        "Linear(20,64)",
+        "ReLU",
+        "Linear(64,64)",
+        "ReLU",
+        "Linear(64,1)"
+      ],
+      "learnable_parameters": 5569,
+      "temporal_aggregation": false
+    },
+    "feature_matched": true,
+    "parameter_matched": true,
+    "same_initial_learnable_weights_within_pair": true
+  },
+  "optimization": {
+    "batch_normalization": false,
+    "cell_weighting_within_dataset": "equal",
+    "dataset_weighting": "equal",
+    "device": "CPU",
+    "dropout": false,
+    "gradient_clipping": false,
+    "learning_rate": 0.001,
+    "loss": "hierarchically balanced MSE",
+    "loss_target_space": "train-only standardized RUL",
+    "observation_weighting_within_cell": "equal",
+    "optimizer": "AdamW",
+    "training_mode": "deterministic full-split full-batch",
+    "training_weight_formula": "w(row)=1/N_datasets * 1/N_train_cells_in_dataset * 1/N_train_rows_in_cell; weights sum to one",
+    "weight_decay": 1e-05
+  },
+  "protocol_script": {
+    "commit": "aca6ae3c777068c0f624768654c0abd5bf2368a7",
+    "path": "${WORKSPACE}/repo/battery-gnn/scripts/revision_2026/105_freeze_prospective_rul_training_protocol.py",
+    "sha256": "ea014b98f96430e784e1d5b9dda1ef034d8728ff9263a65f2b325c3d540566d0"
+  },
+  "split_and_seed_contract": {
+    "paired_runs": 15,
+    "reassignment": false,
+    "split_seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "split_unit": "complete cell",
+    "test_cell_overlap_with_train_or_validation": false,
+    "total_model_fits": 30,
+    "training_initialization_seeds": [
+      0,
+      1,
+      2
+    ]
+  },
+  "status": "FROZEN_BEFORE_MODEL_TRAINING",
+  "task": {
+    "HUST_exact_RUL_used": false,
+    "datasets": [
+      "CALCE",
+      "MATR"
+    ],
+    "endpoint": "first observation of first run of two consecutive finite SOH observations <= 0.80",
+    "target": "RUL_observations_80pct_k2",
+    "target_zero_at_EOL": true,
+    "units": "observation cycles"
+  },
+  "test_evaluation": {
+    "R2_BALANCED_ALL": "weighted R2 using the same hierarchical evaluation weights and weighted target mean",
+    "balanced_metric_semantics": "equal dataset weight, equal cell weight within dataset, equal observation weight within cell",
+    "checkpoint_definition": "exact K-th feature-valid observation in the target table; at most one prediction per cell per checkpoint",
+    "domain_metric_semantics": "plain row-level metrics within CALCE or MATR",
+    "domains": [
+      "BALANCED_ALL",
+      "CALCE",
+      "MATR"
+    ],
+    "fixed_checkpoint_role": "primary early prospective evaluation",
+    "fixed_checkpoints": [
+      25,
+      50,
+      100
+    ],
+    "full_trajectory_role": "supportive prospective cycle-level evaluation",
+    "future_lifetime_fraction_used": false,
+    "metrics": [
+      "RMSE",
+      "MAE",
+      "R2",
+      "normalized_MAE"
+    ],
+    "normalized_MAE_definition": "weighted MAE divided by max(weighted mean absolute true RUL, 1.0 observation cycle), using the same weights as the corresponding evaluation domain",
+    "test_used_for_model_selection": false
+  },
+  "validation_metric_semantics": {
+    "BALANCED_ALL_RMSE": "for each dataset, average per-cell MSE over its validation cells; average the dataset MSE values equally; take the square root",
+    "CALCE_and_MATR_equal_dataset_weight": true,
+    "uses_raw_RUL_units": true
+  }
+}

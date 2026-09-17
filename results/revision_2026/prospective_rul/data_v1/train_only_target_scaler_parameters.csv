@@ -1,0 +1,6 @@
+split_seed,scaler_scope,target,mean,variance,scale,zero_variance,n_train_rows,n_train_cells,fit_split
+0,prospective_rul_target,RUL_observations_80pct_k2,343.19755039320256,54876.550868084196,234.2574457046866,False,44252,71,train_only
+1,prospective_rul_target,RUL_observations_80pct_k2,354.617895512043,56746.80753540825,238.2158843054095,False,46168,71,train_only
+2,prospective_rul_target,RUL_observations_80pct_k2,336.92083474337284,50104.17103686665,223.8396100712889,False,44325,71,train_only
+3,prospective_rul_target,RUL_observations_80pct_k2,354.0520883870683,58786.55477808912,242.45938789432162,False,45346,71,train_only
+4,prospective_rul_target,RUL_observations_80pct_k2,343.6216674475158,53411.60458328481,231.10950777344667,False,44823,71,train_only

@@ -1,0 +1,30 @@
+{
+  "figure": "fig3_lodo_fewshot_transfer",
+  "source_file": "${WORKSPACE}/results/revision_2026/lodo_fewshot/analysis_v1/lodo_fewshot_descriptive_summary.csv",
+  "scope": "CELL_BALANCED",
+  "metric": "RMSE",
+  "held_out_datasets": [
+    "HUST",
+    "CALCE",
+    "MATR"
+  ],
+  "conditions": [
+    "ZERO_SHOT",
+    "K1",
+    "K3",
+    "K5"
+  ],
+  "models": [
+    "MLP",
+    "GCN"
+  ],
+  "summary_definition": "mean over 15 runs; three initialization runs per each of five complete-cell split seeds",
+  "error_bar_definition": "sample standard deviation across five split-level means",
+  "important_interpretation": "Few-shot calibration reduces RMSE relative to zero-shot across all 90 split-model-fold adaptation comparisons, but substantial residual domain mismatch remains. Do not describe adaptation as restoring generalization.",
+  "outputs": [
+    "${WORKSPACE}/repo/battery-gnn/figures/revision_2026/fig3_lodo_fewshot_transfer.pdf",
+    "${WORKSPACE}/repo/battery-gnn/figures/revision_2026/fig3_lodo_fewshot_transfer.png",
+    "${WORKSPACE}/repo/battery-gnn/figures/revision_2026/fig3_lodo_fewshot_transfer.svg",
+    "${WORKSPACE}/repo/battery-gnn/figures/revision_2026/fig3_lodo_fewshot_transfer_source_values.csv"
+  ]
+}

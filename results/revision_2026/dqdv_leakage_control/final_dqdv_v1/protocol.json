@@ -1,0 +1,284 @@
+{
+  "analysis_contract": {
+    "descriptive_horizon_contrasts": [
+      "FULL minus PREFIX50",
+      "FULL minus PREFIX25",
+      "PREFIX50 minus PRIMARY20_COMMON",
+      "PREFIX25 minus PRIMARY20_COMMON"
+    ],
+    "domains": [
+      "BALANCED_ALL",
+      "HUST",
+      "CALCE",
+      "MATR"
+    ],
+    "full_curve_capacity_alignment_report": [
+      "MAE between ica_area_Ah and canonical capacity_Ah",
+      "median absolute relative error",
+      "R2"
+    ],
+    "inference_claim": "descriptive leakage-control evidence only",
+    "model_performance_reports": [
+      "PRIMARY20_COMMON",
+      "PRIMARY20_PLUS_FULL_DQDV10",
+      "PRIMARY20_PLUS_PREFIX25_DQDV10",
+      "PRIMARY20_PLUS_PREFIX50_DQDV10"
+    ],
+    "new_hypothesis_tests": false,
+    "p_values": false,
+    "primary_metrics": [
+      "RMSE",
+      "MAE"
+    ],
+    "role": "target-leakage sensitivity and causal truncation control"
+  },
+  "claim_guards": {
+    "causal_prefix_dqdv_is_target_independent_at_generation_time": true,
+    "feature_dimension_difference_vs_primary20_must_be_disclosed": true,
+    "full_curve_dqdv_is_deployment_valid": false,
+    "full_curve_dqdv_is_positive_control_for_target_leakage": true,
+    "full_curve_result_can_support_prospective_claim": false,
+    "prefix_cutoff_can_use_test_cycle_endpoint": false,
+    "prefix_cutoff_can_use_test_cycle_total_duration": false,
+    "target_capacity_can_enter_feature_generator": false,
+    "universal_gcn_advantage_claim": false
+  },
+  "cohort_policy": {
+    "condition_specific_test_cohorts_forbidden": true,
+    "definition": "within each split_seed and partition, retain only canonical SOH rows that have valid primary20 features and valid FULL, PREFIX25, and PREFIX50 dQ/dV10; use the identical retained row IDs for all four conditions",
+    "per_split_common_cohort": true,
+    "purpose": "prevent row-availability differences from confounding horizon comparisons"
+  },
+  "contract": "dqdv_leakage_control_protocol_v1",
+  "execution_size": {
+    "conditions": 4,
+    "expected_model_fits": 120,
+    "models": 2,
+    "split_seeds": 5,
+    "train_initializations": 3
+  },
+  "feature_sets": {
+    "conditions": [
+      {
+        "feature_set": "primary 20 V/I descriptors only",
+        "id": "PRIMARY20_COMMON",
+        "input_dimension": 20,
+        "role": "common-cohort reference"
+      },
+      {
+        "feature_set": "primary20 + full-curve dQ/dV10",
+        "id": "PRIMARY20_PLUS_FULL_DQDV10",
+        "input_dimension": 30,
+        "role": "retrospective leakage-positive control"
+      },
+      {
+        "feature_set": "primary20 + causal fixed-time prefix dQ/dV10",
+        "id": "PRIMARY20_PLUS_PREFIX25_DQDV10",
+        "input_dimension": 30,
+        "role": "causal truncated leakage control"
+      },
+      {
+        "feature_set": "primary20 + causal fixed-time prefix dQ/dV10",
+        "id": "PRIMARY20_PLUS_PREFIX50_DQDV10",
+        "input_dimension": 30,
+        "role": "causal truncated leakage control"
+      }
+    ],
+    "primary20_definition_unchanged_from_final_v3": true,
+    "same_dqdv_feature_dimension_across_full_and_prefix_conditions": true
+  },
+  "freeze_barriers": {
+    "SOH_values_read": false,
+    "analysis_performed": false,
+    "capacity_values_read": false,
+    "dqdv_features_computed": false,
+    "model_metrics_read": false,
+    "model_states_loaded": false,
+    "model_training_run": false,
+    "raw_numeric_trace_values_read": false
+  },
+  "freeze_commit": "c9cd21db51a1004c33f0f486f2a67acba673ff45",
+  "incremental_capacity_definition": {
+    "bin_assignment": "floor((V_mid - 0.0)/0.01); all dq in one interval is accumulated into that bin",
+    "discharge_onset": "start timestamp of the first valid interval whose end-sample current is negative",
+    "feature_count": 10,
+    "feature_names": [
+      "ica_mean_Ah_per_V",
+      "ica_std_Ah_per_V",
+      "ica_q10_Ah_per_V",
+      "ica_q25_Ah_per_V",
+      "ica_median_Ah_per_V",
+      "ica_q75_Ah_per_V",
+      "ica_q90_Ah_per_V",
+      "ica_max_Ah_per_V",
+      "ica_area_Ah",
+      "ica_peak_voltage_V"
+    ],
+    "feature_statistics_use": "occupied positive-charge bins only",
+    "ica_area_definition": "sum(ica_bin * 0.01 V), numerically equal to observed cumulative discharge Ah",
+    "ica_bin_value": "sum(dq_Ah_in_bin) / 0.01 V",
+    "interval_charge_Ah": "dq_Ah = (-I_step) * dt_s / 3600",
+    "interval_current_rule": "BatteryML-compatible right-endpoint current: I_step = I[1:]",
+    "minimum_discharge_intervals": 20,
+    "minimum_occupied_voltage_bins": 5,
+    "peak_voltage_tie_break": "highest voltage bin center",
+    "valid_interval": "finite endpoints, finite current, dt > 0, I_step < 0",
+    "voltage_bin_origin_V": 0.0,
+    "voltage_bin_width_V": 0.01,
+    "voltage_representative": "midpoint voltage of the contributing interval; for a prefix-crossing interval the endpoint voltage is linearly interpolated to the cutoff before taking the midpoint"
+  },
+  "information_horizons": {
+    "FULL": {
+      "cutoff": "last available discharge-contributing interval",
+      "deployment_valid": false,
+      "role": "retrospective leakage-positive control",
+      "why_leakage_prone": "ica_area_Ah over the full discharge trace is the full observed discharged charge and therefore can encode the capacity target directly or nearly directly"
+    },
+    "PREFIX25": {
+      "crossing_interval_policy": "clip exactly at fixed elapsed-time cutoff",
+      "cutoff_fit_scope": "training rows only, separately for dataset x split_seed",
+      "cutoff_formula": "0.25 * median(training full-discharge wall-clock duration from first to last discharge-contributing interval)",
+      "deployment_valid": true,
+      "individual_test_cycle_endpoint_used": false,
+      "role": "causal truncated control",
+      "validation_or_test_duration_used_to_fit_cutoff": false
+    },
+    "PREFIX50": {
+      "crossing_interval_policy": "clip exactly at fixed elapsed-time cutoff",
+      "cutoff_fit_scope": "training rows only, separately for dataset x split_seed",
+      "cutoff_formula": "0.50 * median(training full-discharge wall-clock duration from first to last discharge-contributing interval)",
+      "deployment_valid": true,
+      "individual_test_cycle_endpoint_used": false,
+      "role": "causal truncated control",
+      "validation_or_test_duration_used_to_fit_cutoff": false
+    }
+  },
+  "models": {
+    "activation": "ReLU",
+    "architectures": [
+      "FeatureMatchedMLP",
+      "FeatureMatchedCausalGCN"
+    ],
+    "batch_norm": false,
+    "causal_gcn_operator": "same parameter-free mean aggregation over {self, previous valid observation} used in final-v3",
+    "cross_cell_edges": false,
+    "dropout": false,
+    "frozen_final_v3_states_reused": false,
+    "future_edges": false,
+    "hidden_layers": [
+      64,
+      64
+    ],
+    "mlp_and_gcn_parameter_matched_within_each_condition": true,
+    "parameters_augmented30": 6209,
+    "parameters_primary20": 5569,
+    "retrain_required": true
+  },
+  "optimization": {
+    "early_stopping_metric": "validation balanced RMSE",
+    "learning_rate": 0.001,
+    "new_hyperparameter_tuning": false,
+    "objective": "dataset-balanced + cell-balanced MSE",
+    "optimizer": "AdamW",
+    "reuse_final_v3_optimizer_objective_and_validation_logic": true,
+    "test_set_used_for_training_or_selection": false,
+    "weight_decay": 1e-05
+  },
+  "raw_trace_contract": {
+    "dataset_semantics": {
+      "CALCE": {
+        "current": "Current(A)",
+        "discharge_rule": "I_A < 0",
+        "time": "Test_Time(s)",
+        "voltage": "Voltage(V)"
+      },
+      "HUST": {
+        "current": "Current (mA) converted to A",
+        "discharge_rule": "I_A < 0",
+        "time": "Time (s)",
+        "voltage": "Voltage (V)"
+      },
+      "MATR": {
+        "current": "cycles.I multiplied by 1.1 A",
+        "discharge_rule": "I_A < 0",
+        "time": "cycles.t converted from minutes to seconds",
+        "voltage": "cycles.V"
+      }
+    },
+    "only_sensor_inputs": [
+      "voltage_V",
+      "current_A",
+      "time_s"
+    ],
+    "polarity_validation_barrier_required_before_bulk_generation": true,
+    "polarity_validation_rule": "negative-current full-discharge integration must be consistent with each dataset's already-audited discharge-capacity provenance before model features are generated; failure stops execution",
+    "target_tables_forbidden_during_dqdv_generation": [
+      "capacity_Ah",
+      "SOH",
+      "RUL",
+      "EOL",
+      "HUST source dq",
+      "MATR summary QDischarge",
+      "MATR summary QCharge",
+      "CALCE capacity columns"
+    ]
+  },
+  "scaling": {
+    "dqdv10_scaler": "fit separately for FULL, PREFIX25, PREFIX50 using only common training rows",
+    "fit_scope": "training rows only within each split's common cohort",
+    "primary20_scaler": "fit once per split on common training rows and reused identically across all four conditions",
+    "validation_or_test_statistics_used": false
+  },
+  "source_anchors": {
+    "audit_script": {
+      "path": "${WORKSPACE}/repo/battery-gnn/scripts/revision_2026/78_dqdv_leakage_control_protocol_audit.py",
+      "sha256": "a8ce4009316e4807bb13e6617172242aae30fc49b4aefd5e99498002f08f6f9f"
+    },
+    "cycle_feature_kernel": {
+      "path": "${WORKSPACE}/repo/battery-gnn/scripts/revision_2026/cycle_feature_kernel.py",
+      "sha256": "089a4b800dec8000738ad019c138c461d063a0476e7977dcd4f9c39453c321c5"
+    },
+    "final_v3_protocol": {
+      "path": "${WORKSPACE}/results/revision_2026/feature_matched_soh/full_clean_benchmark_protocol_v3.json",
+      "sha256": "2dec14c210ae3f02e5f65e4acc24f9c4adc747bc071509cb144e69dba707f4dd"
+    },
+    "freeze_script": {
+      "path": "${WORKSPACE}/repo/battery-gnn/scripts/revision_2026/77_freeze_dqdv_leakage_control_protocol.py",
+      "sha256": "1eb584d69651266b3e21d307f796ee62e1fef74b1bca9d7124acf381a0d27df2"
+    },
+    "hust_dataset_audit": {
+      "path": "${WORKSPACE}/repo/battery-gnn/scripts/revision_2026/00_hust_dataset_audit.py",
+      "sha256": "f368148455404f2047df52c9b690e99601412331884758ac5deb4f5da09ed157"
+    },
+    "raw_cycle_feature_generator": {
+      "path": "${WORKSPACE}/repo/battery-gnn/scripts/revision_2026/14_raw_cycle_feature_generator.py",
+      "sha256": "456711ce3cdfe1f5cdccf0705feb04d04f8159f9324b449fbfb03b1dd204c025"
+    }
+  },
+  "status": "FROZEN_BEFORE_DQDV_FEATURE_EXTRACTION",
+  "task": {
+    "RUL_or_EOL_is_model_feature": false,
+    "SOH_target_is_model_feature": false,
+    "capacity_target_is_model_feature": false,
+    "cycle_index_is_model_feature": false,
+    "datasets": [
+      "HUST",
+      "CALCE",
+      "MATR"
+    ],
+    "name": "cycle-level SOH leakage sensitivity control",
+    "reuse_exact_final_v3_group_assignments": true,
+    "split_seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "train_initialization_seeds": [
+      0,
+      1,
+      2
+    ]
+  }
+}

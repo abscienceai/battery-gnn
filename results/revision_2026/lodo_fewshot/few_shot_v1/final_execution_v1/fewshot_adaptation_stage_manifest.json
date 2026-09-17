@@ -1,0 +1,2444 @@
+{
+  "adaptation_epochs_each": 100,
+  "completed_adaptations": 270,
+  "contract": "lodo_fewshot_adaptation_stage_v1",
+  "data_manifest_sha256": "8d3fa7c8b614305608e8db9f9f8d235388e6b304776cc64ffc8aa2fda6312a67",
+  "expected_adaptations": 270,
+  "fit_metadata": [
+    {
+      "condition": "K1",
+      "held_out": "HUST",
+      "model_tag": "MLP",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_HUST__split0__train0__MLP__K1.json",
+      "sha256": "4140b13c02e2d60e518c3867d598304fe54b40ed62363178e4a219d53d0d75de",
+      "split_seed": 0,
+      "training_initialization_seed": 0
+    },
+    {
+      "condition": "K3",
+      "held_out": "HUST",
+      "model_tag": "MLP",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_HUST__split0__train0__MLP__K3.json",
+      "sha256": "756b9f0535c8759468ecbe487f3653391054dd0977c3e3a0b074c238c0dc61d2",
+      "split_seed": 0,
+      "training_initialization_seed": 0
+    },
+    {
+      "condition": "K5",
+      "held_out": "HUST",
+      "model_tag": "MLP",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_HUST__split0__train0__MLP__K5.json",
+      "sha256": "c69681ab5e5be4b3dce696a3b59243a40e0f30cb4f6841a018189a210fcefecc",
+      "split_seed": 0,
+      "training_initialization_seed": 0
+    },
+    {
+      "condition": "K1",
+      "held_out": "HUST",
+      "model_tag": "GCN",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_HUST__split0__train0__GCN__K1.json",
+      "sha256": "cabd74d537b59b3357a42ea4c9c096b675a2ba836e8f9be463d818c08c0b19af",
+      "split_seed": 0,
+      "training_initialization_seed": 0
+    },
+    {
+      "condition": "K3",
+      "held_out": "HUST",
+      "model_tag": "GCN",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_HUST__split0__train0__GCN__K3.json",
+      "sha256": "1f3909a4194b9adce06f0cc0b05331b631ab3e437dbbc3fee729a46d3dd34677",
+      "split_seed": 0,
+      "training_initialization_seed": 0
+    },
+    {
+      "condition": "K5",
+      "held_out": "HUST",
+      "model_tag": "GCN",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_HUST__split0__train0__GCN__K5.json",
+      "sha256": "2ebc5581d8d3493430abeb9954294219d65c08c5314cbdb3fb8ebf2314f4c7f6",
+      "split_seed": 0,
+      "training_initialization_seed": 0
+    },
+    {
+      "condition": "K1",
+      "held_out": "HUST",
+      "model_tag": "MLP",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_HUST__split0__train1__MLP__K1.json",
+      "sha256": "20cb69fb29439c6d589a71d0b9521d63d5a47acd728597bae0302f2d32cd618d",
+      "split_seed": 0,
+      "training_initialization_seed": 1
+    },
+    {
+      "condition": "K3",
+      "held_out": "HUST",
+      "model_tag": "MLP",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_HUST__split0__train1__MLP__K3.json",
+      "sha256": "5976876287ea1fcabf86fc71ff52e081b123a1b2e75c065642d186b7b9e1d025",
+      "split_seed": 0,
+      "training_initialization_seed": 1
+    },
+    {
+      "condition": "K5",
+      "held_out": "HUST",
+      "model_tag": "MLP",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_HUST__split0__train1__MLP__K5.json",
+      "sha256": "17b908bf1487f2d46eecdf4fd05b8c8896eb199d5042155e00fe790f1fcd7a91",
+      "split_seed": 0,
+      "training_initialization_seed": 1
+    },
+    {
+      "condition": "K1",
+      "held_out": "HUST",
+      "model_tag": "GCN",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_HUST__split0__train1__GCN__K1.json",
+      "sha256": "75273312ad836d3a9093f210af22e0eb0f57e9b134779b8d03aa465d33bb95f2",
+      "split_seed": 0,
+      "training_initialization_seed": 1
+    },
+    {
+      "condition": "K3",
+      "held_out": "HUST",
+      "model_tag": "GCN",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_HUST__split0__train1__GCN__K3.json",
+      "sha256": "aa26811fd9086431c06014b3465f61605990187ec5af13e70af4376f5f95d8b0",
+      "split_seed": 0,
+      "training_initialization_seed": 1
+    },
+    {
+      "condition": "K5",
+      "held_out": "HUST",
+      "model_tag": "GCN",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_HUST__split0__train1__GCN__K5.json",
+      "sha256": "33ba5b4c0b76242673acd35b5bcf572390efbbf41281844bc257185d8823cd1a",
+      "split_seed": 0,
+      "training_initialization_seed": 1
+    },
+    {
+      "condition": "K1",
+      "held_out": "HUST",
+      "model_tag": "MLP",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_HUST__split0__train2__MLP__K1.json",
+      "sha256": "6a6c369df3c6de9413d144c333c1a9bd4a3176129cf4b68e2e21a4e30e0d619e",
+      "split_seed": 0,
+      "training_initialization_seed": 2
+    },
+    {
+      "condition": "K3",
+      "held_out": "HUST",
+      "model_tag": "MLP",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_HUST__split0__train2__MLP__K3.json",
+      "sha256": "8a83ef90fcf9b20796c71028a5232543b5e3106885ce47826eb4873696ec58b3",
+      "split_seed": 0,
+      "training_initialization_seed": 2
+    },
+    {
+      "condition": "K5",
+      "held_out": "HUST",
+      "model_tag": "MLP",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_HUST__split0__train2__MLP__K5.json",
+      "sha256": "9e47b25df561e2502e3ff7284d07a556f4676cab310fc84d021231b317b64a01",
+      "split_seed": 0,
+      "training_initialization_seed": 2
+    },
+    {
+      "condition": "K1",
+      "held_out": "HUST",
+      "model_tag": "GCN",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_HUST__split0__train2__GCN__K1.json",
+      "sha256": "336c558bc276ec041e28d1d262814f6087794d3fb45b18529a0dfc4dde169182",
+      "split_seed": 0,
+      "training_initialization_seed": 2
+    },
+    {
+      "condition": "K3",
+      "held_out": "HUST",
+      "model_tag": "GCN",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_HUST__split0__train2__GCN__K3.json",
+      "sha256": "08f4c2961f04a8cc329077a9c22d67f4108cfd4eb6a28ab12946970ed704c5c3",
+      "split_seed": 0,
+      "training_initialization_seed": 2
+    },
+    {
+      "condition": "K5",
+      "held_out": "HUST",
+      "model_tag": "GCN",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_HUST__split0__train2__GCN__K5.json",
+      "sha256": "9a2bd6ea7574ee854dcf65db36853f1072862792e9be2e63658f806db3772578",
+      "split_seed": 0,
+      "training_initialization_seed": 2
+    },
+    {
+      "condition": "K1",
+      "held_out": "HUST",
+      "model_tag": "MLP",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_HUST__split1__train0__MLP__K1.json",
+      "sha256": "b0d6c00bfb7ef2b2ced4b6cad17955457e1e455be451263f9f29dc7cb9f2170b",
+      "split_seed": 1,
+      "training_initialization_seed": 0
+    },
+    {
+      "condition": "K3",
+      "held_out": "HUST",
+      "model_tag": "MLP",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_HUST__split1__train0__MLP__K3.json",
+      "sha256": "9eb8a8cad2269032b2e26b6e8a9a209ce0bf1aef3b3d57a12d71b109a3930bb0",
+      "split_seed": 1,
+      "training_initialization_seed": 0
+    },
+    {
+      "condition": "K5",
+      "held_out": "HUST",
+      "model_tag": "MLP",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_HUST__split1__train0__MLP__K5.json",
+      "sha256": "dad84d03143921a3627ec0dc1c03c50a547de1f1f7d5721d0581c35eea002283",
+      "split_seed": 1,
+      "training_initialization_seed": 0
+    },
+    {
+      "condition": "K1",
+      "held_out": "HUST",
+      "model_tag": "GCN",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_HUST__split1__train0__GCN__K1.json",
+      "sha256": "8dde903d7839988dc8cd188fe9bc597387a8fe262aa77eb806a0ef3615c4e0e2",
+      "split_seed": 1,
+      "training_initialization_seed": 0
+    },
+    {
+      "condition": "K3",
+      "held_out": "HUST",
+      "model_tag": "GCN",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_HUST__split1__train0__GCN__K3.json",
+      "sha256": "52b4caebb8adeb0a2768cfaef82f72377a8b24faef4c113ece30b24dd7e151a3",
+      "split_seed": 1,
+      "training_initialization_seed": 0
+    },
+    {
+      "condition": "K5",
+      "held_out": "HUST",
+      "model_tag": "GCN",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_HUST__split1__train0__GCN__K5.json",
+      "sha256": "05fb5d45a6a0c36ffe59414fe8632b643e894d5a3086f69388c0047864a55da5",
+      "split_seed": 1,
+      "training_initialization_seed": 0
+    },
+    {
+      "condition": "K1",
+      "held_out": "HUST",
+      "model_tag": "MLP",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_HUST__split1__train1__MLP__K1.json",
+      "sha256": "72c620b47b9a3d50969a0dbf7c32dd8d816c62f29e14c930f8a9b38bd920769f",
+      "split_seed": 1,
+      "training_initialization_seed": 1
+    },
+    {
+      "condition": "K3",
+      "held_out": "HUST",
+      "model_tag": "MLP",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_HUST__split1__train1__MLP__K3.json",
+      "sha256": "6e8b989141309790c040261e034d39628dc0a019ceb7b6594b46a9587347d347",
+      "split_seed": 1,
+      "training_initialization_seed": 1
+    },
+    {
+      "condition": "K5",
+      "held_out": "HUST",
+      "model_tag": "MLP",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_HUST__split1__train1__MLP__K5.json",
+      "sha256": "03659468c08fe0516f4c188a2d3f1615e9ec9021267588c0c8f7f33f47d57bd3",
+      "split_seed": 1,
+      "training_initialization_seed": 1
+    },
+    {
+      "condition": "K1",
+      "held_out": "HUST",
+      "model_tag": "GCN",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_HUST__split1__train1__GCN__K1.json",
+      "sha256": "8d3ae84ea9ced0a887dec2b441051d29ee1f3eb9cdd274797fa5ce4e12b6f78f",
+      "split_seed": 1,
+      "training_initialization_seed": 1
+    },
+    {
+      "condition": "K3",
+      "held_out": "HUST",
+      "model_tag": "GCN",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_HUST__split1__train1__GCN__K3.json",
+      "sha256": "43f9289999e75ac6e74187e31453cb483a3175ee323a6c85d1d3d16762cbae32",
+      "split_seed": 1,
+      "training_initialization_seed": 1
+    },
+    {
+      "condition": "K5",
+      "held_out": "HUST",
+      "model_tag": "GCN",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_HUST__split1__train1__GCN__K5.json",
+      "sha256": "05363bb31c682ea77f59844ad2433586bbc1deac16bc666072034fe8a19768d3",
+      "split_seed": 1,
+      "training_initialization_seed": 1
+    },
+    {
+      "condition": "K1",
+      "held_out": "HUST",
+      "model_tag": "MLP",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_HUST__split1__train2__MLP__K1.json",
+      "sha256": "4de3ae64a0e29572f7f1d238e98d40bcfd3ec4cda86bf918244cd5e0f0bb77ec",
+      "split_seed": 1,
+      "training_initialization_seed": 2
+    },
+    {
+      "condition": "K3",
+      "held_out": "HUST",
+      "model_tag": "MLP",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_HUST__split1__train2__MLP__K3.json",
+      "sha256": "4c76cd7ed1618b57b311f9270ea5fb6b362011ad39e8e5c2949ee2cf23c0f71e",
+      "split_seed": 1,
+      "training_initialization_seed": 2
+    },
+    {
+      "condition": "K5",
+      "held_out": "HUST",
+      "model_tag": "MLP",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_HUST__split1__train2__MLP__K5.json",
+      "sha256": "75978968a685268750edf285ae2e77ad2475435702e307a31d31c5ced1f89a68",
+      "split_seed": 1,
+      "training_initialization_seed": 2
+    },
+    {
+      "condition": "K1",
+      "held_out": "HUST",
+      "model_tag": "GCN",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_HUST__split1__train2__GCN__K1.json",
+      "sha256": "d4383131967b63c9f8794852c2c0256e7b46bf1116b511e7fb719ac82d5fba52",
+      "split_seed": 1,
+      "training_initialization_seed": 2
+    },
+    {
+      "condition": "K3",
+      "held_out": "HUST",
+      "model_tag": "GCN",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_HUST__split1__train2__GCN__K3.json",
+      "sha256": "9ecbefb1d71eaa6843db6ccc44b3a2457c54fb43a95bd10b323221a888c75162",
+      "split_seed": 1,
+      "training_initialization_seed": 2
+    },
+    {
+      "condition": "K5",
+      "held_out": "HUST",
+      "model_tag": "GCN",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_HUST__split1__train2__GCN__K5.json",
+      "sha256": "57ed91a7ecd7bcbe07b3620cfeffcaa1136fb3b7fc3e54ac806f06f7c059788b",
+      "split_seed": 1,
+      "training_initialization_seed": 2
+    },
+    {
+      "condition": "K1",
+      "held_out": "HUST",
+      "model_tag": "MLP",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_HUST__split2__train0__MLP__K1.json",
+      "sha256": "11800defa3c9b9ae7297c535c4a5576d8f3b1be904eb1745b643c739961165ac",
+      "split_seed": 2,
+      "training_initialization_seed": 0
+    },
+    {
+      "condition": "K3",
+      "held_out": "HUST",
+      "model_tag": "MLP",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_HUST__split2__train0__MLP__K3.json",
+      "sha256": "fc40bbef5aafdb3401f9aeab7fd51cc0c67cab7456532aae7f23dc1bd2cea596",
+      "split_seed": 2,
+      "training_initialization_seed": 0
+    },
+    {
+      "condition": "K5",
+      "held_out": "HUST",
+      "model_tag": "MLP",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_HUST__split2__train0__MLP__K5.json",
+      "sha256": "0da3821c6fc8a56e011bca2c6880894a39c3279d4befa9311b559786023d5093",
+      "split_seed": 2,
+      "training_initialization_seed": 0
+    },
+    {
+      "condition": "K1",
+      "held_out": "HUST",
+      "model_tag": "GCN",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_HUST__split2__train0__GCN__K1.json",
+      "sha256": "fc1cc186acf8edec92d5a4aa3cbd798e96dc8148760c5b735f738a5c55588a8d",
+      "split_seed": 2,
+      "training_initialization_seed": 0
+    },
+    {
+      "condition": "K3",
+      "held_out": "HUST",
+      "model_tag": "GCN",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_HUST__split2__train0__GCN__K3.json",
+      "sha256": "d8dfd74b55bd4b4c0d583497257f591b4d2d76b94cc63f60bcef417d33d15c49",
+      "split_seed": 2,
+      "training_initialization_seed": 0
+    },
+    {
+      "condition": "K5",
+      "held_out": "HUST",
+      "model_tag": "GCN",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_HUST__split2__train0__GCN__K5.json",
+      "sha256": "66e260638d7131a8facd7cd142a8d97b31f5a7fec21c918a3a45f33b77397e8c",
+      "split_seed": 2,
+      "training_initialization_seed": 0
+    },
+    {
+      "condition": "K1",
+      "held_out": "HUST",
+      "model_tag": "MLP",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_HUST__split2__train1__MLP__K1.json",
+      "sha256": "9bc04a1c1644ef7d9489d0ed8fa253fbc9d99db0556aa14e0c95567ed6225617",
+      "split_seed": 2,
+      "training_initialization_seed": 1
+    },
+    {
+      "condition": "K3",
+      "held_out": "HUST",
+      "model_tag": "MLP",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_HUST__split2__train1__MLP__K3.json",
+      "sha256": "c728a8a63bd9676a4131bd852ac9429a80bb0ac5d60a02b2a614e21f36bfbc08",
+      "split_seed": 2,
+      "training_initialization_seed": 1
+    },
+    {
+      "condition": "K5",
+      "held_out": "HUST",
+      "model_tag": "MLP",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_HUST__split2__train1__MLP__K5.json",
+      "sha256": "4812ad223220a3e525d7d23321663755080481e04d2be9fa0178be6cdaa42656",
+      "split_seed": 2,
+      "training_initialization_seed": 1
+    },
+    {
+      "condition": "K1",
+      "held_out": "HUST",
+      "model_tag": "GCN",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_HUST__split2__train1__GCN__K1.json",
+      "sha256": "06c4f5c1b91a8c59211317117c9b2d31805879f1136ad9d0c06315bd60a124e1",
+      "split_seed": 2,
+      "training_initialization_seed": 1
+    },
+    {
+      "condition": "K3",
+      "held_out": "HUST",
+      "model_tag": "GCN",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_HUST__split2__train1__GCN__K3.json",
+      "sha256": "fb7ee155a57a4f33d4c46174dd6642b27047dde896b437e22e54656807668f56",
+      "split_seed": 2,
+      "training_initialization_seed": 1
+    },
+    {
+      "condition": "K5",
+      "held_out": "HUST",
+      "model_tag": "GCN",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_HUST__split2__train1__GCN__K5.json",
+      "sha256": "e130fa91b28ba5130f5a1e73fc271c26a447dedb1c61ffaeb0f9f5df9e8d836f",
+      "split_seed": 2,
+      "training_initialization_seed": 1
+    },
+    {
+      "condition": "K1",
+      "held_out": "HUST",
+      "model_tag": "MLP",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_HUST__split2__train2__MLP__K1.json",
+      "sha256": "4dc77e71d1a4f4e994cec7fc6dd6586ec3e50bb27c51cbcbb2ef38dcf492e266",
+      "split_seed": 2,
+      "training_initialization_seed": 2
+    },
+    {
+      "condition": "K3",
+      "held_out": "HUST",
+      "model_tag": "MLP",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_HUST__split2__train2__MLP__K3.json",
+      "sha256": "27ab135a317a11a6dec9309a7abf842a9af44f5ea565f65466795208435e52b0",
+      "split_seed": 2,
+      "training_initialization_seed": 2
+    },
+    {
+      "condition": "K5",
+      "held_out": "HUST",
+      "model_tag": "MLP",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_HUST__split2__train2__MLP__K5.json",
+      "sha256": "d6ad57d3efddb145934e52d364eda8c2d8635a78b28d7093886cfb4faf31a84f",
+      "split_seed": 2,
+      "training_initialization_seed": 2
+    },
+    {
+      "condition": "K1",
+      "held_out": "HUST",
+      "model_tag": "GCN",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_HUST__split2__train2__GCN__K1.json",
+      "sha256": "bdb4137eed9ca9c4a20b8194987d29e93a01b502a1b2d860751cafebe0bcaa95",
+      "split_seed": 2,
+      "training_initialization_seed": 2
+    },
+    {
+      "condition": "K3",
+      "held_out": "HUST",
+      "model_tag": "GCN",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_HUST__split2__train2__GCN__K3.json",
+      "sha256": "c690c2c6bebdf9f06a394e3b576073d5094c6d0f9bd64edb15ad9f3684448eaf",
+      "split_seed": 2,
+      "training_initialization_seed": 2
+    },
+    {
+      "condition": "K5",
+      "held_out": "HUST",
+      "model_tag": "GCN",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_HUST__split2__train2__GCN__K5.json",
+      "sha256": "bef9f59296074746fc9087a7862089766337c68be3f2f8b5e0b52a38224ce09e",
+      "split_seed": 2,
+      "training_initialization_seed": 2
+    },
+    {
+      "condition": "K1",
+      "held_out": "HUST",
+      "model_tag": "MLP",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_HUST__split3__train0__MLP__K1.json",
+      "sha256": "a0e5bbab1451c76e1e5f1c4c1a78a33c6405ac229f8888088520f7de399dfb23",
+      "split_seed": 3,
+      "training_initialization_seed": 0
+    },
+    {
+      "condition": "K3",
+      "held_out": "HUST",
+      "model_tag": "MLP",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_HUST__split3__train0__MLP__K3.json",
+      "sha256": "f342c362beb633226e78e5e9a0bb2f475e8bbf13c5958c14d62149fe7375fa47",
+      "split_seed": 3,
+      "training_initialization_seed": 0
+    },
+    {
+      "condition": "K5",
+      "held_out": "HUST",
+      "model_tag": "MLP",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_HUST__split3__train0__MLP__K5.json",
+      "sha256": "91545af73404f9161da73009c5d806e44b6406290a438c62572d8bc7f04af1f6",
+      "split_seed": 3,
+      "training_initialization_seed": 0
+    },
+    {
+      "condition": "K1",
+      "held_out": "HUST",
+      "model_tag": "GCN",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_HUST__split3__train0__GCN__K1.json",
+      "sha256": "0f3a6cd9baf68b6bb4eef44f68cc16ee46fbdc80c6763e6e365a1f352907b3b6",
+      "split_seed": 3,
+      "training_initialization_seed": 0
+    },
+    {
+      "condition": "K3",
+      "held_out": "HUST",
+      "model_tag": "GCN",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_HUST__split3__train0__GCN__K3.json",
+      "sha256": "7a9654edd7555b5652b906958b56060ab4398606705acda8da86e77c88d3eccf",
+      "split_seed": 3,
+      "training_initialization_seed": 0
+    },
+    {
+      "condition": "K5",
+      "held_out": "HUST",
+      "model_tag": "GCN",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_HUST__split3__train0__GCN__K5.json",
+      "sha256": "09ea48def23599592808964eeee417ae848446413c3028ec2552dfb85ba17a19",
+      "split_seed": 3,
+      "training_initialization_seed": 0
+    },
+    {
+      "condition": "K1",
+      "held_out": "HUST",
+      "model_tag": "MLP",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_HUST__split3__train1__MLP__K1.json",
+      "sha256": "13c5f12a7e706b6b78fba52ea17f939f1773ccdbc13eee7c2be6dd9be90f20a4",
+      "split_seed": 3,
+      "training_initialization_seed": 1
+    },
+    {
+      "condition": "K3",
+      "held_out": "HUST",
+      "model_tag": "MLP",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_HUST__split3__train1__MLP__K3.json",
+      "sha256": "522103bcc77da04edf03e5811597ed9ac410782b9565386fab579d0fac6aaaf7",
+      "split_seed": 3,
+      "training_initialization_seed": 1
+    },
+    {
+      "condition": "K5",
+      "held_out": "HUST",
+      "model_tag": "MLP",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_HUST__split3__train1__MLP__K5.json",
+      "sha256": "cea5fa9f648e43cd758137376bb8eb63465bb54ef38c4cb07f6a58f3c1c833d4",
+      "split_seed": 3,
+      "training_initialization_seed": 1
+    },
+    {
+      "condition": "K1",
+      "held_out": "HUST",
+      "model_tag": "GCN",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_HUST__split3__train1__GCN__K1.json",
+      "sha256": "0bfca0a32aec6d3f0d0ed0c34158572a253a2d46d2c0a6478e5f510bb1065eb3",
+      "split_seed": 3,
+      "training_initialization_seed": 1
+    },
+    {
+      "condition": "K3",
+      "held_out": "HUST",
+      "model_tag": "GCN",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_HUST__split3__train1__GCN__K3.json",
+      "sha256": "4a72f28e010b8b18d655064b6b38953abfad4c8377f527a65371f26ac63f2fa4",
+      "split_seed": 3,
+      "training_initialization_seed": 1
+    },
+    {
+      "condition": "K5",
+      "held_out": "HUST",
+      "model_tag": "GCN",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_HUST__split3__train1__GCN__K5.json",
+      "sha256": "aa2de4dfe8b9aaecec0ec550fa8539219ddbe641574ddb92f868e3d461d8b7d9",
+      "split_seed": 3,
+      "training_initialization_seed": 1
+    },
+    {
+      "condition": "K1",
+      "held_out": "HUST",
+      "model_tag": "MLP",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_HUST__split3__train2__MLP__K1.json",
+      "sha256": "93ac9180a22d85a2a8c44e0edc10c197118bee6a0bbea8f9977fbbdded65acab",
+      "split_seed": 3,
+      "training_initialization_seed": 2
+    },
+    {
+      "condition": "K3",
+      "held_out": "HUST",
+      "model_tag": "MLP",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_HUST__split3__train2__MLP__K3.json",
+      "sha256": "69f3583feefab1666e57f83c2ae06726b0ee6a1c815c66b7a9d05dc705f7ebef",
+      "split_seed": 3,
+      "training_initialization_seed": 2
+    },
+    {
+      "condition": "K5",
+      "held_out": "HUST",
+      "model_tag": "MLP",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_HUST__split3__train2__MLP__K5.json",
+      "sha256": "b62bd71dd7d6b55d38b8f9f1bf09e5f8c10b29cd13302e75d020ac2ec3783371",
+      "split_seed": 3,
+      "training_initialization_seed": 2
+    },
+    {
+      "condition": "K1",
+      "held_out": "HUST",
+      "model_tag": "GCN",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_HUST__split3__train2__GCN__K1.json",
+      "sha256": "138514ceb0b1675380823730707f8fbf6301ead61a6d398a621f1aa2e55a75b6",
+      "split_seed": 3,
+      "training_initialization_seed": 2
+    },
+    {
+      "condition": "K3",
+      "held_out": "HUST",
+      "model_tag": "GCN",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_HUST__split3__train2__GCN__K3.json",
+      "sha256": "045b403ccaf10bf8d7a86225c74c5ec23c6ffc061e601d959edada322cff0ec0",
+      "split_seed": 3,
+      "training_initialization_seed": 2
+    },
+    {
+      "condition": "K5",
+      "held_out": "HUST",
+      "model_tag": "GCN",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_HUST__split3__train2__GCN__K5.json",
+      "sha256": "8ce6dd44c39df36d19a3f0625f349dc83548a0a74ca022b32189142c5f0ac75f",
+      "split_seed": 3,
+      "training_initialization_seed": 2
+    },
+    {
+      "condition": "K1",
+      "held_out": "HUST",
+      "model_tag": "MLP",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_HUST__split4__train0__MLP__K1.json",
+      "sha256": "860335023cec65033d53f33a5675bece503bf1801f53054379a77268bb77575f",
+      "split_seed": 4,
+      "training_initialization_seed": 0
+    },
+    {
+      "condition": "K3",
+      "held_out": "HUST",
+      "model_tag": "MLP",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_HUST__split4__train0__MLP__K3.json",
+      "sha256": "02d820579b4b8f9bbd39fd47ee5d8d5531e0c90a32aea2f251f9031a22bd113c",
+      "split_seed": 4,
+      "training_initialization_seed": 0
+    },
+    {
+      "condition": "K5",
+      "held_out": "HUST",
+      "model_tag": "MLP",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_HUST__split4__train0__MLP__K5.json",
+      "sha256": "03bd820f61f55a241f6e8cc887ec18b6a42f9114375dd6d7592a8e3df913a618",
+      "split_seed": 4,
+      "training_initialization_seed": 0
+    },
+    {
+      "condition": "K1",
+      "held_out": "HUST",
+      "model_tag": "GCN",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_HUST__split4__train0__GCN__K1.json",
+      "sha256": "ea2b5d7b3664eb855e65c1f2d8d5543bee015149c9dbed0c6a499597d4f99fd5",
+      "split_seed": 4,
+      "training_initialization_seed": 0
+    },
+    {
+      "condition": "K3",
+      "held_out": "HUST",
+      "model_tag": "GCN",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_HUST__split4__train0__GCN__K3.json",
+      "sha256": "2825fd0c584a808fbbbea6b93445ba80f4e6259003a39ea3c48d864c4a1ff2e5",
+      "split_seed": 4,
+      "training_initialization_seed": 0
+    },
+    {
+      "condition": "K5",
+      "held_out": "HUST",
+      "model_tag": "GCN",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_HUST__split4__train0__GCN__K5.json",
+      "sha256": "1dc43e49ddf14ab83616a50802f617a1ba9c6516cd4cb651a9f85ac54628e385",
+      "split_seed": 4,
+      "training_initialization_seed": 0
+    },
+    {
+      "condition": "K1",
+      "held_out": "HUST",
+      "model_tag": "MLP",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_HUST__split4__train1__MLP__K1.json",
+      "sha256": "c6097954f0b2cfb96f1bcadb39be2c80e5ca932172dad08ebfe51e5f5ccc02c7",
+      "split_seed": 4,
+      "training_initialization_seed": 1
+    },
+    {
+      "condition": "K3",
+      "held_out": "HUST",
+      "model_tag": "MLP",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_HUST__split4__train1__MLP__K3.json",
+      "sha256": "0c60ae8bd6728971009fb0aac4c4ca3453c2b258ae475f8397875201869560d1",
+      "split_seed": 4,
+      "training_initialization_seed": 1
+    },
+    {
+      "condition": "K5",
+      "held_out": "HUST",
+      "model_tag": "MLP",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_HUST__split4__train1__MLP__K5.json",
+      "sha256": "86b8371290c7f0b76b3fc809fc5433b8535c5dee76bef7357dec88111971b3a1",
+      "split_seed": 4,
+      "training_initialization_seed": 1
+    },
+    {
+      "condition": "K1",
+      "held_out": "HUST",
+      "model_tag": "GCN",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_HUST__split4__train1__GCN__K1.json",
+      "sha256": "daa351b50f1ec2bf29db0a8fc97d39700aaf46838175a913dfb40b0bd0cf9bc5",
+      "split_seed": 4,
+      "training_initialization_seed": 1
+    },
+    {
+      "condition": "K3",
+      "held_out": "HUST",
+      "model_tag": "GCN",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_HUST__split4__train1__GCN__K3.json",
+      "sha256": "0e8ae5d7520dfba260e2c31400ffc98f0017cdf498e64f99a390d2413509a5a7",
+      "split_seed": 4,
+      "training_initialization_seed": 1
+    },
+    {
+      "condition": "K5",
+      "held_out": "HUST",
+      "model_tag": "GCN",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_HUST__split4__train1__GCN__K5.json",
+      "sha256": "78d371f4a9a0f2150e92cd00b1cb0983ba4f671f353c10fbd19b541240575d44",
+      "split_seed": 4,
+      "training_initialization_seed": 1
+    },
+    {
+      "condition": "K1",
+      "held_out": "HUST",
+      "model_tag": "MLP",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_HUST__split4__train2__MLP__K1.json",
+      "sha256": "f464adfc45552a28438f86a102b5ca7d12a40f27ea13daad2ca91d89624cfb47",
+      "split_seed": 4,
+      "training_initialization_seed": 2
+    },
+    {
+      "condition": "K3",
+      "held_out": "HUST",
+      "model_tag": "MLP",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_HUST__split4__train2__MLP__K3.json",
+      "sha256": "fe67e29e5741df0d1e5eceae86f97bad043fb9fc39f3bb56e1b1e92705647afc",
+      "split_seed": 4,
+      "training_initialization_seed": 2
+    },
+    {
+      "condition": "K5",
+      "held_out": "HUST",
+      "model_tag": "MLP",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_HUST__split4__train2__MLP__K5.json",
+      "sha256": "76e97a6a178f86e571f18ab376c9da94d182387cb1ef15f7053f08ac2af50290",
+      "split_seed": 4,
+      "training_initialization_seed": 2
+    },
+    {
+      "condition": "K1",
+      "held_out": "HUST",
+      "model_tag": "GCN",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_HUST__split4__train2__GCN__K1.json",
+      "sha256": "8a133083c1a40e20c47f09a00c4284c819de809b64cf08bf579daf41b17c0872",
+      "split_seed": 4,
+      "training_initialization_seed": 2
+    },
+    {
+      "condition": "K3",
+      "held_out": "HUST",
+      "model_tag": "GCN",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_HUST__split4__train2__GCN__K3.json",
+      "sha256": "cff49afc67eac65b9f2484e5e5a0b104335ac932cdd24fd07c21b78c04622098",
+      "split_seed": 4,
+      "training_initialization_seed": 2
+    },
+    {
+      "condition": "K5",
+      "held_out": "HUST",
+      "model_tag": "GCN",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_HUST__split4__train2__GCN__K5.json",
+      "sha256": "ba77082efe7165ca09340cf54336a99e5fb54fa290f6b1192a2cb819b6c93efa",
+      "split_seed": 4,
+      "training_initialization_seed": 2
+    },
+    {
+      "condition": "K1",
+      "held_out": "CALCE",
+      "model_tag": "MLP",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_CALCE__split0__train0__MLP__K1.json",
+      "sha256": "9dc9c3fcaa29b27dceb532ec0d591410ec68b4a97e12ffb198e709557aba52ec",
+      "split_seed": 0,
+      "training_initialization_seed": 0
+    },
+    {
+      "condition": "K3",
+      "held_out": "CALCE",
+      "model_tag": "MLP",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_CALCE__split0__train0__MLP__K3.json",
+      "sha256": "361817fc87b41a71b5461780c6cf3178ba0ef0e447622b2a11f119f9aca01016",
+      "split_seed": 0,
+      "training_initialization_seed": 0
+    },
+    {
+      "condition": "K5",
+      "held_out": "CALCE",
+      "model_tag": "MLP",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_CALCE__split0__train0__MLP__K5.json",
+      "sha256": "b980e88a85a8380b504c93bc9b749f15464380c953ef74202c8e7f574b666ca6",
+      "split_seed": 0,
+      "training_initialization_seed": 0
+    },
+    {
+      "condition": "K1",
+      "held_out": "CALCE",
+      "model_tag": "GCN",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_CALCE__split0__train0__GCN__K1.json",
+      "sha256": "e994cde2d255c13cb2d4ce6cc545a3295053d3cfc67ade731d0070e875843b13",
+      "split_seed": 0,
+      "training_initialization_seed": 0
+    },
+    {
+      "condition": "K3",
+      "held_out": "CALCE",
+      "model_tag": "GCN",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_CALCE__split0__train0__GCN__K3.json",
+      "sha256": "c282b594f867e235f40ddce9d39e8f59283a91429ab1021c3173f87b3d63fedc",
+      "split_seed": 0,
+      "training_initialization_seed": 0
+    },
+    {
+      "condition": "K5",
+      "held_out": "CALCE",
+      "model_tag": "GCN",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_CALCE__split0__train0__GCN__K5.json",
+      "sha256": "ab56bb0d364ca5106d9ffa965b44d5ebe06a1a6abc0ecdd134bb8267d5d20791",
+      "split_seed": 0,
+      "training_initialization_seed": 0
+    },
+    {
+      "condition": "K1",
+      "held_out": "CALCE",
+      "model_tag": "MLP",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_CALCE__split0__train1__MLP__K1.json",
+      "sha256": "e24b1ec4328cd73456c15a2cd7d57b7e3d5564c07123fc4c0f2cdc53b37fb509",
+      "split_seed": 0,
+      "training_initialization_seed": 1
+    },
+    {
+      "condition": "K3",
+      "held_out": "CALCE",
+      "model_tag": "MLP",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_CALCE__split0__train1__MLP__K3.json",
+      "sha256": "77770c5d88924b7b9afb291f36e5084dc7d397f354cab3ece10a57a16f3091ac",
+      "split_seed": 0,
+      "training_initialization_seed": 1
+    },
+    {
+      "condition": "K5",
+      "held_out": "CALCE",
+      "model_tag": "MLP",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_CALCE__split0__train1__MLP__K5.json",
+      "sha256": "158dc15deb3175c0421c0348a798a1b88875de44778382e2514e42591e9cf73e",
+      "split_seed": 0,
+      "training_initialization_seed": 1
+    },
+    {
+      "condition": "K1",
+      "held_out": "CALCE",
+      "model_tag": "GCN",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_CALCE__split0__train1__GCN__K1.json",
+      "sha256": "5f140bef41bd246c2cecad0749e6b463f147919571724daf92792bd87207c3f0",
+      "split_seed": 0,
+      "training_initialization_seed": 1
+    },
+    {
+      "condition": "K3",
+      "held_out": "CALCE",
+      "model_tag": "GCN",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_CALCE__split0__train1__GCN__K3.json",
+      "sha256": "479075d483abd15eab81205d55835fd6a017077bea9210b8e874abce3b890731",
+      "split_seed": 0,
+      "training_initialization_seed": 1
+    },
+    {
+      "condition": "K5",
+      "held_out": "CALCE",
+      "model_tag": "GCN",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_CALCE__split0__train1__GCN__K5.json",
+      "sha256": "bc9d46f92aeeb0835a3b46dd0785529aaaf7ddcf31151a4d9c1ea25ce8909c46",
+      "split_seed": 0,
+      "training_initialization_seed": 1
+    },
+    {
+      "condition": "K1",
+      "held_out": "CALCE",
+      "model_tag": "MLP",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_CALCE__split0__train2__MLP__K1.json",
+      "sha256": "89d489e5dd5924514a8a05e91493e1ee3fd07d23792e1c363cb70b2ce6c02483",
+      "split_seed": 0,
+      "training_initialization_seed": 2
+    },
+    {
+      "condition": "K3",
+      "held_out": "CALCE",
+      "model_tag": "MLP",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_CALCE__split0__train2__MLP__K3.json",
+      "sha256": "561f1542257cfe44b62bb9508970834086524e60fe9b3e18bd81533c2923fb31",
+      "split_seed": 0,
+      "training_initialization_seed": 2
+    },
+    {
+      "condition": "K5",
+      "held_out": "CALCE",
+      "model_tag": "MLP",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_CALCE__split0__train2__MLP__K5.json",
+      "sha256": "3320d28e3374349b9f829679b8b13485c2f974ab13f14854ccbaa925e452f158",
+      "split_seed": 0,
+      "training_initialization_seed": 2
+    },
+    {
+      "condition": "K1",
+      "held_out": "CALCE",
+      "model_tag": "GCN",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_CALCE__split0__train2__GCN__K1.json",
+      "sha256": "cf700dd03cdbfa9340900734750b171b2a9e629a9d80f117a4a47a11325ad9b8",
+      "split_seed": 0,
+      "training_initialization_seed": 2
+    },
+    {
+      "condition": "K3",
+      "held_out": "CALCE",
+      "model_tag": "GCN",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_CALCE__split0__train2__GCN__K3.json",
+      "sha256": "2e3d7b88eedba48d8c3632df1efe355903d0a23ad2fc2263e6c78c0e4325cc88",
+      "split_seed": 0,
+      "training_initialization_seed": 2
+    },
+    {
+      "condition": "K5",
+      "held_out": "CALCE",
+      "model_tag": "GCN",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_CALCE__split0__train2__GCN__K5.json",
+      "sha256": "6af5fe576b85cba0d8fb49aaca758bcf7751b36798579f911e5b021b66687c5f",
+      "split_seed": 0,
+      "training_initialization_seed": 2
+    },
+    {
+      "condition": "K1",
+      "held_out": "CALCE",
+      "model_tag": "MLP",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_CALCE__split1__train0__MLP__K1.json",
+      "sha256": "4ae5ecc8e2dae495e02464ea4faf05dc530d85b7af6f98eda97c70e0fefe1c09",
+      "split_seed": 1,
+      "training_initialization_seed": 0
+    },
+    {
+      "condition": "K3",
+      "held_out": "CALCE",
+      "model_tag": "MLP",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_CALCE__split1__train0__MLP__K3.json",
+      "sha256": "e6f60702e29ca98c9838841b6aa35e4b96b12f630c0cc1908ee2eb25ecded7a2",
+      "split_seed": 1,
+      "training_initialization_seed": 0
+    },
+    {
+      "condition": "K5",
+      "held_out": "CALCE",
+      "model_tag": "MLP",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_CALCE__split1__train0__MLP__K5.json",
+      "sha256": "1c7e430d617cbd3f11826e2b916ddb67e6c8a5db124c934eee692977e611e636",
+      "split_seed": 1,
+      "training_initialization_seed": 0
+    },
+    {
+      "condition": "K1",
+      "held_out": "CALCE",
+      "model_tag": "GCN",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_CALCE__split1__train0__GCN__K1.json",
+      "sha256": "73f5631a3ea5c9cbd6f4da221399850f1530d2b2b7131814f1df41d63de7b119",
+      "split_seed": 1,
+      "training_initialization_seed": 0
+    },
+    {
+      "condition": "K3",
+      "held_out": "CALCE",
+      "model_tag": "GCN",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_CALCE__split1__train0__GCN__K3.json",
+      "sha256": "c0d7869237fb3d479b8c95ef0cde96bfbfbdbda8184ea114bad73175ab8aa7d0",
+      "split_seed": 1,
+      "training_initialization_seed": 0
+    },
+    {
+      "condition": "K5",
+      "held_out": "CALCE",
+      "model_tag": "GCN",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_CALCE__split1__train0__GCN__K5.json",
+      "sha256": "651051df9c53e9ee37fa883729f94b4148c2ef61e5fcaaa0a1c3320599a3b027",
+      "split_seed": 1,
+      "training_initialization_seed": 0
+    },
+    {
+      "condition": "K1",
+      "held_out": "CALCE",
+      "model_tag": "MLP",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_CALCE__split1__train1__MLP__K1.json",
+      "sha256": "f8b1d83a3c20b3c353b7fadcacb8e0b2cfa0ba96f282810385b02ca270bc6999",
+      "split_seed": 1,
+      "training_initialization_seed": 1
+    },
+    {
+      "condition": "K3",
+      "held_out": "CALCE",
+      "model_tag": "MLP",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_CALCE__split1__train1__MLP__K3.json",
+      "sha256": "ca428c1567437e1155f6ed7ecb38b91d3b992013f7209e21a387a9cdd9aa32a3",
+      "split_seed": 1,
+      "training_initialization_seed": 1
+    },
+    {
+      "condition": "K5",
+      "held_out": "CALCE",
+      "model_tag": "MLP",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_CALCE__split1__train1__MLP__K5.json",
+      "sha256": "e20926c16a84f45dd7d834f031e8c783ee711338976662acde34e170a9f23b0d",
+      "split_seed": 1,
+      "training_initialization_seed": 1
+    },
+    {
+      "condition": "K1",
+      "held_out": "CALCE",
+      "model_tag": "GCN",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_CALCE__split1__train1__GCN__K1.json",
+      "sha256": "f936afadde5c8124ff4c713f414cf63bbe96e0ddfa9a4d3039f128c5ae50b92e",
+      "split_seed": 1,
+      "training_initialization_seed": 1
+    },
+    {
+      "condition": "K3",
+      "held_out": "CALCE",
+      "model_tag": "GCN",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_CALCE__split1__train1__GCN__K3.json",
+      "sha256": "6ec4127996f86e91ea6752e958c0c6ed7a7b83be9a72d2f9ee3955ea622e3190",
+      "split_seed": 1,
+      "training_initialization_seed": 1
+    },
+    {
+      "condition": "K5",
+      "held_out": "CALCE",
+      "model_tag": "GCN",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_CALCE__split1__train1__GCN__K5.json",
+      "sha256": "4fffdae24f925baea3d1936a842a50572e2a7fcc8b2e45b0651489b35f002a07",
+      "split_seed": 1,
+      "training_initialization_seed": 1
+    },
+    {
+      "condition": "K1",
+      "held_out": "CALCE",
+      "model_tag": "MLP",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_CALCE__split1__train2__MLP__K1.json",
+      "sha256": "16c79a325467dcdba794554bef8e457f4e36f013cc3452b0e3b231786bfd287a",
+      "split_seed": 1,
+      "training_initialization_seed": 2
+    },
+    {
+      "condition": "K3",
+      "held_out": "CALCE",
+      "model_tag": "MLP",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_CALCE__split1__train2__MLP__K3.json",
+      "sha256": "47569efabc2576cfd091667665fb485c01d78f8c97467d49ccf726efc0dd9d3c",
+      "split_seed": 1,
+      "training_initialization_seed": 2
+    },
+    {
+      "condition": "K5",
+      "held_out": "CALCE",
+      "model_tag": "MLP",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_CALCE__split1__train2__MLP__K5.json",
+      "sha256": "dcfa1c4535ba1152abb5ca7bc7f20e75ac2fb6e47eafb932742227dccf1d690f",
+      "split_seed": 1,
+      "training_initialization_seed": 2
+    },
+    {
+      "condition": "K1",
+      "held_out": "CALCE",
+      "model_tag": "GCN",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_CALCE__split1__train2__GCN__K1.json",
+      "sha256": "3fe12b125bbb9cfd17436fa28e3e7e38628c9c2dc76a496e961da9246fd791cf",
+      "split_seed": 1,
+      "training_initialization_seed": 2
+    },
+    {
+      "condition": "K3",
+      "held_out": "CALCE",
+      "model_tag": "GCN",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_CALCE__split1__train2__GCN__K3.json",
+      "sha256": "6128a2d5f1caf92fa43ef6117b05a92902c451d52165ae767bdf6245fa00c95e",
+      "split_seed": 1,
+      "training_initialization_seed": 2
+    },
+    {
+      "condition": "K5",
+      "held_out": "CALCE",
+      "model_tag": "GCN",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_CALCE__split1__train2__GCN__K5.json",
+      "sha256": "531b6a299737d6eeb527b98e198fb4a5cf29e052a62d0a3353db72daa9d0df34",
+      "split_seed": 1,
+      "training_initialization_seed": 2
+    },
+    {
+      "condition": "K1",
+      "held_out": "CALCE",
+      "model_tag": "MLP",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_CALCE__split2__train0__MLP__K1.json",
+      "sha256": "0317c7ad9fdad46caf36e1ead04786932dc0791c42b628648f77683d2049b515",
+      "split_seed": 2,
+      "training_initialization_seed": 0
+    },
+    {
+      "condition": "K3",
+      "held_out": "CALCE",
+      "model_tag": "MLP",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_CALCE__split2__train0__MLP__K3.json",
+      "sha256": "52a7287ab799797432e413a5d628e7079e2f7bfe3c6872120aaab468130cf4ee",
+      "split_seed": 2,
+      "training_initialization_seed": 0
+    },
+    {
+      "condition": "K5",
+      "held_out": "CALCE",
+      "model_tag": "MLP",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_CALCE__split2__train0__MLP__K5.json",
+      "sha256": "d8ed5e6ae819c94f36b01ef199bf4784309527bd93e435939e854b66dce966dc",
+      "split_seed": 2,
+      "training_initialization_seed": 0
+    },
+    {
+      "condition": "K1",
+      "held_out": "CALCE",
+      "model_tag": "GCN",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_CALCE__split2__train0__GCN__K1.json",
+      "sha256": "ea17cce8d93f51c8821436913ebfa2f392b5a56859f0932f63de9940724b57d9",
+      "split_seed": 2,
+      "training_initialization_seed": 0
+    },
+    {
+      "condition": "K3",
+      "held_out": "CALCE",
+      "model_tag": "GCN",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_CALCE__split2__train0__GCN__K3.json",
+      "sha256": "aa5fc7fa05b6dc03770259faa9e8a0f5b87c7424d8017ba7a1c19e031b0aa73b",
+      "split_seed": 2,
+      "training_initialization_seed": 0
+    },
+    {
+      "condition": "K5",
+      "held_out": "CALCE",
+      "model_tag": "GCN",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_CALCE__split2__train0__GCN__K5.json",
+      "sha256": "02859249451da0fc50955c0efb0dd6c5aacc15d7e68bbfcad497dc9940823bc9",
+      "split_seed": 2,
+      "training_initialization_seed": 0
+    },
+    {
+      "condition": "K1",
+      "held_out": "CALCE",
+      "model_tag": "MLP",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_CALCE__split2__train1__MLP__K1.json",
+      "sha256": "abfd1eeb970092f2b9d30148a4c987e26128a2bf5bae0f361b62cf0da83bbbde",
+      "split_seed": 2,
+      "training_initialization_seed": 1
+    },
+    {
+      "condition": "K3",
+      "held_out": "CALCE",
+      "model_tag": "MLP",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_CALCE__split2__train1__MLP__K3.json",
+      "sha256": "4739dec1e7fd438191da7e21b0c4390fd04488f38531f95429acfd7bc49cb9c1",
+      "split_seed": 2,
+      "training_initialization_seed": 1
+    },
+    {
+      "condition": "K5",
+      "held_out": "CALCE",
+      "model_tag": "MLP",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_CALCE__split2__train1__MLP__K5.json",
+      "sha256": "c1bd18a0872ba39da8a9152a78b77c2326232436459eab046c2bbdf8b6b1c304",
+      "split_seed": 2,
+      "training_initialization_seed": 1
+    },
+    {
+      "condition": "K1",
+      "held_out": "CALCE",
+      "model_tag": "GCN",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_CALCE__split2__train1__GCN__K1.json",
+      "sha256": "2671c2ac60d6676b85244443bba697b6b3e0e9ecbc66c5efa7cae32c366a0daf",
+      "split_seed": 2,
+      "training_initialization_seed": 1
+    },
+    {
+      "condition": "K3",
+      "held_out": "CALCE",
+      "model_tag": "GCN",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_CALCE__split2__train1__GCN__K3.json",
+      "sha256": "45f63127e0b3ef96e57e7641b7334fc417b89564af4c203eba44d9273846e80f",
+      "split_seed": 2,
+      "training_initialization_seed": 1
+    },
+    {
+      "condition": "K5",
+      "held_out": "CALCE",
+      "model_tag": "GCN",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_CALCE__split2__train1__GCN__K5.json",
+      "sha256": "729c5fcd347f304766751947116603e594022a24bce3b3c25db249f713d2300f",
+      "split_seed": 2,
+      "training_initialization_seed": 1
+    },
+    {
+      "condition": "K1",
+      "held_out": "CALCE",
+      "model_tag": "MLP",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_CALCE__split2__train2__MLP__K1.json",
+      "sha256": "5c89300bfeb7c08e5bd6a1c619272d887c7bfeeed69e86cc8bcabc6184593139",
+      "split_seed": 2,
+      "training_initialization_seed": 2
+    },
+    {
+      "condition": "K3",
+      "held_out": "CALCE",
+      "model_tag": "MLP",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_CALCE__split2__train2__MLP__K3.json",
+      "sha256": "4b5ec53fb421e8197a8de92aca8519fb3ed7f7dadbda6b34bbffda059a479bae",
+      "split_seed": 2,
+      "training_initialization_seed": 2
+    },
+    {
+      "condition": "K5",
+      "held_out": "CALCE",
+      "model_tag": "MLP",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_CALCE__split2__train2__MLP__K5.json",
+      "sha256": "d53498f6d9a069354f1d2988854678dcb34672768db35d31421def44c1d7f0ea",
+      "split_seed": 2,
+      "training_initialization_seed": 2
+    },
+    {
+      "condition": "K1",
+      "held_out": "CALCE",
+      "model_tag": "GCN",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_CALCE__split2__train2__GCN__K1.json",
+      "sha256": "58ddfbaef72c0bdfdc0a3180d2d7f5a83c70354705216cce5c3fcf10e0645ca1",
+      "split_seed": 2,
+      "training_initialization_seed": 2
+    },
+    {
+      "condition": "K3",
+      "held_out": "CALCE",
+      "model_tag": "GCN",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_CALCE__split2__train2__GCN__K3.json",
+      "sha256": "78d5ec63aca4e8a161237e66ce9b9e2cff8e544eded8eee1a8681845eb547d9d",
+      "split_seed": 2,
+      "training_initialization_seed": 2
+    },
+    {
+      "condition": "K5",
+      "held_out": "CALCE",
+      "model_tag": "GCN",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_CALCE__split2__train2__GCN__K5.json",
+      "sha256": "d3900e02a2e69cc5c94ee8e4ea7f9811cf0607499b09829c9f3203f29c0496c4",
+      "split_seed": 2,
+      "training_initialization_seed": 2
+    },
+    {
+      "condition": "K1",
+      "held_out": "CALCE",
+      "model_tag": "MLP",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_CALCE__split3__train0__MLP__K1.json",
+      "sha256": "8198319035038c1b41d0273983e2bd42ffceb62c53a7dec311953f23bfa66a4d",
+      "split_seed": 3,
+      "training_initialization_seed": 0
+    },
+    {
+      "condition": "K3",
+      "held_out": "CALCE",
+      "model_tag": "MLP",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_CALCE__split3__train0__MLP__K3.json",
+      "sha256": "98715edfe9b9fafac09a1e4308e32d127776e92fb80e9c5128cd9ba190e8b0db",
+      "split_seed": 3,
+      "training_initialization_seed": 0
+    },
+    {
+      "condition": "K5",
+      "held_out": "CALCE",
+      "model_tag": "MLP",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_CALCE__split3__train0__MLP__K5.json",
+      "sha256": "78d9bc2470e8575b322b845dc32632f6db46f54b8050c09850b8a3254f09c959",
+      "split_seed": 3,
+      "training_initialization_seed": 0
+    },
+    {
+      "condition": "K1",
+      "held_out": "CALCE",
+      "model_tag": "GCN",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_CALCE__split3__train0__GCN__K1.json",
+      "sha256": "3c48a67c58caefd9755177b020cd89259de27c1ca7140385661d2f4e94496e76",
+      "split_seed": 3,
+      "training_initialization_seed": 0
+    },
+    {
+      "condition": "K3",
+      "held_out": "CALCE",
+      "model_tag": "GCN",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_CALCE__split3__train0__GCN__K3.json",
+      "sha256": "c6c8c9cace9efa5c795148e7189ed11a413ca3cec27739ed48968fe08cf3b775",
+      "split_seed": 3,
+      "training_initialization_seed": 0
+    },
+    {
+      "condition": "K5",
+      "held_out": "CALCE",
+      "model_tag": "GCN",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_CALCE__split3__train0__GCN__K5.json",
+      "sha256": "8706005215201b54adcfdda962dd8a5a2600129689b1b01c50ab172c8c557350",
+      "split_seed": 3,
+      "training_initialization_seed": 0
+    },
+    {
+      "condition": "K1",
+      "held_out": "CALCE",
+      "model_tag": "MLP",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_CALCE__split3__train1__MLP__K1.json",
+      "sha256": "33cade624cf7d6a77b0850a08eb003a0007dfe6e73c47a4c2707bad1d09f02ef",
+      "split_seed": 3,
+      "training_initialization_seed": 1
+    },
+    {
+      "condition": "K3",
+      "held_out": "CALCE",
+      "model_tag": "MLP",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_CALCE__split3__train1__MLP__K3.json",
+      "sha256": "67fd2fe58b5739a61f7638aef844cceb72fa7b5e31a5a9b294f776e5fc38cab4",
+      "split_seed": 3,
+      "training_initialization_seed": 1
+    },
+    {
+      "condition": "K5",
+      "held_out": "CALCE",
+      "model_tag": "MLP",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_CALCE__split3__train1__MLP__K5.json",
+      "sha256": "867d1a13df6e84125e666cccbeec8fd3a9d608a4d6e175c577e98d9d75b76533",
+      "split_seed": 3,
+      "training_initialization_seed": 1
+    },
+    {
+      "condition": "K1",
+      "held_out": "CALCE",
+      "model_tag": "GCN",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_CALCE__split3__train1__GCN__K1.json",
+      "sha256": "78e71dea07cee56d24757d22e5c7e896f23807c4b3cca7455e295aac2979b2ac",
+      "split_seed": 3,
+      "training_initialization_seed": 1
+    },
+    {
+      "condition": "K3",
+      "held_out": "CALCE",
+      "model_tag": "GCN",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_CALCE__split3__train1__GCN__K3.json",
+      "sha256": "2fec6d7d2c11381464ec0819765f4b73535658371233dc78c4b211ce2cb41505",
+      "split_seed": 3,
+      "training_initialization_seed": 1
+    },
+    {
+      "condition": "K5",
+      "held_out": "CALCE",
+      "model_tag": "GCN",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_CALCE__split3__train1__GCN__K5.json",
+      "sha256": "f5ec33c6637c9c5b1b544f47afc0ded11a7ea5ca7bad454e8239d0681771bfe7",
+      "split_seed": 3,
+      "training_initialization_seed": 1
+    },
+    {
+      "condition": "K1",
+      "held_out": "CALCE",
+      "model_tag": "MLP",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_CALCE__split3__train2__MLP__K1.json",
+      "sha256": "031a28d493dd6c60b552af9d3c2bb822bb39f3befad7b171ebedd71637ea821f",
+      "split_seed": 3,
+      "training_initialization_seed": 2
+    },
+    {
+      "condition": "K3",
+      "held_out": "CALCE",
+      "model_tag": "MLP",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_CALCE__split3__train2__MLP__K3.json",
+      "sha256": "0b2005c33cd3005b4102bd32aa83c8449d01386acb60ba17d196b48525d20f73",
+      "split_seed": 3,
+      "training_initialization_seed": 2
+    },
+    {
+      "condition": "K5",
+      "held_out": "CALCE",
+      "model_tag": "MLP",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_CALCE__split3__train2__MLP__K5.json",
+      "sha256": "e3a39e7c607af519d67cffbed3d5f9a0625fba43295483804c8427390e3f28f0",
+      "split_seed": 3,
+      "training_initialization_seed": 2
+    },
+    {
+      "condition": "K1",
+      "held_out": "CALCE",
+      "model_tag": "GCN",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_CALCE__split3__train2__GCN__K1.json",
+      "sha256": "dc19d8ec4840cc04a064b298b5bf1285b1297ddb3bd738012863971e56086599",
+      "split_seed": 3,
+      "training_initialization_seed": 2
+    },
+    {
+      "condition": "K3",
+      "held_out": "CALCE",
+      "model_tag": "GCN",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_CALCE__split3__train2__GCN__K3.json",
+      "sha256": "c00bb06591b0d323a01eeb1ee09bd35b532672f77e7fe7ae8e2ec5719d9507bb",
+      "split_seed": 3,
+      "training_initialization_seed": 2
+    },
+    {
+      "condition": "K5",
+      "held_out": "CALCE",
+      "model_tag": "GCN",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_CALCE__split3__train2__GCN__K5.json",
+      "sha256": "7f2bc5028dcd09ffa8a071afb7f86a39173855265c158ad6516aed6418456f53",
+      "split_seed": 3,
+      "training_initialization_seed": 2
+    },
+    {
+      "condition": "K1",
+      "held_out": "CALCE",
+      "model_tag": "MLP",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_CALCE__split4__train0__MLP__K1.json",
+      "sha256": "532309a7e055da514534c7098145ecfd59e9795e155229a435e27c9da9df46e8",
+      "split_seed": 4,
+      "training_initialization_seed": 0
+    },
+    {
+      "condition": "K3",
+      "held_out": "CALCE",
+      "model_tag": "MLP",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_CALCE__split4__train0__MLP__K3.json",
+      "sha256": "4cf5efd4213ada608daf19ed26c48ab93f5650533ff4796c864de5a365d4f690",
+      "split_seed": 4,
+      "training_initialization_seed": 0
+    },
+    {
+      "condition": "K5",
+      "held_out": "CALCE",
+      "model_tag": "MLP",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_CALCE__split4__train0__MLP__K5.json",
+      "sha256": "7a2547be8d1406c1c6a28fc3419b837f6e2bba08986d8d192961b0d2714061a3",
+      "split_seed": 4,
+      "training_initialization_seed": 0
+    },
+    {
+      "condition": "K1",
+      "held_out": "CALCE",
+      "model_tag": "GCN",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_CALCE__split4__train0__GCN__K1.json",
+      "sha256": "9cd1fc15351da2d243ac7e4f6b9cb8d12fb4923a2c90e20a166a8b5343a60549",
+      "split_seed": 4,
+      "training_initialization_seed": 0
+    },
+    {
+      "condition": "K3",
+      "held_out": "CALCE",
+      "model_tag": "GCN",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_CALCE__split4__train0__GCN__K3.json",
+      "sha256": "318460d553c419ac8a2458d626a79651e5bf8b4e5685aa2a8a2f742d01a2943a",
+      "split_seed": 4,
+      "training_initialization_seed": 0
+    },
+    {
+      "condition": "K5",
+      "held_out": "CALCE",
+      "model_tag": "GCN",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_CALCE__split4__train0__GCN__K5.json",
+      "sha256": "1672eec4adfc4d967ff6ec435a4d2c18a36339f5f848136bed34b4122740db64",
+      "split_seed": 4,
+      "training_initialization_seed": 0
+    },
+    {
+      "condition": "K1",
+      "held_out": "CALCE",
+      "model_tag": "MLP",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_CALCE__split4__train1__MLP__K1.json",
+      "sha256": "832ab5c68edc8aa2ba983467789e191f9746460c83ce58025dde3304839b18a5",
+      "split_seed": 4,
+      "training_initialization_seed": 1
+    },
+    {
+      "condition": "K3",
+      "held_out": "CALCE",
+      "model_tag": "MLP",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_CALCE__split4__train1__MLP__K3.json",
+      "sha256": "e372b26f89651ab8b81726fa8411709554bc81928f8924403961fec1b3139533",
+      "split_seed": 4,
+      "training_initialization_seed": 1
+    },
+    {
+      "condition": "K5",
+      "held_out": "CALCE",
+      "model_tag": "MLP",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_CALCE__split4__train1__MLP__K5.json",
+      "sha256": "d5c3cadb93041cdda43e364b6b41e2419becfa596e4422dab54c9bdae7d894d9",
+      "split_seed": 4,
+      "training_initialization_seed": 1
+    },
+    {
+      "condition": "K1",
+      "held_out": "CALCE",
+      "model_tag": "GCN",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_CALCE__split4__train1__GCN__K1.json",
+      "sha256": "b674d5d631c79d81e79c6dceab9c9082a8586489df5bd6244051c60c71ea5a91",
+      "split_seed": 4,
+      "training_initialization_seed": 1
+    },
+    {
+      "condition": "K3",
+      "held_out": "CALCE",
+      "model_tag": "GCN",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_CALCE__split4__train1__GCN__K3.json",
+      "sha256": "8b24cf9a276c650830252415d4e31586a79572d6111b9039c31d71c46f3a6d02",
+      "split_seed": 4,
+      "training_initialization_seed": 1
+    },
+    {
+      "condition": "K5",
+      "held_out": "CALCE",
+      "model_tag": "GCN",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_CALCE__split4__train1__GCN__K5.json",
+      "sha256": "9b0103e02c2f8d90d51b7a99fc24bb45c9250532ed1ab60b2b246c0c0c15cf8b",
+      "split_seed": 4,
+      "training_initialization_seed": 1
+    },
+    {
+      "condition": "K1",
+      "held_out": "CALCE",
+      "model_tag": "MLP",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_CALCE__split4__train2__MLP__K1.json",
+      "sha256": "28d0f159d87b906499136df0182b3472188eb8e9d7983049251f7d93820c5d6c",
+      "split_seed": 4,
+      "training_initialization_seed": 2
+    },
+    {
+      "condition": "K3",
+      "held_out": "CALCE",
+      "model_tag": "MLP",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_CALCE__split4__train2__MLP__K3.json",
+      "sha256": "211965460a6902e0194f1bb0ec9c257d95fe166d25fb0d93125f0714e88fae45",
+      "split_seed": 4,
+      "training_initialization_seed": 2
+    },
+    {
+      "condition": "K5",
+      "held_out": "CALCE",
+      "model_tag": "MLP",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_CALCE__split4__train2__MLP__K5.json",
+      "sha256": "a7394147c808c2598b20888cbc2bcc26c21bbc7ba5337a35cf76f4141d251b37",
+      "split_seed": 4,
+      "training_initialization_seed": 2
+    },
+    {
+      "condition": "K1",
+      "held_out": "CALCE",
+      "model_tag": "GCN",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_CALCE__split4__train2__GCN__K1.json",
+      "sha256": "0325e8079b48bcc6db8acf1bcc46dee2c9d2b4dba25a53bff50eb31272d66979",
+      "split_seed": 4,
+      "training_initialization_seed": 2
+    },
+    {
+      "condition": "K3",
+      "held_out": "CALCE",
+      "model_tag": "GCN",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_CALCE__split4__train2__GCN__K3.json",
+      "sha256": "5dcf919de9286fe5103fc92bc261143ac40997174b5e6ce067a458a58c010668",
+      "split_seed": 4,
+      "training_initialization_seed": 2
+    },
+    {
+      "condition": "K5",
+      "held_out": "CALCE",
+      "model_tag": "GCN",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_CALCE__split4__train2__GCN__K5.json",
+      "sha256": "b21e17aa1b315bfe91d912a6c47b2eb9aa3eed93d48e304e9e46eccdb026a56f",
+      "split_seed": 4,
+      "training_initialization_seed": 2
+    },
+    {
+      "condition": "K1",
+      "held_out": "MATR",
+      "model_tag": "MLP",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_MATR__split0__train0__MLP__K1.json",
+      "sha256": "e66e6885b64b8c8c6060daf6203defaabbf49ad4e14f54f8b92b7b32d615f549",
+      "split_seed": 0,
+      "training_initialization_seed": 0
+    },
+    {
+      "condition": "K3",
+      "held_out": "MATR",
+      "model_tag": "MLP",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_MATR__split0__train0__MLP__K3.json",
+      "sha256": "8e7363cd97e1d20aa3786f85e6c5fdb0bb1fbbd8a7e0fc8c6202d2b2580722ad",
+      "split_seed": 0,
+      "training_initialization_seed": 0
+    },
+    {
+      "condition": "K5",
+      "held_out": "MATR",
+      "model_tag": "MLP",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_MATR__split0__train0__MLP__K5.json",
+      "sha256": "3ef1e31ad7b4eb5d9e873359230272f0a558af1a875f9a52aa2f48fdb5066220",
+      "split_seed": 0,
+      "training_initialization_seed": 0
+    },
+    {
+      "condition": "K1",
+      "held_out": "MATR",
+      "model_tag": "GCN",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_MATR__split0__train0__GCN__K1.json",
+      "sha256": "cb4d52686063af42662b2c5caa7fffd482fb0a4b737f4da2817abc19358ff463",
+      "split_seed": 0,
+      "training_initialization_seed": 0
+    },
+    {
+      "condition": "K3",
+      "held_out": "MATR",
+      "model_tag": "GCN",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_MATR__split0__train0__GCN__K3.json",
+      "sha256": "d599e3cc9a5e9ef81e87fed59d9482360957c7afcf2c22568b0e4fd235441487",
+      "split_seed": 0,
+      "training_initialization_seed": 0
+    },
+    {
+      "condition": "K5",
+      "held_out": "MATR",
+      "model_tag": "GCN",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_MATR__split0__train0__GCN__K5.json",
+      "sha256": "99e6e6b09a8588573ea808f2d44af146e5c3d8c598debf943dcbde107efabb1e",
+      "split_seed": 0,
+      "training_initialization_seed": 0
+    },
+    {
+      "condition": "K1",
+      "held_out": "MATR",
+      "model_tag": "MLP",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_MATR__split0__train1__MLP__K1.json",
+      "sha256": "6228c50823daea036ed3f26507f0c18a24653b519ae17a5c5dcc57477a3a0ee5",
+      "split_seed": 0,
+      "training_initialization_seed": 1
+    },
+    {
+      "condition": "K3",
+      "held_out": "MATR",
+      "model_tag": "MLP",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_MATR__split0__train1__MLP__K3.json",
+      "sha256": "39359dbf719bcaca331544472afea96f6c9d87661e0f111e4ec322577dc24f10",
+      "split_seed": 0,
+      "training_initialization_seed": 1
+    },
+    {
+      "condition": "K5",
+      "held_out": "MATR",
+      "model_tag": "MLP",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_MATR__split0__train1__MLP__K5.json",
+      "sha256": "3c3307287dc3084325eac764e6f659372b1963fa89f02986d63ff01d7b38ce36",
+      "split_seed": 0,
+      "training_initialization_seed": 1
+    },
+    {
+      "condition": "K1",
+      "held_out": "MATR",
+      "model_tag": "GCN",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_MATR__split0__train1__GCN__K1.json",
+      "sha256": "d71b09932431ef267cfae0448e2e616b9637bebc6be86e5d0bdb0a3590346a9c",
+      "split_seed": 0,
+      "training_initialization_seed": 1
+    },
+    {
+      "condition": "K3",
+      "held_out": "MATR",
+      "model_tag": "GCN",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_MATR__split0__train1__GCN__K3.json",
+      "sha256": "4be3af33402cf1a18ac0f8ce7cb060cbec7c7c6053a3d1a5bcc55ba5dcbf3003",
+      "split_seed": 0,
+      "training_initialization_seed": 1
+    },
+    {
+      "condition": "K5",
+      "held_out": "MATR",
+      "model_tag": "GCN",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_MATR__split0__train1__GCN__K5.json",
+      "sha256": "5eb31a6f5edcd6075a593fd627ec71c7b875a9c90c9bbb5902970fbe725d8a04",
+      "split_seed": 0,
+      "training_initialization_seed": 1
+    },
+    {
+      "condition": "K1",
+      "held_out": "MATR",
+      "model_tag": "MLP",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_MATR__split0__train2__MLP__K1.json",
+      "sha256": "865d63c7bd6f6fa91734dce98c5629969a062a4b06e1b147dab4449773115fce",
+      "split_seed": 0,
+      "training_initialization_seed": 2
+    },
+    {
+      "condition": "K3",
+      "held_out": "MATR",
+      "model_tag": "MLP",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_MATR__split0__train2__MLP__K3.json",
+      "sha256": "be607eb974bdc5f7c33f0700f8d336880c06a6ccef7a20c91c614dd9dfe1b9ba",
+      "split_seed": 0,
+      "training_initialization_seed": 2
+    },
+    {
+      "condition": "K5",
+      "held_out": "MATR",
+      "model_tag": "MLP",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_MATR__split0__train2__MLP__K5.json",
+      "sha256": "136a5476d4c05f9decd5503cbea3b6067a94ee03d1c8792ac12f8cb5f6a54257",
+      "split_seed": 0,
+      "training_initialization_seed": 2
+    },
+    {
+      "condition": "K1",
+      "held_out": "MATR",
+      "model_tag": "GCN",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_MATR__split0__train2__GCN__K1.json",
+      "sha256": "539f0c109bc9e439c59c253d930d0ecb876315b78b0e499afaa484e4f091a023",
+      "split_seed": 0,
+      "training_initialization_seed": 2
+    },
+    {
+      "condition": "K3",
+      "held_out": "MATR",
+      "model_tag": "GCN",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_MATR__split0__train2__GCN__K3.json",
+      "sha256": "9393577f9c87119e2b29859c4e72672fb27abc93e98f856ef618ad31733356bb",
+      "split_seed": 0,
+      "training_initialization_seed": 2
+    },
+    {
+      "condition": "K5",
+      "held_out": "MATR",
+      "model_tag": "GCN",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_MATR__split0__train2__GCN__K5.json",
+      "sha256": "435280a565f92ea0253aa146cd7c83f4d38ca4297974c99864e4b40f0050dba7",
+      "split_seed": 0,
+      "training_initialization_seed": 2
+    },
+    {
+      "condition": "K1",
+      "held_out": "MATR",
+      "model_tag": "MLP",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_MATR__split1__train0__MLP__K1.json",
+      "sha256": "d1e5a58d03f10cc6db0083a4a8cab4bba3454986b3c3e4ff3d849e6914f02f1e",
+      "split_seed": 1,
+      "training_initialization_seed": 0
+    },
+    {
+      "condition": "K3",
+      "held_out": "MATR",
+      "model_tag": "MLP",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_MATR__split1__train0__MLP__K3.json",
+      "sha256": "ded0e17e9d6c1b8ce8e7abe38ba17ec4589a06a3c637bf4ba32c9be5f46d0344",
+      "split_seed": 1,
+      "training_initialization_seed": 0
+    },
+    {
+      "condition": "K5",
+      "held_out": "MATR",
+      "model_tag": "MLP",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_MATR__split1__train0__MLP__K5.json",
+      "sha256": "521aca7da47743d0ef4a9a3bf37ef103c76174deb120f14d3d5ce246dcdfd249",
+      "split_seed": 1,
+      "training_initialization_seed": 0
+    },
+    {
+      "condition": "K1",
+      "held_out": "MATR",
+      "model_tag": "GCN",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_MATR__split1__train0__GCN__K1.json",
+      "sha256": "870d664808c72730fca8f8c237238674d95e2bfe9f4034cad254485e94d12744",
+      "split_seed": 1,
+      "training_initialization_seed": 0
+    },
+    {
+      "condition": "K3",
+      "held_out": "MATR",
+      "model_tag": "GCN",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_MATR__split1__train0__GCN__K3.json",
+      "sha256": "a109d98d465c12689671ec378a1c9f2a86906c93e728f92e35331f7df8b3bbdc",
+      "split_seed": 1,
+      "training_initialization_seed": 0
+    },
+    {
+      "condition": "K5",
+      "held_out": "MATR",
+      "model_tag": "GCN",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_MATR__split1__train0__GCN__K5.json",
+      "sha256": "89c164ca22fbd95e911cb4679b1d042193420c065f2d3ceb175bc73b32d2c0f1",
+      "split_seed": 1,
+      "training_initialization_seed": 0
+    },
+    {
+      "condition": "K1",
+      "held_out": "MATR",
+      "model_tag": "MLP",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_MATR__split1__train1__MLP__K1.json",
+      "sha256": "4edc3a1e7f491fa74f21edb11f61f072ba7bd342ec90cf5f08229cd75399302c",
+      "split_seed": 1,
+      "training_initialization_seed": 1
+    },
+    {
+      "condition": "K3",
+      "held_out": "MATR",
+      "model_tag": "MLP",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_MATR__split1__train1__MLP__K3.json",
+      "sha256": "4df611113860a8cc15b357ad64e6ece775424070365a9a3845af72b31ca349f6",
+      "split_seed": 1,
+      "training_initialization_seed": 1
+    },
+    {
+      "condition": "K5",
+      "held_out": "MATR",
+      "model_tag": "MLP",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_MATR__split1__train1__MLP__K5.json",
+      "sha256": "75ef26610574acd1e649664cdcff7ae03698dbc1476f60ae58da6cd81f41f0f0",
+      "split_seed": 1,
+      "training_initialization_seed": 1
+    },
+    {
+      "condition": "K1",
+      "held_out": "MATR",
+      "model_tag": "GCN",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_MATR__split1__train1__GCN__K1.json",
+      "sha256": "6be8663c0d6a08e664060f2e86300c660c7fbd7e146bb4bcebb4745177a12150",
+      "split_seed": 1,
+      "training_initialization_seed": 1
+    },
+    {
+      "condition": "K3",
+      "held_out": "MATR",
+      "model_tag": "GCN",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_MATR__split1__train1__GCN__K3.json",
+      "sha256": "80c8b76fb2ee0c5e7036692c614fd90231b99cf120d9d3f7a4d1e49ffb22e8c4",
+      "split_seed": 1,
+      "training_initialization_seed": 1
+    },
+    {
+      "condition": "K5",
+      "held_out": "MATR",
+      "model_tag": "GCN",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_MATR__split1__train1__GCN__K5.json",
+      "sha256": "44195998bedd4ceb5e1cda8a3b4a7a64f617390f7c22ae74da75fe41be8faf01",
+      "split_seed": 1,
+      "training_initialization_seed": 1
+    },
+    {
+      "condition": "K1",
+      "held_out": "MATR",
+      "model_tag": "MLP",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_MATR__split1__train2__MLP__K1.json",
+      "sha256": "c44361d912764da7217e027e5b5fc49c27295458f6417c83b6a2b4c85db50804",
+      "split_seed": 1,
+      "training_initialization_seed": 2
+    },
+    {
+      "condition": "K3",
+      "held_out": "MATR",
+      "model_tag": "MLP",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_MATR__split1__train2__MLP__K3.json",
+      "sha256": "e0ab23725bb5d9d586bba64b28fd346bef7b07d78503f37bf32bde44ea09448a",
+      "split_seed": 1,
+      "training_initialization_seed": 2
+    },
+    {
+      "condition": "K5",
+      "held_out": "MATR",
+      "model_tag": "MLP",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_MATR__split1__train2__MLP__K5.json",
+      "sha256": "5ae4ff34748514f645711f3ec5a4146862cc5295388a538916d3b30107224787",
+      "split_seed": 1,
+      "training_initialization_seed": 2
+    },
+    {
+      "condition": "K1",
+      "held_out": "MATR",
+      "model_tag": "GCN",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_MATR__split1__train2__GCN__K1.json",
+      "sha256": "c5537653430bd498f2d8270e30d15b7426efbfa6734ded3dce37cb1a2ec094af",
+      "split_seed": 1,
+      "training_initialization_seed": 2
+    },
+    {
+      "condition": "K3",
+      "held_out": "MATR",
+      "model_tag": "GCN",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_MATR__split1__train2__GCN__K3.json",
+      "sha256": "abff0a76503f351bd1a56453aaf601e0bba0748f1a728b8abdee146d21887f04",
+      "split_seed": 1,
+      "training_initialization_seed": 2
+    },
+    {
+      "condition": "K5",
+      "held_out": "MATR",
+      "model_tag": "GCN",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_MATR__split1__train2__GCN__K5.json",
+      "sha256": "7ce98d0757db7f38afed16bede4d923227ebc8422693f019b44b87a5272ba98e",
+      "split_seed": 1,
+      "training_initialization_seed": 2
+    },
+    {
+      "condition": "K1",
+      "held_out": "MATR",
+      "model_tag": "MLP",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_MATR__split2__train0__MLP__K1.json",
+      "sha256": "63defd08c2e1fff70c9514221ccddd4af20f8f5eaf287f5ffb4b74da28e66ca3",
+      "split_seed": 2,
+      "training_initialization_seed": 0
+    },
+    {
+      "condition": "K3",
+      "held_out": "MATR",
+      "model_tag": "MLP",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_MATR__split2__train0__MLP__K3.json",
+      "sha256": "e72926fb1d10f5763f6ed9dd1fc8dac5a923157a0b347a59cb062dcd2fa74116",
+      "split_seed": 2,
+      "training_initialization_seed": 0
+    },
+    {
+      "condition": "K5",
+      "held_out": "MATR",
+      "model_tag": "MLP",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_MATR__split2__train0__MLP__K5.json",
+      "sha256": "78acde463ba418729d523762a87e698f3db59948c67fdc9490276fc202940458",
+      "split_seed": 2,
+      "training_initialization_seed": 0
+    },
+    {
+      "condition": "K1",
+      "held_out": "MATR",
+      "model_tag": "GCN",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_MATR__split2__train0__GCN__K1.json",
+      "sha256": "e20ef2dfb792cc1bbc2aadf36fe3ffb195c7e3222ac2804450b9d8d7e8c586d4",
+      "split_seed": 2,
+      "training_initialization_seed": 0
+    },
+    {
+      "condition": "K3",
+      "held_out": "MATR",
+      "model_tag": "GCN",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_MATR__split2__train0__GCN__K3.json",
+      "sha256": "adfe5c48cd592c7638fb78e61e8ff1527934f226fb16c3751d89a08702865ef2",
+      "split_seed": 2,
+      "training_initialization_seed": 0
+    },
+    {
+      "condition": "K5",
+      "held_out": "MATR",
+      "model_tag": "GCN",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_MATR__split2__train0__GCN__K5.json",
+      "sha256": "fffd1d32e931d6fa674e4cf6bb3d16166c49dc9692e41befe6833e1668eb7fc0",
+      "split_seed": 2,
+      "training_initialization_seed": 0
+    },
+    {
+      "condition": "K1",
+      "held_out": "MATR",
+      "model_tag": "MLP",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_MATR__split2__train1__MLP__K1.json",
+      "sha256": "4cbcebffaab39bfb7357f6ab7b0785b699925914f10c714f8833dcd35c831a48",
+      "split_seed": 2,
+      "training_initialization_seed": 1
+    },
+    {
+      "condition": "K3",
+      "held_out": "MATR",
+      "model_tag": "MLP",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_MATR__split2__train1__MLP__K3.json",
+      "sha256": "f8a3a79d39ec4dc8c0020693f46a986e3054affeeb12d9f516d93372c2c9aa25",
+      "split_seed": 2,
+      "training_initialization_seed": 1
+    },
+    {
+      "condition": "K5",
+      "held_out": "MATR",
+      "model_tag": "MLP",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_MATR__split2__train1__MLP__K5.json",
+      "sha256": "4a6228e64392e9665139fff8850f083b5b1c5abaaca300fa0e75fd8465795d5a",
+      "split_seed": 2,
+      "training_initialization_seed": 1
+    },
+    {
+      "condition": "K1",
+      "held_out": "MATR",
+      "model_tag": "GCN",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_MATR__split2__train1__GCN__K1.json",
+      "sha256": "23742d91798ecf67a8d45fcf8499d6f3d8092f46abca90ffdf2a126fb75c5387",
+      "split_seed": 2,
+      "training_initialization_seed": 1
+    },
+    {
+      "condition": "K3",
+      "held_out": "MATR",
+      "model_tag": "GCN",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_MATR__split2__train1__GCN__K3.json",
+      "sha256": "4303606fae8e6b902cd0e40c95e0772143531fbf1916610619fa3a03b1697114",
+      "split_seed": 2,
+      "training_initialization_seed": 1
+    },
+    {
+      "condition": "K5",
+      "held_out": "MATR",
+      "model_tag": "GCN",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_MATR__split2__train1__GCN__K5.json",
+      "sha256": "ab363de449e3c97f4629ff8b34ea86d2898e91e0cc11ce4d2728e1698cffa35e",
+      "split_seed": 2,
+      "training_initialization_seed": 1
+    },
+    {
+      "condition": "K1",
+      "held_out": "MATR",
+      "model_tag": "MLP",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_MATR__split2__train2__MLP__K1.json",
+      "sha256": "80f4e2da60b11ab51c217f1f0e81ae8fb0779f537ff2f03eafa544c6b60cbdc8",
+      "split_seed": 2,
+      "training_initialization_seed": 2
+    },
+    {
+      "condition": "K3",
+      "held_out": "MATR",
+      "model_tag": "MLP",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_MATR__split2__train2__MLP__K3.json",
+      "sha256": "115a1c0ceb1471993cf372bde4c310c1bc82ad611c2bc0eba4cf3cdeeebf4934",
+      "split_seed": 2,
+      "training_initialization_seed": 2
+    },
+    {
+      "condition": "K5",
+      "held_out": "MATR",
+      "model_tag": "MLP",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_MATR__split2__train2__MLP__K5.json",
+      "sha256": "6ea9c2b640c5e469f0cb966776cd5aa87fcb3138bbbba3f69d6a2492c2b4cf47",
+      "split_seed": 2,
+      "training_initialization_seed": 2
+    },
+    {
+      "condition": "K1",
+      "held_out": "MATR",
+      "model_tag": "GCN",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_MATR__split2__train2__GCN__K1.json",
+      "sha256": "82392d3dc0ae90e1be2db50fe4ab479e08dc45542345f72e91b9788bad3673ee",
+      "split_seed": 2,
+      "training_initialization_seed": 2
+    },
+    {
+      "condition": "K3",
+      "held_out": "MATR",
+      "model_tag": "GCN",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_MATR__split2__train2__GCN__K3.json",
+      "sha256": "ae6fcd750b6e5980d0ed791bd64d8f5eeca34a74faa2d55ba1ab2a5ec9acf769",
+      "split_seed": 2,
+      "training_initialization_seed": 2
+    },
+    {
+      "condition": "K5",
+      "held_out": "MATR",
+      "model_tag": "GCN",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_MATR__split2__train2__GCN__K5.json",
+      "sha256": "aed04e1d4175cc6fa73aef72a30cb231de29a7b290dfa31d2364120378043be2",
+      "split_seed": 2,
+      "training_initialization_seed": 2
+    },
+    {
+      "condition": "K1",
+      "held_out": "MATR",
+      "model_tag": "MLP",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_MATR__split3__train0__MLP__K1.json",
+      "sha256": "feace138f69a000f185139864f6f686212b1d4d2c9787d08549920102f911246",
+      "split_seed": 3,
+      "training_initialization_seed": 0
+    },
+    {
+      "condition": "K3",
+      "held_out": "MATR",
+      "model_tag": "MLP",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_MATR__split3__train0__MLP__K3.json",
+      "sha256": "05ac28c32fa9dc935b5435d00506675bc76e6656a956ba702f46a14a324eed99",
+      "split_seed": 3,
+      "training_initialization_seed": 0
+    },
+    {
+      "condition": "K5",
+      "held_out": "MATR",
+      "model_tag": "MLP",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_MATR__split3__train0__MLP__K5.json",
+      "sha256": "a6ef4fd72bb3fdbed1891ed4ea18eeee82b242b8cc9962609aec476f170bedbe",
+      "split_seed": 3,
+      "training_initialization_seed": 0
+    },
+    {
+      "condition": "K1",
+      "held_out": "MATR",
+      "model_tag": "GCN",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_MATR__split3__train0__GCN__K1.json",
+      "sha256": "b7f98434e87550c1cd801450674ab34babebbab5a1c34c64373ae0457f177556",
+      "split_seed": 3,
+      "training_initialization_seed": 0
+    },
+    {
+      "condition": "K3",
+      "held_out": "MATR",
+      "model_tag": "GCN",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_MATR__split3__train0__GCN__K3.json",
+      "sha256": "b5f6d6bae1e3ca4e95c0c6ca782162733e457da8a59dabcf562b30dbe67fc2f7",
+      "split_seed": 3,
+      "training_initialization_seed": 0
+    },
+    {
+      "condition": "K5",
+      "held_out": "MATR",
+      "model_tag": "GCN",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_MATR__split3__train0__GCN__K5.json",
+      "sha256": "1912910008fb74a12b6a550c9f43c3a5552f5b2ca568ede3fd39a90dcf63760e",
+      "split_seed": 3,
+      "training_initialization_seed": 0
+    },
+    {
+      "condition": "K1",
+      "held_out": "MATR",
+      "model_tag": "MLP",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_MATR__split3__train1__MLP__K1.json",
+      "sha256": "5560ad05fcc9f0169a51fe6b29edf61d76539cc481842ae850db5fd2f0d36be2",
+      "split_seed": 3,
+      "training_initialization_seed": 1
+    },
+    {
+      "condition": "K3",
+      "held_out": "MATR",
+      "model_tag": "MLP",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_MATR__split3__train1__MLP__K3.json",
+      "sha256": "8701b8d8b3f1197d21e1ab14ec1f95c9ceacf7e0e9705c5281d953b4a87bd0b8",
+      "split_seed": 3,
+      "training_initialization_seed": 1
+    },
+    {
+      "condition": "K5",
+      "held_out": "MATR",
+      "model_tag": "MLP",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_MATR__split3__train1__MLP__K5.json",
+      "sha256": "cd0675e8d0328f161c4d5b68df039c66ca5099faca6155430239faaa7de5f32b",
+      "split_seed": 3,
+      "training_initialization_seed": 1
+    },
+    {
+      "condition": "K1",
+      "held_out": "MATR",
+      "model_tag": "GCN",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_MATR__split3__train1__GCN__K1.json",
+      "sha256": "64bab73ebd4dcf211df25aea1c6bb9ce56e2c15058027236bbba86a64658dbf1",
+      "split_seed": 3,
+      "training_initialization_seed": 1
+    },
+    {
+      "condition": "K3",
+      "held_out": "MATR",
+      "model_tag": "GCN",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_MATR__split3__train1__GCN__K3.json",
+      "sha256": "28a81262766d108c1dc5fcb30194580afc1d3eebc76e2ccfad0b4b8070030225",
+      "split_seed": 3,
+      "training_initialization_seed": 1
+    },
+    {
+      "condition": "K5",
+      "held_out": "MATR",
+      "model_tag": "GCN",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_MATR__split3__train1__GCN__K5.json",
+      "sha256": "dfeeff4e9a96336d09a1ce30adc92834942504fe0ab77f6a5e29d88669def2ea",
+      "split_seed": 3,
+      "training_initialization_seed": 1
+    },
+    {
+      "condition": "K1",
+      "held_out": "MATR",
+      "model_tag": "MLP",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_MATR__split3__train2__MLP__K1.json",
+      "sha256": "ca74e6bd5854875dd7e5df4f283ed69183f49d34119b78f05a9009e216fc0331",
+      "split_seed": 3,
+      "training_initialization_seed": 2
+    },
+    {
+      "condition": "K3",
+      "held_out": "MATR",
+      "model_tag": "MLP",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_MATR__split3__train2__MLP__K3.json",
+      "sha256": "9e472f35a703ff97a9b408f6169dc94adb34789a2d7048091f60e90b8c756498",
+      "split_seed": 3,
+      "training_initialization_seed": 2
+    },
+    {
+      "condition": "K5",
+      "held_out": "MATR",
+      "model_tag": "MLP",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_MATR__split3__train2__MLP__K5.json",
+      "sha256": "2f66599a7c5a3347a56b81984c4bdbef14d5c59242365ab53fe2e6f2fe60f88e",
+      "split_seed": 3,
+      "training_initialization_seed": 2
+    },
+    {
+      "condition": "K1",
+      "held_out": "MATR",
+      "model_tag": "GCN",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_MATR__split3__train2__GCN__K1.json",
+      "sha256": "6a25821329b1d68ef05bea0a3f8b8e7e323c5e2e9817a1d87915f44e70209ed4",
+      "split_seed": 3,
+      "training_initialization_seed": 2
+    },
+    {
+      "condition": "K3",
+      "held_out": "MATR",
+      "model_tag": "GCN",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_MATR__split3__train2__GCN__K3.json",
+      "sha256": "2c3c77e31b2c04ec3591c0eb0afd411e97f141951bf4d53030c21716ead3517f",
+      "split_seed": 3,
+      "training_initialization_seed": 2
+    },
+    {
+      "condition": "K5",
+      "held_out": "MATR",
+      "model_tag": "GCN",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_MATR__split3__train2__GCN__K5.json",
+      "sha256": "87dc5d42f752cc54dcb9f2df4502b47f0cf74f0c32148e4da21cf11637ca772b",
+      "split_seed": 3,
+      "training_initialization_seed": 2
+    },
+    {
+      "condition": "K1",
+      "held_out": "MATR",
+      "model_tag": "MLP",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_MATR__split4__train0__MLP__K1.json",
+      "sha256": "a8da9f9a6b9723ac834eb44edaa1885134eba12f34aee73d9bd6069d09f87ba8",
+      "split_seed": 4,
+      "training_initialization_seed": 0
+    },
+    {
+      "condition": "K3",
+      "held_out": "MATR",
+      "model_tag": "MLP",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_MATR__split4__train0__MLP__K3.json",
+      "sha256": "704439bbcc10529ca959b62d000c9d69443f93585477da01c7ee1afd0c725c09",
+      "split_seed": 4,
+      "training_initialization_seed": 0
+    },
+    {
+      "condition": "K5",
+      "held_out": "MATR",
+      "model_tag": "MLP",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_MATR__split4__train0__MLP__K5.json",
+      "sha256": "24c0df9071af412d8c705d47067c279df45800dba3651fa431fcd8184d186074",
+      "split_seed": 4,
+      "training_initialization_seed": 0
+    },
+    {
+      "condition": "K1",
+      "held_out": "MATR",
+      "model_tag": "GCN",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_MATR__split4__train0__GCN__K1.json",
+      "sha256": "8be1339dbcb43403dc18bbd947277bf4cefa342ef916143641421a2f13b05424",
+      "split_seed": 4,
+      "training_initialization_seed": 0
+    },
+    {
+      "condition": "K3",
+      "held_out": "MATR",
+      "model_tag": "GCN",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_MATR__split4__train0__GCN__K3.json",
+      "sha256": "210cddf1423c51e50a1576ab014dea86ae9b433d6c32c448b15e1bdbb9dbb878",
+      "split_seed": 4,
+      "training_initialization_seed": 0
+    },
+    {
+      "condition": "K5",
+      "held_out": "MATR",
+      "model_tag": "GCN",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_MATR__split4__train0__GCN__K5.json",
+      "sha256": "193eb3823579b05f9d6e3fa77aaf9631400edc59571a20a4505cbe3050901ec9",
+      "split_seed": 4,
+      "training_initialization_seed": 0
+    },
+    {
+      "condition": "K1",
+      "held_out": "MATR",
+      "model_tag": "MLP",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_MATR__split4__train1__MLP__K1.json",
+      "sha256": "c1a8203d72545ec78f2d5885992bdbc28516db31de5ab8257a3d7bab0638e0a4",
+      "split_seed": 4,
+      "training_initialization_seed": 1
+    },
+    {
+      "condition": "K3",
+      "held_out": "MATR",
+      "model_tag": "MLP",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_MATR__split4__train1__MLP__K3.json",
+      "sha256": "3e7ce1755191ceec35fd7439e312dd8c1c4edf2f1b9c47d958855ac74e491784",
+      "split_seed": 4,
+      "training_initialization_seed": 1
+    },
+    {
+      "condition": "K5",
+      "held_out": "MATR",
+      "model_tag": "MLP",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_MATR__split4__train1__MLP__K5.json",
+      "sha256": "075ac2ecfbabb93a602c3f62b010ae4fde88720967a2c74ee59e7204b7bf34dc",
+      "split_seed": 4,
+      "training_initialization_seed": 1
+    },
+    {
+      "condition": "K1",
+      "held_out": "MATR",
+      "model_tag": "GCN",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_MATR__split4__train1__GCN__K1.json",
+      "sha256": "60fe3e1a0dfd4e85c5718bf1e7afb031339b24a746bf2c2fd528a12c9a59cba2",
+      "split_seed": 4,
+      "training_initialization_seed": 1
+    },
+    {
+      "condition": "K3",
+      "held_out": "MATR",
+      "model_tag": "GCN",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_MATR__split4__train1__GCN__K3.json",
+      "sha256": "1caa4a7cf6731b359c83b8f99b676ff59b5f5b5d5d0c50c05144a516958ac153",
+      "split_seed": 4,
+      "training_initialization_seed": 1
+    },
+    {
+      "condition": "K5",
+      "held_out": "MATR",
+      "model_tag": "GCN",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_MATR__split4__train1__GCN__K5.json",
+      "sha256": "f19279d4a467169a4a7542abbcf4d88e4d8197a522e229342f3f1c7fcc504024",
+      "split_seed": 4,
+      "training_initialization_seed": 1
+    },
+    {
+      "condition": "K1",
+      "held_out": "MATR",
+      "model_tag": "MLP",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_MATR__split4__train2__MLP__K1.json",
+      "sha256": "c453bda5cf377723c230f2b51961f004f7adc7497cf75f3b03e378afc76124aa",
+      "split_seed": 4,
+      "training_initialization_seed": 2
+    },
+    {
+      "condition": "K3",
+      "held_out": "MATR",
+      "model_tag": "MLP",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_MATR__split4__train2__MLP__K3.json",
+      "sha256": "bdffea97322e6142d123c3db88f9994bad4054eb14466c09396f31b804c56dbc",
+      "split_seed": 4,
+      "training_initialization_seed": 2
+    },
+    {
+      "condition": "K5",
+      "held_out": "MATR",
+      "model_tag": "MLP",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_MATR__split4__train2__MLP__K5.json",
+      "sha256": "b6e49507dc47f39100ad00a4ec92c1a9d4424e763a8acb6dc5206e046b26dbf5",
+      "split_seed": 4,
+      "training_initialization_seed": 2
+    },
+    {
+      "condition": "K1",
+      "held_out": "MATR",
+      "model_tag": "GCN",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_MATR__split4__train2__GCN__K1.json",
+      "sha256": "ff8f1d577a680db2ad5bce54a440e028d58745eab2f74b7be48494058609ce55",
+      "split_seed": 4,
+      "training_initialization_seed": 2
+    },
+    {
+      "condition": "K3",
+      "held_out": "MATR",
+      "model_tag": "GCN",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_MATR__split4__train2__GCN__K3.json",
+      "sha256": "17b8f88a6008dd9df2ec6c295546531ac23a1942ce0eec8df8a2dbdee7407029",
+      "split_seed": 4,
+      "training_initialization_seed": 2
+    },
+    {
+      "condition": "K5",
+      "held_out": "MATR",
+      "model_tag": "GCN",
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/few_shot_v1/final_execution_v1/fit_metadata/held_MATR__split4__train2__GCN__K5.json",
+      "sha256": "bc1a806cd8e7bccd81b9606775d69739a41f99f2421f01830bacc43722c43245",
+      "split_seed": 4,
+      "training_initialization_seed": 2
+    }
+  ],
+  "protocol_sha256": "966d8c6b95f29e671ce4be9a785c5088e6d8e7eda9d25b8389f204859641897f",
+  "target_test_evaluation_started": false,
+  "target_validation_used": false,
+  "zero_shot_execution_audit_sha256": "21f2f4236a8fbb0f8d1293f72e69bccd9ce679be3c1002dbe57c6137cb68bd21",
+  "zero_shot_execution_manifest_sha256": "b3e82cf395ce543c6452c62df02e34662b768f2cf24124d7eb530c88e11afbc1"
+}

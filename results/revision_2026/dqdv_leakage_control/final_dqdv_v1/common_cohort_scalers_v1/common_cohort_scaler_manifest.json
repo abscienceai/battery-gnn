@@ -1,0 +1,131 @@
+{
+  "RUL_or_EOL_values_read": false,
+  "SOH_values_read": false,
+  "builder_commit": "dab438a9c766fdba30fb9ef571d3758f447eaabe",
+  "builder_sha256": "abe8499f3e29f5ca8f3c4a39c3c1ddffe57dd6b234635c73b591fc6dee86df85",
+  "canonical_soh_eligible_rows": 300553,
+  "canonical_table_sha256": "49a7b7629cf9ee3f8ce0a7e3c52f2807878b752b4c9a30a876285fb891b00c14",
+  "capacity_values_read": false,
+  "cohort_rows_all_seeds": 1194018,
+  "common_cohort_definition": "canonical SOH-eligible row with finite PRIMARY20 and valid FULL, split-specific PREFIX25, and split-specific PREFIX50 dQ/dV10 features",
+  "conditions": {
+    "PRIMARY20_COMMON": {
+      "blocks": [
+        "PRIMARY20"
+      ],
+      "dimension": 20
+    },
+    "PRIMARY20_PLUS_FULL_DQDV10": {
+      "blocks": [
+        "PRIMARY20",
+        "FULL_DQDV10"
+      ],
+      "dimension": 30
+    },
+    "PRIMARY20_PLUS_PREFIX25_DQDV10": {
+      "blocks": [
+        "PRIMARY20",
+        "PREFIX25_DQDV10"
+      ],
+      "dimension": 30
+    },
+    "PRIMARY20_PLUS_PREFIX50_DQDV10": {
+      "blocks": [
+        "PRIMARY20",
+        "PREFIX50_DQDV10"
+      ],
+      "dimension": 30
+    }
+  },
+  "contract": "dqdv_common_cohort_train_only_scalers_v1",
+  "datasets": [
+    "HUST",
+    "CALCE",
+    "MATR"
+  ],
+  "dqdv_feature_names": [
+    "ica_mean_Ah_per_V",
+    "ica_std_Ah_per_V",
+    "ica_q10_Ah_per_V",
+    "ica_q25_Ah_per_V",
+    "ica_median_Ah_per_V",
+    "ica_q75_Ah_per_V",
+    "ica_q90_Ah_per_V",
+    "ica_max_Ah_per_V",
+    "ica_area_Ah",
+    "ica_peak_voltage_V"
+  ],
+  "feature_bank_manifest_sha256": "901d692f720a9e5166283f66b462580496192e9bab8cc1706453546c167021dc",
+  "feature_bank_shard_sha256": {
+    "CALCE": "fb47d1f78fc5f62c85b50242753f04cf09e7af8835301c70d9e23fadc52a91cb",
+    "HUST": "97cf289f9b29f72dba8fc261229e342b279c8108e6fd1dd19d5f05273bfc407c",
+    "MATR": "3f3f39271933681b30176049e546f4f1b4a3e10dd575c5aebe6d90f482e3c5d2"
+  },
+  "model_metrics_read": false,
+  "model_states_loaded": false,
+  "models_trained": false,
+  "outputs": {
+    "common_cohort_rows": {
+      "path": "${WORKSPACE}/results/revision_2026/dqdv_leakage_control/final_dqdv_v1/common_cohort_scalers_v1/common_cohort_rows.csv",
+      "rows": 1194018,
+      "sha256": "ff050fab9d7ad937d50df0cd34dc17082e52008543d574c244f57ff6e37f209c"
+    },
+    "common_cohort_summary": {
+      "path": "${WORKSPACE}/results/revision_2026/dqdv_leakage_control/final_dqdv_v1/common_cohort_scalers_v1/common_cohort_summary.csv",
+      "rows": 50,
+      "sha256": "bfc1f7d3847570c7cc6f5c5e3ea7a29a32821a6c59e3d3874ef1beb1086c0f43"
+    },
+    "train_only_scaler_parameters": {
+      "path": "${WORKSPACE}/results/revision_2026/dqdv_leakage_control/final_dqdv_v1/common_cohort_scalers_v1/train_only_scaler_parameters.csv",
+      "rows": 250,
+      "sha256": "22a688833d53a1b55242ac64f8a9be9bce5189b4de81b6caefe0ccb8f2b5daec"
+    }
+  },
+  "primary_feature_names": [
+    "v_min",
+    "v_q10",
+    "v_q25",
+    "v_median",
+    "v_q75",
+    "v_q90",
+    "v_max",
+    "v_mean",
+    "v_std",
+    "v_phase_slope",
+    "i_min",
+    "i_q10",
+    "i_q25",
+    "i_median",
+    "i_q75",
+    "i_q90",
+    "i_max",
+    "i_mean",
+    "i_std",
+    "i_phase_slope"
+  ],
+  "raw_primary_feature_sha256": {
+    "CALCE": "83f35417c58ba3cd7615ba9593c59e9807be84da4ec3235e29a1ca786b9ef2d0",
+    "HUST": "533f1d3d47b28bd819dec9822123bf0a80e6a9372e2e6d78b01b1a07c9ef1130",
+    "MATR": "a52032a187a75ece8fecf455131c1e1c207ce574d766d88ac534f3bb13b96c4a"
+  },
+  "same_row_ids_all_conditions": true,
+  "scaler_contract": {
+    "dqdv": "separate train-only scaler per split seed and horizon",
+    "primary20": "one train-only scaler per split seed, reused across all conditions",
+    "test_rows_used": false,
+    "validation_rows_used": false,
+    "variance_definition": "population_variance_ddof_0",
+    "zero_variance_scale": 1.0
+  },
+  "scaler_parameter_rows": 250,
+  "split_assignment_sha256": "914c8b90131f496ca396f63e0502147ca99848fdfd4b2c6b2a5887225b47d055",
+  "split_seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "status": "COMMON_COHORT_AND_SCALERS_COMPLETE_BEFORE_MODELING",
+  "target_values_read": false
+}

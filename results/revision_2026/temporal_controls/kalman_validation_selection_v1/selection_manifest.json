@@ -1,0 +1,18 @@
+{
+  "all_fits_below_epoch_ceiling": true,
+  "all_fits_patience_valid": true,
+  "completed_fit_count": 60,
+  "contract": "kalman_validation_selection_manifest_v1",
+  "final_test_result_root_accessed": false,
+  "output_sha256": {
+    "fit_summary": "202bcc8097f97fa7eb9121851354bbd6ae85e81ccaf8c8bc05d7a2e8ead0cb4c",
+    "q_summary": "7281889c833eb8bcc2c4d86c771d8fb31319e1e6223d5f639d6a9fdf7661c5ad",
+    "selected": "1223ee1f8e3bb418492dc6da56271ff4a7bad2c4340077ab6147a38a18168e63",
+    "split_summary": "3d362e2fd985cda262e8c5cb4e97b3f7d097ba2744815e6b1f5e74c91a5c8d2c"
+  },
+  "protocol_sha256": "522e0477a5f211f97f54869e08fba13e0fad31cd5f91dc0012f86906e780d2a5",
+  "selected_q": 0.01,
+  "selected_r": 1.0,
+  "test_metrics_read": false,
+  "test_rows_used": 0
+}

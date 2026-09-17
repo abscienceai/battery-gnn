@@ -1,0 +1,1323 @@
+{
+  "all_features_finite": true,
+  "all_shards_complete": true,
+  "cell_count": 143,
+  "clean_condition_count": 1,
+  "condition_count": 66,
+  "conditions_file_sha256": "eddc2f192229993eb38d84dea3fe09f107d2da336c5e206648b70584fbf56ec1",
+  "conditions_sha256": "9bd258134c9eb3e0cf4b4cb675b45db0c688dbed4544353f1c80c68357cffed3",
+  "contract": "physical_corruption_feature_closure_v1",
+  "corrupted_condition_count": 65,
+  "dataset_cell_counts": {
+    "CALCE": 8,
+    "HUST": 43,
+    "MATR": 92
+  },
+  "dataset_row_counts": {
+    "CALCE": 8653,
+    "HUST": 82701,
+    "MATR": 74950
+  },
+  "elapsed_seconds": 1142.8923377990723,
+  "feature_count": 20,
+  "generated_cells_this_invocation": 143,
+  "generator_commit": "f395c68b5b1851d3e01d5d8637e1978668eb53fd",
+  "generator_sha256": "78ec6341b6befd3657db873f96a60daeb16d2924b9306604e5c7734209451dfd",
+  "metric_computed": false,
+  "model_evaluated": false,
+  "model_loaded": false,
+  "protocol_sha256": "7ae0836fe69c4b14a1f93a094b2d42bb96209e302c8262f7b8bd8625baf78bfc",
+  "records": [
+    {
+      "cell_id": "CS2_34",
+      "dataset": "CALCE",
+      "meta_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/CALCE__CS2_34.json",
+      "npz_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/CALCE__CS2_34.npz",
+      "npz_sha256": "9f6384c17d1c00c3ff7586187c4a490b6cc90a430ac5db89ba8bc7d96a5c1acd",
+      "reused": false,
+      "row_count": 632
+    },
+    {
+      "cell_id": "CS2_35",
+      "dataset": "CALCE",
+      "meta_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/CALCE__CS2_35.json",
+      "npz_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/CALCE__CS2_35.npz",
+      "npz_sha256": "c69d4ea6cbbcdd60d5aea2cf0ba719c9861f7a6e4cba2d830889c791bdbbbabe",
+      "reused": false,
+      "row_count": 780
+    },
+    {
+      "cell_id": "CS2_36",
+      "dataset": "CALCE",
+      "meta_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/CALCE__CS2_36.json",
+      "npz_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/CALCE__CS2_36.npz",
+      "npz_sha256": "7b9748dd47805f644efdd03fc00a87b9a6c9e137209dcd5eaef69e38ac4404ba",
+      "reused": false,
+      "row_count": 832
+    },
+    {
+      "cell_id": "CS2_37",
+      "dataset": "CALCE",
+      "meta_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/CALCE__CS2_37.json",
+      "npz_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/CALCE__CS2_37.npz",
+      "npz_sha256": "ac5c49c00b5a90d6f31656da9d41e149ab771ccf3402d64aa5a8b315386e1487",
+      "reused": false,
+      "row_count": 905
+    },
+    {
+      "cell_id": "CS2_38",
+      "dataset": "CALCE",
+      "meta_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/CALCE__CS2_38.json",
+      "npz_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/CALCE__CS2_38.npz",
+      "npz_sha256": "15d88f13674f5f1b8b1d5873a517a59649c95930fa232e96602229d1986a501f",
+      "reused": false,
+      "row_count": 903
+    },
+    {
+      "cell_id": "CX2_35",
+      "dataset": "CALCE",
+      "meta_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/CALCE__CX2_35.json",
+      "npz_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/CALCE__CX2_35.npz",
+      "npz_sha256": "596521a952762d32eaef073f631202b8eb521a45e865c800fe87b6fd6d498337",
+      "reused": false,
+      "row_count": 1454
+    },
+    {
+      "cell_id": "CX2_36",
+      "dataset": "CALCE",
+      "meta_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/CALCE__CX2_36.json",
+      "npz_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/CALCE__CX2_36.npz",
+      "npz_sha256": "1b7b7d412b40b274f81cc3800219a92e44b89d31ee380c0ab1f48c590b32da5b",
+      "reused": false,
+      "row_count": 1568
+    },
+    {
+      "cell_id": "CX2_38",
+      "dataset": "CALCE",
+      "meta_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/CALCE__CX2_38.json",
+      "npz_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/CALCE__CX2_38.npz",
+      "npz_sha256": "2ae6eb67275623c1f0cf4ee74d88591760cb92e8031adf6553d2394fb9e5c53a",
+      "reused": false,
+      "row_count": 1579
+    },
+    {
+      "cell_id": "1-2",
+      "dataset": "HUST",
+      "meta_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/HUST__1-2.json",
+      "npz_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/HUST__1-2.npz",
+      "npz_sha256": "34ed194d40cd7dd0af501ef664469bb0c7430ee0a11883f4a2d98bde6bd2ac4e",
+      "reused": false,
+      "row_count": 2678
+    },
+    {
+      "cell_id": "1-3",
+      "dataset": "HUST",
+      "meta_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/HUST__1-3.json",
+      "npz_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/HUST__1-3.npz",
+      "npz_sha256": "d927eba16cc17ed5d57bc2b768fdfe5d55060ed3127e0d89fe658031b98cda8c",
+      "reused": false,
+      "row_count": 1858
+    },
+    {
+      "cell_id": "1-4",
+      "dataset": "HUST",
+      "meta_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/HUST__1-4.json",
+      "npz_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/HUST__1-4.npz",
+      "npz_sha256": "c9466bac0cfab085c1a05b7a692b0d55dab2509d60315a7a1c8f7f1269ea364b",
+      "reused": false,
+      "row_count": 1500
+    },
+    {
+      "cell_id": "1-5",
+      "dataset": "HUST",
+      "meta_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/HUST__1-5.json",
+      "npz_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/HUST__1-5.npz",
+      "npz_sha256": "addc6a254172a56305cfa85d728a61515fa623771ebf8b566d1dbfcd96c88967",
+      "reused": false,
+      "row_count": 1971
+    },
+    {
+      "cell_id": "1-6",
+      "dataset": "HUST",
+      "meta_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/HUST__1-6.json",
+      "npz_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/HUST__1-6.npz",
+      "npz_sha256": "3ab1b4cb09ed3270161810fabd90f7c5cf781299ae288a59c5c3341b5fb50f72",
+      "reused": false,
+      "row_count": 1143
+    },
+    {
+      "cell_id": "1-8",
+      "dataset": "HUST",
+      "meta_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/HUST__1-8.json",
+      "npz_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/HUST__1-8.npz",
+      "npz_sha256": "29619fac11d8dda238ab35c1e49bec2188353c375974917fdcf89568927f5759",
+      "reused": false,
+      "row_count": 2285
+    },
+    {
+      "cell_id": "10-1",
+      "dataset": "HUST",
+      "meta_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/HUST__10-1.json",
+      "npz_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/HUST__10-1.npz",
+      "npz_sha256": "56ed5245d51e7e147e810b51bd55726c023bb3a96cd798d0841ca7163d3cff43",
+      "reused": false,
+      "row_count": 1702
+    },
+    {
+      "cell_id": "10-3",
+      "dataset": "HUST",
+      "meta_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/HUST__10-3.json",
+      "npz_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/HUST__10-3.npz",
+      "npz_sha256": "285fb7c83fc44a42b854e313d29c3ef2a19285bc918ffcea4e69942e539903ac",
+      "reused": false,
+      "row_count": 1848
+    },
+    {
+      "cell_id": "10-5",
+      "dataset": "HUST",
+      "meta_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/HUST__10-5.json",
+      "npz_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/HUST__10-5.npz",
+      "npz_sha256": "4d2ce0a7e9846b8421f370041dab38ca92f8acda73a5978189a6228bc8be7a6d",
+      "reused": false,
+      "row_count": 2030
+    },
+    {
+      "cell_id": "10-6",
+      "dataset": "HUST",
+      "meta_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/HUST__10-6.json",
+      "npz_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/HUST__10-6.npz",
+      "npz_sha256": "8b78757ac8b6e2cd47a3d31961aa74ae00437bbee6ba91be89ee042051534277",
+      "reused": false,
+      "row_count": 2285
+    },
+    {
+      "cell_id": "2-2",
+      "dataset": "HUST",
+      "meta_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/HUST__2-2.json",
+      "npz_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/HUST__2-2.npz",
+      "npz_sha256": "1fb8441d76d36ecfa7b5c08bf7d1ec756c350c3c1b51a853986fcba8343fe20e",
+      "reused": false,
+      "row_count": 2651
+    },
+    {
+      "cell_id": "2-5",
+      "dataset": "HUST",
+      "meta_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/HUST__2-5.json",
+      "npz_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/HUST__2-5.npz",
+      "npz_sha256": "6b55eb85925a6cda31830eab3b31ec3d69aaf0750676a87334adc1c42bc9dad9",
+      "reused": false,
+      "row_count": 1386
+    },
+    {
+      "cell_id": "2-7",
+      "dataset": "HUST",
+      "meta_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/HUST__2-7.json",
+      "npz_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/HUST__2-7.npz",
+      "npz_sha256": "1f0973a909f10134bdd642f3ed69ad134379ef924dc55f9c4cb2f8fce04b0b14",
+      "reused": false,
+      "row_count": 2202
+    },
+    {
+      "cell_id": "2-8",
+      "dataset": "HUST",
+      "meta_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/HUST__2-8.json",
+      "npz_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/HUST__2-8.npz",
+      "npz_sha256": "70a50f20c990a3c66c975754a3c54f160d024bb7f17775a1e9d18877e2c33e5d",
+      "reused": false,
+      "row_count": 1481
+    },
+    {
+      "cell_id": "3-2",
+      "dataset": "HUST",
+      "meta_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/HUST__3-2.json",
+      "npz_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/HUST__3-2.npz",
+      "npz_sha256": "bb70a2474de3e108aed5118146017c3fb6b177c46dbf3a883e85b32f6132c8ee",
+      "reused": false,
+      "row_count": 2283
+    },
+    {
+      "cell_id": "3-3",
+      "dataset": "HUST",
+      "meta_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/HUST__3-3.json",
+      "npz_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/HUST__3-3.npz",
+      "npz_sha256": "8538b0340bc4fe8c0f7b99eb6a3dd3e92d0b88623c4057f13f5ce5b80e949ac4",
+      "reused": false,
+      "row_count": 1649
+    },
+    {
+      "cell_id": "3-7",
+      "dataset": "HUST",
+      "meta_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/HUST__3-7.json",
+      "npz_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/HUST__3-7.npz",
+      "npz_sha256": "f2f8edf6be212d144930bb9dcd4e7c8992b371556ab428a6650f88ae6042fc4a",
+      "reused": false,
+      "row_count": 2479
+    },
+    {
+      "cell_id": "4-1",
+      "dataset": "HUST",
+      "meta_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/HUST__4-1.json",
+      "npz_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/HUST__4-1.npz",
+      "npz_sha256": "6b9b778205dca7e6c54122bfb3862ccf7d9e9df45e1aa967de6eeeafab307ffe",
+      "reused": false,
+      "row_count": 2217
+    },
+    {
+      "cell_id": "4-4",
+      "dataset": "HUST",
+      "meta_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/HUST__4-4.json",
+      "npz_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/HUST__4-4.npz",
+      "npz_sha256": "2829bd8a0f7c8d3da4f3883f630f99bd84fa088685722cfb4ac74a55437c8d9b",
+      "reused": false,
+      "row_count": 1491
+    },
+    {
+      "cell_id": "4-5",
+      "dataset": "HUST",
+      "meta_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/HUST__4-5.json",
+      "npz_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/HUST__4-5.npz",
+      "npz_sha256": "915b012c46e47d2dfd0678da477cfbe14c1ca314ad772f60e99f9c5e453aa2aa",
+      "reused": false,
+      "row_count": 1561
+    },
+    {
+      "cell_id": "5-2",
+      "dataset": "HUST",
+      "meta_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/HUST__5-2.json",
+      "npz_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/HUST__5-2.npz",
+      "npz_sha256": "a6bab3ccc5e22d7cd17596e5f6717b68e71602bf161a1de8b7c113547bbbd66b",
+      "reused": false,
+      "row_count": 1926
+    },
+    {
+      "cell_id": "5-4",
+      "dataset": "HUST",
+      "meta_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/HUST__5-4.json",
+      "npz_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/HUST__5-4.npz",
+      "npz_sha256": "add3dbe3242e1462ea86c80d686d52c4a65616d4322b4e5ae6f926c32edd666d",
+      "reused": false,
+      "row_count": 1962
+    },
+    {
+      "cell_id": "5-6",
+      "dataset": "HUST",
+      "meta_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/HUST__5-6.json",
+      "npz_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/HUST__5-6.npz",
+      "npz_sha256": "136454ef7ed5c9058e24226762492a9b075e4b4ddc4ba38a3acee116c20ee35b",
+      "reused": false,
+      "row_count": 2460
+    },
+    {
+      "cell_id": "5-7",
+      "dataset": "HUST",
+      "meta_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/HUST__5-7.json",
+      "npz_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/HUST__5-7.npz",
+      "npz_sha256": "78bfb202d535c992e0e3110fa6163e35ef143adcaae09f70c600470df646d0d5",
+      "reused": false,
+      "row_count": 1448
+    },
+    {
+      "cell_id": "6-2",
+      "dataset": "HUST",
+      "meta_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/HUST__6-2.json",
+      "npz_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/HUST__6-2.npz",
+      "npz_sha256": "4fae1f349a209e9b765e4297bdd07273a3954f783ab870800864f2726fdb52bf",
+      "reused": false,
+      "row_count": 1908
+    },
+    {
+      "cell_id": "6-3",
+      "dataset": "HUST",
+      "meta_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/HUST__6-3.json",
+      "npz_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/HUST__6-3.npz",
+      "npz_sha256": "5c9870538a0782019e9af9bc2a7e454b9b5ac19683d40b934741ca369f88d2de",
+      "reused": false,
+      "row_count": 1804
+    },
+    {
+      "cell_id": "6-4",
+      "dataset": "HUST",
+      "meta_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/HUST__6-4.json",
+      "npz_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/HUST__6-4.npz",
+      "npz_sha256": "66638aea1b37389141552e01150a2dce7b1ffe3c87de8050233f4cba1e3125c1",
+      "reused": false,
+      "row_count": 1717
+    },
+    {
+      "cell_id": "6-5",
+      "dataset": "HUST",
+      "meta_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/HUST__6-5.json",
+      "npz_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/HUST__6-5.npz",
+      "npz_sha256": "29b879e8c6529ae00e21252d12e59acb4061adf2dcc9a43850624a36aaf9608e",
+      "reused": false,
+      "row_count": 2178
+    },
+    {
+      "cell_id": "7-1",
+      "dataset": "HUST",
+      "meta_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/HUST__7-1.json",
+      "npz_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/HUST__7-1.npz",
+      "npz_sha256": "2fe0d94dca7e7cf52de84b35ff842f422f89eee6a858bcbb44155d6d6a2ff884",
+      "reused": false,
+      "row_count": 1690
+    },
+    {
+      "cell_id": "7-2",
+      "dataset": "HUST",
+      "meta_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/HUST__7-2.json",
+      "npz_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/HUST__7-2.npz",
+      "npz_sha256": "6c486301d2c0696209cfb59a79ba8ae111099fb975ce64feae3c23962ca672b2",
+      "reused": false,
+      "row_count": 2030
+    },
+    {
+      "cell_id": "7-6",
+      "dataset": "HUST",
+      "meta_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/HUST__7-6.json",
+      "npz_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/HUST__7-6.npz",
+      "npz_sha256": "fccfc2ea20c2413e4fe132ae15671e69d8fcc13bf141497958912ae6ec2b40d1",
+      "reused": false,
+      "row_count": 1419
+    },
+    {
+      "cell_id": "7-7",
+      "dataset": "HUST",
+      "meta_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/HUST__7-7.json",
+      "npz_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/HUST__7-7.npz",
+      "npz_sha256": "9e449bb423b0d34d9ce5cfc1e4dd2db5f4dda5cf650ab27335285fb111a0c8b9",
+      "reused": false,
+      "row_count": 1685
+    },
+    {
+      "cell_id": "8-2",
+      "dataset": "HUST",
+      "meta_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/HUST__8-2.json",
+      "npz_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/HUST__8-2.npz",
+      "npz_sha256": "e811f1b4a19bdc2de2fd46a05f2bb5a6c3526441b6a60a7b2e6612eadc8adbed",
+      "reused": false,
+      "row_count": 2041
+    },
+    {
+      "cell_id": "8-3",
+      "dataset": "HUST",
+      "meta_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/HUST__8-3.json",
+      "npz_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/HUST__8-3.npz",
+      "npz_sha256": "d75854b6a681c0c0050389456d73e0ab007d9e92442b4738d4b91cbfe9334d50",
+      "reused": false,
+      "row_count": 2290
+    },
+    {
+      "cell_id": "8-4",
+      "dataset": "HUST",
+      "meta_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/HUST__8-4.json",
+      "npz_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/HUST__8-4.npz",
+      "npz_sha256": "b03a0fac776f62b8075546190da004b3fb6661ac480928180c106a7d71e9812f",
+      "reused": false,
+      "row_count": 1885
+    },
+    {
+      "cell_id": "8-5",
+      "dataset": "HUST",
+      "meta_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/HUST__8-5.json",
+      "npz_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/HUST__8-5.npz",
+      "npz_sha256": "f84956325420350d79b913546035382c4817a0abf739a0868d9365c53068c9ed",
+      "reused": false,
+      "row_count": 1348
+    },
+    {
+      "cell_id": "8-6",
+      "dataset": "HUST",
+      "meta_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/HUST__8-6.json",
+      "npz_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/HUST__8-6.npz",
+      "npz_sha256": "e4bb7a0a4a37194ae113c1627d6854f201831a0df20d36f10603f2ee6cd3dba6",
+      "reused": false,
+      "row_count": 2365
+    },
+    {
+      "cell_id": "8-7",
+      "dataset": "HUST",
+      "meta_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/HUST__8-7.json",
+      "npz_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/HUST__8-7.npz",
+      "npz_sha256": "9a445a004a8cac5c19dcf49eedf00e975e33c71afbb0d035b01ed490fb546398",
+      "reused": false,
+      "row_count": 2047
+    },
+    {
+      "cell_id": "8-8",
+      "dataset": "HUST",
+      "meta_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/HUST__8-8.json",
+      "npz_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/HUST__8-8.npz",
+      "npz_sha256": "002dac089f0d480aa8eb70f51f60f7e396df465fff59068a6e60997e6d676d0c",
+      "reused": false,
+      "row_count": 1679
+    },
+    {
+      "cell_id": "9-1",
+      "dataset": "HUST",
+      "meta_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/HUST__9-1.json",
+      "npz_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/HUST__9-1.npz",
+      "npz_sha256": "e6b31d5eb311b668da0f24321b7fcdc7d03b2abc966c8cd0f84e72627e5ebc5e",
+      "reused": false,
+      "row_count": 2057
+    },
+    {
+      "cell_id": "9-6",
+      "dataset": "HUST",
+      "meta_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/HUST__9-6.json",
+      "npz_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/HUST__9-6.npz",
+      "npz_sha256": "b8050272fbf16dcbeaa97cfb60fc6b83eec9f39eebd753cbcc0205ffc475507f",
+      "reused": false,
+      "row_count": 1742
+    },
+    {
+      "cell_id": "9-7",
+      "dataset": "HUST",
+      "meta_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/HUST__9-7.json",
+      "npz_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/HUST__9-7.npz",
+      "npz_sha256": "023a0a16e3bf6b21c945967b0e981dac0301760adc7bfa7782def12f3460ff8a",
+      "reused": false,
+      "row_count": 2012
+    },
+    {
+      "cell_id": "9-8",
+      "dataset": "HUST",
+      "meta_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/HUST__9-8.json",
+      "npz_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/HUST__9-8.npz",
+      "npz_sha256": "5ac9af34bc211b24c1e80b7944a0ea48210a7b8423c29a410f3f7605e4accebb",
+      "reused": false,
+      "row_count": 2308
+    },
+    {
+      "cell_id": "b1c1",
+      "dataset": "MATR",
+      "meta_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/MATR__b1c1.json",
+      "npz_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/MATR__b1c1.npz",
+      "npz_sha256": "66ca6690627eced2af1e8ea94674bdb5e413924cb6e1934818d627d60939f16a",
+      "reused": false,
+      "row_count": 1177
+    },
+    {
+      "cell_id": "b1c11",
+      "dataset": "MATR",
+      "meta_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/MATR__b1c11.json",
+      "npz_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/MATR__b1c11.npz",
+      "npz_sha256": "c012d9f41f5c18bc776565d8a692f5c077541a5c30e890c801ae871dce0fa0df",
+      "reused": false,
+      "row_count": 786
+    },
+    {
+      "cell_id": "b1c15",
+      "dataset": "MATR",
+      "meta_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/MATR__b1c15.json",
+      "npz_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/MATR__b1c15.npz",
+      "npz_sha256": "f1a4fc7587485352e3aff3535359f6567d322e682a98625657bc8d9a42376502",
+      "reused": false,
+      "row_count": 717
+    },
+    {
+      "cell_id": "b1c16",
+      "dataset": "MATR",
+      "meta_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/MATR__b1c16.json",
+      "npz_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/MATR__b1c16.npz",
+      "npz_sha256": "b12597a98ca9a1634d40f95a1350fc9644914664acad06f1598b400fc04d2bcc",
+      "reused": false,
+      "row_count": 860
+    },
+    {
+      "cell_id": "b1c20",
+      "dataset": "MATR",
+      "meta_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/MATR__b1c20.json",
+      "npz_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/MATR__b1c20.npz",
+      "npz_sha256": "9f9e0d5e7b30b3ae7b570e955882fe0de0db57c4c758339c94e3f4de00ebc787",
+      "reused": false,
+      "row_count": 532
+    },
+    {
+      "cell_id": "b1c23",
+      "dataset": "MATR",
+      "meta_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/MATR__b1c23.json",
+      "npz_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/MATR__b1c23.npz",
+      "npz_sha256": "32c537c6a29e8fa459347c08b57be9a93ab6cbc29d18a240fc14eae6a6d95071",
+      "reused": false,
+      "row_count": 1012
+    },
+    {
+      "cell_id": "b1c24",
+      "dataset": "MATR",
+      "meta_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/MATR__b1c24.json",
+      "npz_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/MATR__b1c24.npz",
+      "npz_sha256": "3db58571ca24e9ebd6a4a62e8728b6e8d8536f7ec003246340c89b038a9b5a68",
+      "reused": false,
+      "row_count": 1015
+    },
+    {
+      "cell_id": "b1c26",
+      "dataset": "MATR",
+      "meta_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/MATR__b1c26.json",
+      "npz_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/MATR__b1c26.npz",
+      "npz_sha256": "3ba072d720df3995926a8a0eb99ca0c951c8848dfb3178c55bce10593e8e00ca",
+      "reused": false,
+      "row_count": 868
+    },
+    {
+      "cell_id": "b1c28",
+      "dataset": "MATR",
+      "meta_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/MATR__b1c28.json",
+      "npz_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/MATR__b1c28.npz",
+      "npz_sha256": "6aca836aa63eab8d6b6ed27858f1d40f990c9307f747d22600bb22324af24d9c",
+      "reused": false,
+      "row_count": 858
+    },
+    {
+      "cell_id": "b1c29",
+      "dataset": "MATR",
+      "meta_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/MATR__b1c29.json",
+      "npz_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/MATR__b1c29.npz",
+      "npz_sha256": "0bbf7491a1db9686fd974c586a8ab1d1b1c1c958485ef92c54c3c2a918c85ec9",
+      "reused": false,
+      "row_count": 915
+    },
+    {
+      "cell_id": "b1c3",
+      "dataset": "MATR",
+      "meta_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/MATR__b1c3.json",
+      "npz_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/MATR__b1c3.npz",
+      "npz_sha256": "8c602c387ae602a4d4489dd1c8ac1f880232ef90562e9f5cf48af2dbabe5fff2",
+      "reused": false,
+      "row_count": 1224
+    },
+    {
+      "cell_id": "b1c31",
+      "dataset": "MATR",
+      "meta_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/MATR__b1c31.json",
+      "npz_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/MATR__b1c31.npz",
+      "npz_sha256": "5287fff9a05c298af9b8b22a8c34b21075da9e21f49d484aab5c8c7348ccd950",
+      "reused": false,
+      "row_count": 874
+    },
+    {
+      "cell_id": "b1c32",
+      "dataset": "MATR",
+      "meta_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/MATR__b1c32.json",
+      "npz_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/MATR__b1c32.npz",
+      "npz_sha256": "719bffed54543c61ac0aa14e2abb4fbdb432da3dea46bddf1a2b9c4d30202400",
+      "reused": false,
+      "row_count": 729
+    },
+    {
+      "cell_id": "b1c33",
+      "dataset": "MATR",
+      "meta_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/MATR__b1c33.json",
+      "npz_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/MATR__b1c33.npz",
+      "npz_sha256": "679c36cc7b9db562de303b79bb8a1349275d98117fb54c896930924e12311699",
+      "reused": false,
+      "row_count": 755
+    },
+    {
+      "cell_id": "b1c34",
+      "dataset": "MATR",
+      "meta_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/MATR__b1c34.json",
+      "npz_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/MATR__b1c34.npz",
+      "npz_sha256": "90b8dfe327e010fc3a966bcfc325199f3086818959320a9ac2b3ef25bcccfe19",
+      "reused": false,
+      "row_count": 740
+    },
+    {
+      "cell_id": "b1c38",
+      "dataset": "MATR",
+      "meta_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/MATR__b1c38.json",
+      "npz_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/MATR__b1c38.npz",
+      "npz_sha256": "9ec4ef302ffdb704b27ca03e82a8c260bfed44920cd647318a04c3da4165b298",
+      "reused": false,
+      "row_count": 615
+    },
+    {
+      "cell_id": "b1c39",
+      "dataset": "MATR",
+      "meta_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/MATR__b1c39.json",
+      "npz_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/MATR__b1c39.npz",
+      "npz_sha256": "5a7b991497d0972dcba929e2335a7519d71116818088d23e5b7a906bb90b4bca",
+      "reused": false,
+      "row_count": 623
+    },
+    {
+      "cell_id": "b1c4",
+      "dataset": "MATR",
+      "meta_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/MATR__b1c4.json",
+      "npz_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/MATR__b1c4.npz",
+      "npz_sha256": "f72ceeb752ad2d26f5289febb7776096df73e083213d3e554f571e9551bc9dc0",
+      "reused": false,
+      "row_count": 1225
+    },
+    {
+      "cell_id": "b1c41",
+      "dataset": "MATR",
+      "meta_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/MATR__b1c41.json",
+      "npz_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/MATR__b1c41.npz",
+      "npz_sha256": "e541a44d9c72b55079bfb80f26e4ef292811f88ec2acb572a85d615742bab297",
+      "reused": false,
+      "row_count": 1049
+    },
+    {
+      "cell_id": "b1c43",
+      "dataset": "MATR",
+      "meta_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/MATR__b1c43.json",
+      "npz_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/MATR__b1c43.npz",
+      "npz_sha256": "e232b7b1d0619ac38017da8d8d14863e6844d49416ad6b015f444bb46bf10d71",
+      "reused": false,
+      "row_count": 649
+    },
+    {
+      "cell_id": "b1c6",
+      "dataset": "MATR",
+      "meta_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/MATR__b1c6.json",
+      "npz_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/MATR__b1c6.npz",
+      "npz_sha256": "781dc835e8b03e6a578a77bb42d0e7feaf1871a17768d46d6c700d55d56602ac",
+      "reused": false,
+      "row_count": 634
+    },
+    {
+      "cell_id": "b1c9",
+      "dataset": "MATR",
+      "meta_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/MATR__b1c9.json",
+      "npz_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/MATR__b1c9.npz",
+      "npz_sha256": "bd6535440d9d30bfd6681064835254170c3011404fcb88083bb1d6cc26870562",
+      "reused": false,
+      "row_count": 1052
+    },
+    {
+      "cell_id": "b2c1",
+      "dataset": "MATR",
+      "meta_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/MATR__b2c1.json",
+      "npz_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/MATR__b2c1.npz",
+      "npz_sha256": "daffe39e9e9c783bd4df41ba133e0eeaf77d07fc32111cca467a159ef64135d1",
+      "reused": false,
+      "row_count": 170
+    },
+    {
+      "cell_id": "b2c11",
+      "dataset": "MATR",
+      "meta_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/MATR__b2c11.json",
+      "npz_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/MATR__b2c11.npz",
+      "npz_sha256": "fb6e2d9833ff5ad7b60144d59dfb718490d7696ce030fd3b60ce5befbd6bde34",
+      "reused": false,
+      "row_count": 505
+    },
+    {
+      "cell_id": "b2c12",
+      "dataset": "MATR",
+      "meta_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/MATR__b2c12.json",
+      "npz_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/MATR__b2c12.npz",
+      "npz_sha256": "b9dcc222e15e3d6488bcca434673f2ca68190b95761c81014bc490537d1a10bd",
+      "reused": false,
+      "row_count": 491
+    },
+    {
+      "cell_id": "b2c13",
+      "dataset": "MATR",
+      "meta_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/MATR__b2c13.json",
+      "npz_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/MATR__b2c13.npz",
+      "npz_sha256": "dc5353ab195b365dd5163e738631cc4b912d4dead84ff80a1baeeb7e62b53d7f",
+      "reused": false,
+      "row_count": 520
+    },
+    {
+      "cell_id": "b2c15",
+      "dataset": "MATR",
+      "meta_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/MATR__b2c15.json",
+      "npz_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/MATR__b2c15.npz",
+      "npz_sha256": "ea72e8a4cbd680c2ef3c3659eb6fee70bae92cf432eaa3fcb0abef64178cff14",
+      "reused": false,
+      "row_count": 208
+    },
+    {
+      "cell_id": "b2c16",
+      "dataset": "MATR",
+      "meta_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/MATR__b2c16.json",
+      "npz_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/MATR__b2c16.npz",
+      "npz_sha256": "50f043c40dc1e0607d456a43a9250f8c1c75de7dd055e1e05e9294a03f19827e",
+      "reused": false,
+      "row_count": 482
+    },
+    {
+      "cell_id": "b2c18",
+      "dataset": "MATR",
+      "meta_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/MATR__b2c18.json",
+      "npz_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/MATR__b2c18.npz",
+      "npz_sha256": "3258c4f9b5ad0050ce7a30b9253a667b32b487f2a6f7681394245c1f04c727fd",
+      "reused": false,
+      "row_count": 523
+    },
+    {
+      "cell_id": "b2c20",
+      "dataset": "MATR",
+      "meta_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/MATR__b2c20.json",
+      "npz_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/MATR__b2c20.npz",
+      "npz_sha256": "b4a954b236dfdcc398bb46154da9e81b6b5247998e23d9eb69c75df17ed25c04",
+      "reused": false,
+      "row_count": 531
+    },
+    {
+      "cell_id": "b2c22",
+      "dataset": "MATR",
+      "meta_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/MATR__b2c22.json",
+      "npz_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/MATR__b2c22.npz",
+      "npz_sha256": "19bdf6de9c313942c42267109f738f343fd39375a3deec83d15657a09ff52f80",
+      "reused": false,
+      "row_count": 540
+    },
+    {
+      "cell_id": "b2c24",
+      "dataset": "MATR",
+      "meta_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/MATR__b2c24.json",
+      "npz_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/MATR__b2c24.npz",
+      "npz_sha256": "90265f197300b259cd02a92265ec816c74510c4c60bd03e9cefb7734804f9c12",
+      "reused": false,
+      "row_count": 524
+    },
+    {
+      "cell_id": "b2c26",
+      "dataset": "MATR",
+      "meta_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/MATR__b2c26.json",
+      "npz_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/MATR__b2c26.npz",
+      "npz_sha256": "0c0d368a538cbfbc2ee7483c45d7b9f0256c15d3568507d8f2f5a3f1adbfc3cb",
+      "reused": false,
+      "row_count": 498
+    },
+    {
+      "cell_id": "b2c31",
+      "dataset": "MATR",
+      "meta_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/MATR__b2c31.json",
+      "npz_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/MATR__b2c31.npz",
+      "npz_sha256": "6c7c5b4ed9e39cbab64843179720dcb1e77ecc09d397a4aed80b6bfe51d111bb",
+      "reused": false,
+      "row_count": 519
+    },
+    {
+      "cell_id": "b2c32",
+      "dataset": "MATR",
+      "meta_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/MATR__b2c32.json",
+      "npz_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/MATR__b2c32.npz",
+      "npz_sha256": "5d1c7f88bc3c2f03fd8e130cb1905ce00744d89823c3f3168cd49f2770b9899d",
+      "reused": false,
+      "row_count": 544
+    },
+    {
+      "cell_id": "b2c36",
+      "dataset": "MATR",
+      "meta_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/MATR__b2c36.json",
+      "npz_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/MATR__b2c36.npz",
+      "npz_sha256": "681575ea70e699ce250e0d7d30782bc3b9d949ca428e8a4c8b97b3d82105d707",
+      "reused": false,
+      "row_count": 560
+    },
+    {
+      "cell_id": "b2c37",
+      "dataset": "MATR",
+      "meta_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/MATR__b2c37.json",
+      "npz_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/MATR__b2c37.npz",
+      "npz_sha256": "988e52d4f64cbb51dd7cd53313ea7f5ad4fd75d8c79b029b5f9ddbc9919af5cc",
+      "reused": false,
+      "row_count": 502
+    },
+    {
+      "cell_id": "b2c4",
+      "dataset": "MATR",
+      "meta_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/MATR__b2c4.json",
+      "npz_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/MATR__b2c4.npz",
+      "npz_sha256": "bd7e01d25013f350225fdb29c2cf6b1c61ef8e4e89a763d6cbc949c8c4ed5289",
+      "reused": false,
+      "row_count": 471
+    },
+    {
+      "cell_id": "b2c40",
+      "dataset": "MATR",
+      "meta_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/MATR__b2c40.json",
+      "npz_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/MATR__b2c40.npz",
+      "npz_sha256": "9db9147708291548ba29ced5e895a180b4a79d0130589a1c116e55e3852ea5db",
+      "reused": false,
+      "row_count": 530
+    },
+    {
+      "cell_id": "b2c41",
+      "dataset": "MATR",
+      "meta_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/MATR__b2c41.json",
+      "npz_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/MATR__b2c41.npz",
+      "npz_sha256": "e890dc1d664d6bf050d683174a01c18ad2632a897c2cb83150e2a388b431dfbb",
+      "reused": false,
+      "row_count": 452
+    },
+    {
+      "cell_id": "b2c43",
+      "dataset": "MATR",
+      "meta_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/MATR__b2c43.json",
+      "npz_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/MATR__b2c43.npz",
+      "npz_sha256": "432c62248206c04dacdfe802e640acd8eea7c17837532d30fb00623f03dd4f98",
+      "reused": false,
+      "row_count": 487
+    },
+    {
+      "cell_id": "b2c44",
+      "dataset": "MATR",
+      "meta_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/MATR__b2c44.json",
+      "npz_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/MATR__b2c44.npz",
+      "npz_sha256": "8c4a39783e98bf333bd90c63cea551bfe6613727c0e23e0f0bd46c51f79f824e",
+      "reused": false,
+      "row_count": 479
+    },
+    {
+      "cell_id": "b2c47",
+      "dataset": "MATR",
+      "meta_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/MATR__b2c47.json",
+      "npz_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/MATR__b2c47.npz",
+      "npz_sha256": "d5f00d08961a364eb29496f8d024a24e1334397977e2d259bbdce4c4e12f76c5",
+      "reused": false,
+      "row_count": 745
+    },
+    {
+      "cell_id": "b2c5",
+      "dataset": "MATR",
+      "meta_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/MATR__b2c5.json",
+      "npz_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/MATR__b2c5.npz",
+      "npz_sha256": "96c0662f1df88546b68df8222144773c1cd8b4bb2d4fe3120238a698388d2db2",
+      "reused": false,
+      "row_count": 507
+    },
+    {
+      "cell_id": "b2c6",
+      "dataset": "MATR",
+      "meta_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/MATR__b2c6.json",
+      "npz_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/MATR__b2c6.npz",
+      "npz_sha256": "1984d6f7eb0af99156e7d48b11ca4bae737b32a5927ffab7748ff2441be01811",
+      "reused": false,
+      "row_count": 545
+    },
+    {
+      "cell_id": "b2c8",
+      "dataset": "MATR",
+      "meta_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/MATR__b2c8.json",
+      "npz_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/MATR__b2c8.npz",
+      "npz_sha256": "aca90eb766f059b42a97369f3ec355498ede1aaa9f4ed641d6470e4d8a611980",
+      "reused": false,
+      "row_count": 981
+    },
+    {
+      "cell_id": "b3c1",
+      "dataset": "MATR",
+      "meta_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/MATR__b3c1.json",
+      "npz_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/MATR__b3c1.npz",
+      "npz_sha256": "cecb93346876ecf6d2c3d50c98d67d7759fb8264633190e2a7d804bd1b0fdc2c",
+      "reused": false,
+      "row_count": 1062
+    },
+    {
+      "cell_id": "b3c12",
+      "dataset": "MATR",
+      "meta_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/MATR__b3c12.json",
+      "npz_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/MATR__b3c12.npz",
+      "npz_sha256": "dac8f7732b40b39c85c321299ffae417bc095384cb35c40e1c84bc15893acbb0",
+      "reused": false,
+      "row_count": 931
+    },
+    {
+      "cell_id": "b3c13",
+      "dataset": "MATR",
+      "meta_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/MATR__b3c13.json",
+      "npz_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/MATR__b3c13.npz",
+      "npz_sha256": "a3dcb979cbb2981a94f8fa315ed316af658b9ae5e30a40d3c97db1f774baeaa2",
+      "reused": false,
+      "row_count": 815
+    },
+    {
+      "cell_id": "b3c15",
+      "dataset": "MATR",
+      "meta_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/MATR__b3c15.json",
+      "npz_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/MATR__b3c15.npz",
+      "npz_sha256": "0d9ff652f1cbf95b0c56c1547849d003e7d090b01dca714ed5629076f50f7dfd",
+      "reused": false,
+      "row_count": 875
+    },
+    {
+      "cell_id": "b3c16",
+      "dataset": "MATR",
+      "meta_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/MATR__b3c16.json",
+      "npz_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/MATR__b3c16.npz",
+      "npz_sha256": "4b152869c9867e0f49e6446354452a54f8b9e15faf59843680db79d1ecdb7ba1",
+      "reused": false,
+      "row_count": 1637
+    },
+    {
+      "cell_id": "b3c20",
+      "dataset": "MATR",
+      "meta_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/MATR__b3c20.json",
+      "npz_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/MATR__b3c20.npz",
+      "npz_sha256": "ebad96971888a95a59105210129ccf911ebf0041bba3b4fd75acdb3c9b4ba581",
+      "reused": false,
+      "row_count": 812
+    },
+    {
+      "cell_id": "b3c22",
+      "dataset": "MATR",
+      "meta_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/MATR__b3c22.json",
+      "npz_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/MATR__b3c22.npz",
+      "npz_sha256": "665934e3d0a5f697242d74cca8f951daad8a15d55f04365b504ac215427c8360",
+      "reused": false,
+      "row_count": 1001
+    },
+    {
+      "cell_id": "b3c24",
+      "dataset": "MATR",
+      "meta_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/MATR__b3c24.json",
+      "npz_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/MATR__b3c24.npz",
+      "npz_sha256": "20fff5814a9ce2746eeb082fd4e7f06f8c4676b8912788c5bb52f8ee0dc075b2",
+      "reused": false,
+      "row_count": 824
+    },
+    {
+      "cell_id": "b3c26",
+      "dataset": "MATR",
+      "meta_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/MATR__b3c26.json",
+      "npz_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/MATR__b3c26.npz",
+      "npz_sha256": "7540ac30ef6d29a1554a01563a7fcad5e4db8ba989fe4329bb63481484361f7e",
+      "reused": false,
+      "row_count": 1027
+    },
+    {
+      "cell_id": "b3c27",
+      "dataset": "MATR",
+      "meta_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/MATR__b3c27.json",
+      "npz_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/MATR__b3c27.npz",
+      "npz_sha256": "e02780a9ec295a6a2c0f959b57c5d8bf0f3152ec3cead21b152079700c4334aa",
+      "reused": false,
+      "row_count": 849
+    },
+    {
+      "cell_id": "b3c30",
+      "dataset": "MATR",
+      "meta_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/MATR__b3c30.json",
+      "npz_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/MATR__b3c30.npz",
+      "npz_sha256": "3944d3d2f4d26a3d2f28a5ef40b1536b57ea0885dd99faa0d9d7cd5df3a1468e",
+      "reused": false,
+      "row_count": 934
+    },
+    {
+      "cell_id": "b3c34",
+      "dataset": "MATR",
+      "meta_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/MATR__b3c34.json",
+      "npz_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/MATR__b3c34.npz",
+      "npz_sha256": "9c3c9d6c93726efbcbdb594f864f7c8ed029c74f23a439e6f14d28ce19597009",
+      "reused": false,
+      "row_count": 1157
+    },
+    {
+      "cell_id": "b3c35",
+      "dataset": "MATR",
+      "meta_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/MATR__b3c35.json",
+      "npz_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/MATR__b3c35.npz",
+      "npz_sha256": "ced7a407edb26d307fe45785c34cbeee2a98fdbb6ddb3a0ed3452b19c4a90362",
+      "reused": false,
+      "row_count": 1092
+    },
+    {
+      "cell_id": "b3c36",
+      "dataset": "MATR",
+      "meta_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/MATR__b3c36.json",
+      "npz_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/MATR__b3c36.npz",
+      "npz_sha256": "ff0ec92e8ba38b5784906ef6046e35e6e7764cc9a59cb34106a9acac2fb7b9a3",
+      "reused": false,
+      "row_count": 922
+    },
+    {
+      "cell_id": "b3c38",
+      "dataset": "MATR",
+      "meta_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/MATR__b3c38.json",
+      "npz_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/MATR__b3c38.npz",
+      "npz_sha256": "d1ca4804f8c5428dfbef62bbfffd146e68bd0ceed5ee6c049a2745bd7affe538",
+      "reused": false,
+      "row_count": 1934
+    },
+    {
+      "cell_id": "b3c39",
+      "dataset": "MATR",
+      "meta_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/MATR__b3c39.json",
+      "npz_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/MATR__b3c39.npz",
+      "npz_sha256": "8d91271aa7981c0add3c4f53750682df4083cbf51def6b58a941093310f764c1",
+      "reused": false,
+      "row_count": 1155
+    },
+    {
+      "cell_id": "b3c4",
+      "dataset": "MATR",
+      "meta_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/MATR__b3c4.json",
+      "npz_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/MATR__b3c4.npz",
+      "npz_sha256": "b5f009c3a0becb94371dd0ea8866c1635a73b3ff3b97c3fe0c59ca77d9c4e51d",
+      "reused": false,
+      "row_count": 1047
+    },
+    {
+      "cell_id": "b3c40",
+      "dataset": "MATR",
+      "meta_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/MATR__b3c40.json",
+      "npz_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/MATR__b3c40.npz",
+      "npz_sha256": "21cfbf0a43f367de584fc5d018a3ecf5b5716e3d3237745c693e9fe49fca36d4",
+      "reused": false,
+      "row_count": 795
+    },
+    {
+      "cell_id": "b3c41",
+      "dataset": "MATR",
+      "meta_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/MATR__b3c41.json",
+      "npz_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/MATR__b3c41.npz",
+      "npz_sha256": "d51c7988071eb8b2526cbb48631e4bbf41a11022508a6f851e6dbf3b8a4c3d03",
+      "reused": false,
+      "row_count": 785
+    },
+    {
+      "cell_id": "b3c44",
+      "dataset": "MATR",
+      "meta_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/MATR__b3c44.json",
+      "npz_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/MATR__b3c44.npz",
+      "npz_sha256": "45583b8fd01cabf2c737b5a401354bb52e5acb8675b323c1a9046ab3e41397b3",
+      "reused": false,
+      "row_count": 939
+    },
+    {
+      "cell_id": "b3c6",
+      "dataset": "MATR",
+      "meta_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/MATR__b3c6.json",
+      "npz_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/MATR__b3c6.npz",
+      "npz_sha256": "e85549cf87bf1c6af672b56294e3a88e521aa46ef4cb31a1a11e22d4f93ebd66",
+      "reused": false,
+      "row_count": 666
+    },
+    {
+      "cell_id": "b3c8",
+      "dataset": "MATR",
+      "meta_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/MATR__b3c8.json",
+      "npz_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/MATR__b3c8.npz",
+      "npz_sha256": "2def7767ffca1eced0de49a235cb80932c5e529539d509cea508a1000f279e64",
+      "reused": false,
+      "row_count": 827
+    },
+    {
+      "cell_id": "b4c1",
+      "dataset": "MATR",
+      "meta_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/MATR__b4c1.json",
+      "npz_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/MATR__b4c1.npz",
+      "npz_sha256": "57f8935855e91e045a9a66f5d4dec05057d62c719ac856b5385f9fa87d26d5f6",
+      "reused": false,
+      "row_count": 862
+    },
+    {
+      "cell_id": "b4c10",
+      "dataset": "MATR",
+      "meta_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/MATR__b4c10.json",
+      "npz_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/MATR__b4c10.npz",
+      "npz_sha256": "7f6d27af6756edafa9bdf376b61d74c9e9a8c2e6827ec285727272b84df0699f",
+      "reused": false,
+      "row_count": 1083
+    },
+    {
+      "cell_id": "b4c11",
+      "dataset": "MATR",
+      "meta_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/MATR__b4c11.json",
+      "npz_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/MATR__b4c11.npz",
+      "npz_sha256": "f447df1447992488b73e7cafb63b6c6f946fcdb04c6190dcda39492c00d4a3be",
+      "reused": false,
+      "row_count": 931
+    },
+    {
+      "cell_id": "b4c12",
+      "dataset": "MATR",
+      "meta_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/MATR__b4c12.json",
+      "npz_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/MATR__b4c12.npz",
+      "npz_sha256": "6aafc648a4099ff3801adc33771abf877267ba3a15b54b93fa5ae3e0f87e588c",
+      "reused": false,
+      "row_count": 899
+    },
+    {
+      "cell_id": "b4c14",
+      "dataset": "MATR",
+      "meta_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/MATR__b4c14.json",
+      "npz_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/MATR__b4c14.npz",
+      "npz_sha256": "0ab1e630377167fc1de37388994575fbc7ff6d441b97170de5d6d237bc7b0901",
+      "reused": false,
+      "row_count": 768
+    },
+    {
+      "cell_id": "b4c15",
+      "dataset": "MATR",
+      "meta_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/MATR__b4c15.json",
+      "npz_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/MATR__b4c15.npz",
+      "npz_sha256": "f92cf48ccd2f665424edba70c11d7423fae7ebe1c22967caf8adb08382b2be44",
+      "reused": false,
+      "row_count": 872
+    },
+    {
+      "cell_id": "b4c19",
+      "dataset": "MATR",
+      "meta_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/MATR__b4c19.json",
+      "npz_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/MATR__b4c19.npz",
+      "npz_sha256": "3da1f1eab8d88a56ea3c0ec296c816e5da64c20c02c1c629de286f8e79d78457",
+      "reused": false,
+      "row_count": 1112
+    },
+    {
+      "cell_id": "b4c2",
+      "dataset": "MATR",
+      "meta_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/MATR__b4c2.json",
+      "npz_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/MATR__b4c2.npz",
+      "npz_sha256": "0dc5302407f3cb19d13bbe066c30f0ebd1c809efa361a76948b91e8ea561af72",
+      "reused": false,
+      "row_count": 785
+    },
+    {
+      "cell_id": "b4c20",
+      "dataset": "MATR",
+      "meta_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/MATR__b4c20.json",
+      "npz_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/MATR__b4c20.npz",
+      "npz_sha256": "ffab815e251652271295edb048597b9485e0ef5ba5320670eaebfc0c2817e940",
+      "reused": false,
+      "row_count": 805
+    },
+    {
+      "cell_id": "b4c21",
+      "dataset": "MATR",
+      "meta_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/MATR__b4c21.json",
+      "npz_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/MATR__b4c21.npz",
+      "npz_sha256": "0168dc9d2990b285ad7cd53f524b8a1ebea88d2aeac9d0b6db3cfd8d14138a03",
+      "reused": false,
+      "row_count": 904
+    },
+    {
+      "cell_id": "b4c22",
+      "dataset": "MATR",
+      "meta_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/MATR__b4c22.json",
+      "npz_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/MATR__b4c22.npz",
+      "npz_sha256": "222475539bd0d74afc71268bd83258ad7f51b2fb8e9693797e13594568ef3992",
+      "reused": false,
+      "row_count": 746
+    },
+    {
+      "cell_id": "b4c25",
+      "dataset": "MATR",
+      "meta_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/MATR__b4c25.json",
+      "npz_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/MATR__b4c25.npz",
+      "npz_sha256": "941b36ae1c7437b385c4888d34c5e4939f282fa1ff7be1cf8f75ce739a1029c3",
+      "reused": false,
+      "row_count": 568
+    },
+    {
+      "cell_id": "b4c26",
+      "dataset": "MATR",
+      "meta_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/MATR__b4c26.json",
+      "npz_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/MATR__b4c26.npz",
+      "npz_sha256": "db25b6fe6864d6d12f8fb9f77522b1655c90fa561bbb98ba5153e66b5f3c65e8",
+      "reused": false,
+      "row_count": 580
+    },
+    {
+      "cell_id": "b4c28",
+      "dataset": "MATR",
+      "meta_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/MATR__b4c28.json",
+      "npz_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/MATR__b4c28.npz",
+      "npz_sha256": "9baa6e78d6b45f1a004d8afbfbb3eefa0e47b97d466ef3d6c5fdddb581aec4cb",
+      "reused": false,
+      "row_count": 883
+    },
+    {
+      "cell_id": "b4c29",
+      "dataset": "MATR",
+      "meta_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/MATR__b4c29.json",
+      "npz_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/MATR__b4c29.npz",
+      "npz_sha256": "22188cc940c9c2c9866665ba79af5c39d88d452dc087d98ded4ce6e25047af04",
+      "reused": false,
+      "row_count": 957
+    },
+    {
+      "cell_id": "b4c30",
+      "dataset": "MATR",
+      "meta_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/MATR__b4c30.json",
+      "npz_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/MATR__b4c30.npz",
+      "npz_sha256": "7d22b6bb514ffe9e361dc445a1a68b74437f9badfa9fd7b6259dc08cac3f747e",
+      "reused": false,
+      "row_count": 720
+    },
+    {
+      "cell_id": "b4c35",
+      "dataset": "MATR",
+      "meta_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/MATR__b4c35.json",
+      "npz_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/MATR__b4c35.npz",
+      "npz_sha256": "7985aafe01945f1825ff777c81e976f74012347f9ada708506c122d75c50a04c",
+      "reused": false,
+      "row_count": 1132
+    },
+    {
+      "cell_id": "b4c37",
+      "dataset": "MATR",
+      "meta_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/MATR__b4c37.json",
+      "npz_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/MATR__b4c37.npz",
+      "npz_sha256": "2d3f04b1a06f146e8be1dfda5539f54aa29214aaf00c59e8647bed05abd8a4b5",
+      "reused": false,
+      "row_count": 1006
+    },
+    {
+      "cell_id": "b4c38",
+      "dataset": "MATR",
+      "meta_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/MATR__b4c38.json",
+      "npz_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/MATR__b4c38.npz",
+      "npz_sha256": "429c22c2795eeb001887117dc09cca9c5ba606cef91079458db12638d401eef1",
+      "reused": false,
+      "row_count": 1231
+    },
+    {
+      "cell_id": "b4c40",
+      "dataset": "MATR",
+      "meta_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/MATR__b4c40.json",
+      "npz_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/MATR__b4c40.npz",
+      "npz_sha256": "1e492e68248996642c1268d6ada5f787b4cc16eb701002229b0167475252a6b8",
+      "reused": false,
+      "row_count": 1123
+    },
+    {
+      "cell_id": "b4c41",
+      "dataset": "MATR",
+      "meta_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/MATR__b4c41.json",
+      "npz_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/MATR__b4c41.npz",
+      "npz_sha256": "88aca4f25eb3942c2550447f6df9188bf7dd5d79103ec22fb2507e4c64a702d9",
+      "reused": false,
+      "row_count": 998
+    },
+    {
+      "cell_id": "b4c44",
+      "dataset": "MATR",
+      "meta_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/MATR__b4c44.json",
+      "npz_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/MATR__b4c44.npz",
+      "npz_sha256": "1247d439b424eff2ff9dac602d1117e274e46f0739c048b8d560233f0af54d2b",
+      "reused": false,
+      "row_count": 1078
+    },
+    {
+      "cell_id": "b4c5",
+      "dataset": "MATR",
+      "meta_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/MATR__b4c5.json",
+      "npz_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/MATR__b4c5.npz",
+      "npz_sha256": "669b2c9e66f6eb5e987abb7861b2b958383164f561c9afad79112af16a9e3390",
+      "reused": false,
+      "row_count": 1068
+    },
+    {
+      "cell_id": "b4c9",
+      "dataset": "MATR",
+      "meta_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/MATR__b4c9.json",
+      "npz_path": "${WORKSPACE}/results/revision_2026/physical_sensor_noise/final_physical_v1/corrupted_features/cells/MATR__b4c9.npz",
+      "npz_sha256": "26e713976d9497336048c34d84cbf2e5ee27b1ccdc8e2d9888123e8c6d733d9e",
+      "reused": false,
+      "row_count": 530
+    }
+  ],
+  "reused_cells_this_invocation": 0,
+  "roundtrip_summary_sha256": "6c783a9d9396e3621dbd043d833ea61224c34f1c25d2fc03c4cf22cfc0dd5f99",
+  "row_count": 166304,
+  "status": "COMPLETE_BEFORE_ANY_MODEL_EVALUATION"
+}

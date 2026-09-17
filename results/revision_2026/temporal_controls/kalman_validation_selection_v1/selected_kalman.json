@@ -1,0 +1,18 @@
+{
+  "candidate_count": 4,
+  "contract": "selected_kalman_v1",
+  "final_test_result_root_accessed": false,
+  "fit_count": 60,
+  "initializations_per_split": 3,
+  "protocol_sha256": "522e0477a5f211f97f54869e08fba13e0fad31cd5f91dc0012f86906e780d2a5",
+  "selected_initial_variance": 1.0,
+  "selected_q": 0.01,
+  "selected_r": 1.0,
+  "selection_score": 0.03817658846577009,
+  "selection_score_definition": "mean of five split-level means, with each split-level mean computed over three initialization seeds",
+  "split_count": 5,
+  "test_metrics_read": false,
+  "test_rows_used": 0,
+  "tie_rule": "smallest numeric q among tied candidates",
+  "tie_tolerance": 1e-12
+}

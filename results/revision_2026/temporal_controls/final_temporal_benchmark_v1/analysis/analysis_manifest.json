@@ -1,0 +1,36 @@
+{
+  "clean_execution_manifest_sha256": "5a8bfbe0f11a6158f2749a9da4f18f1e62adf8c839976c1bf0af9c9f6c07440d",
+  "clean_protocol_sha256": "2dec14c210ae3f02e5f65e4acc24f9c4adc747bc071509cb144e69dba707f4dd",
+  "continuation_manifest_sha256": "42927309284c6e84f9aee0f80d10747f4a65242f80c361484d30e1d1b0f6c433",
+  "contract": "final_temporal_control_analysis_v1",
+  "gcn_difference_definition": "comparator minus GCN for RMSE/MAE; positive favors GCN",
+  "higher_level_units": 5,
+  "initialization_seeds_per_split": 3,
+  "methods": [
+    "RAW_MLP",
+    "MOVING_AVERAGE3_MLP",
+    "LOWPASS_BINOMIAL3_MLP",
+    "SAVGOL5_POLY2_MLP",
+    "KALMAN_Q0P01_MLP",
+    "CAUSAL_GCN"
+  ],
+  "multiple_testing": "Holm separately over 20 GCN-vs-comparator RMSE comparisons and 20 MAE comparisons",
+  "new_temporal_methods": 4,
+  "new_temporal_test_values_first_parsed_after_artifact_audit": true,
+  "outputs": {
+    "all_test": "32bded069d17c20182db1e7010a01a7bced939ab893c6de341af6e1b22fc02d3",
+    "comparison": "26a55817da06ea90959b73d7c2ffdbdc9bfd6b94155b11d82406f911842d532a",
+    "method_summary": "e72aec30ddb596c22afaf15a0c0d8b31db8cf474c186707a1e7a21dc651a7855",
+    "paired": "2d840caa6eb4bbbf5ac1d43d4f1e7db81bf3bc9b89cbcd7d2bc9a429cd8a081b",
+    "rankings": "44abc1e4f9e37bdb8d178b459731e0e757aea791e452e4e6eb9bca2550bad082",
+    "raw_comparison": "b673ec45aef14abcee7d7c201c3d16feef12bc1263a73001a7d36ba4db5b7423",
+    "split_level": "7a791f7c9a3f82dd250d252ee9cb9d84788a64ac69e9551e511cbb7c2dc2a16d"
+  },
+  "reference_methods": [
+    "RAW_MLP",
+    "CAUSAL_GCN"
+  ],
+  "signflip_role": "paired repeated-split sensitivity analysis; five splits are not claimed as five independent datasets",
+  "temporal_protocol_sha256": "b6116666e861c79b7332dbd599594846b86511e420d8305eadf82d30b87f0106",
+  "training_closure_sha256": "07a75bfc5ab81d467afda76a8b4cd1097ca0609356bf4bdbd6eb2254a2cc1b55"
+}

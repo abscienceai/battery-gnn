@@ -1,0 +1,22 @@
+{
+  "all_adaptation_conditions_start_independently_from_zero_shot": true,
+  "all_adaptations_fixed_100_epochs": true,
+  "all_adaptations_source_only_scaler": true,
+  "all_starting_zero_shot_state_hashes_exact": true,
+  "all_support_cells_target_train_only": true,
+  "all_support_sets_match_frozen_manifest": true,
+  "all_target_test_metrics_independently_reproduced": true,
+  "audit_pass": true,
+  "causal_test_edge_checks": 2014020,
+  "contract": "lodo_fewshot_execution_audit_receipt_v1",
+  "cross_cell_edges_detected": false,
+  "execution_manifest_sha256": "8c05609ebf554faf15dacd95ae8436205018580e2a7d0b52f06194faa0b625a1",
+  "future_edges_detected": false,
+  "numeric_test_metrics_surfaced_by_audit": false,
+  "runner_sha256": "0b26177cde4a14a9dd5951023bed250e0cfc5f473a473b3de5aaeb993d5fa5d3",
+  "support_isolation_checks": 270,
+  "target_test_used_during_adaptation": false,
+  "target_validation_used": false,
+  "validated_adapted_states": 270,
+  "validated_paired_test_records": 45
+}

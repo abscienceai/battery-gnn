@@ -1,0 +1,80 @@
+{
+  "analysis_script": {
+    "commit": "c84ffdebc05442802ab6fb4ed438421ca0035599",
+    "path": "${WORKSPACE}/repo/battery-gnn/scripts/revision_2026/119_lodo_fewshot_descriptive_analysis.py",
+    "sha256": "9452b031a4457d48c6d669cae66ad8be08316c5582c007533c571c4bac1ac93d"
+  },
+  "analysis_semantics": {
+    "adaptation_contrast_sign": "positive always favors K1/K3/K5 over ZERO_SHOT",
+    "conditions": [
+      "ZERO_SHOT",
+      "K1",
+      "K3",
+      "K5"
+    ],
+    "failure_reportable": true,
+    "fewshot_monotonicity_assumed": false,
+    "five_split_seeds_claimed_independent_trials": false,
+    "held_out_folds": [
+      "HUST",
+      "CALCE",
+      "MATR"
+    ],
+    "initialization_seeds_claimed_independent_splits": false,
+    "metrics": [
+      "RMSE",
+      "MAE",
+      "R2"
+    ],
+    "model_contrast_sign": "positive always favors GCN over MLP",
+    "model_ranking": "descriptive only",
+    "models": [
+      "MLP",
+      "GCN"
+    ],
+    "new_inferential_tests": false,
+    "primary_scope": "CELL_BALANCED",
+    "primary_summary": "mean over 15 split/init paired runs",
+    "secondary_scope": "ROW",
+    "uncertainty_descriptor": "sample SD over five split-level means after averaging the three initialization repetitions"
+  },
+  "audited_inputs": {
+    "few_shot_execution_audit_sha256": "ef83bc676d4cd1f9d8ac0dea837b2895637ad00e52dba228438fe122ddae8d52",
+    "few_shot_execution_manifest_sha256": "8c05609ebf554faf15dacd95ae8436205018580e2a7d0b52f06194faa0b625a1",
+    "zero_shot_execution_audit_sha256": "21f2f4236a8fbb0f8d1293f72e69bccd9ce679be3c1002dbe57c6137cb68bd21",
+    "zero_shot_execution_manifest_sha256": "b3e82cf395ce543c6452c62df02e34662b768f2cf24124d7eb530c88e11afbc1"
+  },
+  "contract": "lodo_fewshot_descriptive_analysis_v1",
+  "new_inferential_tests": false,
+  "numeric_test_metrics_printed_by_analysis_script": false,
+  "outputs": {
+    "descriptive_summary": {
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/analysis_v1/lodo_fewshot_descriptive_summary.csv",
+      "sha256": "5e7a13d36a72e216af360d9d8bfe70d016091e20087e0d3bab068a7103840015"
+    },
+    "fewshot_vs_zero_contrasts": {
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/analysis_v1/lodo_fewshot_vs_zero_contrasts.csv",
+      "sha256": "2a9a25c4aadf802eac4cf568182c52d1b641ca286722e26f61be838e8974e2fd"
+    },
+    "model_contrasts": {
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/analysis_v1/lodo_fewshot_model_contrasts.csv",
+      "sha256": "931d686f520ac8cefd9840e558bf906b340bbe9f7138fa3534d44ad3b717c6bc"
+    },
+    "run_metrics": {
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/analysis_v1/lodo_fewshot_run_metrics.csv",
+      "sha256": "5d1c26d0c65323667619c5b732538ff3cfb1008f8404c46a3dde115b63088d7e"
+    },
+    "split_means": {
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/analysis_v1/lodo_fewshot_split_means.csv",
+      "sha256": "b994d0604f28daac78404467097a4e8438cd68b7253a07db0baad8156c40f16d"
+    }
+  },
+  "row_counts": {
+    "fewshot_vs_zero_contrasts": 108,
+    "model_contrasts": 72,
+    "run_metrics": 2160,
+    "split_means": 720,
+    "summary": 144
+  },
+  "status": "COMPLETE_PENDING_INDEPENDENT_ANALYSIS_AUDIT"
+}

@@ -1,0 +1,51 @@
+{
+  "architecture": "20 -> 64 -> 64 -> 1",
+  "contract": "kalman_validation_selection_v1",
+  "early_stopping_metric": "validation dataset-balanced cell-balanced RMSE",
+  "final_test_result_root_accessed": false,
+  "fit_count": 60,
+  "hidden_dim": 64,
+  "initial_variance": 1.0,
+  "input_sha256": {
+    "assignments": "914c8b90131f496ca396f63e0502147ca99848fdfd4b2c6b2a5887225b47d055",
+    "base_scalers": "b9708b9321b521b87bdd05f969558134d7e0148285ef7c50f648c2028cd86de1",
+    "benchmark": "5d621f8d5764e417e41bc518ec72b9608566a087c552b8365d438c2344c06c5e",
+    "canonical": "49a7b7629cf9ee3f8ce0a7e3c52f2807878b752b4c9a30a876285fb891b00c14",
+    "kernel": "23f733540a23954c278722c43a36e994c5431b603bfeb9e7ebd4474451bd3ff7",
+    "preprocess_manifest": "1397ac3cf505e309fa9d4adf37f95bf58436e4354903a8b7f38345143086e975",
+    "secondary_scalers": "98607908e0cb8ee2bb9c102c061990d7282bef20f1535c16e9825a2eb3d1a82c"
+  },
+  "learning_rate": 0.001,
+  "max_epochs": 5000,
+  "measurement_variance_r": 1.0,
+  "model": "FeatureMatchedMLP",
+  "objective": "dataset-balanced + cell-balanced MSE",
+  "optimizer": "AdamW",
+  "parameter_count": 5569,
+  "patience": 30,
+  "purpose": "Select one global Kalman process-variance q using train/validation information only.",
+  "q_grid": [
+    0.001,
+    0.01,
+    0.1,
+    1.0
+  ],
+  "selection_rule": "For each q, average best validation RMSE across the three initialization seeds within each split_seed; then take the unweighted mean across the five split-level means. Select the lowest global mean.",
+  "split_seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "test_metrics_read": false,
+  "test_rows_in_model_tensors": 0,
+  "tie_rule": "Candidates within absolute 1e-12 of the minimum global split-mean validation RMSE are treated as tied; select the numerically smallest q.",
+  "tie_tolerance": 1e-12,
+  "training_initialization_seeds": [
+    0,
+    1,
+    2
+  ],
+  "weight_decay": 1e-05
+}

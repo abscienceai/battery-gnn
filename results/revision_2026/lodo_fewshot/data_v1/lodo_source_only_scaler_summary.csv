@@ -1,0 +1,16 @@
+held_out,split_seed,source_datasets_json,n_source_train_rows,n_source_train_cells,zero_variance_features,fit_split,target_train_statistics_used,target_validation_statistics_used,target_test_statistics_used
+CALCE,0,"[""HUST"",""MATR""]",200987,173,0,source_train_only,False,False,False
+CALCE,1,"[""HUST"",""MATR""]",201723,173,0,source_train_only,False,False,False
+CALCE,2,"[""HUST"",""MATR""]",200853,173,0,source_train_only,False,False,False
+CALCE,3,"[""HUST"",""MATR""]",203159,173,0,source_train_only,False,False,False
+CALCE,4,"[""HUST"",""MATR""]",203033,173,0,source_train_only,False,False,False
+HUST,0,"[""CALCE"",""MATR""]",107594,128,0,source_train_only,False,False,False
+HUST,1,"[""CALCE"",""MATR""]",108985,128,0,source_train_only,False,False,False
+HUST,2,"[""CALCE"",""MATR""]",108987,128,0,source_train_only,False,False,False
+HUST,3,"[""CALCE"",""MATR""]",110676,128,0,source_train_only,False,False,False
+HUST,4,"[""CALCE"",""MATR""]",109656,128,0,source_train_only,False,False,False
+MATR,0,"[""HUST"",""CALCE""]",113905,63,0,source_train_only,False,False,False
+MATR,1,"[""HUST"",""CALCE""]",110572,63,0,source_train_only,False,False,False
+MATR,2,"[""HUST"",""CALCE""]",113170,63,0,source_train_only,False,False,False
+MATR,3,"[""HUST"",""CALCE""]",113923,63,0,source_train_only,False,False,False
+MATR,4,"[""HUST"",""CALCE""]",112205,63,0,source_train_only,False,False,False

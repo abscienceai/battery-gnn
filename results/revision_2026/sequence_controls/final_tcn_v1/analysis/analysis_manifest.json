@@ -1,0 +1,34 @@
+{
+  "contract": "final_causal_tcn_analysis_v1",
+  "difference_definition": "comparator minus TCN for RMSE/MAE; positive favors TCN",
+  "higher_level_units": 5,
+  "holm_family_per_error_metric": 8,
+  "initialization_seeds_per_split": 3,
+  "outputs": {
+    "comparison": "81832c33c364e23f13840ef15432f13f4cf45376b85de4d8462154addd60d5f3",
+    "paired": "46527d691ac7e34b97bcb0e054d5d8fbc0a0597e3a8dea4376d2d91d65987be3",
+    "rankings": "180a9aed99aa35ade5117bb97482d1dc80ba301ca5ceb4f6356ea126c53fc9d8",
+    "seven_split": "0e5b6fbb5518cf9c8e13c9fc1e1fec7292b606104a3c58bd1e6b7ff63a5edb0e",
+    "seven_summary": "d6346f3ca962516d89989b4667cc575ea5d630860e6035647b17da411dbeb569",
+    "tcn_split_level": "19baf5c51f3148008953518a25b3660daa4f380d6694b60a2c4fc082c5bb8286",
+    "tcn_test_metrics": "4af2afde92f3b371a98bf29b2cb61f201689fda2e3f4befe821ca8f7615f07df"
+  },
+  "primary_comparators": [
+    "RAW_MLP",
+    "CAUSAL_GCN"
+  ],
+  "primary_domains": [
+    "BALANCED_ALL",
+    "HUST",
+    "CALCE",
+    "MATR"
+  ],
+  "seven_method_ranking_role": "descriptive only",
+  "signflip_role": "paired repeated-split sensitivity analysis; five splits are not claimed as independent datasets",
+  "tcn_execution_manifest_sha256": "35b246580e7c6153d72d93e15e78bfd5b0e1beb2c18aa2f9ea41bd0a60bd9d35",
+  "tcn_protocol_sha256": "19fe5012478bd1d70d3f580d08ee8391c905858dbbb3b3e1015fb8627a54f2c3",
+  "tcn_test_values_first_parsed_after_execution_audit": true,
+  "tcn_training_closure_sha256": "5b78737644195a0d17298ad6660d6a32911a573bfcadbb45f3d6281f639ef2ed",
+  "tcn_training_reexecuted_for_analysis": false,
+  "temporal_analysis_manifest_sha256": "c67f1cae7264a6495f9454707fca4b0797ce1ca12234a83dc3d6de40481d1f20"
+}

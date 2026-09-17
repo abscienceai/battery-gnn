@@ -1,0 +1,99 @@
+{
+  "activation": "ReLU",
+  "architecture": "20 -> hidden -> hidden -> 1",
+  "architecture_contract_test": {
+    "cross_cell_influence": false,
+    "future_to_past_influence": false,
+    "initial_weights_equal": true,
+    "parameter_count": 5569,
+    "parameter_signatures_equal": true,
+    "two_step_past_influence": true
+  },
+  "batch_normalization": false,
+  "benchmark_contract": "feature_matched_soh_causal_gcn_v1",
+  "cross_cell_edges": false,
+  "cycle_index_feature": false,
+  "datasets": [
+    "HUST",
+    "CALCE",
+    "MATR"
+  ],
+  "device": "cpu",
+  "dropout": false,
+  "early_stopping_metric": "validation dataset-balanced cell-balanced RMSE",
+  "eligible_observations": 300553,
+  "feature_count": 20,
+  "feature_scaler": "seed-specific pooled_supervised train-only StandardScaler parameters",
+  "features": [
+    "v_min",
+    "v_q10",
+    "v_q25",
+    "v_median",
+    "v_q75",
+    "v_q90",
+    "v_max",
+    "v_mean",
+    "v_std",
+    "v_phase_slope",
+    "i_min",
+    "i_q10",
+    "i_q25",
+    "i_median",
+    "i_q75",
+    "i_q90",
+    "i_max",
+    "i_mean",
+    "i_std",
+    "i_phase_slope"
+  ],
+  "future_edges": false,
+  "gcn_aggregation": "row-normalized causal mean over {self, previous valid observation}",
+  "gcn_layers_with_aggregation": 2,
+  "hidden_dim": 64,
+  "initial_weights_equal_for_same_train_seed": true,
+  "input_sha256": {
+    "assignments": "914c8b90131f496ca396f63e0502147ca99848fdfd4b2c6b2a5887225b47d055",
+    "scalers": "b9708b9321b521b87bdd05f969558134d7e0148285ef7c50f648c2028cd86de1",
+    "supervised": "49a7b7629cf9ee3f8ce0a7e3c52f2807878b752b4c9a30a876285fb891b00c14"
+  },
+  "learning_rate": 0.001,
+  "loss": "dataset-balanced and cell-balanced MSE",
+  "max_epochs": 5000,
+  "maximum_temporal_receptive_field": "current plus two previous valid observations",
+  "model_training": {
+    "CAUSAL_GCN": {
+      "best_epoch": 679,
+      "best_validation_balanced_rmse": 0.0441681444644928,
+      "elapsed_seconds": 115.54033374786377
+    },
+    "MLP": {
+      "best_epoch": 565,
+      "best_validation_balanced_rmse": 0.04891521856188774,
+      "elapsed_seconds": 60.458364725112915
+    }
+  },
+  "optimizer": "AdamW",
+  "parameter_count_each_model": 5569,
+  "parameters_equal": true,
+  "patience": 30,
+  "python_version": "3.10.12",
+  "reverse_edges": false,
+  "smoke": false,
+  "split_cells": {
+    "test": 38,
+    "train": 182,
+    "validation": 39
+  },
+  "split_rows": {
+    "test": 43749,
+    "train": 212447,
+    "validation": 44357
+  },
+  "split_seed": 4,
+  "target_feature": false,
+  "task": "cycle-level SOH regression",
+  "torch_cuda_build": null,
+  "torch_version": "2.14.0+cpu",
+  "train_seed": 0,
+  "weight_decay": 1e-05
+}

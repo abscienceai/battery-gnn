@@ -1,0 +1,4 @@
+dataset,n_expected,n_finite_positive_pairs,coverage,median_sensor_to_capacity_ratio,median_absolute_relative_error,pearson_r_descriptive_only,coverage_threshold,median_abs_rel_error_threshold,median_ratio_min,median_ratio_max,pearson_acceptance_threshold,pearson_used_for_pass_fail,direct_agreement_pass
+HUST,146122,146122,1,1.016807971818029,0.016807971818028965,0.82770543536203711,0.98999999999999999,0.20000000000000001,0.80000000000000004,1.2,,False,True
+CALCE,14298,14298,1,1,2.0980274618943449e-16,1,0.98999999999999999,0.20000000000000001,0.80000000000000004,1.2,,False,True
+MATR,140133,140133,1,1.0003768567801699,0.0027851502331286962,0.68664055626038423,0.98999999999999999,0.20000000000000001,0.80000000000000004,1.2,,False,True

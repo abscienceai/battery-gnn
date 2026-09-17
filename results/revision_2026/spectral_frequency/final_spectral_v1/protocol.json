@@ -1,0 +1,245 @@
+{
+  "ar1_correlation_sweep": {
+    "initial_state": "stationary N(0,sigma^2)",
+    "innovation_std": "sigma*sqrt(1-rho^2)",
+    "rho": [
+      -0.9,
+      -0.5,
+      0.0,
+      0.5,
+      0.9
+    ],
+    "role": "DESCRIPTIVE mechanism check",
+    "same_realization_for_mlp_and_gcn": true,
+    "stationary_marginal_std_standardized_units": 0.1
+  },
+  "bandwidth_sweep": {
+    "causal_FIR_filters": {
+      "bandpass_ma3_minus_ma9": [
+        0.2222222222222222,
+        0.2222222222222222,
+        0.2222222222222222,
+        -0.1111111111111111,
+        -0.1111111111111111,
+        -0.1111111111111111,
+        -0.1111111111111111,
+        -0.1111111111111111,
+        -0.1111111111111111
+      ],
+      "highpass_first_difference": [
+        0.7071067811865475,
+        -0.7071067811865475
+      ],
+      "lowpass_ma3": [
+        0.3333333333333333,
+        0.3333333333333333,
+        0.3333333333333333
+      ],
+      "lowpass_ma9": [
+        0.1111111111111111,
+        0.1111111111111111,
+        0.1111111111111111,
+        0.1111111111111111,
+        0.1111111111111111,
+        0.1111111111111111,
+        0.1111111111111111,
+        0.1111111111111111,
+        0.1111111111111111
+      ],
+      "white": [
+        1.0
+      ]
+    },
+    "empirical_check": "report perturbation spectral centroid and Laplacian-band energy fractions",
+    "post_filter_rms_standardized_units": 0.1,
+    "role": "DESCRIPTIVE mechanism check",
+    "same_realization_for_mlp_and_gcn": true,
+    "source": "independent white innovations"
+  },
+  "benchmark_source_sha256": "5d621f8d5764e417e41bc518ec72b9608566a087c552b8365d438c2344c06c5e",
+  "claim_guard": {
+    "directed_vs_laplacian_distinction_mandatory": true,
+    "mechanism_language": "frequency-selective temporal aggregation behavior and graph-Fourier diagnostics",
+    "physical_sensor_claim_from_feature_space_sweeps": false,
+    "spectral_gcn_claim": false,
+    "universal_gcn_robustness_claim": false
+  },
+  "contract": "final_spectral_frequency_v1",
+  "controlled_drift_sweep": {
+    "physical_reality_note": "not a replacement for the separately completed raw V/I physical-unit drift benchmark",
+    "role": "DESCRIPTIVE low-frequency mechanism check",
+    "same_realization_for_mlp_and_gcn": true,
+    "sign": "stable-hash sign per cell x feature x perturbation seed",
+    "terminal_shift_standardized_units": [
+      0.1,
+      0.25,
+      0.5
+    ],
+    "trajectory": "linear causal ramp from zero at first observation to signed terminal shift at final observation"
+  },
+  "datasets": [
+    "HUST",
+    "CALCE",
+    "MATR"
+  ],
+  "descriptive_outputs": [
+    "actual path-Laplacian eigenvalue summaries by cell length",
+    "clean input graph-Fourier band-energy fractions",
+    "clean residual graph-Fourier band-energy fractions by model",
+    "frequency-response curves",
+    "AR1 rho-response curves",
+    "causal-FIR bandwidth-response curves",
+    "controlled drift-response curves",
+    "analytic aggregation-depth transfer curves"
+  ],
+  "domains": [
+    "BALANCED_ALL",
+    "HUST",
+    "CALCE",
+    "MATR"
+  ],
+  "feature_space": {
+    "cycle_index_feature": false,
+    "dimension": 20,
+    "purpose": "controlled mechanism experiment; not physical sensor realism",
+    "space": "train-only standardized primary feature space",
+    "target_feature": false
+  },
+  "final_v3_execution_manifest": {
+    "path": "${WORKSPACE}/results/revision_2026/feature_matched_soh/final_v3/final_v3_execution_manifest.json",
+    "sha256": "5a8bfbe0f11a6158f2749a9da4f18f1e62adf8c839976c1bf0af9c9f6c07440d"
+  },
+  "final_v3_protocol": {
+    "path": "${WORKSPACE}/results/revision_2026/feature_matched_soh/full_clean_benchmark_protocol_v3.json",
+    "sha256": "2dec14c210ae3f02e5f65e4acc24f9c4adc747bc071509cb144e69dba707f4dd"
+  },
+  "frozen_at_git_commit": "cc594846b43cf8cc6a35d436012acd10d211b509",
+  "graph_operator": {
+    "aggregation_stages_in_frozen_gcn": 2,
+    "analytic_depth_grid": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "boundary_rule": "first valid observation uses self only",
+    "cross_cell_edges": false,
+    "depth_d_magnitude": "|Hd(omega)|=|cos(omega/2)|^d",
+    "depth_sweep_role": "analytic aggregation-operator response only; not separately trained depth models",
+    "directed": true,
+    "future_edges": false,
+    "interior_single_stage_magnitude": "|H1(omega)|=|cos(omega/2)|",
+    "interior_single_stage_transfer": "H1(omega)=0.5*(1+exp(-j*omega))",
+    "maximum_temporal_receptive_field": "{t,t-1,t-2}",
+    "model_operator": "causal parameter-free mean aggregation over {self, previous valid observation}"
+  },
+  "laplacian_graph_fourier": {
+    "band_edge_rule": "left-closed/right-open except final band right-closed",
+    "bands_omega_over_pi": {
+      "high": [
+        0.75,
+        1.0
+      ],
+      "low": [
+        0.0,
+        0.25
+      ],
+      "mid_high": [
+        0.5,
+        0.75
+      ],
+      "mid_low": [
+        0.25,
+        0.5
+      ]
+    },
+    "eigenvalue_index": "k=0,...,n-1",
+    "exact_eigenvalue_formula": "lambda_k=2-2*cos(pi*k/n)",
+    "frequency_coordinate": "omega_k_over_pi=k/n",
+    "graph": "undirected path graph P_n for each cell trajectory",
+    "input_spectral_quantity": "energy of clean standardized feature trajectories projected onto the path-Laplacian basis",
+    "laplacian": "combinatorial L=D-A",
+    "node_order": "chronological valid observation order",
+    "orthonormal_basis": "q_0(j)=1/sqrt(n); q_k(j)=sqrt(2/n)*cos(pi*k*(j+0.5)/n), k>0",
+    "reason_for_separate_definition": "the deployed causal operator is directed and non-symmetric; an orthonormal graph-Fourier basis is therefore defined on the corresponding undirected chronological path graph",
+    "residual_spectral_quantity": "energy of per-cycle prediction residual trajectories projected onto the same cell-specific basis"
+  },
+  "model_policy": {
+    "noise_augmentation": false,
+    "paired_realization_across_models": true,
+    "retraining": false,
+    "scaler_refit": false,
+    "states": "frozen final_v3 model states",
+    "test_only_perturbation": true
+  },
+  "models": [
+    "FeatureMatchedMLP",
+    "FeatureMatchedCausalGCN"
+  ],
+  "primary_frequency_inference": {
+    "comparisons": 8,
+    "delta": "MLP_degradation_AUC_minus_GCN_degradation_AUC",
+    "frequency_response_quantity": "relative degradation=(perturbed_error-clean_error)/clean_error",
+    "metric_family": [
+      "RMSE",
+      "MAE"
+    ],
+    "minimum_attainable_two_sided_p": 0.0625,
+    "multiple_testing": "Holm across four domains separately for RMSE and four domains separately for MAE",
+    "n": 5,
+    "paired_unit": "split_seed",
+    "positive_delta": "GCN lower frequency-integrated relative degradation",
+    "summary": "trapezoidal AUC of relative degradation over the frozen omega/pi frequency grid, normalized by frequency-range width",
+    "test": "exact two-sided paired sign-flip test"
+  },
+  "primary_task": "cycle-level SOH regression",
+  "prohibited_during_protocol_freeze": [
+    "read final spectral outcome metrics",
+    "change grid after seeing spectral outcomes",
+    "retrain frozen final_v3 models",
+    "refit train-only scaler",
+    "use future observations in model input",
+    "call the causal model a spectral GCN"
+  ],
+  "protocol_script_sha256": "b26ac5b918a4da98883ef1f6926f7075b6247379cede6e2b6d8328f797e989ac",
+  "replication": {
+    "inferential_n": 5,
+    "inferential_unit": "split_seed",
+    "perturbation_seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "perturbation_seeds_role": "nested_within_split",
+    "split_seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "train_initializations": "nested_within_split",
+    "train_initializations_per_split": 3
+  },
+  "scientific_role": "Mechanistic temporal-frequency robustness analysis; not a claim that the causal GCN is a spectral GCN.",
+  "sinusoidal_frequency_sweep": {
+    "clean_reference": "same frozen run with zero perturbation",
+    "omega_over_pi": [
+      0.0625,
+      0.125,
+      0.25,
+      0.5,
+      0.75,
+      1.0
+    ],
+    "per_cell_feature_waveform": "cos(omega*t+phase), scaled to exact requested RMS when numerically well-defined",
+    "phase": "deterministic stable-hash phase per cell x feature x perturbation seed",
+    "rms_per_feature_standardized_units": 0.1,
+    "role": "PRIMARY controlled frequency-response experiment",
+    "same_phase_realization_for_mlp_and_gcn": true
+  },
+  "status": "FROZEN_BEFORE_SPECTRAL_RUNS"
+}

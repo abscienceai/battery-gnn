@@ -1,0 +1,198 @@
+{
+  "contract": "prospective_rul_protocol_v1",
+  "early_prediction_contract": {
+    "checkpoint_definition": "exact K-th feature-valid observation available so far; one prediction per eligible cell at each checkpoint",
+    "future_lifetime_needed_to_define_checkpoint": false,
+    "primary_checkpoints_observed_cycles": [
+      25,
+      50,
+      100
+    ],
+    "uses_fraction_of_future_lifetime": false
+  },
+  "endpoint_contract": {
+    "consecutive_observation_index_required": true,
+    "post_eol_rows_receive_rul": false,
+    "primary_definition": "EOL is the first observation of the first run of two consecutive finite SOH observations <= 0.80",
+    "required_consecutive_observations": 2,
+    "right_censored_cells_receive_exact_rul": false,
+    "rul_at_eol": 0,
+    "rul_definition": "RUL_observations_80pct_k2 = harmonized_eol_observation_index - observation_index",
+    "sensitivity_endpoints": {
+      "k1": "first finite SOH <= 0.80; sensitivity only",
+      "k3": "first observation of first three-consecutive finite SOH <= 0.80 run; sensitivity only"
+    },
+    "threshold": 0.8
+  },
+  "evaluation_contract": {
+    "balanced_semantics": "dataset-balanced then cell-balanced so a long-life dataset/cell cannot dominate by row count",
+    "domain_semantics": "plain row-level metrics within each dataset, reported alongside balanced metrics",
+    "early_checkpoint_metrics": [
+      "K25",
+      "K50",
+      "K100"
+    ],
+    "five_split_seeds_are_independent_trials": false,
+    "primary_domains": [
+      "BALANCED_ALL",
+      "CALCE",
+      "MATR"
+    ],
+    "primary_metrics": [
+      "RMSE_observations",
+      "MAE_observations"
+    ],
+    "secondary_metrics": [
+      "R2",
+      "normalized_MAE"
+    ],
+    "three_initialization_seeds_within_split_are_independent_splits": false
+  },
+  "execution_state": {
+    "model_training_performed": false,
+    "scalers_fit": false,
+    "target_table_built": false,
+    "test_metrics_read": false,
+    "test_metrics_surfaced": false
+  },
+  "feasibility_lock": {
+    "CALCE": {
+      "cells": 13,
+      "k1_event_cells": 13,
+      "k2_event_cells": 13,
+      "k2_matches_existing_canonical_eol_index": true,
+      "k2_matches_existing_canonical_event_set": true,
+      "k3_event_cells": 13,
+      "primary_k2_eol_rows": 13,
+      "primary_k2_exact_rul_rows": 7355
+    },
+    "HUST": {
+      "cells": 77,
+      "interpretation": "no observed 80%-SOH endpoint; exact labels forbidden",
+      "minimum_cell_min_soh": 0.800005,
+      "primary_k2_event_cells": 0
+    },
+    "MATR": {
+      "cells": 169,
+      "k1_event_cells": 129,
+      "k1_only_cells": 41,
+      "k1_only_crossing_rows_feature_valid": 0,
+      "k2_event_cells": 88,
+      "k2_matches_existing_canonical_eol_index": false,
+      "k2_matches_existing_observed_event_cell_set": true,
+      "k3_event_cells": 88,
+      "max_abs_k2_vs_existing_eol_index_difference": 48,
+      "median_abs_k2_vs_existing_eol_index_difference": 16.0,
+      "primary_k2_eol_rows": 88,
+      "primary_k2_exact_rul_rows": 56814
+    }
+  },
+  "input_contract": {
+    "EOL_as_model_input": false,
+    "RUL_as_model_input": false,
+    "SOH_as_model_input": false,
+    "capacity_as_model_input": false,
+    "cycle_index_as_model_input": false,
+    "existing_rul_task_eligible_used": false,
+    "feature_count": 20,
+    "feature_family": "within-cycle voltage/current statistics only",
+    "feature_source": "canonical_cycle_supervised_table.csv",
+    "future_observation_as_model_input": false,
+    "input_eligibility": "feature_valid",
+    "lifetime_as_model_input": false,
+    "observation_index_as_model_input": false
+  },
+  "interpretation_barriers": {
+    "claim_HUST_80pct_RUL_performance": false,
+    "claim_censored_exact_RUL": false,
+    "claim_future_lifetime_fraction_is_prospective": false,
+    "claim_universal_gcn_superiority": false,
+    "old_early_prediction_results_reused": false,
+    "old_end_of_record_RUL_results_reused": false,
+    "primary_claim": "prospective causal benchmark under a harmonized observed endpoint, with model ranking treated as empirical"
+  },
+  "model_contract": {
+    "gcn_message_passing": "parameter-free causal mean aggregation followed by shared learnable linear layers; no future aggregation",
+    "graph_level_lifetime_regression": false,
+    "node_or_cycle_level_prediction": true,
+    "primary_models": [
+      "FeatureMatchedMLP_RUL",
+      "FeatureMatchedCausalGCN_RUL"
+    ],
+    "same_initial_learnable_weights_within_pair": true,
+    "same_input_features": true,
+    "same_split_assignments": true,
+    "same_target_definition": true,
+    "same_training_objective": true
+  },
+  "prospective_context_contract": {
+    "causal_gcn_context": "self plus previous valid observations only; two message-passing stages imply maximum historical receptive field t,t-1,t-2",
+    "cross_cell_edges": false,
+    "future_nodes_visible": false,
+    "prediction_at_observation_t": "may use only feature-valid observations with observation time/index <= t",
+    "retrospective_global_pooling": false,
+    "reverse_future_edges": false
+  },
+  "protocol_script": {
+    "commit": "ea3d5e0726e7bd8998710964461721d704cfea21",
+    "path": "${WORKSPACE}/repo/battery-gnn/scripts/revision_2026/101_freeze_prospective_rul_protocol.py",
+    "sha256": "2227e0c655e1fb659512cc1aed84c67463ff4c8373fcaa95c77b7e045e2acb1a"
+  },
+  "scaling_contract": {
+    "feature_scalers": "fit anew on prospective-RUL TRAIN rows only for each split seed; do not inherit the SOH-task pooled scaler",
+    "target_scaler": "fit on prospective-RUL TRAIN targets only; training transformation must be invertible for raw-observation-cycle evaluation",
+    "validation_or_test_rows_used_to_fit_scalers": false
+  },
+  "scientific_scope": {
+    "hust_role": "threshold-censored external diagnostic only; no fabricated exact 80%-SOH RUL labels",
+    "primary_datasets": [
+      "CALCE",
+      "MATR"
+    ],
+    "rwth_role": "not part of this exact-RUL benchmark",
+    "task": "cycle-level prospective remaining-useful-life regression to a harmonized observed 80%-SOH EOL"
+  },
+  "source_artifacts": {
+    "canonical_cycle_supervised_table": {
+      "path": "${WORKSPACE}/data/processed/revision_2026/canonical_tasks/canonical_cycle_supervised_table.csv",
+      "sha256": "49a7b7629cf9ee3f8ce0a7e3c52f2807878b752b4c9a30a876285fb891b00c14"
+    },
+    "cycle_feature_kernel": {
+      "path": "${WORKSPACE}/repo/battery-gnn/scripts/revision_2026/cycle_feature_kernel.py",
+      "sha256": "089a4b800dec8000738ad019c138c461d063a0476e7977dcd4f9c39453c321c5"
+    },
+    "unified_label_backbone": {
+      "path": "${WORKSPACE}/data/processed/revision_2026/unified_label_backbone.csv",
+      "sha256": "2a9d8b59c8a96dc19fe41d2be05142c1fe9ed2fa81530158aa0c9079e3d74834"
+    }
+  },
+  "split_contract": {
+    "cell_overlap_across_splits": false,
+    "row_level_random_split": false,
+    "split_seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "test_data_used_for_model_selection": false,
+    "train_validation_test_policy": "reuse the already frozen grouped full-cell split assignments; subset to CALCE/MATR k2 event cells only",
+    "unit": "complete canonical cell"
+  },
+  "status": "FROZEN_BEFORE_TARGET_BUILDING_OR_MODEL_TRAINING",
+  "training_contract": {
+    "early_stopping_metric": "validation-only balanced raw-RUL RMSE",
+    "learning_rate": 0.001,
+    "new_hyperparameter_tuning": false,
+    "optimizer": "AdamW",
+    "patience": 30,
+    "test_metrics_available_during_training": false,
+    "training_initialization_seeds": [
+      0,
+      1,
+      2
+    ],
+    "weight_decay": 1e-05
+  }
+}

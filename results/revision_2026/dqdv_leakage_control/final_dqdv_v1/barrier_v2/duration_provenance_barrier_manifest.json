@@ -1,0 +1,69 @@
+{
+  "RUL_or_EOL_values_read": false,
+  "SOH_values_read": false,
+  "all_datasets_direct_agreement_pass": true,
+  "capacity_values_passed_to_feature_generator": false,
+  "contract": "dqdv_duration_provenance_barrier_v2",
+  "criterion_revision": {
+    "capacity_correlation_used_to_infer_current_sign": false,
+    "coverage_threshold_unchanged": 0.99,
+    "median_abs_rel_error_threshold_unchanged": 0.2,
+    "median_ratio_max_unchanged": 1.2,
+    "median_ratio_min_unchanged": 0.8,
+    "negative_current_discharge_rule_changed": false,
+    "pearson_role": "descriptive_only",
+    "pearson_threshold": null,
+    "reason": "Pearson correlation measures co-variation rather than pointwise agreement and is not an appropriate acceptance criterion for polarity/provenance consistency when the capacity dynamic range is limited. It is retained descriptively only.",
+    "thresholds_relaxed_after_result": false
+  },
+  "cutoff_artifact_preserved_from_v1": true,
+  "cutoffs_remain_train_only": true,
+  "dqdv_features_computed": false,
+  "existing_heavy_raw_reconstruction_reused": true,
+  "finalizer_commit": "a526cb132c97b41529545aca396f0aec60dd85bf",
+  "finalizer_sha256": "9f86cde4dd92e676835d828650f014cecd13c2767fcb890f9c2a9c6284454e85",
+  "individual_test_cycle_endpoint_used_for_cutoff": false,
+  "model_metrics_read": false,
+  "model_states_loaded": false,
+  "models_trained": false,
+  "protocol_changed": false,
+  "protocol_sha256": "c455bf7a46f89649f25769a43abd443f171545b06e4740c799df1842c8bbb8e9",
+  "raw_reconstruction_rerun": false,
+  "source_artifacts": {
+    "failed_v1_polarity_summary": {
+      "path": "${WORKSPACE}/results/revision_2026/dqdv_leakage_control/final_dqdv_v1/barrier_v1/polarity_validation_summary.csv",
+      "sha256": "17e32fc052ae85ecc2341ad9795b61c430ee89c785e2acdbb7e4986ec25dfe7c"
+    },
+    "sensor_inventory": {
+      "path": "${WORKSPACE}/results/revision_2026/dqdv_leakage_control/final_dqdv_v1/barrier_v1/sensor_discharge_inventory.csv",
+      "rows": 319202,
+      "sha256": "279f0273cafddd26e4fa63bc3740d73a447b6f9a7e04804386e6a724599fb190"
+    },
+    "train_only_prefix_cutoffs": {
+      "path": "${WORKSPACE}/results/revision_2026/dqdv_leakage_control/final_dqdv_v1/barrier_v1/train_only_prefix_cutoffs.csv",
+      "sha256": "cf65c29deb8638503798e2e406cb35fc785f0eae5d56468de2c2ec06842705b7"
+    }
+  },
+  "status": "PASS_BEFORE_DQDV_FEATURE_EXTRACTION",
+  "v1_attempt": {
+    "failed_due_to": "Pearson-r threshold for MATR only; all direct agreement criteria passed",
+    "failure_pattern": {
+      "CALCE": [],
+      "HUST": [],
+      "MATR": [
+        "pearson_r"
+      ]
+    },
+    "polarity_summary_path": "${WORKSPACE}/results/revision_2026/dqdv_leakage_control/final_dqdv_v1/barrier_v1/polarity_validation_summary.csv",
+    "polarity_summary_sha256": "17e32fc052ae85ecc2341ad9795b61c430ee89c785e2acdbb7e4986ec25dfe7c",
+    "status": "FAILED_IMPLEMENTATION_ACCEPTANCE_CRITERION"
+  },
+  "v2_outputs": {
+    "polarity_provenance_agreement_summary": {
+      "path": "${WORKSPACE}/results/revision_2026/dqdv_leakage_control/final_dqdv_v1/barrier_v2/polarity_provenance_agreement_summary.csv",
+      "rows": 3,
+      "sha256": "848044c526ebaeee2a96fadc3dde0afb850cbae6e2fc14ef2849a1f42e7cfdea"
+    }
+  },
+  "validation_or_test_duration_used_for_cutoff": false
+}

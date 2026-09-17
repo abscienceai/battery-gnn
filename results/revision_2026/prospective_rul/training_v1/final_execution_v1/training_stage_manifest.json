@@ -1,0 +1,131 @@
+{
+  "completed_fit_metadata": 30,
+  "contract": "prospective_rul_training_stage_v1",
+  "fit_metadata": [
+    {
+      "path": "${WORKSPACE}/results/revision_2026/prospective_rul/training_v1/final_execution_v1/fit_metadata/split0__train0__MLP.json",
+      "sha256": "8e624a491e3b8b9a38b860bca5043d9d8fadea47656bfa90d8fb898843f711cb"
+    },
+    {
+      "path": "${WORKSPACE}/results/revision_2026/prospective_rul/training_v1/final_execution_v1/fit_metadata/split0__train0__GCN.json",
+      "sha256": "332786fb002f1ba8ce1e9e00541706279209fb61dbf12e4b74f57f93dcbf8a48"
+    },
+    {
+      "path": "${WORKSPACE}/results/revision_2026/prospective_rul/training_v1/final_execution_v1/fit_metadata/split0__train1__MLP.json",
+      "sha256": "81b38bf66e51a7f599fd5058739dbdbe74da313ba9e2efe790c1b71322cdca5e"
+    },
+    {
+      "path": "${WORKSPACE}/results/revision_2026/prospective_rul/training_v1/final_execution_v1/fit_metadata/split0__train1__GCN.json",
+      "sha256": "eeda2fb5a7181d9860362146d9805ee642d696a08c314df051da514261a1e57b"
+    },
+    {
+      "path": "${WORKSPACE}/results/revision_2026/prospective_rul/training_v1/final_execution_v1/fit_metadata/split0__train2__MLP.json",
+      "sha256": "83450a16e8aa3f4214c6f69a8d06080424f8566b31e8d245301488f95cfde9bd"
+    },
+    {
+      "path": "${WORKSPACE}/results/revision_2026/prospective_rul/training_v1/final_execution_v1/fit_metadata/split0__train2__GCN.json",
+      "sha256": "67c7565c1efb9df62c969e71eca6bc1079a55b2cb7520d9913e3f9e233b4bf67"
+    },
+    {
+      "path": "${WORKSPACE}/results/revision_2026/prospective_rul/training_v1/final_execution_v1/fit_metadata/split1__train0__MLP.json",
+      "sha256": "cf5590522c97202b1d31bbd9eeec5c9bbdf103e033ac61b1d5646681a2a421db"
+    },
+    {
+      "path": "${WORKSPACE}/results/revision_2026/prospective_rul/training_v1/final_execution_v1/fit_metadata/split1__train0__GCN.json",
+      "sha256": "3a3a4cae85d1adee403c1d4902560a313b682f45d78652cd73fe4c0da05cedcc"
+    },
+    {
+      "path": "${WORKSPACE}/results/revision_2026/prospective_rul/training_v1/final_execution_v1/fit_metadata/split1__train1__MLP.json",
+      "sha256": "b6def714b51f482149e544bbfcc17400b6dd0a3f940929f7ef6199230626d8c0"
+    },
+    {
+      "path": "${WORKSPACE}/results/revision_2026/prospective_rul/training_v1/final_execution_v1/fit_metadata/split1__train1__GCN.json",
+      "sha256": "d388d80c0d2d4723efe91fac828aff9f1e8987f2a6f716a31959599ec46e0c3a"
+    },
+    {
+      "path": "${WORKSPACE}/results/revision_2026/prospective_rul/training_v1/final_execution_v1/fit_metadata/split1__train2__MLP.json",
+      "sha256": "c616abf9952b541566eb03ea9706293936baec002ff4d65ddba8c291e1c14389"
+    },
+    {
+      "path": "${WORKSPACE}/results/revision_2026/prospective_rul/training_v1/final_execution_v1/fit_metadata/split1__train2__GCN.json",
+      "sha256": "bef2e16e2b8713310fc374f86ec43e9660ce390dd86b38fafd0b9981bceef389"
+    },
+    {
+      "path": "${WORKSPACE}/results/revision_2026/prospective_rul/training_v1/final_execution_v1/fit_metadata/split2__train0__MLP.json",
+      "sha256": "e5bfee544421729749df05e28ee01d50f8018b865aff37a09cd90c0134c12e33"
+    },
+    {
+      "path": "${WORKSPACE}/results/revision_2026/prospective_rul/training_v1/final_execution_v1/fit_metadata/split2__train0__GCN.json",
+      "sha256": "baca67dd4237b7a74168ae14987bd4490bd903f179211702bd618507713a7ae6"
+    },
+    {
+      "path": "${WORKSPACE}/results/revision_2026/prospective_rul/training_v1/final_execution_v1/fit_metadata/split2__train1__MLP.json",
+      "sha256": "b6962fb72c07985c2cb73cd2423db5a722412060e660094638694fcd0d835686"
+    },
+    {
+      "path": "${WORKSPACE}/results/revision_2026/prospective_rul/training_v1/final_execution_v1/fit_metadata/split2__train1__GCN.json",
+      "sha256": "0f2fe8052d71493c63f11fbf7b8c08af936426308c885e52f55a32dd68b90712"
+    },
+    {
+      "path": "${WORKSPACE}/results/revision_2026/prospective_rul/training_v1/final_execution_v1/fit_metadata/split2__train2__MLP.json",
+      "sha256": "9f00d46bf2ea842484938c6e7a22df1cab05eeaa5d18d70f85e6974e9a580c43"
+    },
+    {
+      "path": "${WORKSPACE}/results/revision_2026/prospective_rul/training_v1/final_execution_v1/fit_metadata/split2__train2__GCN.json",
+      "sha256": "43caf163c0563532c5d8b44635c28f0a8a965ea8a2d0cd683c91693d08dedeb7"
+    },
+    {
+      "path": "${WORKSPACE}/results/revision_2026/prospective_rul/training_v1/final_execution_v1/fit_metadata/split3__train0__MLP.json",
+      "sha256": "b8717977d152f50930f3091238fd342a2146462d850206e24c8fbe83d5919a35"
+    },
+    {
+      "path": "${WORKSPACE}/results/revision_2026/prospective_rul/training_v1/final_execution_v1/fit_metadata/split3__train0__GCN.json",
+      "sha256": "55d8ac4b1646086d35db39a8d102c22a0e45d0320754956e72ac085d57e7aeaf"
+    },
+    {
+      "path": "${WORKSPACE}/results/revision_2026/prospective_rul/training_v1/final_execution_v1/fit_metadata/split3__train1__MLP.json",
+      "sha256": "a6dfd3733f82dfb0a8fa036950006544098e1e3ef2dc4f78ff928e490481d7f8"
+    },
+    {
+      "path": "${WORKSPACE}/results/revision_2026/prospective_rul/training_v1/final_execution_v1/fit_metadata/split3__train1__GCN.json",
+      "sha256": "9bbd68e9bbd8054b358014765745027b12306dbea35ad209dd546267370d8bb5"
+    },
+    {
+      "path": "${WORKSPACE}/results/revision_2026/prospective_rul/training_v1/final_execution_v1/fit_metadata/split3__train2__MLP.json",
+      "sha256": "20205d94a82204278b4c3aa351bac3fbc1e3838d2db2fc842194c2f364945955"
+    },
+    {
+      "path": "${WORKSPACE}/results/revision_2026/prospective_rul/training_v1/final_execution_v1/fit_metadata/split3__train2__GCN.json",
+      "sha256": "18ba73c475e014da9a015ed81243d3a7e69d99c5c455bb56a2103d5cf42408dc"
+    },
+    {
+      "path": "${WORKSPACE}/results/revision_2026/prospective_rul/training_v1/final_execution_v1/fit_metadata/split4__train0__MLP.json",
+      "sha256": "76d7b53f64e4f1b48e947f8d088ee756225d14b1eb860489d99f632f79765133"
+    },
+    {
+      "path": "${WORKSPACE}/results/revision_2026/prospective_rul/training_v1/final_execution_v1/fit_metadata/split4__train0__GCN.json",
+      "sha256": "cdda07636d4ae57e0a6d441240716a3b6fdd35c71f06b95927d0247582cecf22"
+    },
+    {
+      "path": "${WORKSPACE}/results/revision_2026/prospective_rul/training_v1/final_execution_v1/fit_metadata/split4__train1__MLP.json",
+      "sha256": "d3ed0b4d328b75eec4b5c25a1c75fc68ec6bcaa89a3d1b89ab5e6276ca78ddef"
+    },
+    {
+      "path": "${WORKSPACE}/results/revision_2026/prospective_rul/training_v1/final_execution_v1/fit_metadata/split4__train1__GCN.json",
+      "sha256": "4b095e2f4cc01dc9f66189b241b507faba211d080f99b1d6ba9221cca0a9b5f0"
+    },
+    {
+      "path": "${WORKSPACE}/results/revision_2026/prospective_rul/training_v1/final_execution_v1/fit_metadata/split4__train2__MLP.json",
+      "sha256": "73f481be848b51cb0722e2f5bf9ff9cc17660cf3be0b32fd5b246d1db8732f79"
+    },
+    {
+      "path": "${WORKSPACE}/results/revision_2026/prospective_rul/training_v1/final_execution_v1/fit_metadata/split4__train2__GCN.json",
+      "sha256": "434c508d0895643fe34e289d78ed3bb8f02a4c6ce3b9120e697ef6f11e83af49"
+    }
+  ],
+  "runner_sha256": "187d2f034282d75888bdc1fbb2408a132b11aa14afa709c7444dade0fc253c60",
+  "safety_ceiling_hit_count": 0,
+  "test_evaluation_started": false,
+  "total_expected_fits": 30,
+  "training_protocol_sha256": "1c43d2f63904d19cf94921be5020f23d01baa4b9d6d3c6badf7560bb15f36bb7"
+}

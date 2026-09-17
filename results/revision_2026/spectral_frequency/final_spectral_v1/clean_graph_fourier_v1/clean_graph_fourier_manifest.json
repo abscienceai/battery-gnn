@@ -1,0 +1,100 @@
+{
+  "analysis_script_commit": "2bd888a09802cf2ae122be50e74bee1dc67bc9a8",
+  "analysis_script_sha256": "25f49dc54bee6b852b0440bf144bfb10fed5cddcfa37c29124ef3e771006e6be",
+  "bands": {
+    "high": "[0.75,1.00]",
+    "low": "[0.00,0.25)",
+    "mid_high": "[0.50,0.75)",
+    "mid_low": "[0.25,0.50)"
+  },
+  "benchmark_source_sha256": "5d621f8d5764e417e41bc518ec72b9608566a087c552b8365d438c2344c06c5e",
+  "cell_rows": 190,
+  "clean_metric_max_abs_mae_difference": 4.990799440385274e-14,
+  "clean_metric_max_abs_rmse_difference": 4.822531263215524e-14,
+  "clean_metric_regression_barrier": "PASS",
+  "clean_metric_rows": 120,
+  "clean_metric_tolerance": 1e-07,
+  "contract": "clean_graph_fourier_diagnostics_v1",
+  "dct_basis_equivalence": "orthonormal DCT-II equals the frozen path-Laplacian eigenvector projection",
+  "eigenvalue_formula": "lambda_k=2-2*cos(pi*k/n)",
+  "final_v3_execution_manifest_sha256": "5a8bfbe0f11a6158f2749a9da4f18f1e62adf8c839976c1bf0af9c9f6c07440d",
+  "final_v3_protocol_sha256": "2dec14c210ae3f02e5f65e4acc24f9c4adc747bc071509cb144e69dba707f4dd",
+  "frequency_coordinate": "omega_k_over_pi=k/n",
+  "graph": "undirected chronological path graph P_n",
+  "input_feature_band_rows": 15200,
+  "input_parseval_max_relative_error": 7.455781323361965e-16,
+  "laplacian": "combinatorial D-A",
+  "mode_rows": 223970,
+  "model_states_loaded": 30,
+  "models_retrained": false,
+  "outputs": {
+    "clean_graph_fourier_summary": {
+      "path": "${WORKSPACE}/results/revision_2026/spectral_frequency/final_spectral_v1/clean_graph_fourier_v1/clean_graph_fourier_summary.csv",
+      "rows": 36,
+      "sha256": "ff2b55b1c8f013198ffecf50d744adf98ad0dbc54d03d987e15c2d3ff36d7009"
+    },
+    "clean_input_feature_band_energy": {
+      "path": "${WORKSPACE}/results/revision_2026/spectral_frequency/final_spectral_v1/clean_graph_fourier_v1/clean_input_feature_band_energy.csv",
+      "rows": 15200,
+      "sha256": "3a6b4fc5dd1dda1813f4b7e8a6e4bf990f11c479a1f87179ed86b3ac72999286"
+    },
+    "clean_prediction_metric_regression": {
+      "path": "${WORKSPACE}/results/revision_2026/spectral_frequency/final_spectral_v1/clean_graph_fourier_v1/clean_prediction_metric_regression.csv",
+      "rows": 120,
+      "sha256": "aec315fac9db34bc0f900207ead221cc873c38141cf41368b452e1cac2b79066"
+    },
+    "clean_residual_band_energy": {
+      "path": "${WORKSPACE}/results/revision_2026/spectral_frequency/final_spectral_v1/clean_graph_fourier_v1/clean_residual_band_energy.csv",
+      "rows": 4560,
+      "sha256": "ec7d976e4026c9426a370990673ed5d29363450fb8b435104c8d7733cc6cb5bc"
+    },
+    "path_laplacian_cells": {
+      "path": "${WORKSPACE}/results/revision_2026/spectral_frequency/final_spectral_v1/clean_graph_fourier_v1/path_laplacian_cells.csv",
+      "rows": 190,
+      "sha256": "13c6edf72346675aeec9b768b0be67683966e4d81916a4542448034063645073"
+    },
+    "path_laplacian_input_modes": {
+      "path": "${WORKSPACE}/results/revision_2026/spectral_frequency/final_spectral_v1/clean_graph_fourier_v1/path_laplacian_input_modes.csv",
+      "rows": 223970,
+      "sha256": "e9df915339a0c21b50a526063f40d1bee49c59fde9d1f4625cc1a2cacbbdc6f2"
+    }
+  },
+  "residual_band_rows": 4560,
+  "residual_parseval_max_relative_error": 9.471841065944076e-16,
+  "scaler_refit": false,
+  "spectral_protocol_sha256": "a8d3b65b87980470f326717f0cb50e3d4fb4d2e0429c93171eb0d21d6c713e45",
+  "state_file_sha256": {
+    "split0_train0/causal_gcn_best_state.pt": "2b1a53293e790703d084fe455d8e7b27275da598773c857d0b652731eb41a82f",
+    "split0_train0/mlp_best_state.pt": "3d3a33cc4a2139aaf37a9d2775b34c0c3cec88fb7e5d512320d1141c16d8704c",
+    "split0_train1/causal_gcn_best_state.pt": "07bf7885aac5119d9dcfc6f7d08a47cf201e1160ea93b27692fde111168a11c6",
+    "split0_train1/mlp_best_state.pt": "a75296fb32122cfe40033d498288583c05faa3f8fedcf43ffb7faf359453715c",
+    "split0_train2/causal_gcn_best_state.pt": "89c84da545a7571c2cff1b97d2d3f176708dab31c031ae4fb5f2f8f1b3f4de93",
+    "split0_train2/mlp_best_state.pt": "e5d9298109cec7bceeac16cbc9c733016c7d247000f26bd98ddcaa4fe8a0dc23",
+    "split1_train0/causal_gcn_best_state.pt": "7836e02af1242b9ae2097d3f6839120a0714562c65a786261d7081e2dba68085",
+    "split1_train0/mlp_best_state.pt": "5ee7b2ec5f1125fbfd68505ed8011b89c29d724de5847eb62c325eb1e1767dc0",
+    "split1_train1/causal_gcn_best_state.pt": "7784116ed30f9b86e0547d12b0ee353f076396628ad2b50e7b69e2add83d3631",
+    "split1_train1/mlp_best_state.pt": "155da6b8de2bff590247742ab88b2b0acd6d1083066000db4e53ac026ecc0800",
+    "split1_train2/causal_gcn_best_state.pt": "06381ae34cadf8c2f4c2c6faf958670bdf5b280e148565649f5e33298b88da86",
+    "split1_train2/mlp_best_state.pt": "67169e0ffc674e829385fb131c39427a602bbf857e9f2a593a63138b8796865d",
+    "split2_train0/causal_gcn_best_state.pt": "b2d7af78a7fca8cad3f21c03ebf20b3661960e1dc1ee5f54af35ffeaa714b5e1",
+    "split2_train0/mlp_best_state.pt": "b658ec9227651f1014006eea657819650d04b6877a489d6ca3d6f91c099842e1",
+    "split2_train1/causal_gcn_best_state.pt": "ac859176941006fcfef9193dd84064369796d4f7102fa4a5e6bedcfddcff55d7",
+    "split2_train1/mlp_best_state.pt": "073c2b1b2238a9c6b7ab8188d36689b11c900348559c98c82e2d9ee4dbdf1fc8",
+    "split2_train2/causal_gcn_best_state.pt": "5e9547f9ecd449b49d06bbb964fd02134cf4879238712440753d19282c33ed6c",
+    "split2_train2/mlp_best_state.pt": "5cef5f75b65fefdc5c6f867e61941717c776e3eb6418d4e49c96796bbec0fa50",
+    "split3_train0/causal_gcn_best_state.pt": "fdb5ef4b5519cddd66d8c247161fb0869e0234bfa7782291262b0f144037eef3",
+    "split3_train0/mlp_best_state.pt": "17bfd8cfbd1669ffdc60a65757f030fc68d22b9b09713198151062238761ee61",
+    "split3_train1/causal_gcn_best_state.pt": "5ba27c1f1ac69f92ca7dda0a78f50537c50205136691695f9acf282f6ad12444",
+    "split3_train1/mlp_best_state.pt": "7b4468b837bdc923e5743f01d047c51d399dc8bfd9431022ee9b031db78152df",
+    "split3_train2/causal_gcn_best_state.pt": "0a8961c8238294138330aec05114292dd7def7993372c2715ab706a63eb7492c",
+    "split3_train2/mlp_best_state.pt": "7b15125b0c3564843c3afe2b40b75e87f70d3a809c778f8157c78cb114934717",
+    "split4_train0/causal_gcn_best_state.pt": "f0a8991be925957a0ac1d3b82bc903326ba8895cc1d22f6cf5dd3a4060c57dc6",
+    "split4_train0/mlp_best_state.pt": "6d06393ee5b98fb9207c6b47e275c91808d8b915cf2c149c1989cea113fdeaec",
+    "split4_train1/causal_gcn_best_state.pt": "549716966b70f8e4068107f73851fa12f8e0d19e803c235e09c29e95318d94f9",
+    "split4_train1/mlp_best_state.pt": "74efc4c954ae3fb87fa23a90d9f633a3f4522efc9e4ff046a37e89b29ba136ba",
+    "split4_train2/causal_gcn_best_state.pt": "ab710b67771a380267843d94c8f0fa0915d629d9d1ba2cb63e3629b1e0d8bf8f",
+    "split4_train2/mlp_best_state.pt": "7c50cd82d9dea70a7e84842227965f24a8afba7394b8f2b21264462b746f20dc"
+  },
+  "status": "COMPLETE_BEFORE_FREQUENCY_PERTURBATION_SWEEP",
+  "transform": "scipy.fft.dct type=2 norm=ortho"
+}

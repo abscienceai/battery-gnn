@@ -1,0 +1,33 @@
+{
+  "figure": "fig2_frequency_selective_response",
+  "source_file": "${WORKSPACE}/results/revision_2026/spectral_frequency/final_spectral_v1/sinusoidal_frequency_v1/analysis_v1/frequency_response_summary.csv",
+  "source_domain": "BALANCED_ALL",
+  "models": [
+    "MLP",
+    "GCN"
+  ],
+  "metrics": [
+    "rmse",
+    "mae"
+  ],
+  "frequency_grid_omega_over_pi": [
+    0.0625,
+    0.125,
+    0.25,
+    0.5,
+    0.75,
+    1.0
+  ],
+  "split_count_per_point": 5,
+  "error_bar_definition": "sample SD across five split-level means",
+  "perturbation_rms_standardized_units": 0.1,
+  "analytic_operator": "|H_d(omega)| = |cos(omega/2)|^d",
+  "deployed_aggregation_stages_d": 2,
+  "outputs": [
+    "${WORKSPACE}/repo/battery-gnn/figures/revision_2026/fig2_frequency_selective_response.pdf",
+    "${WORKSPACE}/repo/battery-gnn/figures/revision_2026/fig2_frequency_selective_response.png",
+    "${WORKSPACE}/repo/battery-gnn/figures/revision_2026/fig2_frequency_selective_response.svg",
+    "${WORKSPACE}/repo/battery-gnn/figures/revision_2026/fig2_frequency_selective_response_source_values.csv"
+  ],
+  "important_interpretation": "Mechanistic/descriptive frequency-selective response; do not present as multiplicity-corrected statistical superiority."
+}

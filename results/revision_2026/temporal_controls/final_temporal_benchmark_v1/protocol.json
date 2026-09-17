@@ -1,0 +1,148 @@
+{
+  "batch_normalization": false,
+  "ceiling_rule": "Any new temporal-control fit reaching epoch 5000 invalidates final aggregation until the optimization budget is revisited using train/validation only.",
+  "centered_smoothing_used": false,
+  "contract": "temporal_control_benchmark_v1",
+  "cross_cell_filter_state": false,
+  "datasets": [
+    "HUST",
+    "CALCE",
+    "MATR"
+  ],
+  "difference_definition": "For RMSE/MAE, comparator minus causal GCN; positive values favor causal GCN.",
+  "dropout": false,
+  "early_stopping_metric": "validation dataset-balanced cell-balanced RMSE",
+  "early_stopping_patience": 30,
+  "feature_count": 20,
+  "feature_policy": "Same 20 voltage/current within-cycle statistical features used in the clean feature-matched benchmark.",
+  "filtfilt_used": false,
+  "future_observations_used": false,
+  "inferential_sensitivity": "Exact two-sided paired sign-flip tests over the five split-level differences are sensitivity analyses, not claims of five fully independent datasets.",
+  "kalman_selected_q": 0.01,
+  "kalman_selected_r": 1.0,
+  "kalman_selected_using_test": false,
+  "kalman_selection_fit_count": 60,
+  "learning_rate": 0.001,
+  "max_epochs": 5000,
+  "max_epochs_role": "nonbinding safety ceiling",
+  "methods": {
+    "causal_gcn": {
+      "learnable_parameters": 5569,
+      "new_fit_required": false,
+      "source": "clean final_v3 CAUSAL_GCN",
+      "temporal_operation": "two causal parameter-free mean aggregation steps with maximum receptive field {t,t-1,t-2}",
+      "type": "reference_anchor"
+    },
+    "kalman_q0p01_mlp": {
+      "kalman_initial_variance": 1.0,
+      "kalman_q": 0.01,
+      "kalman_r": 1.0,
+      "kalman_selection": "validation-only frozen selection",
+      "learnable_parameters": 5569,
+      "new_fit_required": true,
+      "temporal_operation": "independent causal local-level Kalman filter per feature",
+      "type": "new_temporal_control"
+    },
+    "lowpass_binomial3_mlp": {
+      "learnable_parameters": 5569,
+      "new_fit_required": true,
+      "temporal_operation": "strictly causal normalized FIR taps [1,2,1] over {t-2,t-1,t}",
+      "type": "new_temporal_control"
+    },
+    "moving_average3_mlp": {
+      "learnable_parameters": 5569,
+      "new_fit_required": true,
+      "temporal_operation": "strictly causal trailing moving average, window=3",
+      "type": "new_temporal_control"
+    },
+    "raw_mlp": {
+      "learnable_parameters": 5569,
+      "new_fit_required": false,
+      "source": "clean final_v3 MLP",
+      "temporal_operation": "none",
+      "type": "reference_anchor"
+    },
+    "savgol5_poly2_mlp": {
+      "learnable_parameters": 5569,
+      "new_fit_required": true,
+      "temporal_operation": "one-sided causal endpoint polynomial smoother, window=5, polyorder=2",
+      "type": "new_temporal_control"
+    }
+  },
+  "model_architecture_for_new_controls": "20 -> 64 -> 64 -> 1 MLP with ReLU",
+  "multiple_testing_policy": "For each error metric, Holm-adjust the GCN-vs-control sign-flip p-values across all planned control-by-domain comparisons.",
+  "new_fit_count": 60,
+  "new_fit_count_definition": "4 new controls x 5 split seeds x 3 initialization seeds",
+  "new_temporal_control_methods": [
+    "moving_average3_mlp",
+    "lowpass_binomial3_mlp",
+    "savgol5_poly2_mlp",
+    "kalman_q0p01_mlp"
+  ],
+  "optimizer": "AdamW",
+  "planned_analysis": "Average three initialization seeds within each split_seed, then compare methods at the five split-level repeated-holdout units. Report paired differences and win/loss counts.",
+  "preprocessing_pipeline_new_controls": [
+    "split-specific pooled train-only base standardization",
+    "strictly causal filtering within each cell",
+    "filter-specific secondary standardization fitted using training cells only"
+  ],
+  "primary_metrics": [
+    "RMSE",
+    "MAE"
+  ],
+  "primary_replication_policy": "Three initialization seeds are averaged within each split_seed. The five split_seed units remain the higher-level repeated-split comparison units.",
+  "raw_mlp_identity_policy": "The frozen clean final_v3 raw MLP is reused rather than retrained. The preprocessing audit demonstrated that the identity secondary transform has mean 0 and variance 1 to numerical precision, so a second identity standardization is redundant.",
+  "reference_fit_count_definition": "15 frozen raw MLP fits + 15 frozen causal GCN fits from clean final_v3",
+  "reference_fit_count_reused": 30,
+  "research_question": "Determine whether the causal graph model's behavior can be explained by generic causal temporal smoothing rather than graph-specific message passing.",
+  "secondary_metric": "R2 descriptive by physical dataset",
+  "sequence_model_control_in_this_protocol": false,
+  "sequence_model_note": "A TCN/sequence baseline is reserved for a separate pre-specified protocol after the classical causal smoothing benchmark.",
+  "source_commits": {
+    "causal_filter_kernel": "31dd57b7bfb809b40dd45d62fa0dd32e4d6ab349",
+    "clean_feature_matched_analysis": "a52d37d6760bd40382fd56f8ec57f38989bf1043",
+    "kalman_validation_selection": "ed61327887609362056c53efc8842dfecefff6d4",
+    "temporal_preprocessing": "f0a4e3a33ddd3cf7290d250942b4fee3c3f17922"
+  },
+  "source_sha256": {
+    "benchmark_script": "5d621f8d5764e417e41bc518ec72b9608566a087c552b8365d438c2344c06c5e",
+    "clean_v3_execution_manifest": "5a8bfbe0f11a6158f2749a9da4f18f1e62adf8c839976c1bf0af9c9f6c07440d",
+    "clean_v3_protocol": "2dec14c210ae3f02e5f65e4acc24f9c4adc747bc071509cb144e69dba707f4dd",
+    "filter_kernel": "23f733540a23954c278722c43a36e994c5431b603bfeb9e7ebd4474451bd3ff7",
+    "kalman_q_summary": "7281889c833eb8bcc2c4d86c771d8fb31319e1e6223d5f639d6a9fdf7661c5ad",
+    "kalman_selected": "1223ee1f8e3bb418492dc6da56271ff4a7bad2c4340077ab6147a38a18168e63",
+    "kalman_selection_audit": "0cf82af176f0d9bb25c12ed7c10b76eeb7565015414abe998d0b93d6da7cdffc",
+    "kalman_selection_manifest": "6c82febfc849487a489123953c0532226c4b349811aebc80a0fa6e8fa77c8463",
+    "kalman_selection_protocol": "522e0477a5f211f97f54869e08fba13e0fad31cd5f91dc0012f86906e780d2a5",
+    "kalman_selector": "66444f397f24bf5b26e9caf5009802785c7148e093ee2e6eb096599ac7d01e0c",
+    "preprocessing_audit": "600ec65db53329166ded63825bf09afbe8387e1cd494a64bd6351135eb6ac6b3",
+    "preprocessing_builder": "6edd261e0997c39bad2ba76b0536575fefa38e355d5b887e47948f246801ee4a",
+    "preprocessing_manifest": "1397ac3cf505e309fa9d4adf37f95bf58436e4354903a8b7f38345143086e975",
+    "secondary_scalers": "98607908e0cb8ee2bb9c102c061990d7282bef20f1535c16e9825a2eb3d1a82c"
+  },
+  "split_seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "status": "FINAL_FROZEN_BEFORE_NEW_TEMPORAL_TEST_RUNS",
+  "target_used_by_filter_preprocessing": false,
+  "task": "cycle-level SOH regression",
+  "test_blinding_record": {
+    "new_temporal_control_test_metrics_observed_before_protocol_freeze": false,
+    "new_temporal_control_test_results_may_change_training_protocol": false,
+    "raw_mlp_and_gcn_reference_test_metrics_previously_observed": true,
+    "reference_test_results_used_to_fit_secondary_scalers": false,
+    "reference_test_results_used_to_select_kalman_q": false
+  },
+  "test_policy": "New temporal-control fits may evaluate the held-out test cells only after model training and validation early stopping are complete. Test results cannot change filtering parameters, scalers, architecture, optimization settings, patience, or epoch ceiling.",
+  "training_initialization_seeds": [
+    0,
+    1,
+    2
+  ],
+  "training_objective": "dataset-balanced + cell-balanced MSE",
+  "weight_decay": 1e-05
+}

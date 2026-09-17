@@ -1,0 +1,104 @@
+{
+  "RUL_or_EOL_values_read": false,
+  "SOH_values_read": false,
+  "capacity_values_read": false,
+  "contract": "dqdv_feature_bank_v1",
+  "cutoff_artifact_sha256": "cf65c29deb8638503798e2e406cb35fc785f0eae5d56468de2c2ec06842705b7",
+  "cutoffs_refit": false,
+  "datasets": [
+    "HUST",
+    "CALCE",
+    "MATR"
+  ],
+  "dqdv_feature_count": 10,
+  "feature_bank_identity_universe": "audited_primary_feature_valid_rows",
+  "feature_names": [
+    "ica_mean_Ah_per_V",
+    "ica_std_Ah_per_V",
+    "ica_q10_Ah_per_V",
+    "ica_q25_Ah_per_V",
+    "ica_median_Ah_per_V",
+    "ica_q75_Ah_per_V",
+    "ica_q90_Ah_per_V",
+    "ica_max_Ah_per_V",
+    "ica_area_Ah",
+    "ica_peak_voltage_V"
+  ],
+  "horizons": {
+    "FULL": "all available discharge-contributing intervals",
+    "PREFIX25": "split-specific train-only fixed elapsed-time cutoff",
+    "PREFIX50": "split-specific train-only fixed elapsed-time cutoff"
+  },
+  "individual_test_cycle_endpoint_used": false,
+  "minimum_discharge_intervals": 20,
+  "minimum_occupied_voltage_bins": 5,
+  "model_metrics_read": false,
+  "model_states_loaded": false,
+  "models_trained": false,
+  "outputs": {
+    "CALCE": {
+      "path": "${WORKSPACE}/results/revision_2026/dqdv_leakage_control/final_dqdv_v1/features_v1/CALCE_dqdv_feature_bank.csv",
+      "primary_valid_outside_sensor_inventory": 89,
+      "primary_valid_rows": 18804,
+      "reused_existing_dataset_shard": false,
+      "rows": 18804,
+      "sensor_inventory_rows": 18715,
+      "sha256": "fb47d1f78fc5f62c85b50242753f04cf09e7af8835301c70d9e23fadc52a91cb"
+    },
+    "HUST": {
+      "path": "${WORKSPACE}/results/revision_2026/dqdv_leakage_control/final_dqdv_v1/features_v1/HUST_dqdv_feature_bank.csv",
+      "primary_valid_outside_sensor_inventory": 0,
+      "primary_valid_rows": 146122,
+      "reused_existing_dataset_shard": true,
+      "rows": 146122,
+      "sensor_inventory_rows": 146122,
+      "sha256": "97cf289f9b29f72dba8fc261229e342b279c8108e6fd1dd19d5f05273bfc407c"
+    },
+    "MATR": {
+      "path": "${WORKSPACE}/results/revision_2026/dqdv_leakage_control/final_dqdv_v1/features_v1/MATR_dqdv_feature_bank.csv",
+      "primary_valid_outside_sensor_inventory": 0,
+      "primary_valid_rows": 154365,
+      "reused_existing_dataset_shard": false,
+      "rows": 154365,
+      "sensor_inventory_rows": 154365,
+      "sha256": "3f3f39271933681b30176049e546f4f1b4a3e10dd575c5aebe6d90f482e3c5d2"
+    }
+  },
+  "primary_valid_outside_sensor_inventory_by_dataset": {
+    "CALCE": 89,
+    "HUST": 0,
+    "MATR": 0
+  },
+  "primary_valid_rows_by_dataset": {
+    "CALCE": 18804,
+    "HUST": 146122,
+    "MATR": 154365
+  },
+  "primary_valid_total_rows": 319291,
+  "protocol_sha256": "c455bf7a46f89649f25769a43abd443f171545b06e4740c799df1842c8bbb8e9",
+  "provenance_barrier_sha256": "2d4b67d3d1debea5950b399717e22b7db5c1e5df4c583a1f4fbf85be1f1a32a1",
+  "raw_adapter_sha256": "456711ce3cdfe1f5cdccf0705feb04d04f8159f9324b449fbfb03b1dd204c025",
+  "raw_sources_reopened": true,
+  "runner_commit": "16a034b3e7adaac4ae7ae2e86d9c8fc63593f584",
+  "runner_sha256": "e1f1c3e3e5d6565c0f294fb15b71687a52714958ac14bb5d3b2f5c21659aa466",
+  "sensor_inventory_role": "discharge_integrable_subset_for_full_integration_regression",
+  "sensor_inventory_rows_by_dataset": {
+    "CALCE": 18715,
+    "HUST": 146122,
+    "MATR": 154365
+  },
+  "sensor_inventory_sha256": "279f0273cafddd26e4fa63bc3740d73a447b6f9a7e04804386e6a724599fb190",
+  "sensor_inventory_total_rows": 319202,
+  "split_seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "status": "FEATURE_GENERATION_COMPLETE_BEFORE_MODELING",
+  "target_table_loaded": false,
+  "test_cycle_total_duration_used": false,
+  "voltage_bin_origin_V": 0.0,
+  "voltage_bin_width_V": 0.01
+}

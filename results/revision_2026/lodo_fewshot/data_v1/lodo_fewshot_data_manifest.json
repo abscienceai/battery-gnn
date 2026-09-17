@@ -1,0 +1,70 @@
+{
+  "builder": {
+    "commit": "e4363a916b6c245a44d16764326e6045c17eefca",
+    "path": "${WORKSPACE}/repo/battery-gnn/scripts/revision_2026/113_build_lodo_support_and_scalers.py",
+    "sha256": "c4750a7dd3a1b11e4aa3918aeeafeac1e3329ef7f25e870a92b8d542130f8cdd"
+  },
+  "contract": "lodo_fewshot_data_v1",
+  "inputs": {
+    "${WORKSPACE}/data/processed/revision_2026/canonical_tasks/canonical_cycle_supervised_table.csv": "49a7b7629cf9ee3f8ce0a7e3c52f2807878b752b4c9a30a876285fb891b00c14",
+    "${WORKSPACE}/data/processed/revision_2026/splits_and_scalers/cell_split_assignments.csv": "914c8b90131f496ca396f63e0502147ca99848fdfd4b2c6b2a5887225b47d055",
+    "${WORKSPACE}/data/processed/revision_2026/splits_and_scalers/grouped_split_scaler_manifest.json": "91aee27fa332e053454c4f2300c367dc363b938e5ab3d12513372370ec4f2238",
+    "${WORKSPACE}/results/revision_2026/lodo_fewshot/lodo_fewshot_protocol_v1.json": "966d8c6b95f29e671ce4be9a785c5088e6d8e7eda9d25b8389f204859641897f"
+  },
+  "model_training_state": {
+    "few_shot_adaptation_started": false,
+    "test_metrics_read": false,
+    "test_metrics_surfaced": false,
+    "zero_shot_training_started": false
+  },
+  "outputs": {
+    "fold_inventory": {
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/data_v1/lodo_fold_inventory.csv",
+      "sha256": "c5aed9d2ce48a07c725a23e8ebf1fe19fdb102bf71725ec6ada0704a4fc8f97e"
+    },
+    "source_only_feature_scalers": {
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/data_v1/lodo_source_only_feature_scalers.csv",
+      "sha256": "4ebb18c5292eb8e8b47437a22aa37ab4b68f17fdd90491039faed17b0f8ea155"
+    },
+    "source_only_scaler_summary": {
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/data_v1/lodo_source_only_scaler_summary.csv",
+      "sha256": "314e3c91dba10289957afd2ef4b1fdac03a07371273629282205feee89150487"
+    },
+    "support_cells": {
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/data_v1/fewshot_support_cells.csv",
+      "sha256": "d19271436eba461f99629c0271610ffab5cd079c494cfc4f6941c33f045c381d"
+    },
+    "support_sets": {
+      "path": "${WORKSPACE}/results/revision_2026/lodo_fewshot/data_v1/fewshot_support_sets.csv",
+      "sha256": "4924654ce2fa70ad4680f9fc821e53e590124f5d87bdcf196e998edd235e48e9"
+    }
+  },
+  "protocol_sha256": "966d8c6b95f29e671ce4be9a785c5088e6d8e7eda9d25b8389f204859641897f",
+  "scaler_contract": {
+    "features_per_scaler": 20,
+    "fit_source": "source train rows only",
+    "fold_seed_scalers": 15,
+    "scaler_rows": 300,
+    "source_validation_statistics_used": false,
+    "target_scaler_created": false,
+    "target_test_statistics_used": false,
+    "target_train_statistics_used": false,
+    "target_validation_statistics_used": false
+  },
+  "selection_contract": {
+    "candidate_source": "frozen target-train cell IDs only",
+    "nested": true,
+    "selected_cell_rows": 75,
+    "support_K": [
+      1,
+      3,
+      5
+    ],
+    "support_set_rows": 45,
+    "target_features_used_for_ranking": false,
+    "target_labels_used_for_ranking": false,
+    "target_test_used": false,
+    "target_validation_used": false
+  },
+  "status": "COMPLETE_PENDING_INDEPENDENT_AUDIT"
+}

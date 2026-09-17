@@ -1,0 +1,89 @@
+{
+  "analysis_script": {
+    "commit": "9250839b8af942f294751ba8074ae5c09a72ce4a",
+    "path": "${WORKSPACE}/repo/battery-gnn/scripts/revision_2026/109_prospective_rul_descriptive_analysis.py",
+    "sha256": "dfb30baa53da8776e80e0723bf6ef833b75dc22be891474024a0a020798809c9"
+  },
+  "analysis_semantics": {
+    "contrast_sign": "positive always favors GCN; MLP-GCN for lower-is-better metrics, GCN-MLP for R2",
+    "domains": [
+      "BALANCED_ALL",
+      "CALCE",
+      "MATR"
+    ],
+    "five_split_seeds_claimed_independent_trials": false,
+    "full_trajectory_role": "supportive",
+    "initialization_seeds_claimed_independent_splits": false,
+    "mean": "mean over 15 paired split/init runs",
+    "metrics": [
+      "RMSE",
+      "MAE",
+      "R2",
+      "normalized_MAE"
+    ],
+    "model_ranking": "descriptive only",
+    "models": [
+      "MLP",
+      "GCN"
+    ],
+    "new_inferential_tests": false,
+    "primary_early_scopes": [
+      "K25",
+      "K50",
+      "K100"
+    ],
+    "scopes": [
+      "FULL_TRAJECTORY",
+      "K25",
+      "K50",
+      "K100"
+    ],
+    "uncertainty_descriptor": "sample SD across the five split-level means; each split-level mean first averages the three initialization repetitions"
+  },
+  "contract": "prospective_rul_descriptive_analysis_v1",
+  "execution_audit_passed_before_analysis": true,
+  "execution_audit_receipt_sha256": "1446736661d9432a3ae9962d59ffa841aea70b194173f3fb85d2283546286191",
+  "execution_manifest_sha256": "bf65abd7e8d6ab5c03a1afae85902df201f67aebeb4c38a57c4ac17ca857dfc6",
+  "inputs": {
+    "execution_audit_receipt": {
+      "path": "${WORKSPACE}/results/revision_2026/prospective_rul/training_v1/final_execution_v1/prospective_rul_execution_audit_receipt.json",
+      "sha256": "1446736661d9432a3ae9962d59ffa841aea70b194173f3fb85d2283546286191"
+    },
+    "execution_manifest": {
+      "path": "${WORKSPACE}/results/revision_2026/prospective_rul/training_v1/final_execution_v1/prospective_rul_execution_manifest.json",
+      "sha256": "bf65abd7e8d6ab5c03a1afae85902df201f67aebeb4c38a57c4ac17ca857dfc6"
+    },
+    "training_protocol": {
+      "path": "${WORKSPACE}/results/revision_2026/prospective_rul/prospective_rul_training_protocol_v1.json",
+      "sha256": "1c43d2f63904d19cf94921be5020f23d01baa4b9d6d3c6badf7560bb15f36bb7"
+    }
+  },
+  "new_inferential_tests": false,
+  "numeric_test_metrics_printed_by_analysis_script": false,
+  "outputs": {
+    "descriptive_summary": {
+      "path": "${WORKSPACE}/results/revision_2026/prospective_rul/analysis_v1/prospective_rul_descriptive_summary.csv",
+      "sha256": "ce2b0c59ae15da937655430edbaabcabb77b7ba62e44a2bf47e89e9314aef641"
+    },
+    "model_contrasts": {
+      "path": "${WORKSPACE}/results/revision_2026/prospective_rul/analysis_v1/prospective_rul_model_contrasts.csv",
+      "sha256": "064fdfcdf3b8aa3ac4d97ea6e87a70084c0e4a7daea8f2df9b63a34cce46d9cc"
+    },
+    "run_metrics": {
+      "path": "${WORKSPACE}/results/revision_2026/prospective_rul/analysis_v1/prospective_rul_run_metrics.csv",
+      "sha256": "faf980b78c4244951b003db0e9018dc42f60646b19af045e19f3fcb182720ee3"
+    },
+    "split_means": {
+      "path": "${WORKSPACE}/results/revision_2026/prospective_rul/analysis_v1/prospective_rul_split_means.csv",
+      "sha256": "97a4dcea4f1afece6907987bb4653a2fc36e36ddce08434dd40ef91b74adc422"
+    }
+  },
+  "row_counts": {
+    "descriptive_summary": 96,
+    "model_contrasts": 48,
+    "run_metrics": 1440,
+    "split_means": 480
+  },
+  "status": "COMPLETE_PENDING_INDEPENDENT_ANALYSIS_AUDIT",
+  "training_protocol_sha256": "1c43d2f63904d19cf94921be5020f23d01baa4b9d6d3c6badf7560bb15f36bb7"
+}

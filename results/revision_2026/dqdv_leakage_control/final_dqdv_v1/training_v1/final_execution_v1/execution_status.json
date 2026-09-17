@@ -1,0 +1,14 @@
+{
+  "completed_model_fits": 8,
+  "completed_pairs": 4,
+  "contract": "dqdv_training_execution_status_v1",
+  "current": {
+    "condition": "PRIMARY20_PLUS_FULL_DQDV10",
+    "split_seed": 0,
+    "train_seed": 1
+  },
+  "planned_model_fits": 120,
+  "planned_pairs": 60,
+  "protocol_sha256": "43122c4d6ef5a2e70b2d13ae22432a2cfa13027874e0bea6f3b62675e3fb23e9",
+  "test_metric_values_surfaced": false
+}

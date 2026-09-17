@@ -1,0 +1,271 @@
+{
+  "contract": "lodo_fewshot_protocol_v1",
+  "evaluation_contract": {
+    "R2_interpretation": "secondary only because target-domain SOH variance can differ strongly across datasets; especially narrow target variance can make R2 unstable despite finite absolute error",
+    "SOH_scale": "dimensionless and cell-normalized before modeling",
+    "cell_balanced_semantics": "each held-out test cell receives equal total weight; rows within a cell receive equal weight",
+    "conditions": [
+      "ZERO_SHOT",
+      "K1",
+      "K3",
+      "K5"
+    ],
+    "evaluation_set": "the same frozen held-out target TEST cells for ZERO_SHOT, K1, K3, and K5",
+    "primary_metrics": [
+      "CELL_BALANCED_RMSE",
+      "CELL_BALANCED_MAE"
+    ],
+    "relative_fewshot_improvement": "paired within identical held-out dataset, split seed, training initialization, model, and test set",
+    "row_metric_semantics": "plain unweighted row-level metric",
+    "secondary_metrics": [
+      "CELL_BALANCED_R2",
+      "ROW_RMSE",
+      "ROW_MAE",
+      "ROW_R2"
+    ],
+    "test_used_for_model_selection": false
+  },
+  "execution_state": {
+    "few_shot_adaptation_started": false,
+    "lodo_scalers_fit": false,
+    "support_cells_selected": false,
+    "test_metrics_read": false,
+    "test_metrics_surfaced": false,
+    "zero_shot_training_started": false
+  },
+  "expected_execution_scale": {
+    "few_shot_adaptation_fits": 270,
+    "few_shot_conditions_per_zero_shot_state": 3,
+    "models": 2,
+    "split_seeds": 5,
+    "total_fits_or_adaptations": 360,
+    "training_initializations": 3,
+    "zero_shot_folds": 3,
+    "zero_shot_model_fits": 90
+  },
+  "few_shot_adaptation_contract": {
+    "K3_starts_from_K1_state": false,
+    "K5_starts_from_K3_state": false,
+    "all_layers_trainable": true,
+    "early_stopping": false,
+    "epochs": 100,
+    "feature_scaler_refit_during_adaptation": false,
+    "learning_rate": 0.0001,
+    "learning_rate_rule": "one tenth of frozen zero-shot learning rate",
+    "loss": "cell-balanced and observation-balanced target-support MSE",
+    "new_adaptation_hyperparameter_tuning": false,
+    "optimizer": "AdamW",
+    "starting_state": "independently from the corresponding zero-shot best state",
+    "target_test_used_during_adaptation": false,
+    "target_validation_used_for_epoch_selection": false,
+    "training_mode": "deterministic full-support full-batch",
+    "weight_decay": 1e-05
+  },
+  "few_shot_support_contract": {
+    "exact_support_cell_ids_materialized": true,
+    "exact_support_row_counts_materialized": true,
+    "nested_support": "K1 subset K3 subset K5",
+    "percentage_based_support": false,
+    "same_support_cells_across_training_initialization_seeds": true,
+    "same_support_cells_for_MLP_and_GCN": true,
+    "selection_happens_before_model_training": true,
+    "selection_rule": "deterministically rank eligible target TRAIN cell IDs by SHA256('lodo_fewshot_v1|held_out=<dataset>|split_seed=<seed>|cell_id=<cell>'); take first 1, 3, or 5 cells",
+    "selection_uses_target_features": false,
+    "selection_uses_target_labels": false,
+    "selection_uses_target_test": false,
+    "selection_uses_target_validation": false,
+    "support_cell_counts": [
+      1,
+      3,
+      5
+    ],
+    "support_source": "held-out target dataset TRAIN cells only",
+    "target_test_cells_reserved_for_final_evaluation_only": true,
+    "target_validation_cells_reserved_and_never_used": true
+  },
+  "frozen_observed_inventory": {
+    "cells": {
+      "CALCE": 13,
+      "HUST": 77,
+      "MATR": 169
+    },
+    "rows": {
+      "CALCE": 14298,
+      "HUST": 146122,
+      "MATR": 140133
+    },
+    "target_train_cell_pool_size_per_split": {
+      "CALCE": 9,
+      "HUST": 54,
+      "MATR": 119
+    }
+  },
+  "input_contract": {
+    "EOL_as_model_feature": false,
+    "RUL_as_model_feature": false,
+    "canonical_source": "canonical_cycle_supervised_table.csv",
+    "capacity_as_model_feature": false,
+    "cycle_index_as_model_feature": false,
+    "dataset_identity_as_model_feature": false,
+    "feature_count": 20,
+    "features": [
+      "v_min",
+      "v_q10",
+      "v_q25",
+      "v_median",
+      "v_q75",
+      "v_q90",
+      "v_max",
+      "v_mean",
+      "v_std",
+      "v_phase_slope",
+      "i_min",
+      "i_q10",
+      "i_q25",
+      "i_median",
+      "i_q75",
+      "i_q90",
+      "i_max",
+      "i_mean",
+      "i_std",
+      "i_phase_slope"
+    ],
+    "observation_index_as_model_feature": false,
+    "row_eligibility": "dataset in HUST/CALCE/MATR AND feature_valid=True AND soh_task_eligible=True",
+    "target": "SOH",
+    "target_units": "dimensionless cell-normalized state of health"
+  },
+  "lodo_scaler_contract": {
+    "feature_scaler": "StandardScaler-equivalent population mean/variance fit separately for each held-out dataset and split seed",
+    "fit_rows": "feature-valid SOH rows from SOURCE TRAIN cells only",
+    "held_out_target_test_statistics_used": false,
+    "held_out_target_train_statistics_used": false,
+    "held_out_target_validation_statistics_used": false,
+    "same_source_only_scaler_used_for_zero_shot_and_all_few_shot_conditions": true,
+    "source_validation_statistics_used": false,
+    "target_scaler": false,
+    "target_support_statistics_refit_scaler": false
+  },
+  "lodo_split_contract": {
+    "base_train_cells": "train cells from the two source datasets only",
+    "base_validation_cells": "validation cells from the two source datasets only",
+    "cell_overlap_across_train_validation_test": false,
+    "frozen_assignment_source": "cell_split_assignments.csv",
+    "held_out_dataset_removed_from_base_training": true,
+    "held_out_dataset_removed_from_base_validation": true,
+    "reassignment": false,
+    "split_seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "target_test_cells_used_for_selection": false,
+    "target_train_cells_used_by_zero_shot_model": false,
+    "target_validation_cells_used_by_zero_shot_model": false,
+    "zero_shot_test_cells": "test cells from the held-out target dataset only"
+  },
+  "metric_embargo": {
+    "lift_condition": "independent LODO/few-shot execution audit passes",
+    "numeric_test_values_printed_by_runner": false,
+    "numeric_test_values_surfaced_before_execution_audit": false,
+    "test_metrics_may_be_written_to_run_records": true,
+    "test_predictions_may_be_written": true
+  },
+  "protocol_script": {
+    "commit": "da06f1f4c6e277a6ae968b963685b6623d5a34a8",
+    "path": "${WORKSPACE}/repo/battery-gnn/scripts/revision_2026/111_freeze_lodo_fewshot_protocol.py",
+    "sha256": "782f60124e240e813387bf8fb835fca2f5d331e82825d71223a4d913dd3376f1"
+  },
+  "reporting_contract": {
+    "failure_is_reportable_result": true,
+    "few_shot_claim": "adaptation benefit is empirical and dataset-dependent; no monotonic or universal improvement claim is assumed",
+    "five_split_seeds_are_independent_trials": false,
+    "folds": [
+      "HUST",
+      "CALCE",
+      "MATR"
+    ],
+    "model_ranking": "descriptive",
+    "new_inferential_tests": false,
+    "primary_summary": "mean over 15 split/init runs per fold/model/condition; uncertainty descriptor is SD over the five split-level means after averaging three initialization repetitions",
+    "three_initialization_seeds_are_independent_splits": false,
+    "universal_GCN_superiority_claim": false
+  },
+  "scientific_scope": {
+    "folds": {
+      "CALCE": [
+        "HUST",
+        "MATR"
+      ],
+      "HUST": [
+        "CALCE",
+        "MATR"
+      ],
+      "MATR": [
+        "HUST",
+        "CALCE"
+      ]
+    },
+    "old_legacy_fewshot_results_reused": false,
+    "old_legacy_lodo_results_reused": false,
+    "primary_datasets": [
+      "HUST",
+      "CALCE",
+      "MATR"
+    ],
+    "primary_question": "How do feature-matched MLP and causal GCN models generalize to a completely held-out battery dataset, and how much can a small number of labeled target training cells improve that transfer?",
+    "task": "cycle-level SOH regression"
+  },
+  "source_artifacts": {
+    "canonical_cycle_supervised_table": {
+      "path": "${WORKSPACE}/data/processed/revision_2026/canonical_tasks/canonical_cycle_supervised_table.csv",
+      "sha256": "49a7b7629cf9ee3f8ce0a7e3c52f2807878b752b4c9a30a876285fb891b00c14"
+    },
+    "cell_split_assignments": {
+      "path": "${WORKSPACE}/data/processed/revision_2026/splits_and_scalers/cell_split_assignments.csv",
+      "sha256": "914c8b90131f496ca396f63e0502147ca99848fdfd4b2c6b2a5887225b47d055"
+    },
+    "grouped_split_scaler_manifest": {
+      "path": "${WORKSPACE}/data/processed/revision_2026/splits_and_scalers/grouped_split_scaler_manifest.json",
+      "sha256": "91aee27fa332e053454c4f2300c367dc363b938e5ab3d12513372370ec4f2238"
+    }
+  },
+  "status": "FROZEN_BEFORE_SUPPORT_SELECTION_SCALER_FIT_OR_MODEL_TRAINING",
+  "zero_shot_model_contract": {
+    "architecture": "20 -> 64 -> 64 -> 1 with ReLU",
+    "batch_normalization": false,
+    "causal_GCN": "parameter-free causal mean aggregation over self and previous valid observation before each shared linear stage; maximum receptive field t,t-1,t-2",
+    "cross_cell_edges": false,
+    "data_shuffle": false,
+    "dropout": false,
+    "early_stopping_data": "source validation cells only",
+    "early_stopping_metric": "source-validation BALANCED_ALL RMSE",
+    "feature_matched": true,
+    "future_edges": false,
+    "learnable_parameters_each": 5569,
+    "learning_rate": 0.001,
+    "loss": "dataset-balanced, cell-balanced, observation-balanced MSE",
+    "maximum_epochs_safety_ceiling": 10000,
+    "models": [
+      "FeatureMatchedMLP",
+      "FeatureMatchedCausalGCN"
+    ],
+    "new_hyperparameter_tuning": false,
+    "optimizer": "AdamW",
+    "parameter_matched": true,
+    "patience": 30,
+    "reverse_edges": false,
+    "rows_equal_weight_within_cell": true,
+    "same_initial_learnable_weights_within_pair": true,
+    "source_cells_equal_weight_within_dataset": true,
+    "source_datasets_equal_weight": true,
+    "training_initialization_seeds": [
+      0,
+      1,
+      2
+    ],
+    "weight_decay": 1e-05
+  }
+}

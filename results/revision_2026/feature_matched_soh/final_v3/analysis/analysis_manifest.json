@@ -1,0 +1,39 @@
+{
+  "analysis_contract": "final_v3_first_test_unlock_v1",
+  "error_difference_definition": "CAUSAL_GCN minus MLP; negative favors CAUSAL_GCN",
+  "execution_manifest_sha256": "5a8bfbe0f11a6158f2749a9da4f18f1e62adf8c839976c1bf0af9c9f6c07440d",
+  "higher_level_split_units": 5,
+  "initialization_seeds_per_split": 3,
+  "metrics_sha256": {
+    "split0_train0": "912be27c51ef13b9e740387ff1aed97eecaef93b42a4e6e09057c8cb1cdba4c5",
+    "split0_train1": "9dd941173cd8f3b7949c4bb1a9a45973e5859fe268d87146507e5aa6e3a9476e",
+    "split0_train2": "911f841090094ef5009a558d10d454647d3d4fbda543ef372642bc6aee7374f4",
+    "split1_train0": "e87f8c6b49cf1bb3a73c25aa6654f13df41867c1b8ddd3b6404667af5a8b89dc",
+    "split1_train1": "de7142438cd39fae5b4efca55a28c5cb7cf70369c6894c5d3db08c0490ca7f17",
+    "split1_train2": "b564df1acf0ea6093fab98a700edc779fe7b34004874683d9102a3d846327e13",
+    "split2_train0": "1b803c27e5cd02bedf0e84836444fc7a0da265cb7a734927ef018697863de37f",
+    "split2_train1": "05f640a98ddfb61daaa7bde1bc523b8a3f4624ffb931eeda1c508c5a2b637e18",
+    "split2_train2": "111a1552091ac6c8ed23c14fc18315dc388bcd9fce661fc4d9fb5a6603794a9e",
+    "split3_train0": "a77599c2a0d0d6869bfb17dce03e19c7c5fe63902848d25af7b2c77bb601fae0",
+    "split3_train1": "55296938de9c189c4cdcff0bfc81ebcbb2100e666d7ffd7ff6294a9d12f5b746",
+    "split3_train2": "77ae970a6ec425b0b2f57da10186289141bde1294ac46da7a6611f933808ad07",
+    "split4_train0": "ace7731b1050e433da3e38de81a8595a51d4ea80766aa9fe7c0268d8e543f976",
+    "split4_train1": "39d7cf16d3a156fa63267f7a98e744d73482008458271d4595ae169d3fee409c",
+    "split4_train2": "5c500118879a8d582009c3345484f1720dfc1b987870612ff31f10b514e96b35"
+  },
+  "multiple_testing": "Holm adjustment separately across four RMSE domains and four MAE domains",
+  "outputs": {
+    "all_test": "468859cb87bbd7942ed1bf3150d2e8537b6b1e46a452e0e2f12af811de8bac14",
+    "paired": "4d892b2eb251e3754479e2d9c2a662957d2e8481027ed97ab858b989e7a697e3",
+    "seed_stability": "e5aeb4540aaa862501788a10db82ddbea340710c48484feefaaab8ff39dda080",
+    "split_level": "817ad0da1f590a9da1a072a803f4357e2a5a077df78192aaf125eaa7318a830d",
+    "summary": "d7ec8447aeb57efad3a402bbfb9c6aa4b461ebe20278517dee0b39dc198c19e1"
+  },
+  "paired_run_count": 15,
+  "primary_replication_policy": "Average three initialization seeds within each split_seed, then perform paired comparison over the five split-level units.",
+  "primary_test": "exact two-sided paired sign-flip test over five split-level differences",
+  "protocol_sha256": "2dec14c210ae3f02e5f65e4acc24f9c4adc747bc071509cb144e69dba707f4dd",
+  "source_result_root": "${WORKSPACE}/results/revision_2026/feature_matched_soh/final_v3",
+  "test_values_first_read_after_execution_audit": true,
+  "v1_v2_metrics_included": false
+}

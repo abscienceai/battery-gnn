@@ -1,292 +1,271 @@
-# Noise Regime Determines Model Choice: A Frequency-Selective Robustness Benchmark for Lithium-Ion Battery Prognostics
+# Noise Regime Determines Model Choice
 
-> **Alper Bingöl & Mücahit Soylu** — İnönü University
+Reproducibility repository for the revised manuscript:
 
-This repository contains the code, analysis scripts, and results for our study on temporal graph learning for lithium-ion battery degradation modeling. The central argument is that **clean-distribution accuracy and deployment robustness are distinct optimization objectives** — a model that wins on a pristine benchmark may fail under realistic sensor noise.
+**Noise Regime Determines Model Choice: A Frequency-Selective Robustness Benchmark for Lithium-Ion Battery Prognostics**
 
----
+Authors: **Alper Bingöl, Mücahit Soylu**
 
-## Overview
+This repository contains the code, frozen protocols, audit artifacts, curated numerical results, and figure sources used in the revised study.
 
-Each battery cell is represented as a directed temporal graph where nodes correspond to individual charge/discharge cycles and edges are weighted by the Pearson correlation between adjacent dQ/dV curves. A Graph Convolutional Network (GCN) is trained on this representation to jointly predict State of Health (SOH) and Remaining Useful Life (RUL) at the node level.
+## Main conclusion
 
-The key experimental finding: under high-frequency stochastic test-time noise, MLP error increases substantially while GCN error increases only modestly. Under low-frequency thermal drift, the ranking reverses. This regime-dependent behavior is the paper's central result.
+The revised benchmark does **not** support a universal architecture winner.
 
----
+Model behavior depends on the spectral character of sensor error, preprocessing, prediction horizon, and target-domain calibration. In particular, the causal graph model can be advantageous in some conditions, while causal filtering or an MLP can match or outperform it in others.
 
-## Repository Structure
+The term **causal GCN** is used in the manuscript as shorthand for the graph-structured causal temporal model implemented in this study. It should not be interpreted as a conventional symmetric spectral GCN.
 
-```
-battery-gnn-main/
-├── analysis/
-│   └── results/              # All experiment output files (.csv, .json)
-├── figures/                  # Generated figures (PNG, 300 DPI)
-├── notebooks/                # Jupyter notebooks (exploratory analysis)
-├── scripts/                  # All training and evaluation scripts
-└── folder_dump.txt           # Full file listing
-```
+## Primary benchmark cohort
 
-### `analysis/results/`
+The primary cycle-level SOH benchmark pools complete cells from:
 
-| File | Description |
-|------|-------------|
-| `baseline_10seeds.csv` / `baseline_10seeds_fixed.csv` | Main baseline comparison (GCN, MLP, Ridge, XGBoost) over 10 seeds |
-| `ablation_10seeds.csv` / `ablation_10seeds_wilcoxon.json` | Ablation study results with Wilcoxon signed-rank tests |
-| `scenario_a_10seeds.csv` | Noise robustness — training + test noise (Scenario A) |
-| `scenario_b_10seeds.csv` | Noise robustness — test noise only (Scenario B) |
-| `advanced_noise_10seeds_long.csv` / `advanced_noise_10seeds_summary.csv` | Realistic BMS sensor degradation scenarios (Scenario C) |
-| `gat_10seeds.json` | GAT vs. GCN comparison on the physics-informed temporal graph |
-| `gat_noise_scenario_b.json` | GAT noise robustness under Scenario B |
-| `ensemble_gat_mlp.json` | GAT + MLP ensemble results |
-| `lodo_chemistry_normalized.json` | LODO with per-dataset z-score normalization + chemistry features |
-| `fewshot_10seeds.csv` / `fewshot_10seeds_fixed.csv` | Few-shot transfer results (MATR → HUST) |
-| `lowdata_10seeds.csv` / `lowdata_10seeds_fixed.csv` / `lowdata_10seeds_globalnorm.csv` | Low-data regime experiments |
-| `early_prediction.csv` / `early_prediction_10seeds.csv` | Early-cycle prediction (10% and 20% observed cycles) |
-| `rul_all_models.csv` | RUL prediction comparison across all model families |
-| `rul_scenario_a_10seeds.csv` / `rul_scenario_b_10seeds.csv` | RUL noise robustness (Scenarios A and B) |
-| `per_dataset_predictions.csv` | Per-dataset (MATR, CALCE, HUST, RWTH) SOH predictions |
-| `dann_results.csv` | Domain Adaptation (DANN) experiment results |
-| `noise_robustness.csv` | Single-seed noise robustness baseline |
-| `nodelevel_weighted_metrics.json` | Node-level multi-task GCN metrics (SOH + RUL) |
-| `p2_amplitude_normalized.csv` | Amplitude-normalized dQ/dV control experiment |
-| `test_noise_only.csv` / `test_noise_only_seeds.csv` | Test-noise-only scenario variants |
-| `advanced_noise_results.csv` | Single-seed advanced noise experiment |
-| `few_shot_results.json` | Few-shot transfer JSON output |
-| `ablation_no_cycle_graph.json` / `ablation_no_dqdv.json` / `ablation_no_gnn.json` | Individual ablation variant outputs |
+| Dataset | Cells | Feature-valid observations |
+|---|---:|---:|
+| HUST | 77 | 146,122 |
+| CALCE | 13 | 14,298 |
+| MATR | 169 | 140,133 |
+| **Total** | **259** | **300,553** |
 
-### `figures/`
+RWTH is **not pooled into the primary benchmark** because its target-alignment contract differs from the HUST-CALCE-MATR cohort. RWTH is retained for dataset and alignment auditing where appropriate.
 
-| File | Description |
-|------|-------------|
-| `fig2_capacity_degradation_curves.png` | Capacity fade curves for representative cells from each dataset |
-| `fig3_graph_construction_paradigm.png` | Physics-informed temporal graph vs. conventional chain graph |
-| `fig4_dqdv_rwth_peaks.png` | dQ/dV curve with detected peaks for an NMC (RWTH) cell |
-| `fig5_training_validation_loss.png` | GCN training and validation loss curves |
-| `fig6_gnnexplainer_node_importance.png` | GNNExplainer cycle-level node importance scores |
-| `fig7_gnnexplainer_edge_importance.png` | GNNExplainer edge importance across consecutive cycles |
-| `fig8_tsne_domain_visualization.png` | t-SNE projection of GCN node embeddings by dataset |
-| `fig9_shap_feature_importance.png` | SHAP summary plot of input feature contributions |
-| `fig10_pareto_frontier.png` | Deployment–accuracy trade-off (Pareto frontier) |
-| `fig11_noise_robustness_curve.png` | SOH MAE vs. noise level for Scenarios A and B |
-| `fig12_cross_dataset_r2_heatmap.png` | Cross-dataset R² heatmap |
+All primary train/validation/test partitions are complete-cell splits.
 
-### `scripts/`
+## Leakage-safe input contract
 
-#### Graph Construction & Preprocessing
-| Script | Description |
-|--------|-------------|
-| `build_cycle_graphs.py` | Builds temporal cycle graphs from raw battery CSV data; computes dQ/dV features and RUL targets; saves train/val/test splits as `.pkl` files |
+The primary models use exactly 20 target-independent descriptors:
 
-#### Main Model Training
-| Script | Description |
-|--------|-------------|
-| `train_gcn_no_leakage.py` | Trains the primary GCN model (no target leakage); saves `gcn_no_leakage.pth` |
-| `train_baselines_no_leakage.py` | Trains MLP, Ridge, and XGBoost baselines on the same leakage-free splits |
-| `train_nodelevel_weighted.py` | Multi-task node-level GCN (SOH + RUL joint training) |
-| `train_lstm_no_leakage.py` | Cell-level LSTM baseline |
-| `train_lstm_cell_based.py` | Cell-based LSTM with sequence padding |
-| `train_cnn_no_leakage.py` | 1D CNN baseline |
+- 10 voltage descriptors
+- 10 current descriptors
 
-#### Baseline & Ablation Studies
-| Script | Description |
-|--------|-------------|
-| `baseline_10seeds.py` | 10-seed baseline comparison (GCN, MLP, Ridge, XGBoost) |
-| `ablation_10seeds.py` | 10-seed ablation: full model vs. no-cycle-graph vs. no-dQ/dV vs. no-GNN |
-| `Ablasyon10seedWilcoxon.py` | Ablation with Wilcoxon signed-rank significance tests |
+For each signal:
 
-#### Noise Robustness Experiments
-| Script | Description |
-|--------|-------------|
-| `scenario_a_10seeds.py` | Scenario A: training + test Gaussian noise, 10 seeds |
-| `test_noise_only_10seeds.py` | Scenario B: test-only Gaussian noise, 10 seeds |
-| `test_noise_only.py` | Single-seed test-noise-only evaluation |
-| `test_noise_only_seeds.py` | Multi-seed test-noise-only variant |
-| `scenario_a_3seeds.py` | Scenario A with 3 seeds (exploratory) |
-| `gat_noise_scenario_b.py` | GAT under Scenario B noise |
-| `frequency_noise_experiment.py` | Frequency-dependent noise: white vs. low-frequency correlated noise |
-| `test_advanced_noise.py` | Realistic BMS noise (thermal drift, calibration offset, sensor dropout, compound) |
-| `test_advanced_noise_10seeds.py` | Same as above over 10 seeds with Wilcoxon tests |
-| `noise_robustness.py` | Single-run noise robustness sweep |
+`min, q10, q25, median, q75, q90, max, mean, std, phase-slope`
 
-#### GAT & Ensemble
-| Script | Description |
-|--------|-------------|
-| `gat_experiment.py` | GAT (3-layer, 4-head, edge dropout) over 10 seeds |
-| `ensemble_gat_mlp.py` | Weighted ensemble of GAT and MLP predictions |
+The primary input does **not** include:
 
-#### RUL Estimation
-| Script | Description |
-|--------|-------------|
-| `rul_all_models.py` | RUL prediction comparison: MLP, GCN, Ridge, XGBoost |
-| `rul_noise_scenario_a_10seeds.py` | RUL noise robustness — Scenario A |
-| `rul_noise_scenario_b_10seeds.py` | RUL noise robustness — Scenario B |
+- discharge or charge capacity
+- SOH
+- RUL
+- EOL
+- cycle number
+- observation index
+- total cell lifetime
+- dataset identity
+- future observations
 
-#### Transfer Learning & Domain Adaptation
-| Script | Description |
-|--------|-------------|
-| `few_shot_transfer.py` | Few-shot fine-tuning: MATR (source) → HUST (target) |
-| `fewshot_10seeds.py` | Same over 10 seeds with zero-shot and finetune ratios |
-| `train_dann_all.py` | Domain Adversarial Neural Network (DANN) across all four datasets |
-| `lodo_experiment.py` | Leave-One-Dataset-Out (LODO) evaluation |
-| `lodo_chemistry_normalized.py` | LODO with chemistry features + per-dataset z-score normalization |
+Temperature is excluded from the primary feature contract because a compatible observation contract was not available across the pooled datasets.
 
-#### Low-Data & Early Prediction
-| Script | Description |
-|--------|-------------|
-| `lowdata_10seeds.py` | Low-data regime: 1%, 5%, 10% training data over 10 seeds |
-| `early_prediction.py` | Early-cycle prediction with 10% and 20% observed cycles |
-| `early_prediction_10seeds.py` | Same over 10 seeds |
+dQ/dV features are evaluated separately as a leakage-control experiment rather than being used in the primary benchmark.
 
-#### Interpretability & Visualization
-| Script | Description |
-|--------|-------------|
-| `gnn_explainer.py` | GNNExplainer node and edge importance for an RWTH test cell |
-| `shap_analysis.py` | SHAP KernelExplainer on 200 test nodes |
-| `tsne_visualization.py` | t-SNE projection of GCN node embeddings |
-| `compute_per_domain_correct.py` | Per-domain (MATR/CALCE/HUST/RWTH) SOH evaluation metrics |
-| `compute_per_domain_metrics.py` | Per-domain metrics with saved model checkpoint |
-| `evaluate_per_dataset.py` | Per-dataset SOH MAE and R² |
+## Feature-matched model comparison
 
-#### Figure Generation
-| Script | Description |
-|--------|-------------|
-| `plot_all_figures.py` | Generates all main paper figures |
-| `plot_capacity_fade.py` | Capacity fade curves by dataset |
-| `plot_loss_curves.py` | Training and validation loss curves |
-| `plot_architecture.py` | Multi-task GNN architecture diagram |
-| `create_figure3.py` | Graph construction paradigm comparison figure |
+The primary MLP and causal graph model both use:
 
-#### Feature Engineering
-| Script | Description |
-|--------|-------------|
-| `p2_amplitude_normalized.py` | Amplitude-normalized dQ/dV control experiment |
-| `edge_weight_cosine_euclidean.py` | Edge weight comparison: Pearson vs. cosine vs. Euclidean vs. fixed |
-| `edge_weight_pearson_vs_dtw.py` | Pearson vs. DTW edge weight comparison |
-| `train_dqdv_rwth_only.py` | Ablation: dQ/dV features restricted to RWTH (NMC) only |
+`20 -> 64 -> 64 -> 1`
 
----
+Each model contains exactly **5,569 trainable parameters**.
 
-## Datasets
+The causal graph model applies parameter-free causal mean aggregation before the hidden transforms. Edges connect same-cell predecessors only. There are no future, reverse, or cross-cell edges.
 
-Four open-access datasets from the [BatteryML](https://github.com/microsoft/BatteryML) platform are used:
+With two aggregation stages, the maximum temporal receptive field is:
 
-| Dataset | Cells | Cycles | Chemistry | Nominal Capacity |
-|---------|-------|--------|-----------|-----------------|
-| [MATR](https://doi.org/10.1038/s41560-019-0356-8) | 180 | 154,107 | LFP/graphite | 1.10 Ah |
-| [CALCE](https://calce.umd.edu/battery-data) | 13 | 14,298 | LCO/graphite | 1.10 Ah |
-| [HUST](https://doi.org/10.17632/nsc7hnsg4s.2) | 77 | 64,441 | LFP/graphite | 1.10 Ah |
-| [RWTH](https://doi.org/10.1016/j.est.2015.05.003) | 48 | 104,959 | NMC/carbon | 1.11 Ah |
+`{t, t-1, t-2}`
 
-> **Note:** HUST is used as a low-variance diagnostic documentation case. Its discharge capacity targets are clustered in the 0–0.05 Ah range, making standard metrics such as MAE and R² unreliable for primary comparison. MATR, CALCE, and RWTH form the main quantitative benchmark.
+Training uses:
 
-Place the raw data CSV at:
-```
-analysis/battery_data_all_complete.csv
-```
+- AdamW
+- learning rate `1e-3`
+- weight decay `1e-5`
+- no dropout
+- no batch normalization
+- train-only feature scaling
+- hierarchical dataset/cell/observation-balanced MSE
+- validation-only early stopping
+- patience `30`
+- nonbinding maximum of `5000` epochs
 
----
+The primary experiment uses:
 
-## Quickstart
+- 5 complete-cell split seeds
+- 3 initialization seeds per split
+- 15 paired runs
+- 30 primary model fits
 
-### 1. Install dependencies
-```bash
-pip install -r requirements.txt
-```
+Initialization seeds are averaged within each split before higher-level paired comparisons.
 
-### 2. Build cycle graphs
-```bash
-python scripts/build_cycle_graphs.py
-```
-This reads `analysis/battery_data_all_complete.csv`, computes dQ/dV features, and saves `train_graphs_no_target.pkl`, `val_graphs_no_target.pkl`, and `test_graphs_no_target.pkl` to `analysis/cycle_graphs/`.
+## Clean SOH benchmark
 
-### 3. Train the primary GCN model
-```bash
-python scripts/train_gcn_no_leakage.py
-```
+Balanced cross-dataset results:
 
-### 4. Run the main baseline comparison (10 seeds)
-```bash
-python scripts/baseline_10seeds.py
-```
+| Method | RMSE | MAE |
+|---|---:|---:|
+| Raw MLP | 0.03798 ± 0.00394 | 0.02642 ± 0.00284 |
+| MA3 + MLP | 0.03778 ± 0.00414 | 0.02628 ± 0.00219 |
+| LP3 + MLP | 0.03733 ± 0.00430 | 0.02599 ± 0.00245 |
+| SG5 + MLP | 0.03862 ± 0.00424 | 0.02710 ± 0.00294 |
+| Kalman + MLP | 0.03720 ± 0.00422 | 0.02591 ± 0.00256 |
+| Causal GCN | 0.03759 ± 0.00526 | 0.02621 ± 0.00316 |
+| Causal TCN | 0.04205 ± 0.00809 | 0.02906 ± 0.00505 |
 
-### 5. Run noise robustness experiments
-```bash
-# Scenario A: training + test noise
-python scripts/scenario_a_10seeds.py
+The five complete-cell splits are treated as repeated-split comparison units, not as five independent datasets.
 
-# Scenario B: test noise only
-python scripts/test_noise_only_10seeds.py
+Exact two-sided sign-flip tests are performed on split-level paired differences. Holm correction is applied separately to the four clean-domain RMSE comparisons and four clean-domain MAE comparisons, and separately to the temporal-control comparison family.
 
-# Scenario C: realistic BMS sensor degradation
-python scripts/test_advanced_noise_10seeds.py
+The clean comparison does not establish a statistically supported unique graph advantage.
+
+## Experimental blocks
+
+The revised study contains six main experimental blocks.
+
+### 1. Clean SOH and temporal controls
+
+The feature-matched MLP and causal graph model are compared with generic causal smoothing controls and a causal TCN sequence baseline.
+
+This block tests whether apparent graph-model behavior can instead be explained by generic temporal smoothing.
+
+### 2. Physical-unit sensor robustness
+
+Voltage/current corruption is applied to held-out raw traces before feature recomputation.
+
+Noise families include:
+
+- Gaussian sample noise
+- cell-level offset
+- causal drift with bounded caps
+- dropout with causal filling
+
+Models and train-only scalers remain frozen during these evaluations.
+
+A zero-corruption raw roundtrip is separately audited with a numerical tolerance of `1e-8`.
+
+### 3. Frequency-mechanism diagnostics
+
+Controlled perturbations are applied in the train-only standardized feature space.
+
+These experiments are mechanism diagnostics and are **not** presented as replacements for the physical-unit sensor benchmark.
+
+For the causal mean operator,
+
+`H1(omega) = 0.5 * (1 + exp(-j*omega))`
+
+and
+
+`|H1(omega)| = |cos(omega/2)|`.
+
+Repeated aggregation therefore produces frequency-selective attenuation.
+
+Graph-Fourier analyses use the path Laplacian as a diagnostic tool only; the trained causal operator itself remains directed.
+
+### 4. dQ/dV leakage control
+
+The study separates:
+
+- `PRIMARY20`
+- retrospective `FULL` leakage-positive control
+- `PREFIX25`
+- `PREFIX50`
+
+The prefix conditions use fixed training-derived causal cutoffs so future-cycle information is not available to the model.
+
+### 5. Prospective RUL
+
+Prospective RUL uses an 80%-SOH endpoint.
+
+Exact prospective RUL labels are available for:
+
+- 13 CALCE cells
+- 88 MATR cells
+
+HUST is threshold-censored in this experiment and therefore is not used as an exact prospective-RUL target cohort.
+
+### 6. Cross-dataset LODO and few-shot calibration
+
+Leave-one-dataset-out evaluation uses source-only training and source-only feature scaling.
+
+Target-domain calibration follows:
+
+`ZERO -> K1 -> K3 -> K5`
+
+Support-cell selection is deterministic and nested.
+
+Few-shot adaptation:
+
+- starts independently from the zero-shot state
+- retains the source-only scaler
+- uses learning rate `1e-4`
+- uses weight decay `1e-5`
+- runs exactly 100 full-support epochs
+- uses no target validation early stopping
+- does not refit the scaler on target data
+
+Across the audited split-level model/fold/adaptation comparisons, few-shot calibration reduces RMSE relative to zero-shot, while residual cross-domain mismatch remains.
+
+This result does not imply a universal model winner.
+
+## Repository structure
+
+```text
+battery-gnn/
+├── README.md
+├── REPRODUCIBILITY.md
+├── requirements.txt
+├── scripts/
+│   └── revision_2026/
+├── results/
+│   └── revision_2026/
+└── figures/
+    └── revision_2026/
 ```
 
-### 6. Run ablation studies
-```bash
-python scripts/ablation_10seeds.py
-```
+`results/revision_2026/` is a curated public evidence package rather than a dump of every intermediate artifact generated during revision.
 
-### 7. Generate figures
-```bash
-python scripts/plot_all_figures.py
-```
+The release retains the artifacts needed to audit the final reported results while excluding large regenerated intermediates, model states, raw datasets, and progress/resume-only files.
 
----
+## Figures
 
-## Model Architecture
+The final figure directory contains publication figures in PDF, PNG, and SVG form together with figure manifests and source-value tables where applicable.
 
-The primary model is a 3-layer GCN with two regression heads:
+The three final figure groups are:
 
-- **Input:** Node features — temperature, current, nominal capacity, voltage limits, and chemistry-aware dQ/dV descriptors (10 features total). The target variable (discharge capacity) is **excluded** from node features to prevent leakage.
-- **GCN layers:** 3 × `GCNConv(hidden_dim=128)` with ReLU activations
-- **Heads:** SOH head (128→1) and RUL head (128→1)
-- **Loss:** `L = MSE(SOH) + 0.01 × MSE(RUL)`
-- **Optimizer:** Adam, lr=1e-3, batch=32, 50 epochs
-- **Split:** 70% train / 15% validation / 15% test (cell-level)
+1. benchmark workflow
+2. frequency-selective response
+3. LODO/few-shot transfer
 
-Graph Attention Network (GAT) variants are also provided (`gat_experiment.py`, `ensemble_gat_mlp.py`) and use the same physics-informed temporal graph with identical hyperparameters.
+## Data availability
 
----
+Raw third-party battery datasets are **not redistributed in this repository**.
 
-## Key Results
+Users should obtain HUST, CALCE, MATR, and RWTH data from their original providers and comply with the corresponding dataset licenses and terms of use.
 
-| Model | SOH MAE (Ah) | SOH R² |
-|-------|-------------|--------|
-| MLP | 0.0618 ± 0.0007 | 0.9172 ± 0.0012 |
-| XGBoost | 0.0624 | 0.9145 |
-| GCN | 0.0632 ± 0.0007 | 0.9097 ± 0.0010 |
-| Ridge | 0.0687 | 0.8894 |
+The repository instead provides dataset audits, reconstruction logic, frozen protocols, hashes, and curated derived results needed to inspect the analysis.
 
-Under high-frequency test-time noise (Scenario B, σ=0.10): MLP MAE increases by **24.9%** while GCN MAE increases by only **5.8%**. Under low-frequency thermal drift, the ranking reverses in favor of MLP.
+The 185 regenerated MATR per-cell intermediate CSV files are intentionally excluded from the public package. Their reconstruction contract and manifest are retained.
 
----
+## Reproducibility and provenance
 
-## Reproducibility
+The revision workflow was developed as a sequence of frozen protocols followed by execution and independent audit steps.
 
-All stochastic experiments are repeated over 10 fixed seeds: `[5782, 327, 984, 2430, 3382, 8039, 6182, 5398, 6699, 7656]`. Results are reported as mean ± standard deviation. Statistical significance is assessed with Wilcoxon signed-rank tests.
+Many protocol and execution manifests record SHA-256 hashes of the exact scripts and source artifacts used at the time of execution.
 
-Trained model checkpoints:
-- `analysis/results/gcn_no_leakage.pth`
-- `analysis/results/mlp_no_leakage.pth`
-- `analysis/results/nodelevel_best.pth`
+For that reason, the historical revision scripts are retained as **frozen provenance code** and are not rewritten after the fact merely to make their original workspace layout prettier.
 
----
+See [`REPRODUCIBILITY.md`](REPRODUCIBILITY.md) before attempting to rerun the full workflow.
 
-## Citation
+## Important interpretation note
 
-If you use this code or data in your work, please cite:
+Files whose names contain words such as `ranking`, `wins`, or descriptive ordering report point-estimate ordering only unless an inferential test is explicitly attached.
 
-```bibtex
-@article{bingolsoylu2025accuracy,
-  title   = {Noise Regime Determines Model Choice: A Frequency-Selective Robustness Benchmark for Lithium-Ion Battery Prognostics},
-  author  = {Bing{\"o}l, Alper and Soylu, M{\"u}cahit},
-  journal = {Preprint},
-  year    = {2025}
-}
-```
+They must not be interpreted as establishing a universal statistically supported model hierarchy.
 
----
+## Software
 
-## License
+The final revision pipeline uses Python 3.10 and the scientific packages listed in `requirements.txt`.
 
-This project is released for academic and research use. Please refer to the individual dataset licenses (MATR, CALCE, HUST, RWTH) for data usage terms.
+The audited execution environment used Python 3.10.12.
+
+## Release status
+
+This branch corresponds to the revised manuscript analysis and public reproducibility packaging.
+
+The original public repository state and the final revision-analysis state are preserved separately in Git history/tags.

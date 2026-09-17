@@ -1,0 +1,10 @@
+{
+  "completed_model_fits": 120,
+  "completed_pairs": 60,
+  "contract": "dqdv_training_execution_status_v1",
+  "current": null,
+  "planned_model_fits": 120,
+  "planned_pairs": 60,
+  "protocol_sha256": "4612a450eeaf909a04c31be16957bdc0567aac67635241e14d7bbceea507fe9d",
+  "test_metric_values_surfaced": false
+}

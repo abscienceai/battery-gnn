@@ -1,0 +1,51 @@
+{
+  "figure": "fig1_benchmark_workflow",
+  "figure_type": "protocol/workflow schematic",
+  "primary_soh_cohort": {
+    "datasets": [
+      "HUST",
+      "CALCE",
+      "MATR"
+    ],
+    "observations": 300553,
+    "cells": 259,
+    "dataset_counts": {
+      "HUST": {
+        "cells": 77,
+        "observations": 146122
+      },
+      "CALCE": {
+        "cells": 13,
+        "observations": 14298
+      },
+      "MATR": {
+        "cells": 169,
+        "observations": 140133
+      }
+    }
+  },
+  "rwth": {
+    "cells": 48,
+    "primary_soh_role": false,
+    "role": "provenance and chemistry-oriented sensitivity"
+  },
+  "primary_features": 20,
+  "model_parameters_each": 5569,
+  "architecture": "20->64->64->1",
+  "causal_receptive_field": [
+    "t",
+    "t-1",
+    "t-2"
+  ],
+  "split_seeds": 5,
+  "initializations_per_split": 3,
+  "evaluation_blocks": [
+    "clean SOH and temporal controls",
+    "physical-unit raw-sensor robustness",
+    "frequency-mechanism diagnostics",
+    "dQ/dV leakage-control sensitivity",
+    "prospective RUL",
+    "LODO and complete-cell few-shot transfer"
+  ],
+  "important_boundary": "The undirected path-Laplacian basis is diagnostic only and is not the deployed causal aggregation operator."
+}

@@ -1,0 +1,16 @@
+{
+  "all_fits_patience_valid_below_ceiling": true,
+  "all_initial_pair_weights_exact": true,
+  "all_model_state_hashes_exact": true,
+  "all_test_metrics_independently_reproduced": true,
+  "all_validation_best_states_reproduced": true,
+  "audit_pass": true,
+  "contract": "prospective_rul_execution_audit_receipt_v1",
+  "execution_manifest_sha256": "bf65abd7e8d6ab5c03a1afae85902df201f67aebeb4c38a57c4ac17ca857dfc6",
+  "gcn_prefix_invariance_checks": 45,
+  "numeric_test_metrics_surfaced_by_audit": false,
+  "runner_sha256": "187d2f034282d75888bdc1fbb2408a132b11aa14afa709c7444dade0fc253c60",
+  "test_metrics_used_for_protocol_change": false,
+  "validated_model_fits": 30,
+  "validated_run_records": 15
+}

@@ -1,0 +1,122 @@
+{
+  "contract": "dqdv_training_v2_compatible_v1_import_v1",
+  "imported_model_fit_count": 8,
+  "imported_pair_count": 4,
+  "imported_record_count": 4,
+  "imported_records": [
+    {
+      "condition": "PRIMARY20_COMMON",
+      "destination_record_path": "${WORKSPACE}/results/revision_2026/dqdv_leakage_control/final_dqdv_v1/training_v2/final_execution_v2/run_records/PRIMARY20_COMMON__split0__train0.json",
+      "destination_record_sha256": "9677a640d9c00c7b95d9ed861657a4193f28e782760df8146c6f33e4f0802218",
+      "record_bytes_preserved_exactly": true,
+      "source_record_path": "${WORKSPACE}/results/revision_2026/dqdv_leakage_control/final_dqdv_v1/training_v1/final_execution_v1/run_records/PRIMARY20_COMMON__split0__train0.json",
+      "source_record_sha256": "9677a640d9c00c7b95d9ed861657a4193f28e782760df8146c6f33e4f0802218",
+      "split_seed": 0,
+      "state_references": {
+        "CAUSAL_GCN": {
+          "copied_into_v2_namespace": false,
+          "immutable_v1_reference": true,
+          "sha256": "4b5b841025b59f1d4f8cd4206ed1f2f958a996114d77e9131490fc3ef2206c3f",
+          "source_path": "${WORKSPACE}/results/revision_2026/dqdv_leakage_control/final_dqdv_v1/training_v1/final_execution_v1/model_states/PRIMARY20_COMMON__split0__train0__CAUSAL_GCN.pt"
+        },
+        "MLP": {
+          "copied_into_v2_namespace": false,
+          "immutable_v1_reference": true,
+          "sha256": "8afa5067b23fc8e22ae90af70912755cd6d8df7c08513f7f94d0d94ed77127bc",
+          "source_path": "${WORKSPACE}/results/revision_2026/dqdv_leakage_control/final_dqdv_v1/training_v1/final_execution_v1/model_states/PRIMARY20_COMMON__split0__train0__MLP.pt"
+        }
+      },
+      "train_seed": 0
+    },
+    {
+      "condition": "PRIMARY20_COMMON",
+      "destination_record_path": "${WORKSPACE}/results/revision_2026/dqdv_leakage_control/final_dqdv_v1/training_v2/final_execution_v2/run_records/PRIMARY20_COMMON__split0__train1.json",
+      "destination_record_sha256": "8337fc572ed88693d30b91328ab764504bffb5670d360167c0291a3b0859969e",
+      "record_bytes_preserved_exactly": true,
+      "source_record_path": "${WORKSPACE}/results/revision_2026/dqdv_leakage_control/final_dqdv_v1/training_v1/final_execution_v1/run_records/PRIMARY20_COMMON__split0__train1.json",
+      "source_record_sha256": "8337fc572ed88693d30b91328ab764504bffb5670d360167c0291a3b0859969e",
+      "split_seed": 0,
+      "state_references": {
+        "CAUSAL_GCN": {
+          "copied_into_v2_namespace": false,
+          "immutable_v1_reference": true,
+          "sha256": "a24b47c767bb7487a54b7a0a4f04aee634635496346cd9836f527be3f378ed79",
+          "source_path": "${WORKSPACE}/results/revision_2026/dqdv_leakage_control/final_dqdv_v1/training_v1/final_execution_v1/model_states/PRIMARY20_COMMON__split0__train1__CAUSAL_GCN.pt"
+        },
+        "MLP": {
+          "copied_into_v2_namespace": false,
+          "immutable_v1_reference": true,
+          "sha256": "5cf3a3e32e2bf4fbe78e974d5a549c21563fa41e524717fde7cbd1a18fa6001a",
+          "source_path": "${WORKSPACE}/results/revision_2026/dqdv_leakage_control/final_dqdv_v1/training_v1/final_execution_v1/model_states/PRIMARY20_COMMON__split0__train1__MLP.pt"
+        }
+      },
+      "train_seed": 1
+    },
+    {
+      "condition": "PRIMARY20_COMMON",
+      "destination_record_path": "${WORKSPACE}/results/revision_2026/dqdv_leakage_control/final_dqdv_v1/training_v2/final_execution_v2/run_records/PRIMARY20_COMMON__split0__train2.json",
+      "destination_record_sha256": "c459aa781237fff147834b7d571b03a605d6d38ef72478a69a74e92f64f81546",
+      "record_bytes_preserved_exactly": true,
+      "source_record_path": "${WORKSPACE}/results/revision_2026/dqdv_leakage_control/final_dqdv_v1/training_v1/final_execution_v1/run_records/PRIMARY20_COMMON__split0__train2.json",
+      "source_record_sha256": "c459aa781237fff147834b7d571b03a605d6d38ef72478a69a74e92f64f81546",
+      "split_seed": 0,
+      "state_references": {
+        "CAUSAL_GCN": {
+          "copied_into_v2_namespace": false,
+          "immutable_v1_reference": true,
+          "sha256": "c2754536211419a376c8673e73abd452f90020c0592d866e61fcb7084192410d",
+          "source_path": "${WORKSPACE}/results/revision_2026/dqdv_leakage_control/final_dqdv_v1/training_v1/final_execution_v1/model_states/PRIMARY20_COMMON__split0__train2__CAUSAL_GCN.pt"
+        },
+        "MLP": {
+          "copied_into_v2_namespace": false,
+          "immutable_v1_reference": true,
+          "sha256": "0b797d79bd972e544bca140bbe151dacb15545dd316c34896a97ea92f10694ab",
+          "source_path": "${WORKSPACE}/results/revision_2026/dqdv_leakage_control/final_dqdv_v1/training_v1/final_execution_v1/model_states/PRIMARY20_COMMON__split0__train2__MLP.pt"
+        }
+      },
+      "train_seed": 2
+    },
+    {
+      "condition": "PRIMARY20_PLUS_FULL_DQDV10",
+      "destination_record_path": "${WORKSPACE}/results/revision_2026/dqdv_leakage_control/final_dqdv_v1/training_v2/final_execution_v2/run_records/PRIMARY20_PLUS_FULL_DQDV10__split0__train0.json",
+      "destination_record_sha256": "79ea7646b82824136a3624a8163d64ee020238f1c8c4da5873718ce7cc2b6fce",
+      "record_bytes_preserved_exactly": true,
+      "source_record_path": "${WORKSPACE}/results/revision_2026/dqdv_leakage_control/final_dqdv_v1/training_v1/final_execution_v1/run_records/PRIMARY20_PLUS_FULL_DQDV10__split0__train0.json",
+      "source_record_sha256": "79ea7646b82824136a3624a8163d64ee020238f1c8c4da5873718ce7cc2b6fce",
+      "split_seed": 0,
+      "state_references": {
+        "CAUSAL_GCN": {
+          "copied_into_v2_namespace": false,
+          "immutable_v1_reference": true,
+          "sha256": "91bff0eb7d939aea1f65e1f41782444ccbed46fe7710143dad11b0e743abf8b8",
+          "source_path": "${WORKSPACE}/results/revision_2026/dqdv_leakage_control/final_dqdv_v1/training_v1/final_execution_v1/model_states/PRIMARY20_PLUS_FULL_DQDV10__split0__train0__CAUSAL_GCN.pt"
+        },
+        "MLP": {
+          "copied_into_v2_namespace": false,
+          "immutable_v1_reference": true,
+          "sha256": "d99aaa25a3b958665766597ba63b7b85f3200d1fd915948b25b0909b7525b886",
+          "source_path": "${WORKSPACE}/results/revision_2026/dqdv_leakage_control/final_dqdv_v1/training_v1/final_execution_v1/model_states/PRIMARY20_PLUS_FULL_DQDV10__split0__train0__MLP.pt"
+        }
+      },
+      "train_seed": 0
+    }
+  ],
+  "invalid_partial_v1_state_count": 2,
+  "invalid_partial_v1_states_imported": false,
+  "invalid_partial_v1_states_reused": false,
+  "model_states_copied": false,
+  "model_states_referenced_from_v1": true,
+  "model_training_performed": false,
+  "parent_protocol_v1_sha256": "43122c4d6ef5a2e70b2d13ae22432a2cfa13027874e0bea6f3b62675e3fb23e9",
+  "preparer_commit": "fbd29a968e92b6909ebd2ac6b30b0f5318c5444d",
+  "preparer_path": "${WORKSPACE}/repo/battery-gnn/scripts/revision_2026/93_prepare_dqdv_training_v2_execution.py",
+  "preparer_sha256": "43689a43ce9e05b6ea39fb758a16643de0f746bd17833d068fc24e9e045a07c9",
+  "protocol_v2_sha256": "4612a450eeaf909a04c31be16957bdc0567aac67635241e14d7bbceea507fe9d",
+  "record_bytes_preserved_exactly": true,
+  "state_reference_count": 8,
+  "status": "COMPATIBLE_V1_RECORD_IMPORT_COMPLETE_BEFORE_V2_TRAINING",
+  "test_metric_values_from_v1_records_parsed": false,
+  "test_metric_values_inspected": false,
+  "test_metric_values_surfaced": false,
+  "test_metric_values_used_for_import": false
+}

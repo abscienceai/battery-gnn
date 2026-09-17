@@ -1,0 +1,90 @@
+{
+  "analysis_script_commit": "eac605ac978960d71b1e363a4828c5aae9858734",
+  "analysis_script_sha256": "e7ee4634e5f6c5b5ab2286035f70586fe61af614598426525aa9d12b17b27c0e",
+  "analytic_depths": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "analytic_transfer_definition": "|H_d(omega)|=|cos(omega/2)|^d",
+  "claim_guard": {
+    "frequency_selective_temporal_aggregation": true,
+    "spectral_gcn": false,
+    "universal_gcn_robustness": false
+  },
+  "clean_final_v3_reference_barrier": "PASS",
+  "clean_max_abs_mae_difference": 4.990105550994883e-14,
+  "clean_max_abs_rmse_difference": 4.820102650349156e-14,
+  "clean_pairing": "same split_seed + same train_seed + same model + same domain + same metric",
+  "clean_reference_rows": 120,
+  "clean_reference_tolerance": 1e-07,
+  "contract": "sinusoidal_frequency_analysis_v1",
+  "frequency_auc": "trapezoidal AUC of split-level mean relative degradation over frozen six-point omega/pi grid divided by frequency range width",
+  "frequency_auc_range_width": 0.9375,
+  "frequency_count": 6,
+  "frequency_execution_manifest_sha256": "ac56254c584990651ee7430786f3a39b3f7ed96d278091e65e30b115651d19fd",
+  "frequency_grid_omega_over_pi": [
+    0.0625,
+    0.125,
+    0.25,
+    0.5,
+    0.75,
+    1.0
+  ],
+  "holm_significant_0p05_count": 0,
+  "inferential_n": 5,
+  "inferential_unit": "split_seed",
+  "minimum_attainable_two_sided_p": 0.0625,
+  "minimum_possible_first_holm_adjusted_p": 0.25,
+  "models_retrained": false,
+  "multiplicity": "Holm across four domains separately for RMSE and four domains separately for MAE",
+  "nested_aggregation": "relative degradation computed before averaging; 3 train initializations x 5 perturbation seeds averaged within each split-frequency-model-domain-metric",
+  "nested_count_per_split_frequency": 15,
+  "outputs": {
+    "analytic_causal_aggregation_transfer": {
+      "path": "${WORKSPACE}/results/revision_2026/spectral_frequency/final_spectral_v1/sinusoidal_frequency_v1/analysis_v1/analytic_causal_aggregation_transfer.csv",
+      "rows": 30,
+      "sha256": "51ceae566f6ec11fbe948eaa2d3ab1509867bbd923167501024f690fd1c9174e"
+    },
+    "clean_reference_check": {
+      "path": "${WORKSPACE}/results/revision_2026/spectral_frequency/final_spectral_v1/sinusoidal_frequency_v1/analysis_v1/clean_final_v3_reference_check.csv",
+      "rows": 120,
+      "sha256": "2f196bd80222cd8e9212b82c38ffdb1ee52ed6eb71702e751a6773bc7742fe7d"
+    },
+    "frequency_auc_by_split": {
+      "path": "${WORKSPACE}/results/revision_2026/spectral_frequency/final_spectral_v1/sinusoidal_frequency_v1/analysis_v1/frequency_auc_by_split.csv",
+      "rows": 80,
+      "sha256": "c253fa4453df18fd4cbe3aa0d065def1c3e140f15f7ca92b4fdc42b567de2478"
+    },
+    "frequency_primary_inference": {
+      "path": "${WORKSPACE}/results/revision_2026/spectral_frequency/final_spectral_v1/sinusoidal_frequency_v1/analysis_v1/frequency_primary_inference.csv",
+      "rows": 8,
+      "sha256": "a90f381f76132a4a0a4ef068d6f4de2569c0f24133008633b23129a7d963dc46"
+    },
+    "frequency_response_by_split": {
+      "path": "${WORKSPACE}/results/revision_2026/spectral_frequency/final_spectral_v1/sinusoidal_frequency_v1/analysis_v1/frequency_response_by_split.csv",
+      "rows": 480,
+      "sha256": "5b243178aea31b57d274d3d2cad4a854a4831ae494e366da718f12626e486441"
+    },
+    "frequency_response_summary": {
+      "path": "${WORKSPACE}/results/revision_2026/spectral_frequency/final_spectral_v1/sinusoidal_frequency_v1/analysis_v1/frequency_response_summary.csv",
+      "rows": 96,
+      "sha256": "d69c719a0fe1e96063638981d5efa114336bb612c23010e73e6ab7a0b28451e6"
+    }
+  },
+  "perturbation_seed_count": 5,
+  "positive_delta_interpretation": "GCN lower integrated relative degradation",
+  "primary_comparisons": 8,
+  "primary_delta_definition": "MLP_degradation_AUC_minus_GCN_degradation_AUC",
+  "raw_metric_files_read": 30,
+  "raw_metric_rows_read": 3720,
+  "relative_degradation_definition": "(perturbed_metric-clean_metric)/clean_metric",
+  "scaler_refit": false,
+  "spectral_protocol_sha256": "a8d3b65b87980470f326717f0cb50e3d4fb4d2e0429c93171eb0d21d6c713e45",
+  "status": "COMPLETE",
+  "test": "exact two-sided paired sign-flip over five split units",
+  "train_initialization_count_per_split": 3,
+  "value_level_read_started_only_after_analysis_script_commit": true
+}
